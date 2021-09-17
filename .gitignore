@@ -1,0 +1,20 @@
+# misc
+.DS_Store
+*.pem
+
+# dependencies
+node_modules
+
+# testing
+coverage
+
+# production
+dist
+
+# typescript
+tsconfig.tsbuildinfo
+
+# log
+*.log
+yarn-debug.log*
+yarn-error.log*
