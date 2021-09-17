@@ -1,0 +1,63 @@
+{
+  "name": "newton-ui",
+  "private": true,
+  "author": "project44",
+  "license": "MIT",
+  "scripts": {
+    "build": "preconstruct build",
+    "dev": "concurrently \"yarn watch\" \"yarn site:dev\"",
+    "watch": "preconstruct watch",
+    "start": "manypkg run site start",
+    "site:dev": "manypkg run site dev",
+    "site:build": "manypkg run site build",
+    "format": "prettier --write .",
+    "lint": "manypkg check && prettier --check . && tsc",
+    "release": "yarn build && changeset publish",
+    "test": "yarn test:jest",
+    "test:jest": "jest",
+    "version": "changeset version && yarn"
+  },
+  "workspaces": [
+    "examples/*",
+    "packages/*",
+    "site"
+  ],
+  "preconstruct": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "volta": {
+    "node": "14.17.6",
+    "yarn": "1.22.11"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@changesets/changelog-github": "^0.4.0",
+    "@changesets/cli": "^2.16.0",
+    "@manypkg/cli": "^0.18.0",
+    "@preconstruct/cli": "^2.1.4",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.9.2",
+    "@types/react": "17.0.14",
+    "@types/react-dom": "^17.0.9",
+    "concurrently": "^6.2.1",
+    "jest": "^27.2.0",
+    "prettier": "^2.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-jest": "^27.0.5",
+    "ts-node": "^10.1.0",
+    "typescript": "4.3.5"
+  }
+}

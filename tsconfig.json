@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "incremental": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["node_modules", "**/dist/**"],
+  "include": ["./jest.setup.ts", "packages/**/*", "site/**/*"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "resolveJsonModule": true,
+      "noImplicitAny": false
+    }
+  }
+}
