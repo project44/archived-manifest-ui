@@ -1,12 +1,16 @@
 import React from 'react';
+import { ChakraTheme, ManifestProvider } from './components';
 import { PlayroomStateProvider } from './playroomState';
 
 interface Props {
+  theme: ChakraTheme;
   children: React.ReactNode;
 }
 
-export default ({ children }: Props) => (
+export default ({ theme, children }: Props) => (
   <>
-    <PlayroomStateProvider>{children}</PlayroomStateProvider>
+    <ManifestProvider theme={theme}>
+      <PlayroomStateProvider>{children}</PlayroomStateProvider>
+    </ManifestProvider>
   </>
 );

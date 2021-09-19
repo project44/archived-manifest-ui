@@ -1,0 +1,4 @@
+{
+  "main": "dist/manifest-ui-themes-wireframe.cjs.js",
+  "module": "dist/manifest-ui-themes-wireframe.esm.js"
+}

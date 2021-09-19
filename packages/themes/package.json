@@ -1,0 +1,35 @@
+{
+  "name": "@manifest-ui/themes",
+  "version": "0.0.0",
+  "description": "Chakra themes for building project44 experiences.",
+  "main": "dist/manifest-ui-themes.cjs.js",
+  "module": "dist/manifest-ui-themes.esm.js",
+  "files": [
+    "/dist",
+    "momentum",
+    "wireframe"
+  ],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts",
+      "momentum/index.ts",
+      "wireframe/index.ts"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/project44/manifest-ui.git",
+    "directory": "packages/themes"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/theme-tools": "^1.2.1"
+  },
+  "devDependencies": {
+    "@chakra-ui/react": "^1.6.8"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": ">=1.6.8"
+  }
+}
