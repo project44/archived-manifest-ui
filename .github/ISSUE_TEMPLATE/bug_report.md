@@ -18,7 +18,7 @@ assignees: ''
 
 ### System Info
 
-Output of `npx envinfo --system --npmPackages @newton-ui/components,webpack --binaries --browsers`:
+Output of `npx envinfo --system --npmPackages @newton-ui/react,webpack --binaries --browsers`:
 
 ```node
 

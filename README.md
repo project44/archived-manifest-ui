@@ -7,8 +7,8 @@
 <p align="center">Design System tokens and components for <a href="https://www.project44.com/" >project44</a>.</p>
 
 <p align="center">
-  <a aria-label="npm package" href="https://www.npmjs.com/package/@newton-ui/components">
-    <img alt="" src="https://img.shields.io/npm/v/@newton-ui/components.svg">
+  <a aria-label="npm package" href="https://www.npmjs.com/package/@newton-ui/react">
+    <img alt="" src="https://img.shields.io/npm/v/@newton-ui/react.svg">
   </a>
   <a aria-label="contributors graph" href="https://github.com/project44/newton-design-system/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/project44/newton-design-system.svg">
@@ -30,14 +30,14 @@ Our documentation site lives at [zeroheight](https://zeroheight.com/27d9b4710). 
 
 ## Installation
 
-Install `@newton-ui/components` in your project with your package manager of choice:
+Install `@newton-ui/react` in your project with your package manager of choice:
 
 ```
-npm install @newton-ui/components
+npm install @newton-ui/react
 
 // or
 
-yarn add @newton-ui/components
+yarn add @newton-ui/react
 ```
 
 ## Roadmap

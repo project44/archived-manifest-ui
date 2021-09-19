@@ -1,15 +1,15 @@
-# @newton-ui/components
+# @newton-ui/react
 
-**@newton-ui/components** is a React implementation of the design system for [project44](https://stitches.dev) with a best-in-class developer experience.
+**@newton-ui/react** is a React implementation of the design system for [project44](https://stitches.dev) with a best-in-class developer experience.
 
 <p><br /></p>
 
 ```sh
 # with npm
-npm install @newton-ui/components
+npm install @newton-ui/react
 
 # with yarn
-yarn add @newton-ui/components
+yarn add @newton-ui/react
 ```
 
 <p><br /></p>
@@ -19,7 +19,7 @@ yarn add @newton-ui/components
 <br />
 
 ```jsx
-import { Box } from '@newton-ui/components';
+import { Box } from '@newton-ui/react';
 
 export default function App() {
   return (
