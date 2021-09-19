@@ -1,6 +1,9 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@1.6.1/schema.json",
-  "changelog": ["@changesets/changelog-github", { "repo": "project44/newton" }],
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "project44/newton-design-system" }
+  ],
   "commit": false,
   "linked": [],
   "access": "public",
