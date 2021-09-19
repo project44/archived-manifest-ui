@@ -4,21 +4,21 @@
 
 <h1 align="center">Newton UI</h1>
 
-<p align="center">Design System tokens and components for [project44](https://www.project44.com/).</p>
+<p align="center">Design System tokens and components for <a href="https://www.project44.com/" >project44</a>.</p>
 
 <p align="center">
   <a aria-label="npm package" href="https://www.npmjs.com/package/@newton-ui/components">
     <img alt="" src="https://img.shields.io/npm/v/@newton-ui/components.svg">
   </a>
-  <a aria-label="contributors graph" href="https://github.com/project44/newton/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/project44/netwon.svg">
+  <a aria-label="contributors graph" href="https://github.com/project44/newton-design-system/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/project44/newton-design-system.svg">
   </a>
-  <a aria-label="last commit" href="https://github.com/project44/netwon/commits/main">
+  <a aria-label="last commit" href="https://github.com/project44/newton-design-system/commits/main">
     <img alt="" src=
-  "https://img.shields.io/github/last-commit/project44/netwon.svg">
+  "https://img.shields.io/github/last-commit/project44/newton-design-system.svg">
   </a>
-  <a aria-label="license" href="https://github.com/project44/netwon/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/project44/netwon.svg" alt="">
+  <a aria-label="license" href="https://github.com/project44/newton-design-system/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/project44/newton-design-system.svg" alt="">
   </a>
 </p>
 
