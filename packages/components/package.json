@@ -1,9 +1,9 @@
 {
-  "name": "@newton-ui/components",
+  "name": "@newton-ui/react",
   "version": "0.0.0",
   "description": "React components for building project44 experiences.",
-  "main": "dist/newton-ui-components.cjs.js",
-  "module": "dist/newton-ui-components.esm.js",
+  "main": "dist/newton-ui-react.cjs.js",
+  "module": "dist/newton-ui-react.esm.js",
   "files": [
     "/dist"
   ],
