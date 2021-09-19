@@ -16,7 +16,7 @@
     "lint": "manypkg check && prettier --check . && tsc",
     "release": "yarn build && changeset publish",
     "test": "yarn test:jest",
-    "test:jest": "jest",
+    "test:jest": "echo 'No tests yet!'",
     "version": "changeset version && yarn"
   },
   "workspaces": [

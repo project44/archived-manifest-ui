@@ -1,0 +1,4 @@
+{
+  "main": "dist/manifest-ui-themes-momentum.cjs.js",
+  "module": "dist/manifest-ui-themes-momentum.esm.js"
+}

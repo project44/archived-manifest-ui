@@ -1,15 +1,15 @@
-# @manifest-ui/react
+# @manifest-ui/themes
 
-**@manifest-ui/react** is a React implementation of the design system for [project44](https://stitches.dev) with a best-in-class developer experience.
+**@manifest-ui/themes** is a collection of Chakra UI themes for [project44](https://stitches.dev).
 
 <p><br /></p>
 
 ```sh
 # with npm
-npm install @manifest-ui/react @manifest-ui/themes
+npm install @manifest-ui/themes
 
 # with yarn
-yarn add @manifest-ui/react @manifest-ui/themes
+yarn add @manifest-ui/themes
 ```
 
 <p><br /></p>
@@ -19,17 +19,17 @@ yarn add @manifest-ui/react @manifest-ui/themes
 <br />
 
 ```jsx
-import { Box, ManifestProvider } from '@manifest-ui/react';
+import { Box, ChakraProvider } from '@chakra-ui/react';
 import wireframeTheme from '@manifest-ui/themes/wireframe';
 
 export default function App() {
   return (
-    <ManifestProvider theme={wireframeTheme}>
+    <ChakraProvider theme={wireframeTheme}>
       <Box className="App">
         <h1>Hello Manifest UI</h1>
         <h2>Start editing to see some magic happen!</h2>
       </Box>
-    </ManifestProvider>
+    </ChakraProvider>
   );
 }
 ```

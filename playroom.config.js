@@ -4,6 +4,7 @@ module.exports = {
   outputPath: './site/out/playroom',
   title: 'manifest UI',
   snippets: './playroom/snippets.ts',
+  themes: './playroom/themes.ts',
   frameComponent: './playroom/FrameComponent.tsx',
   scope: './playroom/useScope.ts',
   widths: [320, 768, 1024, 1400],
