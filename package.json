@@ -10,6 +10,8 @@
     "start": "manypkg run site start",
     "site:dev": "manypkg run site dev",
     "site:build": "manypkg run site build",
+    "playroom:start": "playroom start",
+    "playroom:build": "playroom build",
     "format": "prettier --write .",
     "lint": "manypkg check && prettier --check . && tsc",
     "release": "yarn build && changeset publish",
@@ -48,16 +50,20 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.24",
+    "@types/lodash": "^4.14.173",
     "@types/node": "^16.9.2",
     "@types/react": "17.0.14",
     "@types/react-dom": "^17.0.9",
+    "@types/webpack-env": "^1.16.2",
     "concurrently": "^6.2.1",
     "jest": "^27.2.0",
+    "lodash": "^4.17.21",
+    "playroom": "^0.27.4",
     "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.1.0",
-    "typescript": "4.3.5"
+    "typescript": "^4.4.3"
   }
 }
