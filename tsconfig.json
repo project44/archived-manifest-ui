@@ -14,6 +14,7 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "jsx": "react",
+    "allowJs": true,
     "incremental": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -22,7 +23,7 @@
     "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules", "**/dist/**"],
-  "include": ["./jest.setup.ts", "packages/**/*", "site/**/*"],
+  "include": ["./jest.setup.ts", "packages/**/*", "playroom/**/*", "site/**/*"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",
