@@ -1,4 +1,6 @@
 dist
+out
 node_modules
 coverage
 .next
+.netlify
