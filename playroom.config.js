@@ -2,7 +2,7 @@ module.exports = {
   baseUrl: '/playroom/',
   components: './playroom/components.ts',
   outputPath: './site/out/playroom',
-  title: 'Newton UI',
+  title: 'manifest UI',
   snippets: './playroom/snippets.ts',
   frameComponent: './playroom/FrameComponent.tsx',
   scope: './playroom/useScope.ts',
