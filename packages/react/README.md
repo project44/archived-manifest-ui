@@ -1,30 +1,30 @@
-# @newton-ui/react
+# @manifest-ui/react
 
-**@newton-ui/react** is a React implementation of the design system for [project44](https://stitches.dev) with a best-in-class developer experience.
+**@manifest-ui/react** is a React implementation of the design system for [project44](https://stitches.dev) with a best-in-class developer experience.
 
 <p><br /></p>
 
 ```sh
 # with npm
-npm install @newton-ui/react
+npm install @manifest-ui/react
 
 # with yarn
-yarn add @newton-ui/react
+yarn add @manifest-ui/react
 ```
 
 <p><br /></p>
 
-<a href="https://codesandbox.io/s/newton-ui-e8z8c"><img src="https://img.shields.io/badge/-Edit_in_Sandbox-2b354f?logo=codesandbox&style=flat-square" alt="open in codesandbox" valign="middle" align="right"></a>
+<a href="https://codesandbox.io/s/manifest-ui-e8z8c"><img src="https://img.shields.io/badge/-Edit_in_Sandbox-2b354f?logo=codesandbox&style=flat-square" alt="open in codesandbox" valign="middle" align="right"></a>
 
 <br />
 
 ```jsx
-import { Box } from '@newton-ui/react';
+import { Box } from '@manifest-ui/react';
 
 export default function App() {
   return (
     <Box className="App">
-      <h1>Hello Newton UI</h1>
+      <h1>Hello Manifest UI</h1>
       <h2>Start editing to see some magic happen!</h2>
     </Box>
   );
