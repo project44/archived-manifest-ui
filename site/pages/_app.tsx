@@ -1,14 +1,14 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 import { ChakraProvider } from '@chakra-ui/react';
-import momentumTheme from '@manifest-ui/themes/momentum';
+import vocTheme from '@manifest-ui/themes/voc';
 
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={momentumTheme}>
-      <Component {...pageProps} />;
+    <ChakraProvider theme={vocTheme}>
+      <Component {...pageProps} />
     </ChakraProvider>
   );
 }

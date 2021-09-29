@@ -1,0 +1,4 @@
+{
+  "main": "dist/manifest-ui-themes-voc.cjs.js",
+  "module": "dist/manifest-ui-themes-voc.esm.js"
+}
