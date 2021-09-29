@@ -7,12 +7,14 @@
   "files": [
     "/dist",
     "momentum",
+    "voc",
     "wireframe"
   ],
   "preconstruct": {
     "entrypoints": [
       "index.ts",
       "momentum/index.ts",
+      "voc/index.ts",
       "wireframe/index.ts"
     ]
   },
