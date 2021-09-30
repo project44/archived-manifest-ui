@@ -6,6 +6,7 @@ import vocTheme from '@manifest-ui/themes/voc';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  console.log(vocTheme);
   return (
     <ChakraProvider theme={vocTheme}>
       <Component {...pageProps} />
