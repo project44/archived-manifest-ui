@@ -60,8 +60,8 @@ link.
 
 You may wish to use our starters to help you get going:
 
-- JavaScript Starter: https://codesandbox.io/s/manifest-ui-javascript-lzzg9
-- TypeScript Starter: https://codesandbox.io/s/manifest-ui-typescript-pomi8
+- JavaScript Starter: https://codesandbox.io/s/manifest-ui-javascript-1i78l
+- TypeScript Starter: https://codesandbox.io/s/manifest-ui-typescript-u5hcs
 
 ## Proposing new or changed API?
 
