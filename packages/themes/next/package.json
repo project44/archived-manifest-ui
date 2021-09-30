@@ -1,0 +1,4 @@
+{
+  "main": "dist/manifest-ui-themes-next.cjs.js",
+  "module": "dist/manifest-ui-themes-next.esm.js"
+}

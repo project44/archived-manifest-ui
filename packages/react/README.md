@@ -6,11 +6,13 @@
 
 ```sh
 # with npm
-npm install @manifest-ui/react @manifest-ui/themes
+npm install @manifest-ui/react
 
 # with yarn
-yarn add @manifest-ui/react @manifest-ui/themes
+yarn add @manifest-ui/react
 ```
+
+You must also have Chakra UI and all peer dependencies installed for your project as well. See the [installation instructions](https://chakra-ui.com/docs/getting-started#installation) of the Chakra UI docs.
 
 <p><br /></p>
 
@@ -25,7 +27,7 @@ import wireframeTheme from '@manifest-ui/themes/wireframe';
 export default function App() {
   return (
     <ManifestProvider theme={wireframeTheme}>
-      <Box className="App">
+      <Box p={8} bg="blue.100">
         <h1>Hello Manifest UI</h1>
         <h2>Start editing to see some magic happen!</h2>
       </Box>
