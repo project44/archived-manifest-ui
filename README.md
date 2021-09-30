@@ -30,14 +30,14 @@ Our documentation site lives at [zeroheight](https://zeroheight.com/27d9b4710). 
 
 ## Installation
 
-Install `@manifest-ui/react` in your project with your package manager of choice:
+Install `@manifest-ui/themes` and necessary peer dependencies in your project with your package manager of choice:
 
 ```
-npm install @manifest-ui/react
+npm install @manifest-ui/themes @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 
 // or
 
-yarn add @manifest-ui/react
+yarn add @manifest-ui/themes @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 ```
 
 ## Usage
@@ -64,12 +64,12 @@ Now you can start using components like so!:
 import { Button } from '@chakra-ui/react';
 
 function Example() {
-  return <Button>I just consumed some ⚡️Chakra!</Button>;
+  return <Button>Track shipment</Button>;
 }
 ```
 
 ## Contributing
 
-We love collaborating with folks inside and outside of GitHub and welcome contributions!
+We love collaborating with folks inside and outside of project44 and welcome contributions!
 
 > 👉 See the [contributing docs](https://github.com/project44/manifest-ui/blob/main/CONTRIBUTING.md) for more info on code style, testing, coverage, and troubleshooting

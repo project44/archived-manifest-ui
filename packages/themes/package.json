@@ -6,14 +6,14 @@
   "module": "dist/manifest-ui-themes.esm.js",
   "files": [
     "/dist",
-    "momentum",
+    "next",
     "voc",
     "wireframe"
   ],
   "preconstruct": {
     "entrypoints": [
       "index.ts",
-      "momentum/index.ts",
+      "next/index.ts",
       "voc/index.ts",
       "wireframe/index.ts"
     ]
