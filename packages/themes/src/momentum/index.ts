@@ -1,22 +1,14 @@
-import { extendTheme } from '@chakra-ui/react';
+import merge from 'deepmerge';
 
-// Global style overrides
+import base from '../base';
+import components from './components';
+import foundations from './foundations';
 import styles from './styles';
 
-// Foundational style overrides
-import borders from './foundations/borders';
-import colors from './foundations/colors';
-
-// Component style overrides
-import Button from './components/button';
-
 const overrides = {
+  ...foundations,
+  components,
   styles,
-  borders,
-  colors,
-  components: {
-    Button,
-  },
 };
 
-export default extendTheme(overrides);
+export default merge(base, overrides);

@@ -5,7 +5,6 @@
   "license": "MIT",
   "scripts": {
     "build": "preconstruct build",
-    "dev": "concurrently \"yarn watch\" \"yarn site:dev\"",
     "watch": "preconstruct watch",
     "start": "manypkg run site start",
     "site:dev": "manypkg run site dev",
@@ -56,7 +55,6 @@
     "@types/react": "17.0.14",
     "@types/react-dom": "^17.0.9",
     "@types/webpack-env": "^1.16.2",
-    "concurrently": "^6.2.1",
     "jest": "^27.2.0",
     "lodash": "^4.17.21",
     "playroom": "^0.27.4",
