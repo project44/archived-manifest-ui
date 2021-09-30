@@ -40,12 +40,36 @@ npm install @manifest-ui/react
 yarn add @manifest-ui/react
 ```
 
-## Roadmap
+## Usage
 
-You can track our roadmap progress in the [Roadmap Project Board](https://github.com/project44/manifest-ui/projects/1) adn see more detail in the [quarterly planning Discussions](https://github.com/project44/manifest/discussions?discussions_q=%5BRoadmap%5D).
+To start using the theme and components, please follow these steps:
+
+Wrap your application with the `ChakraProvider` provided by **@chakra-ui/react**. Then apply a theme from **@manifest-ui/themes**.
+
+```jsx
+import { ChakraProvider } from '@chakra-ui/react';
+import wireframeTheme from '@manifest-ui/themes/wireframe';
+
+// Do this at the root of your application
+function App({ children }) {
+  return <ChakraProvider theme={wireframeTheme}>{children}</ChakraProvider>;
+}
+```
+
+Optionally, you can wrap your application with the `ColorModeProvider` so you can toggle between light and dark mode within your app.
+
+Now you can start using components like so!:
+
+```jsx
+import { Button } from '@chakra-ui/react';
+
+function Example() {
+  return <Button>I just consumed some ⚡️Chakra!</Button>;
+}
+```
 
 ## Contributing
 
 We love collaborating with folks inside and outside of GitHub and welcome contributions!
 
-> 👉 See the [contributing docs](https://github.com/project44/manifest/blob/main/CONTRIBUTING.md) for more info on code style, testing, coverage, and troubleshooting
+> 👉 See the [contributing docs](https://github.com/project44/manifest-ui/blob/main/CONTRIBUTING.md) for more info on code style, testing, coverage, and troubleshooting
