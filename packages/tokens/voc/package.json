@@ -1,0 +1,4 @@
+{
+  "main": "dist/manifest-ui-tokens-voc.cjs.js",
+  "module": "dist/manifest-ui-tokens-voc.esm.js"
+}

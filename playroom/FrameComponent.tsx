@@ -1,5 +1,6 @@
 import React from 'react';
-import { ChakraTheme, ManifestProvider } from './components';
+import { ChakraTheme } from '@chakra-ui/react';
+import { ManifestProvider } from './components';
 import { PlayroomStateProvider } from './playroomState';
 
 interface Props {

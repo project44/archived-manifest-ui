@@ -6,13 +6,13 @@
 
 ```sh
 # with npm
-npm install @manifest-ui/react
+npm install @manifest-ui/react @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 
 # with yarn
-yarn add @manifest-ui/react
+yarn add @manifest-ui/react @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 ```
 
-You must also have Chakra UI and all peer dependencies installed for your project as well. See the [installation instructions](https://chakra-ui.com/docs/getting-started#installation) of the Chakra UI docs.
+Note that you must have Chakra UI and all peer dependencies installed for your project as well. See the [installation instructions](https://chakra-ui.com/docs/getting-started#installation) of the Chakra UI docs.
 
 <p><br /></p>
 
@@ -21,7 +21,8 @@ You must also have Chakra UI and all peer dependencies installed for your projec
 <br />
 
 ```jsx
-import { Box, ManifestProvider } from '@manifest-ui/react';
+import { Box } from '@chakra-ui/react';
+import { ManifestProvider } from '@manifest-ui/react';
 import wireframeTheme from '@manifest-ui/themes/wireframe';
 
 export default function App() {

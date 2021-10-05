@@ -1,6 +1,5 @@
-import merge from 'deepmerge';
+import { extendTheme } from '@chakra-ui/react';
 
-import base from '../base';
 import components from './components';
 import foundations from './foundations';
 import styles from './styles';
@@ -11,4 +10,4 @@ const overrides = {
   styles,
 };
 
-export default merge(base, overrides);
+export default extendTheme(overrides);
