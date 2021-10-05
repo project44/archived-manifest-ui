@@ -1,0 +1,28 @@
+{
+  "name": "@manifest-ui/tokens",
+  "version": "0.0.0",
+  "description": "Typography, spacing, and color tokens for project44's design system",
+  "main": "dist/manifest-ui-tokens.cjs.js",
+  "module": "dist/manifest-ui-tokens.esm.js",
+  "files": [
+    "/dist",
+    "/next",
+    "/voc",
+    "/wireframe"
+  ],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts",
+      "next/index.ts",
+      "voc/index.ts",
+      "wireframe/index.ts"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/project44/manifest-ui.git",
+    "directory": "packages/tokens"
+  },
+  "author": "project44",
+  "license": "MIT"
+}

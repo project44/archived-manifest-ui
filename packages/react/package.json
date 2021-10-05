@@ -14,6 +14,10 @@
   },
   "author": "project44",
   "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/utils": "^1.8.2",
+    "@manifest-ui/themes": "^0.0.0"
+  },
   "devDependencies": {
     "@chakra-ui/react": "^1.6.8",
     "@emotion/react": "^11.4.1",
