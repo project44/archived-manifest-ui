@@ -1,12 +1,12 @@
 import React from 'react';
 import { ChakraProvider, ChakraProviderProps } from '@chakra-ui/react';
 import { __DEV__ } from '@chakra-ui/utils';
-import defaultTheme from '@manifest-ui/themes/voc';
+import { vocTheme } from '@manifest-ui/themes';
 
 export interface ManifestProviderProps extends ChakraProviderProps {}
 
 export const ManifestProvider = (props: ManifestProviderProps) => {
-  return <ChakraProvider theme={defaultTheme} {...props} />;
+  return <ChakraProvider theme={vocTheme} {...props} />;
 };
 
 if (__DEV__) {

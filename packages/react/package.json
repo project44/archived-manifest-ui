@@ -4,9 +4,13 @@
   "description": "React components for building project44 experiences.",
   "main": "dist/manifest-ui-react.cjs.js",
   "module": "dist/manifest-ui-react.esm.js",
+  "umd:main": "dist/manifest-ui-react.umd.min.js",
   "files": [
     "/dist"
   ],
+  "preconstruct": {
+    "umdName": "ManifestUI"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/project44/manifest-ui.git",
@@ -15,18 +19,17 @@
   "author": "project44",
   "license": "MIT",
   "dependencies": {
+    "@chakra-ui/react": "^1.6.8",
     "@chakra-ui/utils": "^1.8.2",
     "@manifest-ui/themes": "^0.0.0"
   },
   "devDependencies": {
-    "@chakra-ui/react": "^1.6.8",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",
     "react": "^17.0.2"
   },
   "peerDependencies": {
-    "@chakra-ui/react": ">=1.6.8",
     "@emotion/react": ">=11.0.0",
     "@emotion/styled": ">=11.0.0",
     "framer-motion": ">=4.0.0",
