@@ -28,7 +28,11 @@
   "preconstruct": {
     "packages": [
       "packages/*"
-    ]
+    ],
+    "globals": {
+      "react": "React",
+      "framer-motion": "FramerMotion"
+    }
   },
   "volta": {
     "node": "14.17.6",
