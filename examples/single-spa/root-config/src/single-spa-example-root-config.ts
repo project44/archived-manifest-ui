@@ -1,8 +1,8 @@
 import { registerApplication, start } from 'single-spa';
 
 registerApplication({
-  name: '@manifest-ui/app-parcel',
-  app: () => System.import('@manifest-ui/app-parcel'),
+  name: '@single-spa-example/app-parcel',
+  app: () => System.import('@single-spa-example/app-parcel'),
   activeWhen: ['/'],
 });
 

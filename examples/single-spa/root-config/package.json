@@ -1,5 +1,5 @@
 {
-  "name": "@manifest-ui/root-config",
+  "name": "@single-spa-example/root-config",
   "scripts": {
     "start": "webpack serve --port 9000 --env isLocal",
     "lint": "eslint src --ext js,ts,tsx",
@@ -43,5 +43,5 @@
     "single-spa": "^5.9.3",
     "@types/webpack-env": "^1.16.2"
   },
-  "types": "dist/manifest-ui-root-config.d.ts"
+  "types": "dist/single-spa-example-root-config.d.ts"
 }
