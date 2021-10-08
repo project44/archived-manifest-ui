@@ -3,19 +3,15 @@ const singleSpaDefaults = require('webpack-config-single-spa-react-ts');
 
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
-    orgName: 'manifest-ui',
+    orgName: 'single-spa-example',
     projectName: 'app-parcel',
     webpackConfigEnv,
     argv,
   });
 
-  return merge(defaultConfig, {
-    externals: [
-      '@manifest-ui/react',
-      '@chakra-ui/react',
-      '@emotion/react',
-      '@emotion/styled',
-      'framer-motion',
-    ],
+  const config = merge(defaultConfig, {
+    externals: ['@emotion/react', '@emotion/styled', 'framer-motion'],
   });
+
+  return config;
 };

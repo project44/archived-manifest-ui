@@ -1,5 +1,5 @@
 {
-  "name": "@manifest-ui/app-parcel",
+  "name": "@single-spa-example/app-parcel",
   "scripts": {
     "start": "webpack serve --port 8500",
     "start:standalone": "webpack serve --env standalone",
@@ -48,20 +48,19 @@
     "webpack-config-single-spa-react-ts": "^4.0.0"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.6.8",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@manifest-ui/react": "*",
-    "framer-motion": "^4.1.17",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "single-spa-react": "^4.3.1",
     "@types/jest": "^27.0.1",
     "@types/systemjs": "^6.1.1",
     "@types/webpack-env": "^1.16.2",
-    "single-spa": "^5.9.3",
     "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9"
+    "@types/react-dom": "^17.0.9",
+    "framer-motion": "^4.1.17",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "single-spa": "^5.9.3",
+    "single-spa-react": "^4.3.1"
   },
-  "types": "dist/manifest-ui-app-parcel.d.ts"
+  "types": "dist/single-spa-example-app-parcel.d.ts"
 }

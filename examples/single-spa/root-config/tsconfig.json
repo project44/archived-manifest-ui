@@ -1,6 +1,6 @@
 {
   "extends": "ts-config-single-spa",
-  "files": ["src/manifest-ui-root-config.ts"],
+  "files": ["src/single-spa-example-root-config.ts"],
   "compilerOptions": {
     "declarationDir": "dist"
   },
