@@ -16,6 +16,7 @@
     "format": "prettier --write .",
     "lint": "manypkg check && prettier --check . && tsc",
     "release": "yarn build && changeset publish",
+    "size": "yarn build && size-limit",
     "test": "yarn test:jest",
     "test:jest": "echo 'No tests yet!'",
     "version": "changeset version && yarn"
@@ -28,11 +29,7 @@
   "preconstruct": {
     "packages": [
       "packages/*"
-    ],
-    "globals": {
-      "react": "React",
-      "framer-motion": "FramerMotion"
-    }
+    ]
   },
   "volta": {
     "node": "14.17.6",
@@ -43,6 +40,14 @@
     "tabWidth": 2,
     "trailingComma": "all"
   },
+  "size-limit": [
+    {
+      "path": "packages/react/dist/manifest-ui-react.cjs.js"
+    },
+    {
+      "path": "packages/react/dist/manifest-ui-react.esm.js"
+    }
+  ],
   "dependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
@@ -52,6 +57,7 @@
     "@changesets/cli": "^2.16.0",
     "@manypkg/cli": "^0.18.0",
     "@preconstruct/cli": "^2.1.4",
+    "@size-limit/preset-small-lib": "^6.0.2",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.24",
@@ -66,6 +72,7 @@
     "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "size-limit": "^6.0.1",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.1.0",
     "typescript": "^4.4.3"
