@@ -50,7 +50,7 @@
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@manifest-ui/react": "*",
+    "@manifest-ui/react": "latest",
     "@types/jest": "^27.0.1",
     "@types/systemjs": "^6.1.1",
     "@types/webpack-env": "^1.16.2",
