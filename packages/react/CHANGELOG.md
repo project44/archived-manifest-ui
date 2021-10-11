@@ -1,5 +1,11 @@
 # @manifest-ui/react
 
+## 0.0.3
+
+### Patch Changes
+
+- [#25](https://github.com/project44/manifest-ui/pull/25) [`c9c525b`](https://github.com/project44/manifest-ui/commit/c9c525bb149bed5bb2cfa66e82a4e961a6a73905) Thanks [@samrose3](https://github.com/samrose3)! - Mark sideEffects as false to support tree shaking
+
 ## 0.0.2
 
 ### Patch Changes
