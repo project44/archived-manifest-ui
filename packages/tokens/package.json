@@ -4,6 +4,12 @@
   "description": "Typography, spacing, and color tokens for project44's design system",
   "main": "dist/manifest-ui-tokens.cjs.js",
   "module": "dist/manifest-ui-tokens.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/manifest-ui-tokens.cjs.js",
+      "default": "./dist/manifest-ui-tokens.esm.js"
+    }
+  },
   "files": [
     "/dist",
     "/next",

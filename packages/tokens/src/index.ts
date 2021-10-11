@@ -1,1 +1,1 @@
-export default {};
+export * as voc from './voc';
