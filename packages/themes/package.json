@@ -4,6 +4,12 @@
   "description": "Chakra themes for building project44 experiences.",
   "main": "dist/manifest-ui-themes.cjs.js",
   "module": "dist/manifest-ui-themes.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/manifest-ui-themes.cjs.js",
+      "default": "./dist/manifest-ui-themes.esm.js"
+    }
+  },
   "files": [
     "/dist",
     "next",
