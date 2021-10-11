@@ -1,5 +1,11 @@
 # @manifest-ui/react
 
+## 0.0.4
+
+### Patch Changes
+
+- [#30](https://github.com/project44/manifest-ui/pull/30) [`de69ba8`](https://github.com/project44/manifest-ui/commit/de69ba8c12dd3063e8081c6e8f85520b2e74e75d) Thanks [@samrose3](https://github.com/samrose3)! - Improve ManifestProvider performance
+
 ## 0.0.3
 
 ### Patch Changes
