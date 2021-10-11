@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/tokens",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Typography, spacing, and color tokens for project44's design system",
   "main": "dist/manifest-ui-tokens.cjs.js",
   "module": "dist/manifest-ui-tokens.esm.js",
