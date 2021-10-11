@@ -1,7 +1,7 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { Box, Button } from '@chakra-ui/react';
+import { Box, Button } from '@manifest-ui/react';
 
 const Home: NextPage = () => {
   return (

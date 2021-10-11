@@ -4,13 +4,16 @@
   "description": "React components for building project44 experiences.",
   "main": "dist/manifest-ui-react.cjs.js",
   "module": "dist/manifest-ui-react.esm.js",
-  "umd:main": "dist/manifest-ui-react.umd.min.js",
+  "exports": {
+    ".": {
+      "require": "./dist/manifest-ui-react.cjs.js",
+      "default": "./dist/manifest-ui-react.esm.js"
+    }
+  },
   "files": [
     "/dist"
   ],
-  "preconstruct": {
-    "umdName": "ManifestUI"
-  },
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/project44/manifest-ui.git",
@@ -27,12 +30,14 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "framer-motion": "^4.1.17",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
-    "@emotion/react": ">=11.0.0",
-    "@emotion/styled": ">=11.0.0",
-    "framer-motion": ">=4.0.0",
-    "react": ">=16.8.6"
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "framer-motion": "3.x || 4.x",
+    "react": ">=16.8.6",
+    "react-dom": ">=16.8.6"
   }
 }
