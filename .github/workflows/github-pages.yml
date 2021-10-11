@@ -20,7 +20,10 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
 
-      - name: Build Playroom
+      - name: Build Packages
+        run: yarn build
+
+      - name: Build Site
         run: yarn site:build
 
       - name: Publish generated content to GitHub Pages
