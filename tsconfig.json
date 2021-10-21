@@ -1,34 +1,3 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
-    "lib": ["dom", "esnext"],
-    "noEmit": true,
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strict": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "jsx": "react",
-    "allowJs": true,
-    "incremental": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "isolatedModules": true,
-    "downlevelIteration": true,
-    "allowSyntheticDefaultImports": true
-  },
-  "exclude": ["node_modules", "**/dist/**"],
-  "include": ["./jest.setup.ts", "packages/**/*", "playroom/**/*", "site/**/*"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS",
-      "resolveJsonModule": true,
-      "noImplicitAny": false
-    }
-  }
+  "extends": "./tsconfig.base.json"
 }
