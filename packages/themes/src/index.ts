@@ -1,3 +1,3 @@
-export { default as nextTheme } from './next';
-export { default as vocTheme } from './voc';
-export { default as wireframeTheme } from './wireframe';
+export { default as next } from './next';
+export { default as voc } from './voc';
+export { default as wireframe } from './wireframe';
