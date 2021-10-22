@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '.storybook/**'
+      - 'packages/**/.tsx?'
+      - 'playroom/**'
+      - 'playroom.config.js'
 
 jobs:
   publish:
