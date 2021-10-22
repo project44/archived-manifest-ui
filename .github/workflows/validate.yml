@@ -1,6 +1,6 @@
 name: Validate
 
-on: [push, pull_request]
+on: push
 
 jobs:
   test:
@@ -28,3 +28,10 @@ jobs:
 
       - name: Test
         run: yarn test:jest
+
+      - name: Chromatic
+        run: |
+          yarn build-storybook
+          yarn chromatic --storybook-build-dir dist-storybook --exit-zero-on-changes --auto-accept-changes main
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.MANIFEST_UI_CHROMATIC_PROJECT_TOKEN }}
