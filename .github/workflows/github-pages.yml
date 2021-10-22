@@ -31,7 +31,7 @@ jobs:
 
       - name: Build Playroom
         run: yarn playroom:build
-g
+
       - name: Publish generated content to GitHub Pages
         uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
         with:
