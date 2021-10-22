@@ -1,4 +1,0 @@
-{
-  "main": "dist/manifest-ui-tokens-next.cjs.js",
-  "module": "dist/manifest-ui-tokens-next.esm.js"
-}
