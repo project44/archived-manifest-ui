@@ -11,7 +11,7 @@
     "site:dev": "manypkg run site dev",
     "site:build": "manypkg run site build",
     "analyze": "manypkg run site analyze",
-    "playroom:dev": "playroom start",
+    "playroom:start": "playroom start",
     "playroom:build": "playroom build",
     "format": "prettier --write .",
     "lint": "manypkg check && prettier --check . && tsc",
@@ -33,7 +33,7 @@
   },
   "volta": {
     "node": "14.17.6",
-    "yarn": "1.22.11"
+    "yarn": "1.22.15"
   },
   "prettier": {
     "singleQuote": true,
