@@ -4,7 +4,7 @@
 
 <h1 align="center">Manifest UI</h1>
 
-<p align="center">Design System tokens and components for <a href="https://www.project44.com/" >project44</a>.</p>
+<p align="center">Design System themes and components for <a href="https://www.project44.com/" >project44</a>.</p>
 
 <p align="center">
   <a aria-label="npm package" href="https://www.npmjs.com/package/@manifest-ui/react">

@@ -7,20 +7,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gen:theme-typings": "chakra-cli tokens ../packages/themes/src/index.ts",
+    "postinstall": "npm run gen:theme-typings"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.6.8",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@manifest-ui/react": "*",
+    "@manifest-ui/themes": "*",
     "@manifest-ui/tokens": "*",
     "framer-motion": "^4.1.17",
     "next": "^11.1.2",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
+    "@chakra-ui/cli": "^1.5.3",
     "@netlify/plugin-nextjs": "^3.9.0",
     "@next/bundle-analyzer": "^11.1.2"
   }
