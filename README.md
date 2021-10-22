@@ -47,12 +47,11 @@ To start using the theme and components, please follow these steps:
 Wrap your application with the `ChakraProvider` provided by **@chakra-ui/react**. Then apply a theme from **@manifest-ui/themes**.
 
 ```jsx
-import { ChakraProvider } from '@chakra-ui/react';
-import wireframeTheme from '@manifest-ui/themes/wireframe';
+import { ChakraProvider } from '@manifest-ui/react';
 
 // Do this at the root of your application
 function App({ children }) {
-  return <ChakraProvider theme={wireframeTheme}>{children}</ChakraProvider>;
+  return <ChakraProvider>{children}</ChakraProvider>;
 }
 ```
 
@@ -61,7 +60,7 @@ Optionally, you can wrap your application with the `ColorModeProvider` so you ca
 Now you can start using components like so!:
 
 ```jsx
-import { Button } from '@chakra-ui/react';
+import { Button } from '@manifest-ui/react';
 
 function Example() {
   return <Button>Track shipment</Button>;

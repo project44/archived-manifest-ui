@@ -21,12 +21,12 @@ You must also have Chakra UI and all peer dependencies installed for your projec
 <br />
 
 ```jsx
-import { Box, ChakraProvider } from '@chakra-ui/react';
-import wireframeTheme from '@manifest-ui/themes/wireframe';
+import { Box, ManifestProvider } from '@manifest-ui/react';
+import wireframe from '@manifest-ui/themes/wireframe';
 
 export default function App() {
   return (
-    <ChakraProvider theme={wireframeTheme}>
+    <ChakraProvider theme={wireframe}>
       <Box p={8} bg="blue.100">
         <h1>Hello Manifest UI</h1>
         <h2>Start editing to see some magic happen!</h2>
