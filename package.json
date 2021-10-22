@@ -10,10 +10,10 @@
     "clean:emotion-types": "rimraf node_modules/@emotion/core/types",
     "postinstall": "yarn clean:emotion-types",
     "start": "manypkg run site start",
-    "site:dev": "manypkg run site dev",
+    "site": "manypkg run site dev",
     "site:build": "manypkg run site build",
     "analyze": "manypkg run site analyze",
-    "playroom:start": "playroom start",
+    "playroom": "playroom start",
     "playroom:build": "playroom build",
     "format": "prettier --write .",
     "lint": "manypkg check && prettier --check . && tsc",
@@ -23,7 +23,7 @@
     "test:jest": "echo 'No tests yet!'",
     "version": "changeset version && yarn",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook:build": "build-storybook -o ./dist"
   },
   "workspaces": [
     "examples/*",

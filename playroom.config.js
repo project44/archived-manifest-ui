@@ -1,7 +1,9 @@
+const isGitHubPages = Boolean(process.env.IS_GITHUB_PAGES);
+
 module.exports = {
-  baseUrl: '/playroom/',
+  baseUrl: isGitHubPages ? '/manifest-ui/playroom/' : '/playroom/',
   components: './playroom/components.ts',
-  outputPath: './dist',
+  outputPath: './dist/playroom',
   title: 'manifest UI',
   snippets: './playroom/snippets.ts',
   themes: './playroom/themes.ts',
