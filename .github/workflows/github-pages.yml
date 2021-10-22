@@ -8,6 +8,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      NODE_OPTIONS: --max_old_space_size=4096
+      IS_GITHUB_PAGES: true
     steps:
       - name: Check out
         uses: actions/checkout@main
@@ -23,11 +26,12 @@ jobs:
       - name: Build Packages
         run: yarn build
 
-      - name: Build Site
-        run: yarn playroom:build
-        env:
-          NODE_OPTIONS: --max_old_space_size=4096
+      - name: Build Storybook
+        run: yarn storybook:build
 
+      - name: Build Playroom
+        run: yarn playroom:build
+g
       - name: Publish generated content to GitHub Pages
         uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
         with:
