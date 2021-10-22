@@ -1,4 +1,0 @@
-{
-  "main": "dist/manifest-ui-tokens-wireframe.cjs.js",
-  "module": "dist/manifest-ui-tokens-wireframe.esm.js"
-}
