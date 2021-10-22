@@ -1,5 +1,3 @@
-import { StyleFunctionProps } from '@chakra-ui/theme-tools';
-
 export default {
   baseStyle: {},
   sizes: {},

@@ -25,6 +25,8 @@ jobs:
 
       - name: Build Site
         run: yarn playroom:build
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
 
       - name: Publish generated content to GitHub Pages
         uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
