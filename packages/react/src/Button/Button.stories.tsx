@@ -277,7 +277,7 @@ export const withMotion = () => {
   return (
     <>
       <Button onClick={() => setBinary((binary) => !binary)}>
-        Toggle binary state: {String(binary)}
+        Toggle state: {String(binary)}
       </Button>
       <MotionButton
         {...motionConfig}
