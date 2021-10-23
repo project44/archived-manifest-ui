@@ -21,7 +21,7 @@ You must also have Chakra UI and all peer dependencies installed for your projec
 <br />
 
 ```jsx
-import { Box, ManifestProvider } from '@manifest-ui/react';
+import { Box, ThemeProvider } from '@manifest-ui/react';
 import wireframe from '@manifest-ui/themes/wireframe';
 
 export default function App() {

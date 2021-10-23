@@ -30,14 +30,24 @@ Our documentation site lives at [zeroheight](https://zeroheight.com/27d9b4710). 
 
 ## Installation
 
-Install `@manifest-ui/themes` and necessary peer dependencies in your project with your package manager of choice:
+Install `@manifest-ui/react` and necessary peer dependencies in your project with your package manager of choice:
+
+```sh
+# with npm
+npm install @manifest-ui/react
+
+# with yarn
+yarn add @manifest-ui/react
+```
+
+Note that you must have Chakra UI and all peer dependencies installed for your project as well. See the [installation instructions](https://chakra-ui.com/docs/getting-started#installation) of the Chakra UI docs.
 
 ```
-npm install @manifest-ui/themes @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
+# npm with peer dependencies
+npm install @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 
-// or
-
-yarn add @manifest-ui/themes @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
+# yarn with peer dependencies
+yarn add @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 ```
 
 ## Usage

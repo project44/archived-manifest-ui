@@ -3,7 +3,7 @@ import { Story, StoryContext } from '@storybook/react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 import {
-  ManifestProvider,
+  ThemeProvider,
   extendTheme,
   Flex,
   IconButton,
@@ -54,12 +54,12 @@ const withManifest = (StoryFn: Story, context: StoryContext) => {
   }, [dir]);
 
   return (
-    <ManifestProvider theme={extendTheme({ direction: dir }, theme)}>
+    <ThemeProvider theme={extendTheme({ direction: dir }, theme)}>
       <div dir={dir} id="story-wrapper" style={{ minHeight: '100vh' }}>
         <ColorModeToggleBar />
         <StoryFn />
       </div>
-    </ManifestProvider>
+    </ThemeProvider>
   );
 };
 

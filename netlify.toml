@@ -1,9 +1,0 @@
-[build]
-  command = "yarn build && next build site"
-  publish = "site/out"
-
-[dev]
-  command = "next dev site"
-  
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
