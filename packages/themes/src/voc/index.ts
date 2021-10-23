@@ -7,11 +7,6 @@ import layerStyles from './textStyles';
 import textStyles from './textStyles';
 
 const overrides = {
-  config: {
-    cssVarPrefix: 'manifest',
-    initialColorMode: 'light',
-    useSystemColorMode: true,
-  },
   ...foundations,
   components,
   styles,

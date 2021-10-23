@@ -1,23 +1,8 @@
-# misc
 .DS_Store
 *.pem
-
-# dependencies
 node_modules
-
-# testing
-coverage
-
-# production
 dist
-
-# typescript
+storybook-static/
 tsconfig.tsbuildinfo
-
-# log
+*.local
 *.log
-yarn-debug.log*
-yarn-error.log*
-
-# Local Netlify folder
-.netlify

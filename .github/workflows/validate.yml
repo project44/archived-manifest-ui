@@ -10,10 +10,12 @@ jobs:
       CI: true
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js 14.x
-        uses: actions/setup-node@main
+        uses: actions/setup-node@v2
         with:
           node-version: 14.x
 
@@ -26,10 +28,12 @@ jobs:
       - name: Lint
         run: yarn lint
 
-      - name: Test
-        run: yarn test:jest
-
       - name: Chromatic
-        run: echo "Run Chromatic when ready"
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.MANIFEST_UI_CHROMATIC_PROJECT_TOKEN }}
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.MANIFEST_UI_GITHUB_TOKEN }}
+          projectToken: ${{ secrets.MANIFEST_UI_CHROMATIC_PROJECT_TOKEN }}
+          buildScriptName: storybook:build
+          autoAcceptChanges: main
+          exitZeroOnChanges: true
+          onlyChanged: true

@@ -1,43 +1,40 @@
-name: Publish to GitHub Pages
+name: Playroom
 
 on:
   push:
     branches:
       - main
     paths:
-      - '.storybook/**'
       - 'packages/**/.tsx?'
-      - 'playroom/**'
+      - '.playroom/**'
       - 'playroom.config.js'
 
 jobs:
-  publish:
+  playroom:
+    name: Build & deploy Playroom
     runs-on: ubuntu-latest
     env:
       NODE_OPTIONS: --max_old_space_size=4096
       IS_GITHUB_PAGES: true
     steps:
       - name: Check out
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
 
       - name: Setup Node.js 14.x
-        uses: actions/setup-node@main
+        uses: actions/setup-node@v2
         with:
           node-version: 14.x
 
       - name: Install Dependencies
         run: yarn --immutable
 
-      - name: Build Packages
+      - name: Build
         run: yarn build
-
-      - name: Build Storybook
-        run: yarn storybook:build
 
       - name: Build Playroom
         run: yarn playroom:build
 
-      - name: Publish generated content to GitHub Pages
+      - name: Publish to GitHub Pages
         uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
         with:
           dir: ./dist

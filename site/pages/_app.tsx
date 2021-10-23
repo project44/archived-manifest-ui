@@ -1,13 +1,22 @@
 import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
-import { ManifestProvider } from '@manifest-ui/react';
-
-import theme from '../theme';
+import { ThemeProvider } from '@manifest-ui/react';
+import { Global } from '@emotion/react';
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ManifestProvider theme={theme}>
+    <ThemeProvider>
+      <Global
+        styles={{
+          'html, body': {
+            height: '100%',
+          },
+          '#__next': {
+            height: '100%',
+          },
+        }}
+      />
       <Head>
         <title>project 44 | Manifest UI</title>
         <meta
@@ -27,7 +36,7 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
-    </ManifestProvider>
+    </ThemeProvider>
   );
 }
 export default App;

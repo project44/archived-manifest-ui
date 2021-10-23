@@ -1,22 +1,11 @@
-const isGitHubPages = Boolean(process.env.IS_GITHUB_PAGES);
-
 module.exports = {
-  baseUrl: isGitHubPages ? '/manifest-ui/playroom/' : '/playroom/',
-  components: './playroom/components.ts',
-  outputPath: './dist/playroom',
-  title: 'manifest UI',
-  snippets: './playroom/snippets.ts',
-  themes: './playroom/themes.ts',
-  frameComponent: './playroom/FrameComponent.tsx',
-  scope: './playroom/useScope.ts',
-  widths: [320, 768, 1024, 1400],
-  port: 9000,
-  openBrowser: true,
-  exampleCode: `
-    <Box>
-      Hello Playroom!
-    </Box>
-  `,
+  components: './.playroom/components.ts',
+  outputPath: './dist',
+  title: 'Manifest UI',
+  snippets: './.playroom/snippets.ts',
+  themes: './.playroom/themes.ts',
+  frameComponent: './.playroom/FrameComponent.tsx',
+  widths: [320, 768, 1024, 1400, 'calc(100vw - 120px)'],
   webpackConfig: () => ({
     module: {
       rules: [
