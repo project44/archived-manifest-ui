@@ -13,9 +13,10 @@
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
     "format": "prettier --write .",
-    "lint": "manypkg check && prettier --check . && tsc",
+    "lint": "manypkg check && eslint . && prettier --check . && tsc",
     "release": "yarn build && changeset publish",
-    "version": "changeset version && yarn"
+    "version": "changeset version && yarn",
+    "prepare": "husky install"
   },
   "workspaces": [
     "examples/*",
@@ -36,6 +37,14 @@
     "tabWidth": 2,
     "trailingComma": "all"
   },
+  "lint-staged": {
+    "**/*.{ts,tsx,js,jsx}": [
+      "prettier --write"
+    ],
+    "**/*.{md,yml,json}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.6",
@@ -55,10 +64,19 @@
     "@types/node": "^16.9.2",
     "@types/react": "17.0.14",
     "@types/react-dom": "^17.0.9",
-    "@types/webpack-env": "^1.16.2",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
     "babel-loader": "^8.2.3",
     "chromatic": "^6.0.4",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "framer-motion": "^4.1.17",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.4",
     "lodash": "^4.17.21",
     "playroom": "^0.27.7",
     "prettier": "^2.3.2",
