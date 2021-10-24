@@ -31,8 +31,8 @@ jobs:
       - name: Chromatic
         uses: chromaui/action@v1
         with:
-          token: ${{ secrets.MANIFEST_UI_GITHUB_TOKEN }}
-          projectToken: ${{ secrets.MANIFEST_UI_CHROMATIC_PROJECT_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           buildScriptName: storybook:build
           autoAcceptChanges: main
           exitZeroOnChanges: true

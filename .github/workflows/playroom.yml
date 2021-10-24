@@ -39,4 +39,4 @@ jobs:
         with:
           dir: ./dist
           branch: gh-pages
-          token: ${{ secrets.MANIFEST_UI_GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
