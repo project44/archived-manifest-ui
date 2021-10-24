@@ -6,8 +6,6 @@
   "scripts": {
     "pkg": "manypkg run",
     "build": "preconstruct build",
-    "clean:emotion-types": "rimraf node_modules/@emotion/core/types",
-    "postinstall": "yarn clean:emotion-types",
     "site": "manypkg run site dev",
     "site:build": "manypkg run site build",
     "playroom": "playroom start",
