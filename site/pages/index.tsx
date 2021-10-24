@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Container,
-  BoxProps,
-  Flex,
-  useColorModeValue,
-} from '@manifest-ui/react';
+import { Container, BoxProps, Flex } from '@manifest-ui/react';
 import { Meta, Story } from '@storybook/react';
 import startCase from 'lodash/startCase';
 
@@ -51,53 +46,6 @@ const Stories = () => {
   );
 };
 
-const Frame = (props: BoxProps) => (
-  <Container
-    as="main"
-    pb="4"
-    sx={{
-      h1: {
-        mt: '8',
-        mb: '1',
-        fontSize: '3xl',
-        fontWeight: 'bold',
-        lineHeight: '1.2',
-        letterSpacing: 'tight',
-      },
-      h2: {
-        mt: '24',
-        mb: '2',
-        fontSize: '2xl',
-        fontWeight: 'semibold',
-        lineHeight: '1.3',
-        letterSpacing: 'tight',
-      },
-      h3: {
-        mt: '12',
-        mb: '2',
-        fontSize: 'xl',
-        fontWeight: 'semibold',
-        lineHeight: 'shorter',
-        letterSpacing: 'tight',
-      },
-      p: {
-        mt: '5',
-        lineHeight: '1.7',
-      },
-      code: {
-        borderRadius: 'sm',
-        paddingInlineStart: '1',
-        paddingInlineEnd: '1',
-        fontSize: 'sm',
-        paddingTop: '2px',
-        paddingBottom: '2px',
-        whiteSpace: 'nowrap',
-        lineHeight: 'normal',
-        color: useColorModeValue('purple.500', 'purple.200'),
-      },
-    }}
-    {...props}
-  />
-);
+const Frame = (props: BoxProps) => <Container as="main" pb="4" {...props} />;
 
 export default Stories;
