@@ -77,19 +77,15 @@ const Navbar = () => {
         <HStack spacing={3} alignItems="center">
           <DarkMode>
             <InputGroup>
-              <InputLeftElement
-                pointerEvents="none"
-                children={<AiOutlineSearch />}
-              />
+              <InputLeftElement pointerEvents="none">
+                <AiOutlineSearch />
+              </InputLeftElement>
               <Input type="text" variant="filled" placeholder="Search" py={2} />
-              <InputRightElement
-                pointerEvents="none"
-                children={
-                  <Flex as="kbd" color="gray.400" fontSize="sm" pr="2">
-                    ⌘ K
-                  </Flex>
-                }
-              />
+              <InputRightElement pointerEvents="none">
+                <Flex as="kbd" color="gray.400" fontSize="sm" pr="2">
+                  ⌘ K
+                </Flex>
+              </InputRightElement>
             </InputGroup>
           </DarkMode>
 
