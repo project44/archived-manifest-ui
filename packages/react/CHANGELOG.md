@@ -1,5 +1,11 @@
 # @manifest-ui/react
 
+## 0.0.6
+
+### Patch Changes
+
+- [#48](https://github.com/project44/manifest-ui/pull/48) [`b85bcb6`](https://github.com/project44/manifest-ui/commit/b85bcb6bec7c7b26229d7f06eae75476364661ae) Thanks [@samrose3](https://github.com/samrose3)! - Rename ManifestProvider to ThemeProvider
+
 ## 0.0.5
 
 ### Patch Changes
