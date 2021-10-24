@@ -26,12 +26,12 @@ import wireframe from '@manifest-ui/themes/wireframe';
 
 export default function App() {
   return (
-    <ChakraProvider theme={wireframe}>
+    <ThemeProvider theme={wireframe}>
       <Box p={8} bg="blue.100">
         <h1>Hello Manifest UI</h1>
         <h2>Start editing to see some magic happen!</h2>
       </Box>
-    </ChakraProvider>
+    </ThemeProvider>
   );
 }
 ```
