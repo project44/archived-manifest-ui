@@ -65,9 +65,7 @@ function App({ children }) {
 }
 ```
 
-Optionally, you can wrap your application with the `ColorModeProvider` so you can toggle between light and dark mode within your app.
-
-Now you can start using components like so!:
+Now you can start using components like so:
 
 ```jsx
 import { Button } from '@manifest-ui/react';
