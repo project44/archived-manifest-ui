@@ -1,5 +1,11 @@
 # @manifest-ui/themes
 
+## 0.1.2
+
+### Patch Changes
+
+- [#52](https://github.com/project44/manifest-ui/pull/52) [`a0a5a04`](https://github.com/project44/manifest-ui/commit/a0a5a04055fac2013700b994bb9842d7c59a0165) Thanks [@samrose3](https://github.com/samrose3)! - Import correct file for layerStyles
+
 ## 0.1.1
 
 ### Patch Changes
