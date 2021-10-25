@@ -1,2 +1,2 @@
 export * from '@chakra-ui/react';
-export { ThemeProvider } from './ThemeProvider';
+export { ManifestProvider } from './ManifestProvider';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChakraTheme, ThemeProvider } from '../packages/react/src';
+import { ChakraTheme, ManifestProvider } from '../packages/react/src';
 
 interface Props {
   theme: ChakraTheme;
@@ -8,6 +8,6 @@ interface Props {
 
 export default ({ theme, children }: Props) => (
   <>
-    <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    <ManifestProvider theme={theme}>{children}</ManifestProvider>
   </>
 );

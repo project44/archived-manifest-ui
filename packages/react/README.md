@@ -29,16 +29,16 @@ yarn add @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 <br />
 
 ```jsx
-import { Box, ThemeProvider } from '@manifest-ui/react';
+import { Box, ManifestProvider } from '@manifest-ui/react';
 
 export default function App() {
   return (
-    <ThemeProvider>
+    <ManifestProvider>
       <Box p="8" bg="blue.100">
         <h1>Hello Manifest UI</h1>
         <h2>Start editing to see some magic happen!</h2>
       </Box>
-    </ThemeProvider>
+    </ManifestProvider>
   );
 }
 ```

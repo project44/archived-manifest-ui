@@ -54,14 +54,14 @@ yarn add @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 
 To start using the theme and components, please follow these steps:
 
-Wrap your application with the `ThemeProvider` provided by **@manifest-ui/react**.
+Wrap your application with the `ManifestProvider` provided by **@manifest-ui/react**.
 
 ```jsx
-import { ThemeProvider } from '@manifest-ui/react';
+import { ManifestProvider } from '@manifest-ui/react';
 
 // Do this at the root of your application
 function App({ children }) {
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return <ManifestProvider>{children}</ManifestProvider>;
 }
 ```
 
