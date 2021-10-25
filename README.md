@@ -40,7 +40,7 @@ npm install @manifest-ui/react
 yarn add @manifest-ui/react
 ```
 
-Note that you must have Manifest UI and all peer dependencies installed for your project as well. Manifest UI is built using Chakra UI – see the Chakra UI[installation instructions](https://chakra-ui.com/docs/getting-started#installation).
+Note that you must have Manifest UI and all peer dependencies installed for your project as well.
 
 ```
 # npm with peer dependencies
