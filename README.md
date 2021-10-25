@@ -22,11 +22,11 @@
   </a>
 </p>
 
-Themeable design system for the project44.
+Themeable design system built using [Chakra UI] for the project44.
 
 ## Documentation
 
-Our documentation site lives at [zeroheight](https://zeroheight.com/27d9b4710). You'll be able to find detailed documentation on getting started, all of the components, our theme, our principles, and more.
+Our documentation site lives at [zeroheight]. You'll be able to find detailed documentation on getting started, all of the components, our theme, our principles, and more.
 
 ## Installation
 
@@ -40,7 +40,7 @@ npm install @manifest-ui/react
 yarn add @manifest-ui/react
 ```
 
-Note that you must have Chakra UI and all peer dependencies installed for your project as well. See the [installation instructions](https://chakra-ui.com/docs/getting-started#installation) of the Chakra UI docs.
+Note that you must have Manifest UI and all peer dependencies installed for your project as well. Manifest UI is built using Chakra UI – see the Chakra UI[installation instructions](https://chakra-ui.com/docs/getting-started#installation).
 
 ```
 # npm with peer dependencies
@@ -79,4 +79,8 @@ function Example() {
 
 We love collaborating with folks inside and outside of project44 and welcome contributions!
 
-> 👉 See the [contributing docs](https://github.com/project44/manifest-ui/blob/main/CONTRIBUTING.md) for more info on code style, testing, coverage, and troubleshooting
+> 👉 See the [contributing docs] for more info on code style, testing, coverage, and troubleshooting
+
+[zeroheight]: https://p44design.systems
+[chakra ui]: https://chakra-ui.com/
+[contributing docs]: CONTRIBUTING.md
