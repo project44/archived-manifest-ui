@@ -27,13 +27,3 @@ jobs:
 
       - name: Lint
         run: yarn lint
-
-      - name: Chromatic
-        uses: chromaui/action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          buildScriptName: storybook:build
-          autoAcceptChanges: main
-          exitZeroOnChanges: true
-          onlyChanged: true
