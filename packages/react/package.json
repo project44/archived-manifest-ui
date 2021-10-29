@@ -22,9 +22,7 @@
   "author": "project44",
   "license": "MIT",
   "dependencies": {
-    "@manifest-ui/box": "*",
-    "@manifest-ui/button": "*",
-    "@manifest-ui/stitches": "*",
-    "@manifest-ui/text": "*"
+    "@manifest-ui/themes": "*",
+    "@stitches/react": "^1.2.5"
   }
 }

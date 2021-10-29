@@ -1,24 +1,32 @@
-import { styled } from '@manifest-ui/stitches';
-import type { ComponentProps, VariantProps } from '@manifest-ui/stitches';
+import { styled } from '../stitches.config';
+import type { ComponentProps, VariantProps } from '../stitches.config';
 
 export type ButtonProps = ComponentProps<typeof Button>;
 export type ButtonVariants = VariantProps<typeof Button>;
 
 export const Button = styled('button', {
+  // Reset
+  appearance: 'none',
+  WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
+
+  // Custom
+  display: 'inline-flex',
+  alignItems: 'center',
   backgroundColor: 'transparent',
   border: '1px solid',
   borderColor: 'transparent',
-  borderRadius: '$md',
+  borderRadius: '$sm',
   fontFamily: '$body',
   fontWeight: '$semibold',
-  lineHeight: 'normal',
+  lineHeight: '1',
   py: '$2',
+  outline: 'none',
   '&:focus': {
     boxShadow: '0 0 0 4px $$outline',
   },
   '&:disabled': {
-    cursor: 'not-allowed',
     boxShadow: 'none',
+    cursor: 'not-allowed',
   },
   variants: {
     size: {
@@ -37,24 +45,7 @@ export const Button = styled('button', {
       },
     },
     variant: {
-      primary: {
-        $$outline: '$colors$blue100',
-        $$bg: '$colors$blue500',
-        $$bgHover: '$colors$blue600',
-        $$bgActive: '$colors$blue700',
-        backgroundColor: '$$bg',
-        color: 'white',
-        '&:hover': {
-          bg: '$$bgHover',
-        },
-        '&:active': {
-          bg: '$$bgActive',
-        },
-        '&:disabled': {
-          backgroundColor: '$gray',
-          color: '$gray400',
-        },
-      },
+      primary: getSolidStyles('blue'),
       secondary: {
         $$outline: '$colors$gray400',
         borderColor: '$gray300',
@@ -75,11 +66,11 @@ export const Button = styled('button', {
         $$outline: '$colors$blue100',
         color: '$blue600',
         '&:hover': {
-          backgroundColor: '$blue100',
+          bg: '$blue100',
           color: '$blue500',
         },
         '&:active': {
-          backgroundColor: '$blue200',
+          bg: '$blue200',
           color: '$blue600',
         },
         '&:disabled': {
@@ -87,20 +78,8 @@ export const Button = styled('button', {
           color: '$gray400',
         },
       },
-    },
-    tone: {
-      success: {
-        $$outline: '$colors$green100',
-        $$bg: '$colors$green500',
-        $$bgHover: '$colors$green600',
-        $$bgActive: '$colors$green700',
-      },
-      danger: {
-        $$outline: '$colors$red100',
-        $$bg: '$colors$red500',
-        $$bgHover: '$colors$red600',
-        $$bgActive: '$colors$red700',
-      },
+      success: getSolidStyles('green'),
+      danger: getSolidStyles('red'),
     },
   },
   defaultVariants: {
@@ -108,3 +87,21 @@ export const Button = styled('button', {
     variant: 'primary',
   },
 });
+
+function getSolidStyles(color: string) {
+  return {
+    $$outline: `$colors$${color}400`,
+    backgroundColor: `$${color}500`,
+    color: 'white',
+    '&:hover': {
+      backgroundColor: `$${color}600`,
+    },
+    '&:active': {
+      backgroundColor: `$${color}700`,
+    },
+    '&:disabled': {
+      backgroundColor: '$gray100',
+      color: '$gray400',
+    },
+  };
+}

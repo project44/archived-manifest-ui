@@ -1,8 +1,23 @@
-export { Box } from '@manifest-ui/box';
-export type { BoxProps } from '@manifest-ui/box';
+export { Box } from './Box';
+export type { BoxProps } from './Box';
 
-export { Button } from '@manifest-ui/button';
-export type { ButtonProps, ButtonVariants } from '@manifest-ui/button';
+export { Button } from './Button';
+export type { ButtonProps, ButtonVariants } from './Button';
 
-export { Text } from '@manifest-ui/text';
-export type { TextProps, TextVariants } from '@manifest-ui/text';
+export { Input } from './Input';
+export type { InputProps, InputVariants } from './Input';
+
+export { Text } from './Text';
+export type { TextProps, TextVariants } from './Text';
+
+// Stitches
+export {
+  styled,
+  css,
+  globalCss,
+  keyframes,
+  getCssText,
+  theme,
+  createTheme,
+  config,
+} from './stitches.config';

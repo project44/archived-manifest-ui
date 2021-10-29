@@ -1,7 +1,8 @@
-import { createStitches, CSSProperties } from '@stitches/react';
-export * from '@stitches/react';
-
+import { createStitches } from '@stitches/react';
+import type { ScaleValue } from '@stitches/react';
 import { theme as defaultTheme } from '@manifest-ui/themes';
+
+export * from '@stitches/react';
 
 export const {
   styled,
@@ -15,56 +16,58 @@ export const {
 } = createStitches({
   theme: defaultTheme,
   utils: {
-    p: (value: CSSProperties['padding']) => ({
+    bg: (value: ScaleValue<'color'>) => ({
+      backgroundColor: value,
+    }),
+    p: (value: ScaleValue<'space'>) => ({
       paddingTop: value,
       paddingBottom: value,
       paddingLeft: value,
       paddingRight: value,
     }),
-    pt: (value: CSSProperties['padding']) => ({
+    pt: (value: ScaleValue<'space'>) => ({
       paddingTop: value,
     }),
-    pr: (value: CSSProperties['padding']) => ({
+    pr: (value: ScaleValue<'space'>) => ({
       paddingRight: value,
     }),
-    pb: (value: CSSProperties['padding']) => ({
+    pb: (value: ScaleValue<'space'>) => ({
       paddingBottom: value,
     }),
-    pl: (value: CSSProperties['padding']) => ({
+    pl: (value: ScaleValue<'space'>) => ({
       paddingLeft: value,
     }),
-    px: (value: CSSProperties['padding']) => ({
+    px: (value: ScaleValue<'space'>) => ({
       paddingLeft: value,
       paddingRight: value,
     }),
-    py: (value: CSSProperties['padding']) => ({
+    py: (value: ScaleValue<'space'>) => ({
       paddingTop: value,
       paddingBottom: value,
     }),
-
-    m: (value: CSSProperties['margin']) => ({
+    m: (value: ScaleValue<'space'>) => ({
       marginTop: value,
       marginBottom: value,
       marginLeft: value,
       marginRight: value,
     }),
-    mt: (value: CSSProperties['margin']) => ({
+    mt: (value: ScaleValue<'space'>) => ({
       marginTop: value,
     }),
-    mr: (value: CSSProperties['margin']) => ({
+    mr: (value: ScaleValue<'space'>) => ({
       marginRight: value,
     }),
-    mb: (value: CSSProperties['margin']) => ({
+    mb: (value: ScaleValue<'space'>) => ({
       marginBottom: value,
     }),
-    ml: (value: CSSProperties['margin']) => ({
+    ml: (value: ScaleValue<'space'>) => ({
       marginLeft: value,
     }),
-    mx: (value: CSSProperties['margin']) => ({
+    mx: (value: ScaleValue<'space'>) => ({
       marginLeft: value,
       marginRight: value,
     }),
-    my: (value: CSSProperties['margin']) => ({
+    my: (value: ScaleValue<'space'>) => ({
       marginTop: value,
       marginBottom: value,
     }),

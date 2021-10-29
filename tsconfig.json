@@ -22,13 +22,6 @@
     "downlevelIteration": true,
     "allowSyntheticDefaultImports": true
   },
-  "exclude": ["node_modules", "**/dist/**"],
-  "include": ["./jest.setup.ts", "packages/**/*", "playroom/**/*", "site/**/*"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS",
-      "resolveJsonModule": true,
-      "noImplicitAny": false
-    }
-  }
+  "exclude": ["node_modules"],
+  "include": ["packages/**/*"]
 }

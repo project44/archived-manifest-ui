@@ -1,87 +1,87 @@
-import { styled, ComponentProps, VariantProps } from '@manifest-ui/stitches';
+import { styled, ComponentProps, VariantProps } from '../stitches.config';
 
 export type TextProps = ComponentProps<typeof Text>;
 export type TextVariants = VariantProps<typeof Text>;
 
 export const Text = styled('span', {
   variants: {
-    tone: {
+    status: {
       success: {
-        color: '$green500',
+        color: '$green800',
       },
       critical: {
-        color: '$orange500',
+        color: '$orange800',
       },
       danger: {
-        color: '$red500',
+        color: '$red800',
       },
       info: {
-        color: '$blue500',
+        color: '$blue800',
       },
     },
     variant: {
-      h1: {
+      headingLg: {
         fontSize: '$11',
         fontWeight: '$bold',
         lineHeight: '$normal',
         letterSpacing: '$tighter',
       },
-      h2: {
+      headingMd: {
         fontSize: '$10',
         fontWeight: '$bold',
         lineHeight: '46px',
         letterSpacing: '$tighter',
       },
-      h3: {
+      headingSm: {
         fontSize: '$9',
         fontWeight: '$bold',
         lineHeight: '36px',
         letterSpacing: '$tighter',
       },
-      h4: {
+      titleLg: {
         fontSize: '$8',
         fontWeight: '$bold',
         lineHeight: '30px',
         letterSpacing: 'tight',
       },
-      h5: {
+      titleMd: {
         fontSize: '$7',
         fontWeight: '$bold',
         lineHeight: '24px',
         letterSpacing: 'wider',
         textTransform: 'uppercase',
       },
-      h6: {
+      titleSm: {
         fontSize: '$6',
         fontWeight: '$bold',
         lineHeight: '22px',
         letterSpacing: '$wide',
       },
-      body1: {
+      bodyLg: {
         fontSize: '$5',
         fontWeight: '$medium',
         lineHeight: '28px',
         letterSpacing: 'normal',
       },
-      body2: {
+      bodyMd: {
         fontSize: '$4',
         fontWeight: '$medium',
         lineHeight: '24px',
         letterSpacing: 'normal',
       },
-      footnote: {
+      bodySm: {
         fontSize: '$3',
         fontWeight: '$medium',
         lineHeight: '22px',
         letterSpacing: '$wide',
       },
-      caption1: {
+      captionMd: {
         fontSize: '$2',
         fontWeight: '$medium',
         lineHeight: '18px',
         letterSpacing: '$wide',
       },
-      caption2: {
+      captionSm: {
         fontSize: '$1',
         fontWeight: '$medium',
         lineHeight: '16px',
