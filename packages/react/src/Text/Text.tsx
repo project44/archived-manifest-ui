@@ -4,21 +4,9 @@ export type TextProps = ComponentProps<typeof Text>;
 export type TextVariants = VariantProps<typeof Text>;
 
 export const Text = styled('span', {
+  fontFamily: '$body',
+
   variants: {
-    status: {
-      success: {
-        color: '$green800',
-      },
-      critical: {
-        color: '$orange800',
-      },
-      danger: {
-        color: '$red800',
-      },
-      info: {
-        color: '$blue800',
-      },
-    },
     variant: {
       headingLg: {
         fontSize: '$11',
