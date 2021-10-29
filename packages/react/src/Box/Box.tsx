@@ -1,4 +1,4 @@
-import { styled, ComponentProps } from '@manifest-ui/stitches';
+import { styled, ComponentProps } from '../stitches.config';
 
 export type BoxProps = ComponentProps<typeof Box>;
 

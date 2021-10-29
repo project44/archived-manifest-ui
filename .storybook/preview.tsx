@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Story } from '@storybook/react';
 
-import { globalCss } from '@manifest-ui/stitches';
+import { globalCss } from '../packages/react/src';
 
 const globalStyles = globalCss({
   'html, body': {

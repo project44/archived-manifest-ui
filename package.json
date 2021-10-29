@@ -6,8 +6,6 @@
   "scripts": {
     "pkg": "manypkg run",
     "build": "preconstruct build",
-    "site": "manypkg run site dev",
-    "site:build": "manypkg run site build",
     "playroom": "playroom start",
     "playroom:build": "playroom build",
     "storybook": "start-storybook -p 6006",
@@ -19,13 +17,11 @@
     "prepare": "husky install"
   },
   "workspaces": [
-    "examples/*",
-    "packages/**/*",
-    "site"
+    "packages/*"
   ],
   "preconstruct": {
     "packages": [
-      "packages/**/*"
+      "packages/*"
     ]
   },
   "volta": {
@@ -54,7 +50,6 @@
     "@changesets/cli": "^2.16.0",
     "@manypkg/cli": "^0.18.0",
     "@preconstruct/cli": "^2.1.4",
-    "@stitches/react": "^1.2.5",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
@@ -73,7 +68,6 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "framer-motion": "^4.1.17",
     "husky": "^7.0.4",
     "lint-staged": "^11.2.4",
     "lodash": "^4.17.21",
