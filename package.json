@@ -20,12 +20,12 @@
   },
   "workspaces": [
     "examples/*",
-    "packages/*",
+    "packages/**/*",
     "site"
   ],
   "preconstruct": {
     "packages": [
-      "packages/*"
+      "packages/**/*"
     ]
   },
   "volta": {
@@ -52,10 +52,9 @@
     "@babel/preset-typescript": "^7.15.0",
     "@changesets/changelog-github": "^0.4.0",
     "@changesets/cli": "^2.16.0",
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
     "@manypkg/cli": "^0.18.0",
     "@preconstruct/cli": "^2.1.4",
+    "@stitches/react": "^1.2.5",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",

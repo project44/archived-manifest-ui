@@ -1,17 +1,32 @@
-import { extendTheme } from '@chakra-ui/react';
+import colors from './colors';
+import {
+  fonts,
+  fontSizes,
+  fontWeights,
+  letterSpacings,
+  lineHeights,
+} from './typography';
+import radii from './radii';
+import shadows from './shadows';
+import space from './space';
+import zIndices from './zIndices';
 
-import components from './components';
-import foundations from './foundations';
-import styles from './styles';
-import layerStyles from './layerStyles';
-import textStyles from './textStyles';
-
-const overrides = {
-  ...foundations,
-  components,
-  styles,
-  layerStyles,
-  textStyles,
+const theme = {
+  borderStyles: {},
+  borderWidths: {},
+  colors,
+  fonts,
+  fontSizes,
+  fontWeights,
+  letterSpacings,
+  lineHeights,
+  radii,
+  shadows,
+  sizes: {},
+  space,
+  transitions: {},
+  zIndices,
 };
 
-export default extendTheme(overrides);
+export { theme };
+export default theme;

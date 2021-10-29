@@ -1,10 +1,7 @@
-import { default as voc } from './voc';
-
-// Names themes
-export { default as next } from './next';
-export { default as voc } from './voc';
-export { default as wireframe } from './wireframe';
+import voc from './voc';
 
 // Default theme
-export const theme = voc;
+const theme = voc;
+
+export { theme, voc };
 export default theme;
