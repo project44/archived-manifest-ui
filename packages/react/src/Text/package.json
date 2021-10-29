@@ -1,0 +1,26 @@
+{
+  "name": "@manifest-ui/text",
+  "version": "0.0.0",
+  "main": "dist/manifest-ui-text.cjs.js",
+  "module": "dist/manifest-ui-text.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/manifest-ui-text.cjs.js",
+      "default": "./dist/manifest-ui-text.esm.js"
+    }
+  },
+  "files": [
+    "/dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/project44/manifest-ui.git"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "dependencies": {
+    "@manifest-ui/stitches": "*"
+  }
+}

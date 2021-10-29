@@ -1,0 +1,27 @@
+{
+  "name": "@manifest-ui/box",
+  "version": "0.0.0",
+  "main": "dist/manifest-ui-box.cjs.js",
+  "module": "dist/manifest-ui-box.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/manifest-ui-box.cjs.js",
+      "default": "./dist/manifest-ui-box.esm.js"
+    }
+  },
+  "files": [
+    "/dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/project44/manifest-ui.git",
+    "directory": "packages/box"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "dependencies": {
+    "@manifest-ui/stitches": "*"
+  }
+}

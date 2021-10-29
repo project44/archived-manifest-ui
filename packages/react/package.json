@@ -22,21 +22,9 @@
   "author": "project44",
   "license": "MIT",
   "dependencies": {
-    "@chakra-ui/react": "^1.6.8",
-    "@manifest-ui/themes": "*"
-  },
-  "devDependencies": {
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
-    "framer-motion": "^4.1.17",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "peerDependencies": {
-    "@emotion/react": "^11.0.0",
-    "@emotion/styled": "^11.0.0",
-    "framer-motion": "3.x || 4.x",
-    "react": ">=16.8.6",
-    "react-dom": ">=16.8.6"
+    "@manifest-ui/box": "*",
+    "@manifest-ui/button": "*",
+    "@manifest-ui/stitches": "*",
+    "@manifest-ui/text": "*"
   }
 }
