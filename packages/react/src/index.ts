@@ -16,8 +16,6 @@ export type {
 export { Text } from './Text';
 export type { TextProps, TextVariants } from './Text';
 
-export { ThemeTest } from './ThemeTest';
-
 // Stitches
 export {
   styled,
