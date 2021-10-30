@@ -5,15 +5,6 @@ export default {
   black: '#0F1013',
   white: '#FFFFFF',
 
-  $hiContrast: '#0F1013',
-  $loContrast: 'white',
-
-  $surface: '$gray',
-  $panel: 'white',
-  $shadowLight: 'hsla(206,22%,7%,.35)',
-  $shadowDark: 'hsla(206,22%,7%,.2)',
-  $transparentExtreme: 'hsla(0,0%,0%,.97)',
-
   // Palettes
   whiteAlpha50: 'rgba(255, 255, 255, 0.04)',
   whiteAlpha100: 'rgba(255, 255, 255, 0.06)',

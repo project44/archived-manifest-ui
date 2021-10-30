@@ -27,7 +27,7 @@
   </a>
 </p>
 
-Themeable design system built using [Chakra UI] for the project44.
+Themeable design system built using [Stitches] and [Radix] for the project44.
 
 ## Documentation
 
@@ -43,16 +43,6 @@ npm install @manifest-ui/react
 
 # with yarn
 yarn add @manifest-ui/react
-```
-
-Note that you must have Manifest UI and all peer dependencies installed for your project as well.
-
-```
-# npm with peer dependencies
-npm install @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
-
-# yarn with peer dependencies
-yarn add @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 ```
 
 ## Usage
@@ -87,5 +77,6 @@ We love collaborating with folks inside and outside of project44 and welcome con
 > 👉 See the [contributing docs] for more info on code style, testing, coverage, and troubleshooting
 
 [zeroheight]: https://p44design.systems
-[chakra ui]: https://chakra-ui.com/
+[stitches]: https://stitches.dev/
+[radix]: https://www.radix-ui.com/
 [contributing docs]: CONTRIBUTING.md

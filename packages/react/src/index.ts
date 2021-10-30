@@ -7,8 +7,16 @@ export type { ButtonProps, ButtonVariants } from './Button';
 export { Input } from './Input';
 export type { InputProps, InputVariants } from './Input';
 
+export { ManifestProvider, useManifestTheme } from './ManifestProvider';
+export type {
+  ManifestProviderProps,
+  ManifestThemeContext,
+} from './ManifestProvider';
+
 export { Text } from './Text';
 export type { TextProps, TextVariants } from './Text';
+
+export { ThemeTest } from './ThemeTest';
 
 // Stitches
 export {
