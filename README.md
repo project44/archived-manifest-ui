@@ -7,18 +7,23 @@
 <p align="center">Design System themes and components for <a href="https://www.project44.com/" >project44</a>.</p>
 
 <p align="center">
+  <a aria-label="Storybook" href="https://project44.github.io/manifest-ui/">
+        <img alt="" src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg">
+    </a>
+  <a aria-label="Playroom" href="https://project44.github.io/manifest-ui/playroom">
+    <img alt="" src="https://img.shields.io/badge/playroom-live-blueviolet">
+  </a>
+</p>
+
+<p align="center">
   <a aria-label="npm package" href="https://www.npmjs.com/package/@manifest-ui/react">
     <img alt="" src="https://img.shields.io/npm/v/@manifest-ui/react.svg">
   </a>
-  <a aria-label="contributors graph" href="https://github.com/project44/manifest-ui/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/project44/manifest-ui.svg">
+  <a aria-label="percy.io builds" href="https://percy.io/f2a7a5cd/manifest-ui">
+    <img alt="" src="https://percy.io/static/images/percy-badge.svg">
   </a>
-  <a aria-label="last commit" href="https://github.com/project44/manifest-ui/commits/main">
-    <img alt="" src=
-  "https://img.shields.io/github/last-commit/project44/manifest-ui.svg">
-  </a>
-  <a aria-label="license" href="https://github.com/project44/manifest-ui/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/project44/manifest-ui.svg" alt="">
+  <a aria-label="build status" href="https://firehydrant.io">
+      <img alt="" src="https://github.com/project44/manifest-ui/actions/workflows/pages.yml/badge.svg">
   </a>
 </p>
 

@@ -1,4 +1,4 @@
-name: Playroom
+name: GitHub Pages
 
 on:
   push:
@@ -7,11 +7,12 @@ on:
     paths:
       - 'packages/**/.tsx?'
       - '.playroom/**'
+      - '.storybook/**'
       - 'playroom.config.js'
 
 jobs:
   playroom:
-    name: Build & deploy Playroom
+    name: Build & deploy to GitHub Pages
     runs-on: ubuntu-latest
     env:
       NODE_OPTIONS: --max_old_space_size=4096
@@ -30,6 +31,9 @@ jobs:
 
       - name: Build
         run: yarn build
+
+      - name: Build Storybook
+        run: yarn storybook:build
 
       - name: Build Playroom
         run: yarn playroom:build

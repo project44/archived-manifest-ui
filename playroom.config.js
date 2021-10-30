@@ -1,7 +1,8 @@
 module.exports = {
   components: './.playroom/components.ts',
-  outputPath: './dist',
+  outputPath: './dist/playroom',
   title: 'Manifest UI',
+  baseUrl: '/playroom/',
   snippets: './.playroom/snippets.ts',
   themes: './.playroom/themes.ts',
   frameComponent: './.playroom/FrameComponent.tsx',

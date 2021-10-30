@@ -10,18 +10,15 @@ export default {
     variant: {
       name: 'variant',
       type: { name: 'string', required: false },
-      defaultValue: 'primary',
       description: 'Different types of buttons',
       table: {
         type: {
-          summary: 'primary|secondary|tertiary|success|danger|',
+          summary: 'primary|secondary|tertiary|success|danger',
         },
         defaultValue: { summary: 'primary' },
       },
-      control: {
-        type: 'radio',
-        options: ['primary', 'secondary', 'tertiary', 'success', 'danger'],
-      },
+      control: { type: 'radio' },
+      options: ['primary', 'secondary', 'tertiary', 'success', 'danger'],
     },
     children: {
       description: 'Inner element or text for element',
@@ -47,9 +44,7 @@ export default {
         type: { summary: 'string' },
         defaultValue: { summary: false },
       },
-      control: {
-        type: 'boolean',
-      },
+      control: { type: 'boolean' },
     },
     isDisabled: {
       description: 'if button is disabled',
@@ -57,9 +52,7 @@ export default {
         type: { summary: 'bool' },
         defaultValue: { summary: false },
       },
-      control: {
-        type: 'boolean',
-      },
+      control: { type: 'boolean' },
     },
   },
 } as Meta;
