@@ -1,5 +1,14 @@
 # @manifest-ui/react
 
+## 0.0.8
+
+### Patch Changes
+
+- [#54](https://github.com/project44/manifest-ui/pull/54) [`1daec4b`](https://github.com/project44/manifest-ui/commit/1daec4b448c2a5eca1ecd1ef0936cced706ba9a5) Thanks [@samrose3](https://github.com/samrose3)! - Migrate themes and components to use Stitches
+
+- Updated dependencies [[`1daec4b`](https://github.com/project44/manifest-ui/commit/1daec4b448c2a5eca1ecd1ef0936cced706ba9a5)]:
+  - @manifest-ui/themes@0.1.3
+
 ## 0.0.7
 
 ### Patch Changes
