@@ -18,10 +18,10 @@ export const Input = styled('input', {
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
 
   // Custom
-  backgroundColor: '$loContrast',
+  backgroundColor: '$white',
   boxShadow: 'inset 0 0 0 1px $gray600',
   borderRadius: '$2',
-  color: '$hiContrast',
+  color: '$black',
 
   ':focus': {
     boxShadow: 'inset 0px 0px 0px 1px $blue700, 0px 0px 0px 1px $blue700',

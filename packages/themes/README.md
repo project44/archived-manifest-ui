@@ -1,6 +1,6 @@
 # @manifest-ui/themes
 
-**@manifest-ui/themes** is a collection of Chakra UI themes for [project44](https://stitches.dev).
+**@manifest-ui/themes** is a collection of themes for Manifest UI.
 
 <p><br /></p>
 
@@ -12,8 +12,6 @@ npm install @manifest-ui/themes
 yarn add @manifest-ui/themes
 ```
 
-You must also have Chakra UI and all peer dependencies installed for your project as well. See the [installation instructions](https://chakra-ui.com/docs/getting-started#installation) of the Chakra UI docs.
-
 <p><br /></p>
 
 <a href="https://codesandbox.io/s/manifest-ui-e8z8c"><img src="https://img.shields.io/badge/-Edit_in_Sandbox-2b354f?logo=codesandbox&style=flat-square" alt="open in codesandbox" valign="middle" align="right"></a>
@@ -21,13 +19,18 @@ You must also have Chakra UI and all peer dependencies installed for your projec
 <br />
 
 ```jsx
-import { Box, ManifestProvider } from '@manifest-ui/react';
-import wireframe from '@manifest-ui/themes/wireframe';
+import { Box, ManifestProvider } from "@manifest-ui/react";
+import { wireframe } from "@manifest-ui/themes";
 
 export default function App() {
   return (
     <ManifestProvider theme={wireframe}>
-      <Box p={8} bg="blue.100">
+      <Box
+        sx={{
+          bg: "$blue.100",
+          p: "$8"
+        }}
+      >
         <h1>Hello Manifest UI</h1>
         <h2>Start editing to see some magic happen!</h2>
       </Box>

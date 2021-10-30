@@ -1,5 +1,5 @@
 import React from 'react';
-import { globalCss, theme } from '../packages/react/src';
+import { globalCss, ManifestProvider, theme } from '../packages/react/src';
 
 interface Props {
   theme: typeof theme;
@@ -17,5 +17,5 @@ const globalStyles = globalCss({
 export default ({ theme, children }: Props) => {
   globalStyles();
 
-  return <div className={theme}>{children}</div>;
+  return <ManifestProvider theme={theme}>{children}</ManifestProvider>;
 };

@@ -1,6 +1,6 @@
 # @manifest-ui/react
 
-**@manifest-ui/react** is a React implementation of the design system for [project44](https://stitches.dev) with a best-in-class developer experience.
+**@manifest-ui/react** is a React implementation of the design system for [project44] with a best-in-class developer experience.
 
 <p><br /></p>
 
@@ -12,16 +12,6 @@ npm install @manifest-ui/react
 yarn add @manifest-ui/react
 ```
 
-Note that you must have Chakra UI and all peer dependencies installed for your project as well. See the [installation instructions](https://chakra-ui.com/docs/getting-started#installation) of the Chakra UI docs.
-
-```sh
-# npm with peer dependencies
-npm install @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
-
-# yarn with peer dependencies
-yarn add @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
-```
-
 <p><br /></p>
 
 <a href="https://codesandbox.io/s/manifest-ui-e8z8c"><img src="https://img.shields.io/badge/-Edit_in_Sandbox-2b354f?logo=codesandbox&style=flat-square" alt="open in codesandbox" valign="middle" align="right"></a>
@@ -29,12 +19,17 @@ yarn add @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 <br />
 
 ```jsx
-import { Box, ManifestProvider } from '@manifest-ui/react';
+import { Box, ManifestProvider } from "@manifest-ui/react";
 
 export default function App() {
   return (
     <ManifestProvider>
-      <Box p="8" bg="blue.100">
+      <Box
+        sx={{
+          bg: "$blue.100",
+          p: "$8"
+        }}
+      >
         <h1>Hello Manifest UI</h1>
         <h2>Start editing to see some magic happen!</h2>
       </Box>
@@ -63,3 +58,5 @@ Please follow our [contributing guidelines](./CONTRIBUTING.md).
 Licensed under the MIT License, Copyright © 2021-present project44.
 
 See [LICENSE](./LICENSE.md) for more information.
+
+[project44]: https://project44.com
