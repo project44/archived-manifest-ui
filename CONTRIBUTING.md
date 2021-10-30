@@ -21,7 +21,7 @@ cd manifest-ui
 ```
 
 3. Setup all the dependencies and packages by running `yarn && yarn build`. This
-   command will install dependencies and bootstrap the repo using `lerna`
+   command will install dependencies
 
 > If you run into any issues during this step, kindly reach out to the Design System team [here](https://p-44.slack.com/archives/C02CL3RLKED).
 
@@ -33,24 +33,19 @@ _coming soon_ ✨
 
 - [Preconstruct](https://preconstruct.tools/) to dev and build code in the monorepo.
 - [Playroom](https://github.com/seek-oss/playroom/) for rapid UI prototyping.
-- [Testing Library](https://testing-library.com/) for testing components and
-  hooks.
-- [Next.js](https://www.nextjs.org/) for a blazing fast testing website.
+- [Storybook](https://storybook.js.org/) for building, documenting, and testing components.
 - [Changeset](https://github.com/atlassian/changesets) for changes
   documentation, changelog generation, and release management.
 
 ### Commands
 
-**`yarn playroom:dev`**: starts the Playroom prototyping environment.
+**`yarn playroom`**: starts the Playroom prototyping environment.
 
-**`yarn site:dev`**: run the test site locally.
+**`yarn storybook`**: starts Storybook for building and testing components.
 
 **`yarn build`**: run build for all component packages.
 
-**`yarn test`**: run test for all component packages.
-
-**`yarn pkg [package] <cmd>`**: Run a command on the specific package you're
-working on. You can run `build`, `test`, `lint` commands.
+**`yarn lint`**: runs all the safety checks (manypkg, eslint, prettier, and tsc).
 
 ## Think you found a bug?
 
@@ -84,10 +79,8 @@ the PR author is a collaborator, that counts as one.
    commit type. `scope` is just a short id that describes the scope of work.
 
 3. Make and commit your changes.
-   As you develop, you can run `yarn pkg <module> build` and
-   `yarn pkg <module> test` to make sure everything works as expected. Please
-   note that you might have to run `yarn boot` first in order to build all
-   dependencies.
+   As you develop, you can run `yarn build` and
+   `yarn storybook` to make sure everything works as expected.
 
 4. Run `yarn changeset` to create a detailed description of your changes. This
    will be used to generate a changelog when we publish an update.
