@@ -4,7 +4,7 @@
 
 <h1 align="center">Manifest UI</h1>
 
-<p align="center">Design System themes and components for <a href="https://www.project44.com/" >project44</a>.</p>
+<p align="center">Design System themes and components for <a href="https://www.project44.com/">project44</a>.</p>
 
 <p align="center">
   <a aria-label="Storybook" href="https://project44.github.io/manifest-ui/">
@@ -22,11 +22,8 @@
     <a aria-label="percy.io builds" href="https://percy.io/f2a7a5cd/manifest-ui">
     <img alt="" src="https://percy.io/static/images/percy-badge.svg">
   </a>
-  <a aria-label="build status" href="https://github.com/project44/manifest-ui/actions/workflows/pages.yml">
-      <img alt="" src="https://github.com/project44/manifest-ui/actions/workflows/validate.yml/badge.svg">
-  </a>
   <a aria-label="pages status" href="https://github.com/project44/manifest-ui/actions/workflows/pages.yml">
-      <img alt="" src="https://github.com/project44/manifest-ui/actions/workflows/pages.yml/badge.svg">
+      <img alt="" src="https://img.shields.io/github/workflow/status/project44/manifest-ui/Validate/main.svg?">
   </a>
 </p>
 
