@@ -25,8 +25,8 @@ export default function App() {
   return (
     <ManifestProvider>
       <Box
-        sx={{
-          bg: "$blue.100",
+        css={{
+          bg: "$blue100",
           p: "$8"
         }}
       >

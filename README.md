@@ -27,7 +27,7 @@
   </a>
 </p>
 
-Themeable design system built using [Stitches] and [Radix] for the project44.
+Themeable design system built using [Stitches] and [Radix] for project44.
 
 ## Documentation
 

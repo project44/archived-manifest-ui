@@ -26,13 +26,13 @@ export default function App() {
   return (
     <ManifestProvider theme={wireframe}>
       <Box
-        sx={{
-          bg: "$blue.100",
+        css={{
+          bg: "$blue100",
           p: "$8"
         }}
       >
         <h1>Hello Manifest UI</h1>
-        <h2>Start editing to see some magic happen!</h2>
+        <p>Start editing to see some magic happen!</p>
       </Box>
     </ManifestProvider>
   );
