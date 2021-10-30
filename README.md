@@ -11,18 +11,21 @@
         <img alt="" src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg">
     </a>
   <a aria-label="Playroom" href="https://project44.github.io/manifest-ui/playroom">
-    <img alt="" src="https://img.shields.io/badge/playroom-live-blueviolet">
-  </a>
+    <img alt="" src="https://img.shields.io/badge/Playroom-live-blueviolet">
 </p>
 
 <p align="center">
   <a aria-label="npm package" href="https://www.npmjs.com/package/@manifest-ui/react">
     <img alt="" src="https://img.shields.io/npm/v/@manifest-ui/react.svg">
   </a>
-  <a aria-label="percy.io builds" href="https://percy.io/f2a7a5cd/manifest-ui">
+    </a>
+    <a aria-label="percy.io builds" href="https://percy.io/f2a7a5cd/manifest-ui">
     <img alt="" src="https://percy.io/static/images/percy-badge.svg">
   </a>
-  <a aria-label="build status" href="https://firehydrant.io">
+  <a aria-label="build status" href="https://github.com/project44/manifest-ui/actions/workflows/pages.yml">
+      <img alt="" src="https://github.com/project44/manifest-ui/actions/workflows/validate.yml/badge.svg">
+  </a>
+  <a aria-label="pages status" href="https://github.com/project44/manifest-ui/actions/workflows/pages.yml">
       <img alt="" src="https://github.com/project44/manifest-ui/actions/workflows/pages.yml/badge.svg">
   </a>
 </p>
