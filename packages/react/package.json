@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/react",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "React components for building project44 experiences.",
   "main": "dist/manifest-ui-react.cjs.js",
   "module": "dist/manifest-ui-react.esm.js",

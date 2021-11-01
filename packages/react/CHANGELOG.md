@@ -1,5 +1,15 @@
 # @manifest-ui/react
 
+## 0.0.9
+
+### Patch Changes
+
+- [`57a4ecc`](https://github.com/project44/manifest-ui/commit/57a4ecc12d6608e0986050c8152f173ff8993dfd) Thanks [@samrose3](https://github.com/samrose3)! - Add Text and Heading components with updated typography values
+
+- Updated dependencies [[`57a4ecc`](https://github.com/project44/manifest-ui/commit/57a4ecc12d6608e0986050c8152f173ff8993dfd), [`57a4ecc`](https://github.com/project44/manifest-ui/commit/57a4ecc12d6608e0986050c8152f173ff8993dfd)]:
+  - @manifest-ui/themes@0.1.4
+  - @manifest-ui/icons@0.0.1
+
 ## 0.0.8
 
 ### Patch Changes
