@@ -11,8 +11,9 @@
     }
   },
   "files": [
-    "/dist"
+    "dist"
   ],
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/project44/manifest-ui.git",

@@ -10,6 +10,10 @@ export default {
 
 export const Variants: Story<TextProps> = () => (
   <Box css={{ display: 'flex', flexDirection: 'column', gap: '$4' }}>
-    <Text>Almost before we knew it, we had left the ground.</Text>
+    <Text size="lg">Almost before we knew it, we had left the ground.</Text>
+    <Text size="md">Almost before we knew it, we had left the ground.</Text>
+    <Text size="sm">Almost before we knew it, we had left the ground.</Text>
+    <Text size="xs">Almost before we knew it, we had left the ground.</Text>
+    <Text size="xxs">Almost before we knew it, we had left the ground.</Text>
   </Box>
 );

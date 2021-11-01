@@ -1,1 +1,16 @@
-export { Box, Button, Input, Text } from '../packages/react/src';
+export {
+  // Components
+  Box,
+  Button,
+  Heading,
+  Icon,
+  Input,
+  Text,
+  // Icons
+  AddIcon,
+  CheckIcon,
+  ChevronDownIcon,
+  ChevronLeftIcon,
+  CloseIcon,
+  StarIcon,
+} from '../packages/react/src';

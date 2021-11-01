@@ -12,16 +12,28 @@ export const Button = styled('button', {
   // Custom
   display: 'inline-flex',
   alignItems: 'center',
+  justifyContent: 'center',
+  gap: '$1',
   backgroundColor: 'transparent',
   border: '1px solid',
   borderColor: 'transparent',
   borderRadius: '$sm',
   fontFamily: '$body',
-  fontWeight: '$semibold',
+  fontWeight: '$medium',
   lineHeight: '1',
   py: '$2',
   outline: 'none',
+  transition: '$fast',
+  transitionProperty: 'background-color, border-color, box-shadow, color',
   '&:focus': {
+    outline: 'none',
+    boxShadow: '0 0 0 4px $$outline',
+  },
+  '&:focus:not(:focus-visible)': {
+    outline: 'none',
+    boxShadow: 'none',
+  },
+  '&:focus-visible': {
     boxShadow: '0 0 0 4px $$outline',
   },
   '&:disabled': {
@@ -29,25 +41,33 @@ export const Button = styled('button', {
     cursor: 'not-allowed',
   },
   variants: {
+    full: {
+      true: {
+        width: '100%',
+      },
+    },
     size: {
       sm: {
-        borderRadius: '$sm',
-        fontSize: '$caption1',
+        fontSize: '$xs',
+        height: '30px',
         px: '$3',
+        gap: '2px',
       },
       md: {
-        fontSize: '$footnote',
+        fontSize: '$sm',
+        height: '38px',
         px: '$4',
       },
       lg: {
-        fontSize: '$body1',
+        fontSize: '$lg',
+        height: '48px',
         px: '$4',
       },
     },
     variant: {
       primary: getSolidStyles('blue'),
       secondary: {
-        $$outline: '$colors$gray400',
+        $$outline: '$colors$gray200',
         borderColor: '$gray300',
         color: '$gray500',
         '&:hover': {
@@ -63,7 +83,7 @@ export const Button = styled('button', {
         },
       },
       tertiary: {
-        $$outline: '$colors$blue100',
+        $$outline: '$colors$blue200',
         color: '$blue600',
         '&:hover': {
           bg: '$blue100',
@@ -74,7 +94,7 @@ export const Button = styled('button', {
           color: '$blue600',
         },
         '&:disabled': {
-          borderColor: '$gray400',
+          bg: 'transparent',
           color: '$gray400',
         },
       },
@@ -90,7 +110,7 @@ export const Button = styled('button', {
 
 function getSolidStyles(color: string) {
   return {
-    $$outline: `$colors$${color}400`,
+    $$outline: `$colors$${color}200`,
     backgroundColor: `$${color}500`,
     color: 'white',
     '&:hover': {

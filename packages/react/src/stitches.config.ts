@@ -14,7 +14,18 @@ export const {
   createTheme,
   config,
 } = createStitches({
+  prefix: 'p44',
   theme: defaultTheme,
+  media: {
+    bp1: '(min-width: 600px)',
+    bp2: '(min-width: 960px)',
+    bp3: '(min-width: 1280px)',
+    bp4: '(min-width: 1920px)',
+    motion: '(prefers-reduced-motion)',
+    hover: '(hover: hover)',
+    dark: '(prefers-color-scheme: dark)',
+    light: '(prefers-color-scheme: light)',
+  },
   utils: {
     bg: (value: ScaleValue<'color'>) => ({
       backgroundColor: value,

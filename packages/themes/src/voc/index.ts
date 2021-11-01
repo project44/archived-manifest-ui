@@ -9,6 +9,7 @@ import {
 import radii from './radii';
 import shadows from './shadows';
 import space from './space';
+import transitions from './transitions';
 import zIndices from './zIndices';
 
 const theme = {
@@ -24,7 +25,7 @@ const theme = {
   shadows,
   sizes: {},
   space,
-  transitions: {},
+  transitions,
   zIndices,
 };
 

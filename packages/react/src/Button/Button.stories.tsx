@@ -26,28 +26,25 @@ export default {
         type: { summary: 'text|node' },
       },
     },
-    rightIcon: {
-      description: 'Icon Component on right of text',
-      table: {
-        type: { summary: 'icon' },
-      },
-    },
-    leftIcon: {
-      description: 'Icon Component on left of text',
-      table: {
-        type: { summary: 'icon' },
-      },
-    },
-    isFullWidth: {
-      description: 'Used to give the icon full width',
+    loading: {
+      description:
+        'Used to indicate a loading state, which also ensures that the button is disabled',
       table: {
         type: { summary: 'string' },
         defaultValue: { summary: false },
       },
       control: { type: 'boolean' },
     },
-    isDisabled: {
-      description: 'if button is disabled',
+    full: {
+      description: 'Used to give the button full container width',
+      table: {
+        type: { summary: 'string' },
+        defaultValue: { summary: false },
+      },
+      control: { type: 'boolean' },
+    },
+    disabled: {
+      description: 'Set the button to a disabled state',
       table: {
         type: { summary: 'bool' },
         defaultValue: { summary: false },

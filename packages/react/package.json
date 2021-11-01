@@ -11,7 +11,7 @@
     }
   },
   "files": [
-    "/dist"
+    "dist"
   ],
   "sideEffects": false,
   "repository": {
@@ -22,6 +22,7 @@
   "author": "project44",
   "license": "MIT",
   "dependencies": {
+    "@manifest-ui/icons": "*",
     "@manifest-ui/themes": "*",
     "@stitches/react": "^1.2.5"
   },

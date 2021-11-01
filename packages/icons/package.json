@@ -1,0 +1,31 @@
+{
+  "name": "@manifest-ui/icons",
+  "version": "0.0.0",
+  "description": "React icons for building project44 experiences.",
+  "main": "dist/manifest-ui-icons.cjs.js",
+  "module": "dist/manifest-ui-icons.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/manifest-ui-icons.cjs.js",
+      "default": "./dist/manifest-ui-icons.esm.js"
+    }
+  },
+  "files": [
+    "dist",
+    "svg"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/project44/manifest-ui.git",
+    "directory": "packages/icons"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0"
+  }
+}
