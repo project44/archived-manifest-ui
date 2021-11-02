@@ -11,6 +11,9 @@ export type { IconProps } from './Icon';
 export { Input } from './Input';
 export type { InputProps, InputVariants } from './Input';
 
+export { Label } from './Label';
+export type { LabelProps, LabelVariants } from './Label';
+
 export { ManifestProvider, useManifestTheme } from './ManifestProvider';
 export type {
   ManifestProviderProps,

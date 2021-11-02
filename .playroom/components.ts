@@ -4,6 +4,7 @@ export {
   Button,
   Icon,
   Input,
+  Label,
   Text,
   // Icons
   AddIcon,
