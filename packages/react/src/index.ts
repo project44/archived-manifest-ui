@@ -5,9 +5,6 @@ export type { BoxProps } from './Box';
 export { Button } from './Button';
 export type { ButtonProps, ButtonVariants } from './Button';
 
-export { Heading } from './Heading';
-export type { HeadingProps, HeadingVariants } from './Heading';
-
 export { Icon } from './Icon';
 export type { IconProps } from './Icon';
 

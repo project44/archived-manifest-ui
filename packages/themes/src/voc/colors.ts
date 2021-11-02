@@ -5,6 +5,9 @@ export default {
   black: '#0F1013',
   white: '#FFFFFF',
 
+  hiContrast: '$black',
+  loContrast: '$white',
+
   // Palettes
   whiteAlpha50: 'rgba(255, 255, 255, 0.04)',
   whiteAlpha100: 'rgba(255, 255, 255, 0.06)',
