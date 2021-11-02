@@ -4,6 +4,6 @@ export const snippets: Snippets = [
   {
     group: 'Text',
     name: 'Default',
-    code: `<Text>Button</Text>`,
+    code: `<Text>Text</Text>`,
   },
 ];
