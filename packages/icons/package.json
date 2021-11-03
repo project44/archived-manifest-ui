@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React icons for building project44 experiences.",
   "main": "dist/manifest-ui-icons.cjs.js",
   "module": "dist/manifest-ui-icons.esm.js",

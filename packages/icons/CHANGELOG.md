@@ -1,8 +1,13 @@
 # @manifest-ui/icons
 
-## 0.0.1
+## 0.0.2
+
 ### Patch Changes
 
+- [#64](https://github.com/project44/manifest-ui/pull/64) [`075faf6`](https://github.com/project44/manifest-ui/commit/075faf627b876457a383dc010313117a872da3be) Thanks [@samrose3](https://github.com/samrose3)! - Update build target to use preset-env defaults
 
+## 0.0.1
+
+### Patch Changes
 
 - [`57a4ecc`](https://github.com/project44/manifest-ui/commit/57a4ecc12d6608e0986050c8152f173ff8993dfd) Thanks [@samrose3](https://github.com/samrose3)! - Release base set of icons
