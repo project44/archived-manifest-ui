@@ -21,7 +21,7 @@ export const Input = styled('input', {
 
   // Custom
   backgroundColor: '$loContrast',
-  boxShadow: 'inset 0 0 0 2px $colors$gray300',
+  boxShadow: 'inset 0 0 0 2px $colors$neutral300',
   color: '$hiContrast',
   transition: '$fast',
   transitionProperty: 'background-color, border-color, box-shadow, color',
@@ -33,27 +33,27 @@ export const Input = styled('input', {
     boxShadow: 'inset 0 0 0 2px $$border, 0 0 0 4px $$outline',
   },
   '&:focus:not(:focus-visible)': {
-    boxShadow: 'inset 0 0 0 2px $colors$gray300',
+    boxShadow: 'inset 0 0 0 2px $colors$neutral300',
   },
   '&:focus-visible': {
     boxShadow: 'inset 0 0 0 2px $$border, 0 0 0 4px $$outline',
   },
   '&::placeholder': {
-    color: '$gray400',
+    color: '$neutral400',
   },
   '&:disabled': {
     pointerEvents: 'none',
-    backgroundColor: '$gray100',
-    color: '$gray700',
+    backgroundColor: '$neutral100',
+    color: '$neutral700',
     cursor: 'not-allowed',
     '&::placeholder': {
-      color: '$gray600',
+      color: '$neutral600',
     },
   },
   '&:read-only': {
-    backgroundColor: '$gray100',
+    backgroundColor: '$neutral100',
     '&:focus': {
-      boxShadow: 'inset 0px 0px 0px 1px $colors$gray600',
+      boxShadow: 'inset 0px 0px 0px 1px $colors$neutral600',
     },
   },
   variants: {

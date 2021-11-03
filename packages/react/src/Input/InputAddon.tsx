@@ -14,11 +14,11 @@ const InputAddon = styled('div', {
   fontSize: '$4',
   letterSpacing: '$normal',
   whiteSpace: 'nowrap',
-  color: '$gray600',
+  color: '$neutral600',
 
   border: '2px solid',
-  borderColor: '$gray300',
-  backgroundColor: '$gray100',
+  borderColor: '$neutral300',
+  backgroundColor: '$neutral100',
   borderRadius: '$sm',
   px: '$3',
 
