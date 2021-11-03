@@ -1,44 +1,37 @@
-import React from 'react';
 import { styled } from '../stitches.config';
 import type { ComponentProps, VariantProps } from '../stitches.config';
 import * as LabelPrimitive from '@radix-ui/react-label';
 
-import { mapToVariant } from '../utils';
-import { Text } from '../Text';
-import type { TextProps } from '../Text';
-
 export type LabelProps = LabelPrimitive.LabelProps &
-  ComponentProps<typeof StyledLabel>;
-export type LabelVariants = VariantProps<typeof StyledLabel>;
+  ComponentProps<typeof Label>;
+export type LabelVariants = VariantProps<typeof Label>;
 
-const StyledLabel = styled(LabelPrimitive.Root, {
+export const Label = styled(LabelPrimitive.Root, {
+  // Reset
+  display: 'block',
+  margin: '0',
+
+  // Custom
+  color: '$hiContrast',
+  fontFamily: '$body',
+
   variants: {
     size: {
-      large: {},
-      medium: {},
-      small: {},
+      standard: {
+        fontSize: '$4',
+        fontWeight: '$medium',
+        lineHeight: '24px',
+        letterSpacing: '$normal',
+      },
+      small: {
+        fontSize: '$3',
+        fontWeight: '$medium',
+        lineHeight: '22px',
+        letterSpacing: '$wide',
+      },
     },
   },
   defaultVariants: {
-    size: 'medium',
+    size: 'standard',
   },
 });
-
-const variantMap = {
-  large: 'labelLarge',
-  medium: 'labelMedium',
-  small: 'labelSmall',
-};
-
-export const Label = React.forwardRef<HTMLSpanElement, LabelProps>(
-  ({ size = 'medium', ...props }, forwardedRef) => {
-    const variant = mapToVariant<typeof size, TextProps['variant']>(
-      variantMap,
-      size,
-      'labelMedium',
-    );
-    return (
-      <Text as={StyledLabel} ref={forwardedRef} variant={variant} {...props} />
-    );
-  },
-);

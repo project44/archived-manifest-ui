@@ -12,12 +12,12 @@ export default {
       description: 'Different supported label sizes',
       table: {
         type: {
-          summary: 'small|medium|large',
+          summary: 'small|standard',
         },
         defaultValue: { summary: 'medium' },
       },
       control: { type: 'radio' },
-      options: ['small', 'medium', 'large'],
+      options: ['small', 'standard'],
     },
     children: {
       description: 'Inner text for label element',
@@ -30,16 +30,10 @@ export default {
 
 const Template: Story<LabelProps> = (args) => <Label {...args} />;
 
-export const Large = Template.bind({});
-Large.args = {
+export const Standard = Template.bind({});
+Standard.args = {
   children: 'Label',
-  size: 'large',
-};
-
-export const Medium = Template.bind({});
-Medium.args = {
-  children: 'Label',
-  size: 'medium',
+  size: 'standard',
 };
 
 export const Small = Template.bind({});
