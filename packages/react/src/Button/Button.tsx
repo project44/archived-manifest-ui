@@ -26,11 +26,9 @@ export const Button = styled('button', {
   transition: '$fast',
   transitionProperty: 'background-color, border-color, box-shadow, color',
   '&:focus': {
-    outline: 'none',
     boxShadow: '0 0 0 4px $$outline',
   },
   '&:focus:not(:focus-visible)': {
-    outline: 'none',
     boxShadow: 'none',
   },
   '&:focus-visible': {
@@ -47,19 +45,19 @@ export const Button = styled('button', {
       },
     },
     size: {
-      sm: {
-        fontSize: '$xs',
+      small: {
+        fontSize: '$3',
         height: '30px',
         px: '$3',
         gap: '2px',
       },
-      md: {
-        fontSize: '$sm',
+      medium: {
+        fontSize: '$4',
         height: '38px',
         px: '$4',
       },
-      lg: {
-        fontSize: '$lg',
+      large: {
+        fontSize: '$5',
         height: '48px',
         px: '$4',
       },
@@ -103,7 +101,7 @@ export const Button = styled('button', {
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'medium',
     variant: 'primary',
   },
 });

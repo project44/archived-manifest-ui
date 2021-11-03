@@ -18,37 +18,76 @@ export const Input = styled('input', {
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
 
   // Custom
-  backgroundColor: '$white',
-  boxShadow: 'inset 0 0 0 1px $gray600',
-  borderRadius: '$2',
-  color: '$black',
-
-  ':focus': {
-    boxShadow: 'inset 0px 0px 0px 1px $blue700, 0px 0px 0px 1px $blue700',
+  backgroundColor: '$loContrast',
+  boxShadow: 'inset 0 0 0 2px $colors$gray300',
+  color: '$hiContrast',
+  transition: '$fast',
+  transitionProperty: 'background-color, border-color, box-shadow, color',
+  '&:focus': {
+    boxShadow: 'inset 0 0 0 2px $colors$blue500, 0 0 0 4px $$outline',
   },
-  '::placeholder': {
-    color: '$gray800',
+  '&:focus:not(:focus-visible)': {
+    boxShadow: 'none',
   },
-  ':disabled': {
+  '&:focus-visible': {
+    boxShadow: 'inset 0 0 0 2px $colors$blue500, 0 0 0 4px $$outline',
+  },
+  '&::placeholder': {
+    color: '$gray400',
+  },
+  '&:disabled': {
     pointerEvents: 'none',
     backgroundColor: '$gray100',
     color: '$gray700',
     cursor: 'not-allowed',
-    '::placeholder': {
+    '&::placeholder': {
       color: '$gray600',
     },
   },
-  ':read-only': {
+  '&:read-only': {
     backgroundColor: '$gray100',
-    ':focus': {
-      boxShadow: 'inset 0px 0px 0px 1px $gray600',
+    '&:focus': {
+      boxShadow: 'inset 0px 0px 0px 1px $colors$gray600',
     },
   },
   variants: {
     size: {
-      sm: {},
-      md: {},
-      lg: {},
+      sm: {
+        borderRadius: '$xs',
+        fontSize: '$sm',
+        height: '30px',
+        px: '$2',
+      },
+      md: {
+        borderRadius: '$sm',
+        fontSize: '$md',
+        height: '38px',
+        px: '$3',
+      },
+      lg: {
+        borderRadius: '$sm',
+        fontSize: '$md',
+        height: '44px',
+        px: '$3',
+      },
     },
+    variant: {
+      normal: {
+        $$outline: '$colors$blue200',
+      },
+      success: {
+        $$outline: '$colors$green200',
+      },
+      warning: {
+        $$outline: '$colors$orange200',
+      },
+      danger: {
+        $$outline: '$colors$red200',
+      },
+    },
+  },
+  defaultVariants: {
+    size: 'md',
+    variant: 'normal',
   },
 });

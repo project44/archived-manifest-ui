@@ -20,6 +20,19 @@ export default {
       control: { type: 'radio' },
       options: ['primary', 'secondary', 'tertiary', 'success', 'danger'],
     },
+    size: {
+      name: 'size',
+      type: { name: 'string', required: false },
+      description: 'Different supported button sizes',
+      table: {
+        type: {
+          summary: 'small|medium|large',
+        },
+        defaultValue: { summary: 'medium' },
+      },
+      control: { type: 'radio' },
+      options: ['small', 'medium', 'large'],
+    },
     children: {
       description: 'Inner element or text for element',
       table: {
