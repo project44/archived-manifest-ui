@@ -1,5 +1,15 @@
 # @manifest-ui/themes
 
+## 0.2.0
+
+### Minor Changes
+
+- [#63](https://github.com/project44/manifest-ui/pull/63) [`373c95e`](https://github.com/project44/manifest-ui/commit/373c95e50b262c50b5fa50b7f7e96f4d16c8ad96) Thanks [@samrose3](https://github.com/samrose3)! - Update color palettes
+
+### Patch Changes
+
+- [#60](https://github.com/project44/manifest-ui/pull/60) [`9e55506`](https://github.com/project44/manifest-ui/commit/9e5550602754ec1cadddb56fc697234bed027b26) Thanks [@samrose3](https://github.com/samrose3)! - Remove Heading component in favor of only using Text
+
 ## 0.1.4
 
 ### Patch Changes
