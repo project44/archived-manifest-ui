@@ -1,5 +1,22 @@
 # @manifest-ui/react
 
+## 0.1.0
+
+### Minor Changes
+
+- [#62](https://github.com/project44/manifest-ui/pull/62) [`cd994bf`](https://github.com/project44/manifest-ui/commit/cd994bf2673ef010a497ec61c5007978b60265aa) Thanks [@samrose3](https://github.com/samrose3)! - Add Input and Input helper components
+
+* [#60](https://github.com/project44/manifest-ui/pull/60) [`9e55506`](https://github.com/project44/manifest-ui/commit/9e5550602754ec1cadddb56fc697234bed027b26) Thanks [@samrose3](https://github.com/samrose3)! - Add Label component
+
+### Patch Changes
+
+- [#60](https://github.com/project44/manifest-ui/pull/60) [`9e55506`](https://github.com/project44/manifest-ui/commit/9e5550602754ec1cadddb56fc697234bed027b26) Thanks [@samrose3](https://github.com/samrose3)! - Remove Heading component in favor of only using Text
+
+* [#63](https://github.com/project44/manifest-ui/pull/63) [`373c95e`](https://github.com/project44/manifest-ui/commit/373c95e50b262c50b5fa50b7f7e96f4d16c8ad96) Thanks [@samrose3](https://github.com/samrose3)! - Update color palettes
+
+* Updated dependencies [[`9e55506`](https://github.com/project44/manifest-ui/commit/9e5550602754ec1cadddb56fc697234bed027b26), [`373c95e`](https://github.com/project44/manifest-ui/commit/373c95e50b262c50b5fa50b7f7e96f4d16c8ad96)]:
+  - @manifest-ui/themes@0.2.0
+
 ## 0.0.9
 
 ### Patch Changes
