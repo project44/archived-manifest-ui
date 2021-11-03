@@ -65,19 +65,19 @@ export const Button = styled('button', {
     variant: {
       primary: getSolidStyles('blue'),
       secondary: {
-        $$outline: '$colors$gray200',
-        borderColor: '$gray300',
-        color: '$gray500',
+        $$outline: '$colors$neutral200',
+        borderColor: '$neutral300',
+        color: '$neutral500',
         '&:hover': {
-          borderColor: '$gray400',
+          borderColor: '$neutral400',
         },
         '&:active': {
-          borderColor: '$gray500',
-          color: '$gray600',
+          borderColor: '$neutral500',
+          color: '$neutral600',
         },
         '&:disabled': {
-          borderColor: '$gray300',
-          color: '$gray300',
+          borderColor: '$neutral300',
+          color: '$neutral300',
         },
       },
       tertiary: {
@@ -93,7 +93,7 @@ export const Button = styled('button', {
         },
         '&:disabled': {
           bg: 'transparent',
-          color: '$gray400',
+          color: '$neutral400',
         },
       },
       success: getSolidStyles('green'),
@@ -118,8 +118,8 @@ function getSolidStyles(color: string) {
       backgroundColor: `$${color}700`,
     },
     '&:disabled': {
-      backgroundColor: '$gray100',
-      color: '$gray400',
+      backgroundColor: '$neutral100',
+      color: '$neutral400',
     },
   };
 }

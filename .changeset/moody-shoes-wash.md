@@ -1,5 +1,5 @@
 ---
-'@manifest-ui/react': patch
+'@manifest-ui/react': minor
 ---
 
 Add Label component
