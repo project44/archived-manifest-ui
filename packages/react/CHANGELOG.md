@@ -1,5 +1,15 @@
 # @manifest-ui/react
 
+## 0.1.1
+
+### Patch Changes
+
+- [#64](https://github.com/project44/manifest-ui/pull/64) [`075faf6`](https://github.com/project44/manifest-ui/commit/075faf627b876457a383dc010313117a872da3be) Thanks [@samrose3](https://github.com/samrose3)! - Update build target to use preset-env defaults
+
+- Updated dependencies [[`075faf6`](https://github.com/project44/manifest-ui/commit/075faf627b876457a383dc010313117a872da3be)]:
+  - @manifest-ui/icons@0.0.2
+  - @manifest-ui/themes@0.2.1
+
 ## 0.1.0
 
 ### Minor Changes
