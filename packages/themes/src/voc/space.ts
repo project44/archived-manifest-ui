@@ -10,5 +10,4 @@ export default {
   9: '6rem',
   10: '8rem',
   11: '12rem',
-  16: '256px',
 };

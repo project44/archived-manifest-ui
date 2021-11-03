@@ -6,18 +6,18 @@ export default {
   title: 'Components/Label',
   component: Label,
   argTypes: {
-    variant: {
-      name: 'variant',
+    size: {
+      name: 'size',
       type: { name: 'string', required: false },
-      description: 'Different types of labels',
+      description: 'Different supported label sizes',
       table: {
         type: {
-          summary: 'body1|body2',
+          summary: 'small|medium|large',
         },
-        defaultValue: { summary: 'body1' },
+        defaultValue: { summary: 'medium' },
       },
       control: { type: 'radio' },
-      options: ['body1', 'body2'],
+      options: ['small', 'medium', 'large'],
     },
     children: {
       description: 'Inner text for label element',
@@ -30,14 +30,20 @@ export default {
 
 const Template: Story<LabelProps> = (args) => <Label {...args} />;
 
-export const Normal = Template.bind({});
-Normal.args = {
+export const Large = Template.bind({});
+Large.args = {
   children: 'Label',
-  variant: 'body1',
+  size: 'large',
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
+  children: 'Label',
+  size: 'medium',
 };
 
 export const Small = Template.bind({});
 Small.args = {
   children: 'Label',
-  variant: 'body2',
+  size: 'small',
 };

@@ -6,8 +6,6 @@ export type TextVariants = VariantProps<typeof Text>;
 export const Text = styled('span', {
   // Reset
   lineHeight: '1',
-  fontWeight: '$medium',
-  fontVariantNumeric: 'tabular-nums',
   display: 'block',
   margin: '0',
 
@@ -17,70 +15,77 @@ export const Text = styled('span', {
 
   variants: {
     variant: {
-      heading1: {
-        fontSize: '$4xl',
+      headlineLarge: {
+        fontSize: '$9',
         fontWeight: '$bold',
         lineHeight: '$base',
         letterSpacing: '$tighter',
       },
-      heading2: {
-        fontSize: '$3xl',
+      headlineMedium: {
+        fontSize: '$8',
         fontWeight: '$bold',
         lineHeight: '$base',
         letterSpacing: '$tighter',
       },
-      heading3: {
-        fontSize: '$2xl',
+      headlineSmall: {
+        fontSize: '$7',
         fontWeight: '$bold',
         lineHeight: '$short',
         letterSpacing: '$tight',
       },
-      title1: {
-        fontSize: 'xl',
+      titleLarge: {
+        fontSize: '$6',
         fontWeight: '$bold',
         lineHeight: '$short',
         letterSpacing: '$wide',
       },
-      title2: {
-        fontSize: '$md',
+      titleMedium: {
+        fontSize: '$4',
         fontWeight: '$bold',
         lineHeight: '$short',
         letterSpacing: '$wider',
         textTransform: 'uppercase',
       },
-      title3: {
-        fontSize: '$sm',
+      titleSmall: {
+        fontSize: '$3',
         fontWeight: '$bold',
         lineHeight: '$tall',
         letterSpacing: '$wide',
       },
-      body1: {
-        fontSize: '$lg',
+      labelLarge: {
+        fontSize: '$5',
         fontWeight: '$medium',
         lineHeight: '28px',
         letterSpacing: '$normal',
       },
-      body2: {
-        fontSize: '$md',
+      labelMedium: {
+        fontSize: '$4',
         fontWeight: '$medium',
         lineHeight: '24px',
         letterSpacing: '$normal',
       },
-      body3: {
-        fontSize: '$sm',
+      labelSmall: {
+        fontSize: '$3',
         fontWeight: '$medium',
         lineHeight: '22px',
         letterSpacing: '$wide',
       },
-      caption1: {
-        fontSize: '$xs',
+      bodyLarge: {
+        fontSize: '$5',
         fontWeight: '$medium',
-        letterSpacing: '$wide',
+        lineHeight: '28px',
+        letterSpacing: '$normal',
       },
-      caption2: {
-        fontSize: '$xxs',
+      bodyMedium: {
+        fontSize: '$4',
         fontWeight: '$medium',
-        lineHeight: '16px',
+        lineHeight: '24px',
+        letterSpacing: '$normal',
+      },
+      bodySmall: {
+        fontSize: '$3',
+        fontWeight: '$medium',
+        lineHeight: '22px',
         letterSpacing: '$wide',
       },
     },

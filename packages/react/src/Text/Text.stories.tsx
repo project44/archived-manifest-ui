@@ -10,37 +10,31 @@ export default {
 
 export const Variants: Story<TextProps> = () => (
   <Box css={{ display: 'flex', flexDirection: 'column', gap: '$4' }}>
-    <Text variant="heading1">
+    <Text variant="headlineLarge">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text variant="heading2">
+    <Text variant="headlineMedium">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text variant="heading3">
+    <Text variant="headlineSmall">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text variant="title1">
+    <Text variant="titleLarge">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text variant="title2">
+    <Text variant="titleMedium">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text variant="title3">
+    <Text variant="titleSmall">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text variant="body1">
+    <Text variant="bodyLarge">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text variant="body2">
+    <Text variant="bodyMedium">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text variant="body3">
-      Almost before we knew it, we had left the ground.
-    </Text>
-    <Text variant="caption1">
-      Almost before we knew it, we had left the ground.
-    </Text>
-    <Text variant="caption2">
+    <Text variant="bodySmall">
       Almost before we knew it, we had left the ground.
     </Text>
   </Box>
