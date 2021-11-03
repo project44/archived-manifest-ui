@@ -1,6 +1,8 @@
 import { styled } from '../stitches.config';
 import type { ComponentProps, VariantProps } from '../stitches.config';
 
+import { WithId } from '../utils/types';
+
 export type InputProps = ComponentProps<typeof Input>;
 export type InputVariants = VariantProps<typeof Input>;
 
@@ -23,14 +25,18 @@ export const Input = styled('input', {
   color: '$hiContrast',
   transition: '$fast',
   transitionProperty: 'background-color, border-color, box-shadow, color',
+  zIndex: 1,
+  '&:hover': {
+    boxShadow: 'inset 0 0 0 2px $$border',
+  },
   '&:focus': {
-    boxShadow: 'inset 0 0 0 2px $colors$blue500, 0 0 0 4px $$outline',
+    boxShadow: 'inset 0 0 0 2px $$border, 0 0 0 4px $$outline',
   },
   '&:focus:not(:focus-visible)': {
-    boxShadow: 'none',
+    boxShadow: 'inset 0 0 0 2px $colors$gray300',
   },
   '&:focus-visible': {
-    boxShadow: 'inset 0 0 0 2px $colors$blue500, 0 0 0 4px $$outline',
+    boxShadow: 'inset 0 0 0 2px $$border, 0 0 0 4px $$outline',
   },
   '&::placeholder': {
     color: '$gray400',
@@ -52,42 +58,49 @@ export const Input = styled('input', {
   },
   variants: {
     size: {
-      sm: {
-        borderRadius: '$xs',
-        fontSize: '$sm',
+      small: {
+        borderRadius: '0.375rem',
+        fontSize: '$3',
         height: '30px',
         px: '$2',
       },
-      md: {
+      medium: {
         borderRadius: '$sm',
-        fontSize: '$md',
+        fontSize: '$4',
         height: '38px',
         px: '$3',
       },
-      lg: {
+      large: {
         borderRadius: '$sm',
-        fontSize: '$md',
+        fontSize: '$4',
         height: '44px',
         px: '$3',
       },
     },
     variant: {
       normal: {
+        $$border: '$colors$blue500',
         $$outline: '$colors$blue200',
       },
       success: {
+        $$border: '$colors$green500',
         $$outline: '$colors$green200',
       },
       warning: {
+        $$border: '$colors$orange500',
         $$outline: '$colors$orange200',
       },
       danger: {
+        $$border: '$colors$red500',
         $$outline: '$colors$red200',
       },
     },
   },
   defaultVariants: {
-    size: 'md',
+    size: 'medium',
     variant: 'normal',
   },
 });
+
+// This is used in `input-group.tsx`
+(Input as WithId<typeof Input>).id = 'Input';

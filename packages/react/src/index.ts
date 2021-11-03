@@ -8,7 +8,14 @@ export type { ButtonProps, ButtonVariants } from './Button';
 export { Icon } from './Icon';
 export type { IconProps } from './Icon';
 
-export { Input } from './Input';
+export {
+  Input,
+  InputEndAddon,
+  InputEndElement,
+  InputGroup,
+  InputStartAddon,
+  InputStartElement,
+} from './Input';
 export type { InputProps, InputVariants } from './Input';
 
 export { Label } from './Label';
@@ -22,6 +29,9 @@ export type {
 
 export { Text } from './Text';
 export type { TextProps, TextVariants } from './Text';
+
+export { TextField } from './TextField';
+export type { TextFieldProps, TextFieldVariants } from './TextField';
 
 // Icons
 export {
