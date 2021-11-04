@@ -1,3 +1,4 @@
+import { borderWidths } from './borders';
 import colors from './colors';
 import {
   fonts,
@@ -8,13 +9,13 @@ import {
 } from './typography';
 import radii from './radii';
 import shadows from './shadows';
+import sizes from './sizes';
 import space from './space';
 import transitions from './transitions';
 import zIndices from './zIndices';
 
 const theme = {
-  borderStyles: {},
-  borderWidths: {},
+  borderWidths,
   colors,
   fonts,
   fontSizes,
@@ -23,7 +24,7 @@ const theme = {
   lineHeights,
   radii,
   shadows,
-  sizes: {},
+  sizes,
   space,
   transitions,
   zIndices,
