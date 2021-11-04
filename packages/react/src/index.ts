@@ -41,6 +41,7 @@ export {
   ChevronLeftIcon,
   CloseIcon,
   StarIcon,
+  SearchIcon,
 } from './Icons';
 
 // Stitches

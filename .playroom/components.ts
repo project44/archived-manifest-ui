@@ -18,5 +18,6 @@ export {
   ChevronDownIcon,
   ChevronLeftIcon,
   CloseIcon,
+  SearchIcon,
   StarIcon,
 } from '../packages/react/src';

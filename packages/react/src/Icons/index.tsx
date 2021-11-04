@@ -4,3 +4,4 @@ export * from './ChevronDownIcon';
 export * from './ChevronLeftIcon';
 export * from './CloseIcon';
 export * from './StarIcon';
+export * from './SearchIcon';
