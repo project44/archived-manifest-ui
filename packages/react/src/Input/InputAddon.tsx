@@ -13,10 +13,11 @@ const InputAddon = styled('div', {
   fontFamily: '$body',
   fontSize: '$4',
   letterSpacing: '$normal',
+  lineHeight: '$base',
   whiteSpace: 'nowrap',
   color: '$neutral600',
 
-  border: '2px solid',
+  border: '1px solid',
   borderColor: '$neutral300',
   backgroundColor: '$neutral100',
   borderRadius: '$sm',
@@ -25,13 +26,13 @@ const InputAddon = styled('div', {
   variants: {
     placement: {
       start: {
-        marginInlineEnd: '-2px',
+        marginInlineEnd: '-1px',
         borderStartEndRadius: 0,
         borderEndEndRadius: 0,
         borderEndColor: 'transparent',
       },
       end: {
-        marginInlineStart: '-2px',
+        marginInlineStart: '-1px',
         borderStartStartRadius: 0,
         borderEndStartRadius: 0,
         borderStartColor: 'transparent',

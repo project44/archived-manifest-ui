@@ -21,7 +21,7 @@ export const Input = styled('input', {
 
   // Custom
   backgroundColor: '$loContrast',
-  boxShadow: 'inset 0 0 0 2px $colors$neutral300',
+  boxShadow: 'inset 0 0 0 1px $colors$neutral300',
   color: '$hiContrast',
   transition: '$fast',
   transitionProperty: 'background-color, border-color, box-shadow, color',
