@@ -13,7 +13,7 @@ const InputElement = styled('div', {
   zIndex: 2,
   top: 0,
   bottom: 0,
-  width: '38px',
+  width: '40px',
   pointerEvents: 'none',
   fontFamily: '$body',
   color: '$neutral400',

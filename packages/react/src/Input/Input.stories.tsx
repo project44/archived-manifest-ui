@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
 import { Box } from '../Box';
-import { StarIcon } from '../Icons';
+import { ChevronDownIcon } from '../Icons';
 import {
   Input,
   InputEndAddon,
@@ -43,7 +43,7 @@ export default {
       options: ['small', 'medium', 'large'],
     },
     disabled: {
-      description: 'Set the button to a disabled state',
+      description: 'Set the input to a disabled state',
       table: {
         type: { summary: 'bool' },
         defaultValue: { summary: false },
@@ -65,11 +65,13 @@ Basic.args = {
 export const Group: Story<InputProps> = (args) => (
   <InputGroup>
     <InputStartElement>
-      <StarIcon />
+      <span aria-label="phone" role="img">
+        📞
+      </span>
     </InputStartElement>
     <Input type="tel" placeholder="Phone number" {...args} />
     <InputEndElement>
-      <StarIcon />
+      <ChevronDownIcon />
     </InputEndElement>
   </InputGroup>
 );
