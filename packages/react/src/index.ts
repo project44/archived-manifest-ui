@@ -5,6 +5,8 @@ export type { BoxProps } from './Box';
 export { Button } from './Button';
 export type { ButtonProps, ButtonVariants } from './Button';
 
+export { ColorModeProvider, useColorMode } from './ColorModeProvider';
+
 export { Icon } from './Icon';
 export type { IconProps } from './Icon';
 

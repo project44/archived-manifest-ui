@@ -1,7 +1,12 @@
 import React from 'react';
 import { Story } from '@storybook/react';
 
-import { ManifestProvider } from '../packages/react/src';
+import { Button, ManifestProvider, useColorMode } from '../packages/react/src';
+
+export const ColorModeToggleButton = () => {
+  const { mode, invertMode } = useColorMode();
+  return <Button onClick={invertMode}>Mode: {mode}</Button>;
+};
 
 export const decorators = [
   (StoryFn: Story) => (
