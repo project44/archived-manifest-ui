@@ -1,5 +1,11 @@
 # @manifest-ui/themes
 
+## 0.2.2
+
+### Patch Changes
+
+- [#66](https://github.com/project44/manifest-ui/pull/66) [`41550f3`](https://github.com/project44/manifest-ui/commit/41550f32b095ab6b8f04d68dab002b2529db8da4) Thanks [@samrose3](https://github.com/samrose3)! - Add borders and sizes to theme
+
 ## 0.2.1
 
 ### Patch Changes

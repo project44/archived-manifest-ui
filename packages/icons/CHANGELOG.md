@@ -1,5 +1,11 @@
 # @manifest-ui/icons
 
+## 0.0.3
+
+### Patch Changes
+
+- [#66](https://github.com/project44/manifest-ui/pull/66) [`5e88ca4`](https://github.com/project44/manifest-ui/commit/5e88ca4b6c480114e9b9b171001b6a57e8c5c0f9) Thanks [@samrose3](https://github.com/samrose3)! - Add Search icon
+
 ## 0.0.2
 
 ### Patch Changes

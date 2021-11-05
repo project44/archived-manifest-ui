@@ -1,5 +1,15 @@
 # @manifest-ui/react
 
+## 0.1.2
+
+### Patch Changes
+
+- [#66](https://github.com/project44/manifest-ui/pull/66) [`ae23c41`](https://github.com/project44/manifest-ui/commit/ae23c41707710258e1cc1315949c3d0670e4aa91) Thanks [@samrose3](https://github.com/samrose3)! - Add TextInput component
+
+- Updated dependencies [[`41550f3`](https://github.com/project44/manifest-ui/commit/41550f32b095ab6b8f04d68dab002b2529db8da4), [`5e88ca4`](https://github.com/project44/manifest-ui/commit/5e88ca4b6c480114e9b9b171001b6a57e8c5c0f9)]:
+  - @manifest-ui/themes@0.2.2
+  - @manifest-ui/icons@0.0.3
+
 ## 0.1.1
 
 ### Patch Changes

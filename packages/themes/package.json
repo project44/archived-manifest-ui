@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/themes",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Themes for building project44 experiences.",
   "main": "dist/manifest-ui-themes.cjs.js",
   "module": "dist/manifest-ui-themes.esm.js",
