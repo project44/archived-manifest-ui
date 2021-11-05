@@ -14,7 +14,7 @@ export const {
   createTheme,
   config,
 } = createStitches({
-  prefix: 'p44',
+  prefix: 'manifest',
   theme: defaultTheme,
   media: {
     bp1: '(min-width: 600px)',
@@ -82,5 +82,12 @@ export const {
       marginTop: value,
       marginBottom: value,
     }),
+  },
+});
+
+export const darkTheme = createTheme({
+  colors: {
+    hiContrast: '$bright',
+    loContrast: '$dark',
   },
 });
