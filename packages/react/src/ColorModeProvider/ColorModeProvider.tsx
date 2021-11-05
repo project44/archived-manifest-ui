@@ -34,7 +34,6 @@ const getSavedColorModePreference = (): ColorMode | void => {
     const savedMode = window.localStorage.getItem('manifest-ui-color-mode');
     if (typeof savedMode === 'string') return savedMode;
   } catch (e) {
-    // When Chrome in incognito, localStorage cannot be accessed
     console.warn(e);
   }
 };

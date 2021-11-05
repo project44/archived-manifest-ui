@@ -1,7 +1,6 @@
 import React from 'react';
 import { theme as defaultTheme } from '../stitches.config';
 
-import { ColorModeProvider } from '../ColorModeProvider';
 import { ManifestThemeContext } from './ManifestThemeContext';
 
 export interface ManifestProviderProps {
@@ -15,7 +14,7 @@ export const ManifestProvider = ({
 }: ManifestProviderProps) => {
   return (
     <ManifestThemeContext.Provider value={theme}>
-      <ColorModeProvider>{children}</ColorModeProvider>
+      <div className={theme}>{children}</div>
     </ManifestThemeContext.Provider>
   );
 };
