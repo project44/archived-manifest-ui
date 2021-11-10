@@ -20,7 +20,7 @@ const InputAddon = styled('div', {
   border: '1px solid',
   borderColor: '$neutral300',
   backgroundColor: '$neutral100',
-  borderRadius: '$sm',
+  borderRadius: '$small',
   px: '$3',
 
   variants: {
