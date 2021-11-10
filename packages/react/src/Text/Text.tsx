@@ -6,88 +6,71 @@ export type TextVariants = VariantProps<typeof Text>;
 export const Text = styled('span', {
   // Reset
   lineHeight: '1',
-  display: 'block',
   margin: '0',
-
-  // Custom
-  fontFamily: '$body',
-  color: '$hiContrast',
+  fontWeight: '$normal',
+  fontVariantNumeric: 'tabular-nums',
 
   variants: {
-    variant: {
-      headlineLarge: {
-        fontSize: '$9',
-        fontWeight: '$bold',
-        lineHeight: '$base',
-        letterSpacing: '$tighter',
+    fontSize: {
+      '1': {
+        fontSize: '$1',
       },
-      headlineMedium: {
-        fontSize: '$8',
-        fontWeight: '$bold',
-        lineHeight: '$base',
-        letterSpacing: '$tighter',
+      '2': {
+        fontSize: '$2',
       },
-      headlineSmall: {
-        fontSize: '$7',
-        fontWeight: '$bold',
-        lineHeight: '$short',
-        letterSpacing: '$tight',
+      '3': {
+        fontSize: '$3',
       },
-      titleLarge: {
+      '4': {
+        fontSize: '$4',
+      },
+      '5': {
+        fontSize: '$5',
+      },
+      '6': {
         fontSize: '$6',
-        fontWeight: '$bold',
-        lineHeight: '$short',
-        letterSpacing: '$wide',
       },
-      titleMedium: {
-        fontSize: '$4',
-        fontWeight: '$bold',
-        lineHeight: '$short',
-        letterSpacing: '$wider',
-        textTransform: 'uppercase',
+      '7': {
+        fontSize: '$7',
       },
-      titleSmall: {
-        fontSize: '$3',
-        fontWeight: '$bold',
-        lineHeight: '$tall',
-        letterSpacing: '$wide',
+      '8': {
+        fontSize: '$8',
       },
-      labelLarge: {
-        fontSize: '$5',
-        fontWeight: '$medium',
-        lineHeight: '28px',
-        letterSpacing: '$normal',
-      },
-      labelMedium: {
-        fontSize: '$4',
-        fontWeight: '$medium',
-        lineHeight: '24px',
-        letterSpacing: '$normal',
-      },
-      labelSmall: {
-        fontSize: '$3',
-        fontWeight: '$medium',
-        lineHeight: '22px',
-        letterSpacing: '$wide',
-      },
-      bodyLarge: {
-        fontSize: '$5',
-        fontWeight: '$medium',
-        lineHeight: '28px',
-        letterSpacing: '$normal',
-      },
-      bodyMedium: {
-        fontSize: '$4',
-        fontWeight: '$medium',
-        lineHeight: '24px',
-        letterSpacing: '$normal',
-      },
-      bodySmall: {
-        fontSize: '$3',
-        fontWeight: '$medium',
-        lineHeight: '22px',
-        letterSpacing: '$wide',
+      '9': {
+        fontSize: '$9',
       },
     },
+    size: {
+      small: {
+        fontSize: '$3',
+        letterSpacing: '$normal',
+        lineHeight: 1,
+      },
+      medium: {
+        fontSize: '$3',
+        letterSpacing: '$normal',
+        lineHeight: 1,
+      },
+      large: {
+        fontSize: '$3',
+        letterSpacing: '$normal',
+        lineHeight: 1,
+      },
+    },
+    variant: {
+      contrast: {
+        color: '$hiContrast',
+      },
+      secondary: {
+        color: '$neutral500',
+      },
+    },
+    isTruncated: {
+      true: {},
+    },
+  },
+  defaultVariants: {
+    size: 'medium',
+    variant: 'contrast',
   },
 });

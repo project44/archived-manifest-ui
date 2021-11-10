@@ -70,7 +70,7 @@ export const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
           {suffix && <InputEndAddon>{suffix}</InputEndAddon>}
         </InputGroup>
         {helpText && (
-          <Text variant="bodySmall" css={{ color: '$neutral500', mt: '$1' }}>
+          <Text variant="secondary" css={{ mt: '$1' }}>
             {helpText}
           </Text>
         )}

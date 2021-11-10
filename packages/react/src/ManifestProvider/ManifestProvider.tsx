@@ -14,7 +14,7 @@ export const ManifestProvider = ({
 }: ManifestProviderProps) => {
   return (
     <ManifestThemeContext.Provider value={theme}>
-      <div className={theme}>{children}</div>
+      {children}
     </ManifestThemeContext.Provider>
   );
 };

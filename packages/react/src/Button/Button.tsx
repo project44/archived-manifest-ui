@@ -18,7 +18,7 @@ export const Button = styled(Primitives.Button, {
   backgroundColor: 'transparent',
   border: '1px solid',
   borderColor: 'transparent',
-  borderRadius: '$sm',
+  borderRadius: '$small',
   fontFamily: '$body',
   fontWeight: '$medium',
   lineHeight: '1',
@@ -27,7 +27,7 @@ export const Button = styled(Primitives.Button, {
   transition: '$fast',
   transitionProperty: 'background-color, border-color, box-shadow, color',
   '&:focus': {
-    boxShadow: '0 0 0 4px $$outline',
+    boxShadow: '$outline',
   },
   '&:focus:not(:focus-visible)': {
     boxShadow: 'none',

@@ -30,10 +30,10 @@ export default {
 
 const Template: Story<LabelProps> = (args) => <Label {...args} />;
 
-export const Standard = Template.bind({});
-Standard.args = {
+export const Medium = Template.bind({});
+Medium.args = {
   children: 'Label',
-  size: 'standard',
+  size: 'medium',
 };
 
 export const Small = Template.bind({});
