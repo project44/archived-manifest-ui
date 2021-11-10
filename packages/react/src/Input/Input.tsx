@@ -65,13 +65,13 @@ export const Input = styled('input', {
         px: '$2',
       },
       medium: {
-        borderRadius: '$sm',
+        borderRadius: '$small',
         fontSize: '$4',
         height: '38px',
         px: '$3',
       },
       large: {
-        borderRadius: '$sm',
+        borderRadius: '$small',
         fontSize: '$4',
         height: '44px',
         px: '$3',

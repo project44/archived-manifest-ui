@@ -20,7 +20,7 @@ export const Button = styled(Primitives.Button, {
   borderColor: 'transparent',
   borderRadius: '$small',
   fontFamily: '$body',
-  fontWeight: '$medium',
+  fontWeight: '$semibold',
   lineHeight: '1',
   py: '$2',
   outline: 'none',
