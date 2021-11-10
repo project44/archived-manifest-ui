@@ -1,0 +1,31 @@
+{
+  "name": "@manifest-ui/hooks",
+  "version": "0.0.0",
+  "main": "dist/manifest-ui-hooks.cjs.js",
+  "module": "dist/manifest-ui-hooks.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/manifest-ui-hooks.cjs.js",
+      "default": "./dist/manifest-ui-hooks.esm.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/project44/manifest-ui.git",
+    "directory": "packages/hooks"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0",
+    "react-dom": "^16.8 || ^17.0"
+  }
+}

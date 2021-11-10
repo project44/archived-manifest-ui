@@ -1,0 +1,34 @@
+{
+  "name": "@manifest-ui/state",
+  "version": "0.0.0",
+  "main": "dist/manifest-ui-state.cjs.js",
+  "module": "dist/manifest-ui-state.esm.js",
+  "exports": {
+    ".": {
+      "require": "./dist/manifest-ui-state.cjs.js",
+      "default": "./dist/manifest-ui-state.esm.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/project44/manifest-ui.git",
+    "directory": "packages/state"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "devDependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0",
+    "react-dom": "^16.8 || ^17.0"
+  },
+  "dependencies": {
+    "@manifest-ui/hooks": "*"
+  }
+}
