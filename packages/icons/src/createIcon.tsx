@@ -32,8 +32,14 @@ export function createIcon(options: CreateIconOptions) {
   } = options;
 
   const Comp = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
-    <svg ref={ref} viewBox={viewBox} {...defaultProps} {...props}>
-      {path ?? <path fill="currentColor" d={pathDefinition} />}
+    <svg
+      ref={ref}
+      viewBox={viewBox}
+      fill="currentColor"
+      {...defaultProps}
+      {...props}
+    >
+      {path ?? <path d={pathDefinition} />}
     </svg>
   ));
 
