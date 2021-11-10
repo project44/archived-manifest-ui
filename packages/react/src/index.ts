@@ -39,9 +39,18 @@ export {
   CheckIcon,
   ChevronDownIcon,
   ChevronLeftIcon,
+  ChevronRightIcon,
+  ChevronUpIcon,
+  CloseCircleIcon,
+  CloseCircleOutlineIcon,
   CloseIcon,
+  ExternalIcon,
+  InfoIcon,
+  InfoOutlineIcon,
   StarIcon,
   SearchIcon,
+  WarningIcon,
+  WarningOutlineIcon,
 } from './Icons';
 
 // Stitches
