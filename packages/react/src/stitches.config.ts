@@ -1,5 +1,5 @@
 import { createStitches } from '@stitches/react';
-import type { ScaleValue } from '@stitches/react';
+import type { PropertyValue } from '@stitches/react';
 import { theme as defaultTheme } from '@manifest-ui/themes';
 
 export * from '@stitches/react';
@@ -27,60 +27,54 @@ export const {
     light: '(prefers-color-scheme: light)',
   },
   utils: {
-    bg: (value: ScaleValue<'color'>) => ({
+    p: (value: PropertyValue<'padding'>) => ({
+      padding: value,
+    }),
+    pt: (value: PropertyValue<'paddingTop'>) => ({
+      paddingTop: value,
+    }),
+    pr: (value: PropertyValue<'paddingRight'>) => ({
+      paddingRight: value,
+    }),
+    pb: (value: PropertyValue<'paddingBottom'>) => ({
+      paddingBottom: value,
+    }),
+    pl: (value: PropertyValue<'paddingLeft'>) => ({
+      paddingLeft: value,
+    }),
+    px: (value: PropertyValue<'paddingLeft'>) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    py: (value: PropertyValue<'paddingTop'>) => ({
+      paddingTop: value,
+      paddingBottom: value,
+    }),
+    m: (value: PropertyValue<'margin'>) => ({
+      margin: value,
+    }),
+    mt: (value: PropertyValue<'marginTop'>) => ({
+      marginTop: value,
+    }),
+    mr: (value: PropertyValue<'marginRight'>) => ({
+      marginRight: value,
+    }),
+    mb: (value: PropertyValue<'marginBottom'>) => ({
+      marginBottom: value,
+    }),
+    ml: (value: PropertyValue<'marginLeft'>) => ({
+      marginLeft: value,
+    }),
+    mx: (value: PropertyValue<'marginLeft'>) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    my: (value: PropertyValue<'marginTop'>) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
+    bg: (value: PropertyValue<'backgroundColor'>) => ({
       backgroundColor: value,
-    }),
-    p: (value: ScaleValue<'space'>) => ({
-      paddingTop: value,
-      paddingBottom: value,
-      paddingLeft: value,
-      paddingRight: value,
-    }),
-    pt: (value: ScaleValue<'space'>) => ({
-      paddingTop: value,
-    }),
-    pr: (value: ScaleValue<'space'>) => ({
-      paddingRight: value,
-    }),
-    pb: (value: ScaleValue<'space'>) => ({
-      paddingBottom: value,
-    }),
-    pl: (value: ScaleValue<'space'>) => ({
-      paddingLeft: value,
-    }),
-    px: (value: ScaleValue<'space'>) => ({
-      paddingLeft: value,
-      paddingRight: value,
-    }),
-    py: (value: ScaleValue<'space'>) => ({
-      paddingTop: value,
-      paddingBottom: value,
-    }),
-    m: (value: ScaleValue<'space'>) => ({
-      marginTop: value,
-      marginBottom: value,
-      marginLeft: value,
-      marginRight: value,
-    }),
-    mt: (value: ScaleValue<'space'>) => ({
-      marginTop: value,
-    }),
-    mr: (value: ScaleValue<'space'>) => ({
-      marginRight: value,
-    }),
-    mb: (value: ScaleValue<'space'>) => ({
-      marginBottom: value,
-    }),
-    ml: (value: ScaleValue<'space'>) => ({
-      marginLeft: value,
-    }),
-    mx: (value: ScaleValue<'space'>) => ({
-      marginLeft: value,
-      marginRight: value,
-    }),
-    my: (value: ScaleValue<'space'>) => ({
-      marginTop: value,
-      marginBottom: value,
     }),
   },
 });
@@ -89,5 +83,7 @@ export const darkTheme = createTheme({
   colors: {
     hiContrast: '$bright',
     loContrast: '$dark',
+    shadow1: '#000000',
+    shadow2: 'rgba(0, 0, 0, 0.9)',
   },
 });

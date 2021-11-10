@@ -2,8 +2,8 @@ import { Snippets } from 'playroom';
 
 export const snippets: Snippets = [
   {
-    group: 'Label',
-    name: 'Standard',
-    code: `<Label>Label</Label>`,
+    group: 'Alert',
+    name: 'Info',
+    code: `<Alert status="info">Alert</Alert>`,
   },
 ];
