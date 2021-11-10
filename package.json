@@ -17,11 +17,11 @@
     "prepare": "husky install"
   },
   "workspaces": [
-    "packages/*"
+    "packages/**/*"
   ],
   "preconstruct": {
     "packages": [
-      "packages/*"
+      "packages/**/*"
     ]
   },
   "volta": {

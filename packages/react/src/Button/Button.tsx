@@ -1,10 +1,11 @@
+import * as Primitives from '@manifest-ui/primitive-button';
 import { styled } from '../stitches.config';
 import type { ComponentProps, VariantProps } from '../stitches.config';
 
 export type ButtonProps = ComponentProps<typeof Button>;
 export type ButtonVariants = VariantProps<typeof Button>;
 
-export const Button = styled('button', {
+export const Button = styled(Primitives.Button, {
   // Reset
   appearance: 'none',
   WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
