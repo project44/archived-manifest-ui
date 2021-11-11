@@ -5,6 +5,7 @@ export type TextVariants = VariantProps<typeof Text>;
 
 export const Text = styled('span', {
   // Reset
+  display: 'block',
   lineHeight: '1',
   margin: '0',
   fontWeight: '$normal',

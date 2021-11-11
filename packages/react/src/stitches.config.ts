@@ -79,30 +79,11 @@ export const {
   },
   themeMap: {
     ...defaultThemeMap,
-    border: 'borders',
-
     opacity: 'opacities',
-
-    blockSize: 'space',
-    minBlockSize: 'space',
-    maxBlockSize: 'space',
-    inlineSize: 'space',
-    minInlineSize: 'space',
-    maxInlineSize: 'space',
-    width: 'space',
-    minWidth: 'space',
-    maxWidth: 'space',
-    height: 'space',
-    minHeight: 'space',
-    maxHeight: 'space',
-    flexBasis: 'space',
-    gridTemplateColumns: 'space',
-    gridTemplateRows: 'space',
-
     transitionProperty: 'transitionProperties',
     transitionDuration: 'transitionDurations',
     transitionDelay: 'transitionDurations',
-    transitionTimingFunction: 'transitionTimingFunction',
+    transitionTimingFunction: 'transitionTimingFunctions',
   },
 });
 
