@@ -1,2 +1,2 @@
 export * from './ManifestProvider';
-export * from './ManifestThemeContext';
+export * from './ThemeContext';

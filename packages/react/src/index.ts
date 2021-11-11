@@ -21,11 +21,8 @@ export type { InputProps, InputVariants } from './Input';
 export { Label } from './Label';
 export type { LabelProps, LabelVariants } from './Label';
 
-export { ManifestProvider, useManifestTheme } from './ManifestProvider';
-export type {
-  ManifestProviderProps,
-  ManifestThemeContext,
-} from './ManifestProvider';
+export { ManifestProvider, useTheme } from './ManifestProvider';
+export type { ManifestProviderProps, ThemeContext } from './ManifestProvider';
 
 export { Text } from './Text';
 export type { TextProps, TextVariants } from './Text';
