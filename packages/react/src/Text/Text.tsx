@@ -41,23 +41,6 @@ export const Text = styled('span', {
         fontSize: '$9',
       },
     },
-    size: {
-      small: {
-        fontSize: '$3',
-        letterSpacing: '$normal',
-        lineHeight: 1,
-      },
-      medium: {
-        fontSize: '$3',
-        letterSpacing: '$normal',
-        lineHeight: 1,
-      },
-      large: {
-        fontSize: '$3',
-        letterSpacing: '$normal',
-        lineHeight: 1,
-      },
-    },
     variant: {
       contrast: {
         color: '$hiContrast',
@@ -71,7 +54,6 @@ export const Text = styled('span', {
     },
   },
   defaultVariants: {
-    size: 'medium',
     variant: 'contrast',
   },
 });
