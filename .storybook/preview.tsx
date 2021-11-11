@@ -1,14 +1,38 @@
 import React from 'react';
-import { Story } from '@storybook/react';
+import { Story, StoryContext } from '@storybook/react';
 
-import { ManifestProvider } from '../packages/react/src';
+import { ManifestProvider, createTheme } from '../packages/react/src';
+import * as themes from '../packages/themes/src';
+
+export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Global theme for components',
+    defaultValue: 'voc',
+    toolbar: {
+      icon: 'circlehollow',
+      items: ['voc', 'dolly'],
+    },
+  },
+};
+
+const getTheme = (themeName) => {
+  return createTheme(themes[themeName]);
+};
 
 export const decorators = [
-  (StoryFn: Story) => (
-    <ManifestProvider>
-      <StoryFn />
-    </ManifestProvider>
-  ),
+  (StoryFn: Story, context: StoryContext) => {
+    const themeName = context.globals.theme;
+    const theme = React.useMemo(() => {
+      return getTheme(context.globals.theme);
+    }, [themeName]);
+
+    return (
+      <ManifestProvider theme={theme}>
+        <StoryFn {...context} />
+      </ManifestProvider>
+    );
+  },
 ];
 
 export const parameters = {

@@ -1,4 +1,4 @@
-import { createStitches } from '@stitches/react';
+import { createStitches, defaultThemeMap } from '@stitches/react';
 import type { PropertyValue } from '@stitches/react';
 import { theme as defaultTheme } from '@manifest-ui/themes';
 
@@ -77,12 +77,39 @@ export const {
       backgroundColor: value,
     }),
   },
+  themeMap: {
+    ...defaultThemeMap,
+    border: 'borders',
+
+    opacity: 'opacities',
+
+    blockSize: 'space',
+    minBlockSize: 'space',
+    maxBlockSize: 'space',
+    inlineSize: 'space',
+    minInlineSize: 'space',
+    maxInlineSize: 'space',
+    width: 'space',
+    minWidth: 'space',
+    maxWidth: 'space',
+    height: 'space',
+    minHeight: 'space',
+    maxHeight: 'space',
+    flexBasis: 'space',
+    gridTemplateColumns: 'space',
+    gridTemplateRows: 'space',
+
+    transitionProperty: 'transitionProperties',
+    transitionDuration: 'transitionDurations',
+    transitionDelay: 'transitionDurations',
+    transitionTimingFunction: 'transitionTimingFunction',
+  },
 });
 
 export const darkTheme = createTheme({
   colors: {
-    hiContrast: '$bright',
-    loContrast: '$dark',
+    hiContrast: '$neutral900',
+    loContrast: '$neutral800',
     shadow1: '#000000',
     shadow2: 'rgba(0, 0, 0, 0.9)',
   },
