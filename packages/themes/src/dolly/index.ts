@@ -1,26 +1,22 @@
 export const borderWidths = {
-  small: '1px',
-  medium: '2px',
-  large: '4px',
-};
-
-export const borders = {
-  small: `${borderWidths.small} solid`,
-  medium: `${borderWidths.medium} solid`,
-  large: `${borderWidths.large} solid`,
+  small: '0.0625rem',
+  medium: '0.125px',
+  large: '0.25rem',
 };
 
 export const colors = {
-  grey100: '#fbfbfb',
-  grey200: '#f6f6f6',
-  grey300: '#eeeeee',
-  grey400: '#cccccc',
-  grey500: '#999999',
-  grey600: '#555555',
-  grey700: '#493e3f',
-  grey800: '#3d2a2e',
-  grey900: '#311b20',
-  grey1000: '#281018',
+  shadow1: 'rgba(0, 0, 0, 0.12)',
+  shadow2: 'rgba(0, 0, 0, 0.24)',
+  neutral100: '#fbfbfb',
+  neutral200: '#f6f6f6',
+  neutral300: '#eeeeee',
+  neutral400: '#cccccc',
+  neutral500: '#999999',
+  neutral600: '#555555',
+  neutral700: '#493e3f',
+  neutral800: '#3d2a2e',
+  neutral900: '#311b20',
+  neutral1000: '#281018',
   red100: '#fdf2ed',
   red200: '#fbded1',
   red300: '#f8b6a4',
@@ -104,7 +100,7 @@ export const colors = {
 };
 
 export const fonts = {
-  body: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+  body: 'proxima-nova, sans-serif',
   mono: `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`,
 };
 
@@ -115,9 +111,9 @@ export const fontSizes = {
   4: '1rem',
   5: '1.25rem',
   6: '2.125rem',
-  7: '1.5rem', // ?
-  8: '1.875rem', // ?
-  9: '2.375rem', // ?
+  7: '2.125rem', // ?
+  8: '2.125rem', // ?
+  9: '2.125rem', // ?
 };
 
 export const fontWeights = {
@@ -135,6 +131,7 @@ export const letterSpacings = {
   wider: 1,
 };
 
+// Convert to relative unit?
 export const lineHeights = {
   shorter: '12px',
   short: '16px',
@@ -151,6 +148,7 @@ export const opacities = {
   selected: 0.08,
 };
 
+// Convert to REMs
 export const radii = {
   small: '2px',
   medium: '4px',
@@ -160,11 +158,11 @@ export const radii = {
 };
 
 export const shadows = {
-  xsmall: 'none',
-  small: 'none',
-  medium: '0px 2px 8px rgba(0, 0, 0, 0.25)',
-  large: '0px 4px 8px rgba(0, 0, 0, 0.12)',
-  xlarge: '0px 0px 8px rgba(0, 0, 0, 0.12), 0px 8px 8px rgba(0, 0, 0, 0.24)',
+  xsmall: 'none', // ?
+  small: 'none', // ?
+  medium: `0px 2px 8px ${colors.shadow2}`,
+  large: `0px 4px 8px ${colors.shadow1}`,
+  xlarge: `0px 0px 8px ${colors.shadow1}, 0px 8px 8px ${colors.shadow2}`,
 };
 
 export const space = {
@@ -200,12 +198,7 @@ const transitionTimingFunctions = {
   easeOut: 'cubic-bezier(0, 0, 0.2, 1)',
 };
 
-const transitions = {
-  fast: `${transitionDurations.fast} ${transitionTimingFunctions.ease}`,
-  normal: `${transitionDurations.normal} ${transitionTimingFunctions.ease}`,
-  slow: `${transitionDurations.slow} ${transitionTimingFunctions.ease}`,
-};
-
+// Scale or named?
 export const zIndices = {
   hide: -1,
   base: 0,
@@ -214,7 +207,6 @@ export const zIndices = {
 };
 
 export const theme = {
-  borders,
   borderWidths,
   colors,
   fonts,
@@ -226,7 +218,8 @@ export const theme = {
   radii,
   shadows,
   space,
-  transitions,
+  transitionDurations,
+  transitionTimingFunctions,
   transitionProperties,
   zIndices,
 };

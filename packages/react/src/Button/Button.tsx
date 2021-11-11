@@ -7,8 +7,15 @@ export type ButtonVariants = VariantProps<typeof Button>;
 
 export const Button = styled(Primitives.Button, {
   // Reset
-  appearance: 'none',
-  WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
+  all: 'unset',
+  boxSizing: 'border-box',
+  userSelect: 'none',
+  '&::before': {
+    boxSizing: 'border-box',
+  },
+  '&::after': {
+    boxSizing: 'border-box',
+  },
 
   // Custom
   display: 'inline-flex',
@@ -16,7 +23,8 @@ export const Button = styled(Primitives.Button, {
   justifyContent: 'center',
   gap: '$1',
   backgroundColor: 'transparent',
-  border: '1px solid',
+  borderWidth: '$small',
+  borderStyle: 'solid',
   borderColor: 'transparent',
   borderRadius: '$small',
   fontFamily: '$body',
@@ -24,10 +32,11 @@ export const Button = styled(Primitives.Button, {
   lineHeight: '1',
   py: '$2',
   outline: 'none',
-  transition: '$fast',
-  transitionProperty: 'background-color, border-color, box-shadow, color',
+  transitionDuration: '$fast',
+  transitionTimingFunction: '$ease',
+  transitionProperty: '$common',
   '&:focus': {
-    boxShadow: '$outline',
+    boxShadow: '$colors$neutral400',
   },
   '&:focus:not(:focus-visible)': {
     boxShadow: 'none',
