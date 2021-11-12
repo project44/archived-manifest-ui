@@ -14,25 +14,21 @@ export const Label = styled(LabelPrimitive.Root, Text, {
   verticalAlign: 'middle',
   cursor: 'default',
 
+  // Custom
+  fontWeight: '$base',
+  letterSpacing: '$base',
+  lineHeight: '$base',
+
   variants: {
     size: {
       large: {
         fontSize: '$5',
-        fontWeight: '$medium',
-        lineHeight: '$space$6',
-        letterSpacing: '$normal',
       },
       medium: {
         fontSize: '$4',
-        fontWeight: '$medium',
-        lineHeight: '$space$6',
-        letterSpacing: '$normal',
       },
       small: {
         fontSize: '$3',
-        fontWeight: '$medium',
-        lineHeight: '$space$5',
-        letterSpacing: '$wide',
       },
     },
   },

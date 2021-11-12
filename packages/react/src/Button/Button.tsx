@@ -28,7 +28,7 @@ export const Button = styled(Primitives.Button, {
   borderColor: 'transparent',
   borderRadius: '$small',
   fontFamily: '$body',
-  fontWeight: '$semibold',
+  fontWeight: '$base',
   lineHeight: '1',
   py: '$2',
   outline: 'none',
@@ -36,7 +36,7 @@ export const Button = styled(Primitives.Button, {
   transitionTimingFunction: '$ease',
   transitionProperty: '$common',
   '&:focus': {
-    boxShadow: '$colors$neutral400',
+    boxShadow: '$colors$neutral40',
   },
   '&:focus:not(:focus-visible)': {
     boxShadow: 'none',
@@ -75,35 +75,35 @@ export const Button = styled(Primitives.Button, {
     variant: {
       primary: getSolidStyles('blue'),
       secondary: {
-        $$outline: '$colors$neutral200',
-        borderColor: '$neutral300',
-        color: '$neutral500',
+        $$outline: '$colors$neutral20',
+        borderColor: '$neutral30',
+        color: '$neutral50',
         '&:hover': {
-          borderColor: '$neutral400',
+          borderColor: '$neutral40',
         },
         '&:active': {
-          borderColor: '$neutral500',
-          color: '$neutral600',
+          borderColor: '$neutral50',
+          color: '$neutral60',
         },
         '&:disabled': {
-          borderColor: '$neutral300',
-          color: '$neutral300',
+          borderColor: '$neutral30',
+          color: '$neutral30',
         },
       },
       tertiary: {
-        $$outline: '$colors$blue200',
-        color: '$blue600',
+        $$outline: '$colors$blue20',
+        color: '$blue60',
         '&:hover': {
-          bg: '$blue100',
-          color: '$blue500',
+          bg: '$blue10',
+          color: '$blue50',
         },
         '&:active': {
-          bg: '$blue200',
-          color: '$blue600',
+          bg: '$blue20',
+          color: '$blue60',
         },
         '&:disabled': {
           bg: 'transparent',
-          color: '$neutral400',
+          color: '$neutral40',
         },
       },
       success: getSolidStyles('green'),
@@ -118,18 +118,18 @@ export const Button = styled(Primitives.Button, {
 
 function getSolidStyles(color: string) {
   return {
-    $$outline: `$colors$${color}200`,
-    backgroundColor: `$${color}500`,
+    $$outline: `$colors$${color}20`,
+    backgroundColor: `$${color}50`,
     color: 'white',
     '&:hover': {
-      backgroundColor: `$${color}600`,
+      backgroundColor: `$${color}60`,
     },
     '&:active': {
-      backgroundColor: `$${color}700`,
+      backgroundColor: `$${color}70`,
     },
     '&:disabled': {
-      backgroundColor: '$neutral100',
-      color: '$neutral400',
+      backgroundColor: '$neutral10',
+      color: '$neutral40',
     },
   };
 }

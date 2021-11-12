@@ -1,7 +1,6 @@
 import { styled } from '../stitches.config';
 import type { ComponentProps, VariantProps } from '../stitches.config';
 
-import { Icon } from '../Icon';
 export type AlertProps = ComponentProps<typeof Alert>;
 export type AlertVariants = VariantProps<typeof Alert>;
 
@@ -14,31 +13,27 @@ export const Alert = styled('div', {
   fontFamily: '$body',
   borderRadius: '$small',
 
-  [`& ${Icon}`]: {
-    mr: '$2',
-  },
-
   variants: {
     status: {
       neutral: {
-        backgroundColor: '$neutral100',
-        color: '$neutral500',
+        backgroundColor: '$neutral10',
+        color: '$neutral50',
       },
       info: {
-        backgroundColor: '$blue100',
-        color: '$blue500',
+        backgroundColor: '$blue10',
+        color: '$blue50',
       },
       success: {
-        backgroundColor: '$green100',
-        color: '$green500',
+        backgroundColor: '$green10',
+        color: '$green50',
       },
       warning: {
-        backgroundColor: '$orange100',
-        color: '$orange500',
+        backgroundColor: '$orange10',
+        color: '$orange50',
       },
       danger: {
-        backgroundColor: '$red100',
-        color: '$red500',
+        backgroundColor: '$red10',
+        color: '$red50',
       },
     },
     size: {

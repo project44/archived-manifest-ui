@@ -16,7 +16,7 @@ const InputElement = styled('div', {
   width: '40px',
   pointerEvents: 'none',
   fontFamily: '$body',
-  color: '$neutral400',
+  color: '$neutral40',
 
   variants: {
     placement: {

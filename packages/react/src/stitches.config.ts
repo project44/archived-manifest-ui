@@ -89,8 +89,8 @@ export const {
 
 export const darkTheme = createTheme({
   colors: {
-    hiContrast: '$neutral900',
-    loContrast: '$neutral800',
+    hiContrast: '$neutral90',
+    loContrast: '$neutral80',
     shadow1: '#000000',
     shadow2: 'rgba(0, 0, 0, 0.9)',
   },

@@ -8,7 +8,7 @@ export const Text = styled('span', {
   display: 'block',
   lineHeight: '1',
   margin: '0',
-  fontWeight: '$normal',
+  fontWeight: '$light',
   fontVariantNumeric: 'tabular-nums',
 
   variants: {
@@ -46,7 +46,7 @@ export const Text = styled('span', {
         color: '$hiContrast',
       },
       secondary: {
-        color: '$neutral500',
+        color: '$neutral50',
       },
     },
     isTruncated: {
