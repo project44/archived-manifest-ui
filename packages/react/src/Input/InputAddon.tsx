@@ -12,14 +12,14 @@ const InputAddon = styled('div', {
   width: 'auto',
   fontFamily: '$body',
   fontSize: '$4',
-  letterSpacing: '$normal',
+  letterSpacing: '$base',
   lineHeight: '$base',
   whiteSpace: 'nowrap',
-  color: '$neutral600',
+  color: '$neutral60',
 
   border: '1px solid',
-  borderColor: '$neutral300',
-  backgroundColor: '$neutral100',
+  borderColor: '$neutral30',
+  backgroundColor: '$neutral10',
   borderRadius: '$small',
   px: '$3',
 

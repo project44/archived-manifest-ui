@@ -21,7 +21,7 @@ export const Input = styled('input', {
 
   // Custom
   backgroundColor: '$loContrast',
-  boxShadow: 'inset 0 0 0 1px $colors$neutral300',
+  boxShadow: 'inset 0 0 0 1px $colors$neutral30',
   color: '$hiContrast',
   transition: '$fast',
   transitionProperty: 'background-color, border-color, box-shadow, color',
@@ -33,27 +33,27 @@ export const Input = styled('input', {
     boxShadow: 'inset 0 0 0 2px $$border, 0 0 0 4px $$outline',
   },
   '&:focus:not(:focus-visible)': {
-    boxShadow: 'inset 0 0 0 2px $colors$neutral300',
+    boxShadow: 'inset 0 0 0 2px $colors$neutral30',
   },
   '&:focus-visible': {
     boxShadow: 'inset 0 0 0 2px $$border, 0 0 0 4px $$outline',
   },
   '&::placeholder': {
-    color: '$neutral400',
+    color: '$neutral40',
   },
   '&:disabled': {
     pointerEvents: 'none',
-    backgroundColor: '$neutral100',
-    color: '$neutral700',
+    backgroundColor: '$neutral10',
+    color: '$neutral70',
     cursor: 'not-allowed',
     '&::placeholder': {
-      color: '$neutral600',
+      color: '$neutral60',
     },
   },
   '&:read-only': {
-    backgroundColor: '$neutral100',
+    backgroundColor: '$neutral10',
     '&:focus': {
-      boxShadow: 'inset 0px 0px 0px 1px $colors$neutral600',
+      boxShadow: 'inset 0px 0px 0px 1px $colors$neutral60',
     },
   },
   variants: {
@@ -79,20 +79,20 @@ export const Input = styled('input', {
     },
     variant: {
       normal: {
-        $$border: '$colors$blue500',
-        $$outline: '$colors$blue200',
+        $$border: '$colors$blue50',
+        $$outline: '$colors$blue20',
       },
       success: {
-        $$border: '$colors$green500',
-        $$outline: '$colors$green200',
+        $$border: '$colors$green50',
+        $$outline: '$colors$green20',
       },
       warning: {
-        $$border: '$colors$orange500',
-        $$outline: '$colors$orange200',
+        $$border: '$colors$orange50',
+        $$outline: '$colors$orange20',
       },
       danger: {
-        $$border: '$colors$red500',
-        $$outline: '$colors$red200',
+        $$border: '$colors$red50',
+        $$outline: '$colors$red20',
       },
     },
   },
