@@ -23,25 +23,17 @@ export const Input = styled('input', {
   backgroundColor: '$loContrast',
   boxShadow: 'inset 0 0 0 1px $colors$neutral30',
   color: '$hiContrast',
-  transition: '$fast',
-  transitionProperty: 'background-color, border-color, box-shadow, color',
+  transitionDuration: '$fast',
+  transitionProperty: '$common',
+  transitionTimingFunction: '$ease',
   zIndex: 1,
-  '&:hover': {
+  _hover: {
     boxShadow: 'inset 0 0 0 2px $$border',
   },
-  '&:focus': {
+  _focus: {
     boxShadow: 'inset 0 0 0 2px $$border, 0 0 0 4px $$outline',
   },
-  '&:focus:not(:focus-visible)': {
-    boxShadow: 'inset 0 0 0 2px $colors$neutral30',
-  },
-  '&:focus-visible': {
-    boxShadow: 'inset 0 0 0 2px $$border, 0 0 0 4px $$outline',
-  },
-  '&::placeholder': {
-    color: '$neutral40',
-  },
-  '&:disabled': {
+  _disabled: {
     pointerEvents: 'none',
     backgroundColor: '$neutral10',
     color: '$neutral70',
@@ -50,16 +42,19 @@ export const Input = styled('input', {
       color: '$neutral60',
     },
   },
-  '&:read-only': {
+  _placeholder: {
+    color: '$neutral40',
+  },
+  _readOnly: {
     backgroundColor: '$neutral10',
-    '&:focus': {
+    _focus: {
       boxShadow: 'inset 0px 0px 0px 1px $colors$neutral60',
     },
   },
   variants: {
     size: {
       small: {
-        borderRadius: '0.375rem',
+        borderRadius: '$small',
         fontSize: '$3',
         height: '30px',
         px: '$2',

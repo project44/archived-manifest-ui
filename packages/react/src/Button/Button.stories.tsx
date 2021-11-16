@@ -39,7 +39,7 @@ export default {
         type: { summary: 'text|node' },
       },
     },
-    loading: {
+    isLoading: {
       description:
         'Used to indicate a loading state, which also ensures that the button is disabled',
       table: {
@@ -48,7 +48,7 @@ export default {
       },
       control: { type: 'boolean' },
     },
-    full: {
+    isFull: {
       description: 'Used to give the button full container width',
       table: {
         type: { summary: 'string' },
@@ -56,7 +56,7 @@ export default {
       },
       control: { type: 'boolean' },
     },
-    disabled: {
+    isDisabled: {
       description: 'Set the button to a disabled state',
       table: {
         type: { summary: 'bool' },

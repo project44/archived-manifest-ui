@@ -1,8 +1,16 @@
-import { createStitches, defaultThemeMap } from '@stitches/react';
+import { createStitches, defaultThemeMap, CSS } from '@stitches/react';
 import type { PropertyValue } from '@stitches/react';
 import { theme as defaultTheme } from '@manifest-ui/themes';
 
 export * from '@stitches/react';
+
+// Should these be exported?
+const bp = {
+  1: '600px',
+  2: '960px',
+  3: '1280px',
+  4: '1920px',
+};
 
 export const {
   styled,
@@ -17,16 +25,19 @@ export const {
   prefix: 'manifest',
   theme: defaultTheme,
   media: {
-    bp1: '(min-width: 600px)',
-    bp2: '(min-width: 960px)',
-    bp3: '(min-width: 1280px)',
-    bp4: '(min-width: 1920px)',
+    bp1: `(min-width: ${bp[1]})`,
+    bp2: `(min-width: ${bp[2]})`,
+    bp3: `(min-width: ${bp[3]})`,
+    bp4: `(min-width: ${bp[4]})`,
     motion: '(prefers-reduced-motion)',
     hover: '(hover: hover)',
     dark: '(prefers-color-scheme: dark)',
     light: '(prefers-color-scheme: light)',
   },
   utils: {
+    bg: (value: PropertyValue<'backgroundColor'>) => ({
+      backgroundColor: value,
+    }),
     p: (value: PropertyValue<'padding'>) => ({
       padding: value,
     }),
@@ -73,8 +84,28 @@ export const {
       marginTop: value,
       marginBottom: value,
     }),
-    bg: (value: PropertyValue<'backgroundColor'>) => ({
-      backgroundColor: value,
+    // Selectors
+    // https://chakra-ui.com/docs/features/style-props#pseudo
+    _hover: (value: CSS) => ({
+      '&:hover, &[data-hover]': value,
+    }),
+    _active: (value: CSS) => ({
+      '&:active, &[data-active]': value,
+    }),
+    _focus: (value: CSS) => ({
+      '&:focus, &[data-focus]': value,
+    }),
+    _focusVisible: (value: CSS) => ({
+      '&:focus-visible': value,
+    }),
+    _disabled: (value: CSS) => ({
+      '&[disabled], &[aria-disabled=true], &[data-disabled]': value,
+    }),
+    _readOnly: (value: CSS) => ({
+      '&[aria-readonly=true], &[readonly], &[data-readonly]': value,
+    }),
+    _placeholder: (value: CSS) => ({
+      '&::placeholder': value,
     }),
   },
   themeMap: {
