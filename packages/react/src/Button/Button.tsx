@@ -73,7 +73,13 @@ export const Button = styled(Primitives.Button, {
       },
     },
     variant: {
-      primary: getSolidStyles('blue'),
+      primary: {
+        background:
+          'linear-gradient(316.05deg, #5300DB -73.48%, #308DF1 75.72%)',
+        borderRadius: '0.125rem',
+        boxShadow: '0px 4px 6px -2px rgba(0, 0, 0, 0.07)',
+        color: 'white',
+      },
       secondary: {
         $$outline: '$colors$neutral20',
         borderColor: '$neutral30',
