@@ -27,9 +27,6 @@ export type { ManifestProviderProps, ThemeContext } from './ManifestProvider';
 export { Text } from './Text';
 export type { TextProps, TextVariants } from './Text';
 
-export { TextField } from './TextField';
-export type { TextFieldProps, TextFieldVariants } from './TextField';
-
 // Icons
 export {
   AddIcon,

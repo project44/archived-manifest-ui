@@ -11,7 +11,6 @@ export {
   InputStartElement,
   Label,
   Text,
-  TextField,
   // Icons
   AddIcon,
   CheckIcon,
