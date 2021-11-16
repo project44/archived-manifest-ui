@@ -35,16 +35,16 @@ export const Button = styled(Primitives.Button, {
   transitionDuration: '$fast',
   transitionTimingFunction: '$ease',
   transitionProperty: '$common',
-  '&:focus': {
-    boxShadow: '$colors$neutral40',
+  _focus: {
+    boxShadow: '0 0 0 4px $$outline',
   },
   '&:focus:not(:focus-visible)': {
     boxShadow: 'none',
   },
-  '&:focus-visible': {
+  _focusVisible: {
     boxShadow: '0 0 0 4px $$outline',
   },
-  '&:disabled': {
+  _disabled: {
     boxShadow: 'none',
     cursor: 'not-allowed',
   },
@@ -78,14 +78,14 @@ export const Button = styled(Primitives.Button, {
         $$outline: '$colors$neutral20',
         borderColor: '$neutral30',
         color: '$neutral50',
-        '&:hover': {
+        _hover: {
           borderColor: '$neutral40',
         },
-        '&:active': {
+        _active: {
           borderColor: '$neutral50',
           color: '$neutral60',
         },
-        '&:disabled': {
+        _disabled: {
           borderColor: '$neutral30',
           color: '$neutral30',
         },
@@ -93,15 +93,15 @@ export const Button = styled(Primitives.Button, {
       tertiary: {
         $$outline: '$colors$blue20',
         color: '$blue60',
-        '&:hover': {
+        _hover: {
           bg: '$blue10',
           color: '$blue50',
         },
-        '&:active': {
+        _active: {
           bg: '$blue20',
           color: '$blue60',
         },
-        '&:disabled': {
+        _disabled: {
           bg: 'transparent',
           color: '$neutral40',
         },
@@ -121,13 +121,13 @@ function getSolidStyles(color: string) {
     $$outline: `$colors$${color}20`,
     backgroundColor: `$${color}50`,
     color: 'white',
-    '&:hover': {
+    _hover: {
       backgroundColor: `$${color}60`,
     },
-    '&:active': {
+    _active: {
       backgroundColor: `$${color}70`,
     },
-    '&:disabled': {
+    _disabled: {
       backgroundColor: '$neutral10',
       color: '$neutral40',
     },
