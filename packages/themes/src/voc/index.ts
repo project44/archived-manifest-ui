@@ -147,19 +147,19 @@ export const opacities = {
 };
 
 export const radii = {
-  small: '0.25rem',
-  medium: '0.5rem',
-  large: '2rem',
-  xlarge: '4rem',
+  1: '0.25rem',
+  2: '0.5rem',
+  3: '2rem',
+  4: '4rem',
   full: '9999px',
 };
 
 export const shadows = {
-  xsmall: `0px 1px 3px ${colors.shadow10}, 0px 0px 1px ${colors.shadow20}`,
-  small: `0px 2px 4px ${colors.shadow10}, 0px 0px 1px ${colors.shadow20}`,
-  medium: `0px 4px 8px ${colors.shadow10}, 0px 0px 1px ${colors.shadow20}`,
-  large: `0px 8px 16px ${colors.shadow10}, 0px 0px 1px ${colors.shadow20}`,
-  xlarge: `0px 16px 24px ${colors.shadow10}, 0px 0px 1px ${colors.shadow20}`,
+  1: `0px 1px 3px ${colors.shadow10}, 0px 0px 1px ${colors.shadow20}`,
+  2: `0px 2px 4px ${colors.shadow10}, 0px 0px 1px ${colors.shadow20}`,
+  3: `0px 4px 8px ${colors.shadow10}, 0px 0px 1px ${colors.shadow20}`,
+  4: `0px 8px 16px ${colors.shadow10}, 0px 0px 1px ${colors.shadow20}`,
+  5: `0px 16px 24px ${colors.shadow10}, 0px 0px 1px ${colors.shadow20}`,
 };
 
 export const space = {
@@ -195,6 +195,12 @@ const transitionTimingFunctions = {
   easeOut: 'cubic-bezier(0, 0, 0.2, 1)',
 };
 
+const transitions = {
+  fast: `${transitionDurations.fast} ${transitionTimingFunctions.ease}`,
+  base: `${transitionDurations.base} ${transitionTimingFunctions.ease}`,
+  slow: `${transitionDurations.slow} ${transitionTimingFunctions.ease}`,
+};
+
 export const zIndices = {
   hide: -1,
   base: 0,
@@ -214,6 +220,7 @@ export const theme = {
   radii,
   shadows,
   space,
+  transitions,
   transitionProperties,
   transitionDurations,
   transitionTimingFunctions,

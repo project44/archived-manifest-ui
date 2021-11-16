@@ -4,14 +4,6 @@ import { theme as defaultTheme } from '@manifest-ui/themes';
 
 export * from '@stitches/react';
 
-// Should these be exported?
-const bp = {
-  1: '600px',
-  2: '960px',
-  3: '1280px',
-  4: '1920px',
-};
-
 export const {
   styled,
   css,
@@ -25,10 +17,10 @@ export const {
   prefix: 'manifest',
   theme: defaultTheme,
   media: {
-    bp1: `(min-width: ${bp[1]})`,
-    bp2: `(min-width: ${bp[2]})`,
-    bp3: `(min-width: ${bp[3]})`,
-    bp4: `(min-width: ${bp[4]})`,
+    bp1: `(min-width: 600px)`,
+    bp2: `(min-width: 960px)`,
+    bp3: `(min-width: 1280px)`,
+    bp4: `(min-width: 1920px)`,
     motion: '(prefers-reduced-motion)',
     hover: '(hover: hover)',
     dark: '(prefers-color-scheme: dark)',

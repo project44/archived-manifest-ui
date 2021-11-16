@@ -148,10 +148,10 @@ export const opacities = {
 };
 
 export const radii = {
-  small: '0.125rem',
-  medium: '0.25rem',
-  large: '0.5rem',
-  xlarge: '1rem',
+  1: '0.125rem',
+  2: '0.25rem',
+  3: '0.5rem',
+  4: '1rem',
   full: 9999,
 };
 
@@ -196,7 +196,12 @@ const transitionTimingFunctions = {
   easeOut: 'cubic-bezier(0, 0, 0.2, 1)',
 };
 
-// Scale or named?
+const transitions = {
+  fast: `${transitionDurations.fast} ${transitionTimingFunctions.ease}`,
+  base: `${transitionDurations.base} ${transitionTimingFunctions.ease}`,
+  slow: `${transitionDurations.slow} ${transitionTimingFunctions.ease}`,
+};
+
 export const zIndices = {
   hide: -1,
   base: 0,
@@ -216,6 +221,7 @@ export const theme = {
   radii,
   shadows,
   space,
+  transitions,
   transitionDurations,
   transitionTimingFunctions,
   transitionProperties,
