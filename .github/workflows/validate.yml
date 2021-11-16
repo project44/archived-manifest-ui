@@ -30,3 +30,11 @@ jobs:
 
       - name: Test
         run: yarn test
+
+      - name: Storybook
+        run: yarn storybook:build
+
+      - name: Percy
+        run: yarn percy storybook ./dist
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

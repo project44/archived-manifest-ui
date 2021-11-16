@@ -14,9 +14,6 @@ jobs:
   playroom:
     name: Build & deploy to GitHub Pages
     runs-on: ubuntu-latest
-    env:
-      NODE_OPTIONS: --max_old_space_size=4096
-      IS_GITHUB_PAGES: true
     steps:
       - name: Check out
         uses: actions/checkout@v2
