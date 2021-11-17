@@ -1,8 +1,8 @@
 import dolly from './dolly';
-import voc from './voc';
+import current from './current';
+import legacy from './legacy';
 
-// Default theme
-const theme = voc;
+const theme = current;
 
-export { dolly, voc, theme };
+export { dolly, current, legacy, theme };
 export default theme;

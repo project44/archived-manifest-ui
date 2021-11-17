@@ -8,10 +8,10 @@ export const globalTypes = {
   theme: {
     name: 'Theme',
     description: 'Global theme for components',
-    defaultValue: 'voc',
+    defaultValue: 'current',
     toolbar: {
       icon: 'circlehollow',
-      items: ['voc', 'dolly'],
+      items: ['current', 'legacy', 'dolly'],
     },
   },
 };

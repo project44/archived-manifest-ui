@@ -176,10 +176,10 @@ export const space = {
   11: '12rem',
 };
 
-const transitionProperties = {
-  common:
-    'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform',
-  colors: 'background-color, border-color, color, fill, stroke',
+export const sizes = {
+  inlineSmall: '1.875rem',
+  inlineMedium: '2.375rem',
+  inlineLarge: '2.75rem',
 };
 
 const transitionDurations = {
@@ -188,11 +188,22 @@ const transitionDurations = {
   slow: '300ms',
 };
 
+const transitionProperties = {
+  common:
+    'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform',
+  colors: 'background-color, border-color, color, fill, stroke',
+};
+
 const transitionTimingFunctions = {
   ease: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
   easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
   easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
   easeOut: 'cubic-bezier(0, 0, 0.2, 1)',
+};
+
+const transitions = {
+  ...transitionDurations,
+  ...transitionTimingFunctions,
 };
 
 export const zIndices = {
@@ -214,8 +225,10 @@ export const theme = {
   radii,
   shadows,
   space,
-  transitionProperties,
+  sizes,
+  transitions,
   transitionDurations,
+  transitionProperties,
   transitionTimingFunctions,
   zIndices,
 };

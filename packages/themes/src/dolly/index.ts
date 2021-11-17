@@ -1,8 +1,4 @@
-export const borderWidths = {
-  small: '0.0625rem',
-  medium: '0.125rem',
-  large: '0.25rem',
-};
+import { createTheme } from '../createTheme';
 
 export const colors = {
   shadow10: 'rgba(0, 0, 0, 0.12)',
@@ -101,7 +97,6 @@ export const colors = {
 
 export const fonts = {
   body: 'proxima-nova, sans-serif',
-  mono: `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`,
 };
 
 export const fontSizes = {
@@ -118,16 +113,16 @@ export const fontSizes = {
 
 export const fontWeights = {
   light: 400,
-  base: 700,
+  base: 600,
   heavy: 700,
 };
 
 export const letterSpacings = {
-  tighter: 0,
+  tighter: '0',
   tight: '0.1px',
   base: '0.15px',
   wide: '0.25px',
-  wider: 1,
+  wider: '1',
 };
 
 // Convert to relative unit?
@@ -139,20 +134,12 @@ export const lineHeights = {
   taller: '40px',
 };
 
-export const opacities = {
-  active: 0.12,
-  disabled: 0.38,
-  focus: 0.38,
-  hover: 0.04,
-  selected: 0.08,
-};
-
 export const radii = {
   small: '0.125rem',
   medium: '0.25rem',
   large: '0.5rem',
   xlarge: '1rem',
-  full: 9999,
+  full: '9999px',
 };
 
 export const shadows = {
@@ -163,63 +150,14 @@ export const shadows = {
   xlarge: `0px 0px 8px ${colors.shadow10}, 0px 8px 8px ${colors.shadow20}`,
 };
 
-export const space = {
-  1: '0.25rem',
-  2: '0.5rem',
-  3: '0.75rem',
-  4: '1rem',
-  5: '1.5rem',
-  6: '2rem',
-  7: '3rem',
-  8: '4rem',
-  9: '6rem',
-  10: '8rem',
-  11: '12rem',
-};
-
-const transitionProperties = {
-  common:
-    'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform',
-  colors: 'background-color, border-color, color, fill, stroke',
-};
-
-const transitionDurations = {
-  fast: '125ms',
-  base: '200ms',
-  slow: '300ms',
-};
-
-const transitionTimingFunctions = {
-  ease: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
-  easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
-  easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
-  easeOut: 'cubic-bezier(0, 0, 0.2, 1)',
-};
-
-// Scale or named?
-export const zIndices = {
-  hide: -1,
-  base: 0,
-  modal: 1400,
-  popover: 1500,
-};
-
-export const theme = {
-  borderWidths,
+export const theme = createTheme({
   colors,
   fonts,
   fontSizes,
   fontWeights,
   letterSpacings,
-  lineHeights,
-  opacities,
   radii,
   shadows,
-  space,
-  transitionDurations,
-  transitionTimingFunctions,
-  transitionProperties,
-  zIndices,
-};
+});
 
 export default theme;

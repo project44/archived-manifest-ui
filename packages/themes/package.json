@@ -20,5 +20,11 @@
     "directory": "packages/themes"
   },
   "author": "project44",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash.merge": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/lodash.merge": "^4.6.6"
+  }
 }
