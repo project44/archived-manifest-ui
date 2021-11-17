@@ -1,13 +1,13 @@
-name: Release
+name: Prerelease
 
 on:
   push:
     branches:
-      - main
+      - changeset-release/main
 
 jobs:
-  release:
-    name: Publish & Deploy
+  test:
+    name: Build & deploy to Percy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -23,11 +23,13 @@ jobs:
       - name: Install Dependencies
         run: yarn --immutable
 
-      - name: Create release PR or publish to npm
-        uses: changesets/action@master
-        with:
-          version: yarn run version
-          publish: yarn release
+      - name: Build
+        run: yarn build
+
+      - name: Storybook
+        run: yarn storybook:build
+
+      - name: Percy
+        run: yarn percy storybook ./dist
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
