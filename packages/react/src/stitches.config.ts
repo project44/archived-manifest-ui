@@ -4,14 +4,6 @@ import { theme as defaultTheme } from '@manifest-ui/themes';
 
 export * from '@stitches/react';
 
-// Should these be exported?
-const bp = {
-  1: '600px',
-  2: '960px',
-  3: '1280px',
-  4: '1920px',
-};
-
 export const {
   styled,
   css,
@@ -25,19 +17,16 @@ export const {
   prefix: 'manifest',
   theme: defaultTheme,
   media: {
-    bp1: `(min-width: ${bp[1]})`,
-    bp2: `(min-width: ${bp[2]})`,
-    bp3: `(min-width: ${bp[3]})`,
-    bp4: `(min-width: ${bp[4]})`,
+    bp1: '(min-width: 600px)',
+    bp2: '(min-width: 960px})',
+    bp3: '(min-width: 1280px)',
+    bp4: '(min-width: 1920px)',
     motion: '(prefers-reduced-motion)',
     hover: '(hover: hover)',
     dark: '(prefers-color-scheme: dark)',
     light: '(prefers-color-scheme: light)',
   },
   utils: {
-    bg: (value: PropertyValue<'backgroundColor'>) => ({
-      backgroundColor: value,
-    }),
     p: (value: PropertyValue<'padding'>) => ({
       padding: value,
     }),
@@ -84,7 +73,14 @@ export const {
       marginTop: value,
       marginBottom: value,
     }),
-    // Selectors
+    br: (value: PropertyValue<'borderRadius'>) => ({
+      borderRadius: value,
+    }),
+    bg: (value: PropertyValue<'backgroundColor'>) => ({
+      backgroundColor: value,
+    }),
+
+    // Selectors (experimental)
     // https://chakra-ui.com/docs/features/style-props#pseudo
     _hover: (value: CSS) => ({
       '&:hover, &[data-hover]': value,
@@ -94,6 +90,9 @@ export const {
     }),
     _focus: (value: CSS) => ({
       '&:focus, &[data-focus]': value,
+    }),
+    _notFocusVisible: (value: CSS) => ({
+      '&:focus:not(:focus-visible)': value,
     }),
     _focusVisible: (value: CSS) => ({
       '&:focus-visible': value,
@@ -118,11 +117,13 @@ export const {
   },
 });
 
+// Should this come from @manifest/themes?
+// Where should we handle aliases and darkTheme creation
 export const darkTheme = createTheme({
   colors: {
     hiContrast: '$neutral90',
-    loContrast: '$neutral80',
-    shadow1: '#000000',
-    shadow2: 'rgba(0, 0, 0, 0.9)',
+    loContrast: '$neutral10',
+    shadow10: '#000000',
+    shadow20: 'rgba(0, 0, 0, 0.9)',
   },
 });
