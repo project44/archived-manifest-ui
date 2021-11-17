@@ -38,7 +38,7 @@ export const Button = styled(Primitives.Button, {
   _focus: {
     boxShadow: '0 0 0 4px $$outline',
   },
-  '&:focus:not(:focus-visible)': {
+  _notFocusVisible: {
     boxShadow: 'none',
   },
   _focusVisible: {
