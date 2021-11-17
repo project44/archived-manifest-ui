@@ -196,6 +196,11 @@ const transitionTimingFunctions = {
   easeOut: 'cubic-bezier(0, 0, 0.2, 1)',
 };
 
+const transitions = {
+  ...transitionDurations,
+  ...transitionTimingFunctions,
+};
+
 // Scale or named?
 export const zIndices = {
   hide: -1,
@@ -216,6 +221,7 @@ export const theme = {
   radii,
   shadows,
   space,
+  transitions,
   transitionDurations,
   transitionTimingFunctions,
   transitionProperties,

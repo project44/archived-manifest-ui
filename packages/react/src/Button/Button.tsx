@@ -32,8 +32,7 @@ export const Button = styled(Primitives.Button, {
   lineHeight: '1',
   py: '$2',
   outline: 'none',
-  transitionDuration: '$fast',
-  transitionTimingFunction: '$ease',
+  transition: '$fast $ease',
   transitionProperty: '$common',
   _focus: {
     boxShadow: '0 0 0 4px $$outline',
