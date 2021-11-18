@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
+const BrotliPlugin = require('brotli-webpack-plugin');
+
 module.exports = {
   components: './.playroom/components.ts',
   outputPath: './dist/playroom',
@@ -29,5 +33,16 @@ module.exports = {
     resolve: {
       extensions: ['.js', '.ts', '.tsx'],
     },
+    plugins:
+      process.env.NODE_ENV === 'production'
+        ? [
+            new BrotliPlugin({
+              asset: '[path].br[query]',
+              test: /\.(js|css|html|svg)$/,
+              threshold: 10240,
+              minRatio: 0.8,
+            }),
+          ]
+        : [],
   }),
 };

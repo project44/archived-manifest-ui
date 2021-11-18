@@ -6,7 +6,7 @@ export type TextVariants = VariantProps<typeof Text>;
 export const Text = styled('span', {
   // Reset
   display: 'block',
-  lineHeight: '1',
+  lineHeight: '$base',
   margin: '0',
   fontWeight: '$light',
   fontVariantNumeric: 'tabular-nums',
