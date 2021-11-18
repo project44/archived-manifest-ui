@@ -31,7 +31,7 @@ Themeable design system built using [Stitches] and [Radix] for project44.
 
 ## Documentation
 
-Our documentation site lives at [zeroheight]. You'll be able to find detailed documentation on getting started, all of the components, our theme, our principles, and more.
+Our documentation site lives at [p44design.systems]. You'll be able to find detailed documentation on getting started, all of the components, our theme, our principles, and more.
 
 ## Installation
 
@@ -76,7 +76,7 @@ We love collaborating with folks inside and outside of project44 and welcome con
 
 > 👉 See the [contributing docs] for more info on code style, testing, coverage, and troubleshooting
 
-[zeroheight]: https://p44design.systems
+[p44design.systems]: https://p44design.systems
 [stitches]: https://stitches.dev/
 [radix]: https://www.radix-ui.com/
 [contributing docs]: CONTRIBUTING.md
