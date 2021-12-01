@@ -2,6 +2,7 @@ export {
   // Components
   Box,
   Button,
+  Flex,
   Icon,
   Input,
   InputEndAddon,
