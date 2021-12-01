@@ -5,6 +5,9 @@ export type { BoxProps } from './Box';
 export { Button } from './Button';
 export type { ButtonProps, ButtonVariants } from './Button';
 
+export { Flex } from './Flex';
+export type { FlexProps } from './Flex';
+
 export { Icon } from './Icon';
 export type { IconProps } from './Icon';
 
