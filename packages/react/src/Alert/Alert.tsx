@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { styled } from '../stitches.config';
 import type { ComponentProps, VariantProps } from '../stitches.config';
 
@@ -6,54 +8,64 @@ export type AlertVariants = VariantProps<typeof Alert>;
 
 export const Alert = styled('div', {
   display: 'flex',
-  alignItems: 'center',
   position: 'relative',
-  overflow: 'hidden',
+  alignItems: 'center',
   px: '$3',
-  fontFamily: '$body',
+  overflow: 'hidden',
   borderRadius: '$small',
+  fontFamily: '$body',
 
   variants: {
     status: {
       neutral: {
-        backgroundColor: '$neutral10',
-        color: '$neutral50',
+        $$subtle: '$colors$neutral10',
+        $$solid: '$colors$neutral50',
       },
       info: {
-        backgroundColor: '$blue10',
-        color: '$blue50',
+        $$subtle: '$colors$blue10',
+        $$solid: '$colors$blue50',
       },
       success: {
-        backgroundColor: '$green10',
-        color: '$green50',
+        $$subtle: '$colors$green10',
+        $$solid: '$colors$green50',
       },
       warning: {
-        backgroundColor: '$orange10',
-        color: '$orange50',
+        $$subtle: '$colors$orange10',
+        $$solid: '$colors$orange50',
       },
       danger: {
-        backgroundColor: '$red10',
-        color: '$red50',
+        $$subtle: '$colors$red10',
+        $$solid: '$colors$red50',
       },
     },
     size: {
-      small: {
-        py: '$2',
-      },
-      medium: {
-        py: '$3',
-      },
-      large: {
-        py: '$4',
-      },
+      medium: { py: '$3' },
     },
     variant: {
-      subtle: {},
-      solid: {},
+      subtle: { bg: '$$subtle' },
+      solid: { bg: '$$solid', color: '$loContrast' },
     },
   },
   defaultVariants: {
     size: 'medium',
-    variant: 'medium',
+    variant: 'subtle',
   },
+});
+
+export const AlertIcon = () => {
+  return (
+    <span role="img" aria-label="alert icon">
+      👋
+    </span>
+  );
+};
+
+export const AlertTitle = styled('div', {
+  fontWeight: '$bold',
+  lineHeight: '$body',
+});
+
+export const AlertDescription = styled('div', {
+  display: 'inline',
+  lineHeight: '$body',
 });
