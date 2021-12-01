@@ -1,4 +1,7 @@
 // Components
+export { Alert } from './Alert';
+export type { AlertProps } from './Alert';
+
 export { Box } from './Box';
 export type { BoxProps } from './Box';
 

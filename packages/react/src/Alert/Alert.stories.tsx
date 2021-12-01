@@ -19,6 +19,19 @@ export default {
       control: { type: 'radio' },
       options: ['neutral', 'info', 'success', 'warning', 'danger'],
     },
+    variant: {
+      name: 'variant',
+      type: { name: 'string', required: false },
+      description: 'Different types of alerts',
+      table: {
+        type: {
+          summary: 'subtle|solid',
+        },
+        defaultValue: { summary: 'subtle' },
+      },
+      control: { type: 'radio' },
+      options: ['subtle', 'solid'],
+    },
   },
 } as Meta;
 
