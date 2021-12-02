@@ -14,14 +14,7 @@ export type { FlexProps } from './Flex';
 export { Icon } from './Icon';
 export type { IconProps } from './Icon';
 
-export {
-  Input,
-  InputEndAddon,
-  InputEndElement,
-  InputGroup,
-  InputStartAddon,
-  InputStartElement,
-} from './Input';
+export { Input } from './Input';
 export type { InputProps, InputVariants } from './Input';
 
 export { Label } from './Label';
@@ -61,6 +54,7 @@ export {
   keyframes,
   getCssText,
   theme,
+  darkTheme,
   createTheme,
   config,
 } from './stitches.config';

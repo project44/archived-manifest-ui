@@ -117,25 +117,20 @@ export const fontSizes = {
 };
 
 export const fontWeights = {
-  light: 400,
-  base: 500,
-  heavy: 700,
+  normal: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
 };
 
 export const letterSpacings = {
-  tighter: '-0.05em',
   tight: '-0.025em',
-  base: '0',
+  normal: '0',
   wide: '0.025em',
-  wider: '0.05em',
 };
-
 export const lineHeights = {
-  shorter: 1.25,
-  short: 1.375,
+  short: 1.25,
   base: 1.5,
-  tall: 1.625,
-  taller: 2,
 };
 
 export const opacities = {

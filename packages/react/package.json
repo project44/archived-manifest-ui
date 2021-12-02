@@ -24,7 +24,6 @@
   "dependencies": {
     "@manifest-ui/icons": "*",
     "@manifest-ui/primitive-button": "*",
-    "@manifest-ui/themes": "*",
     "@radix-ui/react-label": "^0.1.1",
     "@stitches/react": "^1.2.5",
     "lodash.merge": "^4.6.2"
