@@ -2,13 +2,27 @@ import * as Primitives from '@manifest-ui/primitive-button';
 import { styled } from '../stitches.config';
 import type { ComponentProps, VariantProps } from '../stitches.config';
 
-export type ButtonProps = ComponentProps<typeof Button>;
+export type ButtonProps = Omit<ComponentProps<typeof Button>, 'css'>;
 export type ButtonVariants = VariantProps<typeof Button>;
 
 export const Button = styled(Primitives.Button, {
-  // Reset
+  alignItems: 'center',
   all: 'unset',
+  backgroundColor: 'transparent',
+  borderColor: 'transparent',
+  borderRadius: '$small',
+  borderStyle: 'solid',
+  borderWidth: '$small',
   boxSizing: 'border-box',
+  display: 'inline-flex',
+  fontFamily: '$body',
+  fontWeight: '$semibold',
+  justifyContent: 'center',
+  lineHeight: 1,
+  outline: 'none',
+  py: '$2',
+  transition: '$fast $ease',
+  transitionProperty: '$common',
   userSelect: 'none',
   '&::before': {
     boxSizing: 'border-box',
@@ -16,119 +30,114 @@ export const Button = styled(Primitives.Button, {
   '&::after': {
     boxSizing: 'border-box',
   },
-
-  // Custom
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '$1',
-  backgroundColor: 'transparent',
-  borderWidth: '$small',
-  borderStyle: 'solid',
-  borderColor: 'transparent',
-  borderRadius: '$small',
-  fontFamily: '$body',
-  fontWeight: '$base',
-  lineHeight: '1',
-  py: '$2',
-  outline: 'none',
-  transition: '$fast $ease',
-  transitionProperty: '$common',
-  _focus: {
+  '&:focus': {
     boxShadow: '0 0 0 4px $$outline',
   },
-  _notFocusVisible: {
+  '&:focus:not(:focus-visible)': {
     boxShadow: 'none',
   },
-  _focusVisible: {
+  '&:focus-visible': {
     boxShadow: '0 0 0 4px $$outline',
   },
-  _disabled: {
+  '&:disabled': {
     boxShadow: 'none',
     cursor: 'not-allowed',
   },
   variants: {
-    full: {
+    isFullWidth: {
       true: {
         width: '100%',
+      },
+    },
+    isLoading: {
+      true: {
+        opacity: '$disabled',
+        cursor: 'not-allowed',
       },
     },
     size: {
       small: {
         fontSize: '$3',
-        height: '30px',
         px: '$3',
-        gap: '2px',
       },
       medium: {
         fontSize: '$4',
-        height: '38px',
         px: '$4',
       },
       large: {
         fontSize: '$5',
-        height: '48px',
         px: '$4',
       },
     },
     variant: {
-      primary: getSolidStyles('blue'),
-      secondary: {
-        $$outline: '$colors$neutral20',
-        borderColor: '$neutral30',
-        color: '$neutral50',
-        _hover: {
-          borderColor: '$neutral40',
+      solid: {
+        $$outline: '$colors$blue2',
+        $$bg: '$colors$blue5',
+        $$bgHover: '$colors$blue6',
+        $$bgActive: '$colors$blue7',
+        backgroundColor: '$$bg',
+        color: 'white',
+        '&:hover': {
+          backgroundColor: '$$bgHover',
         },
-        _active: {
-          borderColor: '$neutral50',
-          color: '$neutral60',
+        '&:active': {
+          backgroundColor: '$$bgActive',
         },
-        _disabled: {
-          borderColor: '$neutral30',
-          color: '$neutral30',
+        '&:disabled': {
+          backgroundColor: '$neutral1',
+          color: '$neutral4',
         },
       },
-      tertiary: {
-        $$outline: '$colors$blue20',
-        color: '$blue60',
-        _hover: {
-          bg: '$blue10',
-          color: '$blue50',
+      outline: {
+        $$outline: '$colors$neutral2',
+        borderColor: '$neutral3',
+        color: '$neutral5',
+        '&:hover': {
+          borderColor: '$neutral4',
         },
-        _active: {
-          bg: '$blue20',
-          color: '$blue60',
+        '&:active': {
+          borderColor: '$neutral5',
+          color: '$neutral6',
         },
-        _disabled: {
+        '&:disabled': {
+          borderColor: '$neutral3',
+          color: '$neutral3',
+        },
+      },
+      ghost: {
+        $$outline: '$colors$blue2',
+        color: '$blue6',
+        '&:hover': {
+          bg: '$blue1',
+          color: '$blue5',
+        },
+        '&:active': {
+          bg: '$blue2',
+          color: '$blue6',
+        },
+        '&:disabled': {
           bg: 'transparent',
-          color: '$neutral40',
+          color: '$neutral4',
         },
       },
-      success: getSolidStyles('green'),
-      danger: getSolidStyles('red'),
+    },
+    status: {
+      success: {
+        $$outline: '$colors$green2',
+        $$bg: '$colors$green5',
+        $$bgHover: '$colors$green6',
+        $$bgActive: '$colors$green7',
+      },
+      danger: {
+        $$outline: '$colors$red2',
+        $$bg: '$colors$red5',
+        $$bgHover: '$colors$red6',
+        $$bgActive: '$colors$red7',
+      },
     },
   },
   defaultVariants: {
     size: 'medium',
-    variant: 'primary',
+    variant: 'solid',
   },
 });
-
-function getSolidStyles(color: string) {
-  return {
-    $$outline: `$colors$${color}20`,
-    backgroundColor: `$${color}50`,
-    color: 'white',
-    _hover: {
-      backgroundColor: `$${color}60`,
-    },
-    _active: {
-      backgroundColor: `$${color}70`,
-    },
-    _disabled: {
-      backgroundColor: '$neutral10',
-      color: '$neutral40',
-    },
-  };
-}

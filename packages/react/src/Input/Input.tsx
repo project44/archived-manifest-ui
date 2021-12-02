@@ -1,101 +1,102 @@
 import { styled } from '../stitches.config';
 import type { ComponentProps, VariantProps } from '../stitches.config';
 
-import { WithId } from '../utils/types';
-
 export type InputProps = ComponentProps<typeof Input>;
 export type InputVariants = VariantProps<typeof Input>;
 
 export const Input = styled('input', {
-  // Reset
+  $$border: '$colors$blue5',
+  $$outline: '$colors$blue2',
   appearance: 'none',
-  borderWidth: '0',
+  bg: '$loContrast',
+  border: 'none',
+  borderRadius: '$small',
+  boxShadow: 'inset 0 0 0 1px $colors$neutral3',
   boxSizing: 'border-box',
+  color: '$hiContrast',
   fontFamily: '$body',
   lineHeight: '1',
   margin: '0',
   outline: 'none',
   padding: '0',
-  width: '100%',
-  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
-
-  // Custom
-  backgroundColor: '$loContrast',
-  boxShadow: 'inset 0 0 0 1px $colors$neutral30',
-  color: '$hiContrast',
-  transitionDuration: '$fast',
+  transition: '$fast $ease',
   transitionProperty: '$common',
-  transitionTimingFunction: '$ease',
+  WebkitTapHighlightColor: 'rgba(0,0,0,0)',
+  width: '100%',
   zIndex: 1,
-  _hover: {
+  '&:hover': {
     boxShadow: 'inset 0 0 0 2px $$border',
   },
-  _focus: {
+  '&:focus': {
     boxShadow: 'inset 0 0 0 2px $$border, 0 0 0 4px $$outline',
   },
-  _disabled: {
+  '&:disabled': {
     pointerEvents: 'none',
-    backgroundColor: '$neutral10',
-    color: '$neutral70',
+    backgroundColor: '$neutral1',
+    color: '$neutral7',
     cursor: 'not-allowed',
     '&::placeholder': {
-      color: '$neutral60',
+      color: '$neutral6',
     },
   },
-  _placeholder: {
-    color: '$neutral40',
+  '&::placeholder': {
+    color: '$neutral4',
   },
-  _readOnly: {
-    backgroundColor: '$neutral10',
-    _focus: {
-      boxShadow: 'inset 0px 0px 0px 1px $colors$neutral60',
+  '&:read-only': {
+    backgroundColor: '$neutral1',
+    '&:focus': {
+      boxShadow: 'inset 0px 0px 0px 1px $colors$neutral6',
     },
   },
   variants: {
     size: {
       small: {
-        borderRadius: '$small',
         fontSize: '$3',
-        height: '30px',
         px: '$2',
+        lineHeight: '$space$5',
       },
       medium: {
-        borderRadius: '$small',
         fontSize: '$4',
-        height: '38px',
         px: '$3',
-      },
-      large: {
-        borderRadius: '$small',
-        fontSize: '$4',
-        height: '44px',
-        px: '$3',
+        lineHeight: '$space$6',
       },
     },
     variant: {
-      normal: {
-        $$border: '$colors$blue50',
-        $$outline: '$colors$blue20',
+      ghost: {
+        boxShadow: 'none',
+        backgroundColor: 'transparent',
+        '&:hover': {
+          boxShadow: 'inset 0 0 0 1px $colors$neutral3',
+        },
+        '&:focus': {
+          backgroundColor: '$loContrast',
+          boxShadow:
+            'inset 0px 0px 0px 1px $colors$blue2, 0px 0px 0px 1px $colors$blue2',
+        },
+        '&:disabled': {
+          backgroundColor: 'transparent',
+        },
+        '&:read-only': {
+          backgroundColor: 'transparent',
+        },
       },
+    },
+    status: {
       success: {
-        $$border: '$colors$green50',
-        $$outline: '$colors$green20',
+        $$border: '$colors$green5',
+        $$outline: '$colors$green2',
       },
       warning: {
-        $$border: '$colors$orange50',
-        $$outline: '$colors$orange20',
+        $$border: '$colors$orange5',
+        $$outline: '$colors$orange2',
       },
       danger: {
-        $$border: '$colors$red50',
-        $$outline: '$colors$red20',
+        $$border: '$colors$red5',
+        $$outline: '$colors$red2',
       },
     },
   },
   defaultVariants: {
     size: 'medium',
-    variant: 'normal',
   },
 });
-
-// This is used in `input-group.tsx`
-(Input as WithId<typeof Input>).id = 'Input';

@@ -117,9 +117,8 @@ export const fontSizes = {
 };
 
 export const fontWeights = {
-  light: 400,
-  base: 700,
-  heavy: 700,
+  normal: 400,
+  bold: 700,
 };
 
 export const letterSpacings = {

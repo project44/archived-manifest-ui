@@ -1,6 +1,6 @@
-import { createStitches, defaultThemeMap, CSS } from '@stitches/react';
+import { createStitches, defaultThemeMap } from '@stitches/react';
 import type { PropertyValue } from '@stitches/react';
-import { theme as defaultTheme } from '@manifest-ui/themes';
+import * as themes from './themes';
 
 export * from '@stitches/react';
 
@@ -15,16 +15,12 @@ export const {
   config,
 } = createStitches({
   prefix: 'manifest',
-  theme: defaultTheme,
+  theme: themes.lightTheme,
   media: {
     bp1: '(min-width: 600px)',
     bp2: '(min-width: 960px})',
     bp3: '(min-width: 1280px)',
     bp4: '(min-width: 1920px)',
-    motion: '(prefers-reduced-motion)',
-    hover: '(hover: hover)',
-    dark: '(prefers-color-scheme: dark)',
-    light: '(prefers-color-scheme: light)',
   },
   utils: {
     p: (value: PropertyValue<'padding'>) => ({
@@ -79,37 +75,25 @@ export const {
     bg: (value: PropertyValue<'backgroundColor'>) => ({
       backgroundColor: value,
     }),
-
-    // Selectors (experimental)
-    // https://chakra-ui.com/docs/features/style-props#pseudo
-    _hover: (value: CSS) => ({
-      '&:hover, &[data-hover]': value,
+    userSelect: (value: PropertyValue<'userSelect'>) => ({
+      WebkitUserSelect: value,
+      userSelect: value,
     }),
-    _active: (value: CSS) => ({
-      '&:active, &[data-active]': value,
+    size: (value: PropertyValue<'width'>) => ({
+      width: value,
+      height: value,
     }),
-    _focus: (value: CSS) => ({
-      '&:focus, &[data-focus]': value,
+    appearance: (value: PropertyValue<'appearance'>) => ({
+      WebkitAppearance: value,
+      appearance: value,
     }),
-    _notFocusVisible: (value: CSS) => ({
-      '&:focus:not(:focus-visible)': value,
-    }),
-    _focusVisible: (value: CSS) => ({
-      '&:focus-visible': value,
-    }),
-    _disabled: (value: CSS) => ({
-      '&[disabled], &[aria-disabled=true], &[data-disabled]': value,
-    }),
-    _readOnly: (value: CSS) => ({
-      '&[aria-readonly=true], &[readonly], &[data-readonly]': value,
-    }),
-    _placeholder: (value: CSS) => ({
-      '&::placeholder': value,
+    backgroundClip: (value: PropertyValue<'backgroundClip'>) => ({
+      WebkitBackgroundClip: value,
+      backgroundClip: value,
     }),
   },
   themeMap: {
     ...defaultThemeMap,
-    opacity: 'opacities',
     transitionProperty: 'transitionProperties',
     transitionDuration: 'transitionDurations',
     transitionDelay: 'transitionDurations',
@@ -117,13 +101,4 @@ export const {
   },
 });
 
-// Should this come from @manifest/themes?
-// Where should we handle aliases and darkTheme creation
-export const darkTheme = createTheme({
-  colors: {
-    hiContrast: '$neutral90',
-    loContrast: '$neutral10',
-    shadow10: '#000000',
-    shadow20: 'rgba(0, 0, 0, 0.9)',
-  },
-});
+export const darkTheme = createTheme(themes.darkTheme);

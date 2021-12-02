@@ -7,6 +7,8 @@ export type AlertProps = ComponentProps<typeof Alert>;
 export type AlertVariants = VariantProps<typeof Alert>;
 
 export const Alert = styled('div', {
+  $$subtle: '$colors$neutral1',
+  $$solid: '$colors$neutral5',
   display: 'flex',
   position: 'relative',
   alignItems: 'center',
@@ -17,25 +19,21 @@ export const Alert = styled('div', {
 
   variants: {
     status: {
-      neutral: {
-        $$subtle: '$colors$neutral10',
-        $$solid: '$colors$neutral50',
-      },
       info: {
-        $$subtle: '$colors$blue10',
-        $$solid: '$colors$blue50',
+        $$subtle: '$colors$blue1',
+        $$solid: '$colors$blue5',
       },
       success: {
-        $$subtle: '$colors$green10',
-        $$solid: '$colors$green50',
+        $$subtle: '$colors$green1',
+        $$solid: '$colors$green5',
       },
       warning: {
-        $$subtle: '$colors$orange10',
-        $$solid: '$colors$orange50',
+        $$subtle: '$colors$orange1',
+        $$solid: '$colors$orange5',
       },
       danger: {
-        $$subtle: '$colors$red10',
-        $$solid: '$colors$red50',
+        $$subtle: '$colors$red1',
+        $$solid: '$colors$red5',
       },
     },
     size: {

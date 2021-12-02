@@ -9,29 +9,11 @@ export type LabelProps = LabelPrimitive.LabelProps &
 export type LabelVariants = VariantProps<typeof Label>;
 
 export const Label = styled(LabelPrimitive.Root, Text, {
-  // Reset
   display: 'inline-block',
-  verticalAlign: 'middle',
   cursor: 'default',
-
-  // Custom
-  fontWeight: '$base',
-  letterSpacing: '$base',
+  fontWeight: '$medium',
   lineHeight: '$base',
 
-  variants: {
-    size: {
-      large: {
-        fontSize: '$5',
-      },
-      medium: {
-        fontSize: '$4',
-      },
-      small: {
-        fontSize: '$3',
-      },
-    },
-  },
   defaultVariants: {
     size: 'medium',
   },

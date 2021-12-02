@@ -5,34 +5,6 @@ import { Alert, AlertProps } from './';
 export default {
   title: 'Components/Alert',
   component: Alert,
-  argTypes: {
-    status: {
-      name: 'status',
-      type: { name: 'string', required: false },
-      description: 'Different types of alerts',
-      table: {
-        type: {
-          summary: 'neutral|info|success|warning|danger',
-        },
-        defaultValue: { summary: 'neutral' },
-      },
-      control: { type: 'radio' },
-      options: ['neutral', 'info', 'success', 'warning', 'danger'],
-    },
-    variant: {
-      name: 'variant',
-      type: { name: 'string', required: false },
-      description: 'Different types of alerts',
-      table: {
-        type: {
-          summary: 'subtle|solid',
-        },
-        defaultValue: { summary: 'subtle' },
-      },
-      control: { type: 'radio' },
-      options: ['subtle', 'solid'],
-    },
-  },
 } as Meta;
 
 const Template: Story<AlertProps> = (args) => <Alert {...args} />;
