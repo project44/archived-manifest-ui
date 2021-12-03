@@ -120,6 +120,22 @@ export const Button = styled(Primitives.Button, {
           color: '$neutral4',
         },
       },
+      link: {
+        $$outline: '$colors$blue2',
+        p: 0,
+        bg: 'transparent',
+        color: '$blue6',
+        textDecoration: 'underline',
+        '&:hover': {
+          color: '$blue5',
+        },
+        '&:active': {
+          color: '$blue6',
+        },
+        '&:disabled': {
+          color: '$neutral4',
+        },
+      },
     },
     status: {
       success: {

@@ -10,10 +10,16 @@ export type LabelVariants = VariantProps<typeof Label>;
 
 export const Label = styled(LabelPrimitive.Root, Text, {
   display: 'inline-block',
+  verticalAlign: 'middle',
   cursor: 'default',
   fontWeight: '$medium',
   lineHeight: '$base',
-
+  variants: {
+    size: {
+      small: { fontSize: '$3' },
+      medium: { fontSize: '$4' },
+    },
+  },
   defaultVariants: {
     size: 'medium',
   },
