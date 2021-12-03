@@ -1,15 +1,12 @@
 export {
   // Components
+  Alert,
   Box,
   Button,
   Flex,
+  Heading,
   Icon,
   Input,
-  InputEndAddon,
-  InputEndElement,
-  InputGroup,
-  InputStartAddon,
-  InputStartElement,
   Label,
   Text,
   // Icons
