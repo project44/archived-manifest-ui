@@ -11,6 +11,9 @@ export type { ButtonProps, ButtonVariants } from './Button';
 export { Flex } from './Flex';
 export type { FlexProps } from './Flex';
 
+export { Heading } from './Heading';
+export type { HeadingProps, HeadingVariants } from './Heading';
+
 export { Icon } from './Icon';
 export type { IconProps } from './Icon';
 
