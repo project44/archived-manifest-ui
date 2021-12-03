@@ -64,23 +64,6 @@ export const FontWeight: Story<TextProps> = (args) => (
   </Flex>
 );
 
-export const Truncated: Story<TextProps> = (args) => (
-  <Box
-    css={{
-      br: '$small',
-      border: '1px dashed $neutral3',
-      width: '300px',
-      p: '$1',
-      resize: 'horizontal',
-      overflow: 'scroll',
-    }}
-  >
-    <Text {...args} isTruncated>
-      Almost before we knew it, we had left the ground.
-    </Text>
-  </Box>
-);
-
 export const Status: Story<TextProps> = (args) => (
   <Flex direction="column" gap="4">
     <Text {...args} status="success">
@@ -96,6 +79,23 @@ export const Status: Story<TextProps> = (args) => (
       Almost before we knew it, we had left the ground.
     </Text>
   </Flex>
+);
+
+export const Truncated: Story<TextProps> = (args) => (
+  <Box
+    css={{
+      br: '$small',
+      border: '1px dashed $neutral3',
+      width: '300px',
+      p: '$1',
+      resize: 'horizontal',
+      overflow: 'scroll',
+    }}
+  >
+    <Text {...args} isTruncated>
+      Almost before we knew it, we had left the ground.
+    </Text>
+  </Box>
 );
 
 export const Variant: Story<TextProps> = (args) => (

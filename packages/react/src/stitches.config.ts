@@ -18,7 +18,7 @@ export const {
   theme: themes.lightTheme,
   media: {
     bp1: '(min-width: 600px)',
-    bp2: '(min-width: 960px})',
+    bp2: '(min-width: 960px)',
     bp3: '(min-width: 1280px)',
     bp4: '(min-width: 1920px)',
   },
