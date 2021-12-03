@@ -1,5 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
+
+import { Flex } from '../';
 import { Alert, AlertProps } from './';
 
 export default {
@@ -9,26 +11,37 @@ export default {
 
 const Template: Story<AlertProps> = (args) => <Alert {...args} />;
 
-export const Info = Template.bind({});
-Info.args = {
-  children: 'Info',
+export const Basic = Template.bind({});
+Basic.args = {
+  children: 'Manifest is going live. Get ready!',
   status: 'info',
+  variant: 'subtle',
 };
 
-export const Success = Template.bind({});
-Success.args = {
-  children: 'Success',
-  status: 'success',
-};
+export const Status: Story<AlertProps> = (args) => (
+  <Flex direction="column" gap="4">
+    <Alert {...args} status="info">
+      Alert
+    </Alert>
+    <Alert {...args} status="success">
+      Alert
+    </Alert>
+    <Alert {...args} status="warning">
+      Alert
+    </Alert>
+    <Alert {...args} status="danger">
+      Alert
+    </Alert>
+  </Flex>
+);
 
-export const Warning = Template.bind({});
-Warning.args = {
-  children: 'Warning',
-  status: 'warning',
-};
-
-export const Danger = Template.bind({});
-Danger.args = {
-  children: 'Danger',
-  status: 'danger',
-};
+export const Variant: Story<AlertProps> = (args) => (
+  <Flex direction="column" gap="4">
+    <Alert status="success" {...args} variant="subtle">
+      Alert
+    </Alert>
+    <Alert status="success" {...args} variant="solid">
+      Alert
+    </Alert>
+  </Flex>
+);

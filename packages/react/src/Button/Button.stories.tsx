@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react';
-import { Button } from './';
-import type { ButtonProps } from '../';
+import { Flex } from '../';
+import { Button, ButtonProps } from './';
 
 export default {
   title: 'Components/Button',
@@ -10,20 +10,42 @@ export default {
 
 const Template: Story<ButtonProps> = (args) => <Button {...args} />;
 
-export const Solid = Template.bind({});
-Solid.args = {
-  children: 'Solid',
+export const Basic = Template.bind({});
+Basic.args = {
+  children: 'Button',
+  isDisabled: false,
+  isFullWidth: false,
+  size: 'medium',
   variant: 'solid',
 };
 
-export const Outline = Template.bind({});
-Outline.args = {
-  children: 'Outline',
-  variant: 'outline',
-};
+export const Size: Story<ButtonProps> = (args) => (
+  <Flex align="center" gap="4">
+    <Button {...args} size="small">
+      Button
+    </Button>
+    <Button {...args} size="medium">
+      Button
+    </Button>
+    <Button {...args} size="large">
+      Button
+    </Button>
+  </Flex>
+);
 
-export const Ghost = Template.bind({});
-Ghost.args = {
-  children: 'Ghost',
-  variant: 'ghost',
-};
+export const Variant: Story<ButtonProps> = (args) => (
+  <Flex align="center" gap="4">
+    <Button {...args} variant="solid">
+      Button
+    </Button>
+    <Button {...args} variant="outline">
+      Button
+    </Button>
+    <Button {...args} variant="ghost">
+      Button
+    </Button>
+    <Button {...args} variant="link">
+      Button
+    </Button>
+  </Flex>
+);

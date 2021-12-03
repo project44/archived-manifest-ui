@@ -21,17 +21,18 @@ export const Text = styled('span', {
       '8': { fontSize: '$8' },
       '9': { fontSize: '$9' },
     },
+    fontWeight: {
+      normal: { fontWeight: '$normal' },
+      medium: { fontWeight: '$medium' },
+      semibold: { fontWeight: '$semibold' },
+      bold: { fontWeight: '$bold' },
+    },
     isTruncated: {
       true: {
         overflow: 'hidden',
         textOverflow: 'ellipsis',
         whiteSpace: 'nowrap',
       },
-    },
-    size: {
-      small: { fontSize: '$3' },
-      medium: { fontSize: '$4' },
-      large: { fontSize: '$5' },
     },
     status: {
       info: { color: '$blue5' },
@@ -43,14 +44,9 @@ export const Text = styled('span', {
       contrast: { color: '$hiContrast' },
       secondary: { color: '$neutral5' },
     },
-    weight: {
-      normal: { fontWeight: '$normal' },
-      medium: { fontWeight: '$medium' },
-      semibold: { fontWeight: '$semibold' },
-      bold: { fontWeight: '$bold' },
-    },
   },
   defaultVariants: {
+    fontSize: '4',
     variant: 'contrast',
   },
 });
