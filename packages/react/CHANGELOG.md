@@ -1,5 +1,11 @@
 # @manifest-ui/react
 
+## 0.1.3
+
+### Patch Changes
+
+- [#94](https://github.com/project44/manifest-ui/pull/94) [`613789a`](https://github.com/project44/manifest-ui/commit/613789aa154b3ae850d994cdde3d6b9d286f617c) Thanks [@samrose3](https://github.com/samrose3)! - The theme tokens now use a linear scale system for most properties. Components also now use a linear number scale for the size prop.
+
 ## 0.1.2
 
 ### Patch Changes
