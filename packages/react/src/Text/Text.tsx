@@ -6,11 +6,18 @@ export type TextVariants = VariantProps<typeof Text>;
 export const Text = styled('span', {
   display: 'block',
   m: '0',
-  fontWeight: '$normal',
-  lineHeight: '$base',
+  fontWeight: '$4',
+  lineHeight: '1',
 
   variants: {
-    fontSize: {
+    isTruncated: {
+      true: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
+      },
+    },
+    size: {
       '1': { fontSize: '$1' },
       '2': { fontSize: '$2' },
       '3': { fontSize: '$3' },
@@ -21,32 +28,21 @@ export const Text = styled('span', {
       '8': { fontSize: '$8' },
       '9': { fontSize: '$9' },
     },
-    fontWeight: {
-      normal: { fontWeight: '$normal' },
-      medium: { fontWeight: '$medium' },
-      semibold: { fontWeight: '$semibold' },
-      bold: { fontWeight: '$bold' },
-    },
-    isTruncated: {
-      true: {
-        overflow: 'hidden',
-        textOverflow: 'ellipsis',
-        whiteSpace: 'nowrap',
-      },
-    },
-    status: {
-      info: { color: '$blue5' },
-      success: { color: '$green5' },
-      warning: { color: '$orange5' },
-      danger: { color: '$red5' },
-    },
     variant: {
       contrast: { color: '$hiContrast' },
-      secondary: { color: '$neutral5' },
+      gray: { color: '$gray8' },
+      red: { color: '$red8' },
+      orange: { color: '$orange8' },
+      yellow: { color: '$yellow8' },
+      green: { color: '$green8' },
+      teal: { color: '$teal8' },
+      blue: { color: '$blue8' },
+      purple: { color: '$purple8' },
+      pink: { color: '$pink8' },
     },
   },
   defaultVariants: {
-    fontSize: '4',
+    size: '4',
     variant: 'contrast',
   },
 });

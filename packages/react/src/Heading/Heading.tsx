@@ -5,11 +5,11 @@ import { Text } from '../Text';
 
 const DEFAULT_TAG = 'h2';
 
-type TextSizeVariants = Pick<VariantProps<typeof Text>, 'fontSize'>;
-type HeadingSizeVariants = 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge';
+type TextSizeVariants = Pick<VariantProps<typeof Text>, 'size'>;
+type HeadingSizeVariants = '1' | '2' | '3' | '4' | '5';
 export type HeadingVariants = { size?: HeadingSizeVariants } & Omit<
   VariantProps<typeof Text>,
-  'fontSize' | 'fontWeight' | 'status' | 'variant'
+  'size'
 >;
 export type HeadingProps = React.ComponentProps<typeof DEFAULT_TAG> &
   HeadingVariants & {
@@ -21,13 +21,13 @@ export const Heading = React.forwardRef<
   React.ElementRef<typeof DEFAULT_TAG>,
   HeadingProps
 >((props, ref) => {
-  const { size = 'large', css, ...textProps } = props;
-  const textSize: Record<HeadingSizeVariants, TextSizeVariants['fontSize']> = {
-    small: { '@initial': '3', '@bp2': '4' },
-    medium: { '@initial': '4', '@bp2': '5' },
-    large: { '@initial': '6', '@bp2': '7' },
-    xlarge: { '@initial': '7', '@bp2': '8' },
-    xxlarge: { '@initial': '8', '@bp2': '9' },
+  const { size = 3, css, ...textProps } = props;
+  const textSize: Record<HeadingSizeVariants, TextSizeVariants['size']> = {
+    1: { '@initial': '3', '@bp2': '4' },
+    2: { '@initial': '4', '@bp2': '5' },
+    3: { '@initial': '6', '@bp2': '7' },
+    4: { '@initial': '7', '@bp2': '8' },
+    5: { '@initial': '8', '@bp2': '9' },
   };
 
   return (
@@ -35,9 +35,8 @@ export const Heading = React.forwardRef<
       as={DEFAULT_TAG}
       {...textProps}
       ref={ref}
-      fontWeight="bold"
-      fontSize={textSize[size]}
-      css={{ lineHeight: '$short', ...css }}
+      size={textSize[size]}
+      css={{ fontWeight: '$7', lineHeight: '$1', ...css }}
     />
   );
 });

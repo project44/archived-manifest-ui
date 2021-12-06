@@ -14,27 +14,26 @@ const Template: Story<InputProps> = (args) => <Input {...args} />;
 export const Basic = Template.bind({});
 Basic.args = {
   placeholder: 'Search',
-  size: 'medium',
+  size: '2',
 };
 
 export const Size: Story<InputProps> = (args) => (
   <Flex direction="column" gap="4">
-    <Input {...args} size="small" />
-    <Input {...args} size="medium" />
+    <Input {...args} size="1" />
+    <Input {...args} size="2" />
   </Flex>
 );
 Size.args = {
   placeholder: 'Search',
 };
 
-export const Status: Story<InputProps> = (args) => (
+export const State: Story<InputProps> = (args) => (
   <Flex direction="column" gap="4">
-    <Input {...args} status="success" />
-    <Input {...args} status="warning" />
-    <Input {...args} status="danger" />
+    <Input {...args} state="valid" />
+    <Input {...args} state="invalid" />
   </Flex>
 );
-Status.args = {
+State.args = {
   placeholder: 'Search',
 };
 

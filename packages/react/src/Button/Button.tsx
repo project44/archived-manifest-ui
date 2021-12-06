@@ -10,18 +10,18 @@ export const Button = styled(Primitives.Button, {
   all: 'unset',
   backgroundColor: 'transparent',
   borderColor: 'transparent',
-  borderRadius: '$small',
+  borderRadius: '$1',
   borderStyle: 'solid',
-  borderWidth: '$small',
+  borderWidth: '$1',
   boxSizing: 'border-box',
   display: 'inline-flex',
   fontFamily: '$body',
-  fontWeight: '$semibold',
+  fontWeight: '$6',
   justifyContent: 'center',
   lineHeight: 1,
   outline: 'none',
   py: '$2',
-  transition: '$fast $ease',
+  transition: '$1 $ease',
   transitionProperty: '$common',
   userSelect: 'none',
   '&::before': {
@@ -56,15 +56,15 @@ export const Button = styled(Primitives.Button, {
       },
     },
     size: {
-      small: {
+      '1': {
         fontSize: '$3',
         px: '$3',
       },
-      medium: {
+      '2': {
         fontSize: '$4',
         px: '$4',
       },
-      large: {
+      '3': {
         fontSize: '$5',
         px: '$4',
       },
@@ -84,24 +84,24 @@ export const Button = styled(Primitives.Button, {
           backgroundColor: '$$bgActive',
         },
         '&:disabled': {
-          backgroundColor: '$neutral1',
-          color: '$neutral4',
+          backgroundColor: '$gray1',
+          color: '$gray4',
         },
       },
       outline: {
-        $$outline: '$colors$neutral2',
-        borderColor: '$neutral3',
-        color: '$neutral5',
+        $$outline: '$colors$gray2',
+        borderColor: '$gray3',
+        color: '$gray5',
         '&:hover': {
-          borderColor: '$neutral4',
+          borderColor: '$gray4',
         },
         '&:active': {
-          borderColor: '$neutral5',
-          color: '$neutral6',
+          borderColor: '$gray5',
+          color: '$gray6',
         },
         '&:disabled': {
-          borderColor: '$neutral3',
-          color: '$neutral3',
+          borderColor: '$gray3',
+          color: '$gray3',
         },
       },
       ghost: {
@@ -117,7 +117,7 @@ export const Button = styled(Primitives.Button, {
         },
         '&:disabled': {
           bg: 'transparent',
-          color: '$neutral4',
+          color: '$gray4',
         },
       },
       link: {
@@ -133,7 +133,7 @@ export const Button = styled(Primitives.Button, {
           color: '$blue6',
         },
         '&:disabled': {
-          color: '$neutral4',
+          color: '$gray4',
         },
       },
     },
@@ -153,7 +153,7 @@ export const Button = styled(Primitives.Button, {
     },
   },
   defaultVariants: {
-    size: 'medium',
+    size: '2',
     variant: 'solid',
   },
 });

@@ -12,15 +12,15 @@ export const Label = styled(LabelPrimitive.Root, Text, {
   display: 'inline-block',
   verticalAlign: 'middle',
   cursor: 'default',
-  fontWeight: '$medium',
-  lineHeight: '$base',
+  fontWeight: '$5',
+
   variants: {
     size: {
-      small: { fontSize: '$3' },
-      medium: { fontSize: '$4' },
+      '1': { fontSize: '$3' },
+      '2': { fontSize: '$4' },
     },
   },
   defaultVariants: {
-    size: 'medium',
+    size: '2',
   },
 });
