@@ -15,19 +15,19 @@ Basic.args = {
   children: 'Button',
   isDisabled: false,
   isFullWidth: false,
-  size: 'medium',
+  size: '2',
   variant: 'solid',
 };
 
 export const Size: Story<ButtonProps> = (args) => (
   <Flex align="center" gap="4">
-    <Button {...args} size="small">
+    <Button {...args} size="1">
       Button
     </Button>
-    <Button {...args} size="medium">
+    <Button {...args} size="2">
       Button
     </Button>
-    <Button {...args} size="large">
+    <Button {...args} size="3">
       Button
     </Button>
   </Flex>

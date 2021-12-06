@@ -13,69 +13,38 @@ const Template: Story<TextProps> = (args) => <Text {...args} />;
 export const Basic = Template.bind({});
 Basic.args = {
   children: 'Almost before we knew it, we had left the ground.',
-  fontSize: '4',
-  fontWeight: 'normal',
+  isTruncated: false,
+  size: '4',
   variant: 'contrast',
 };
 
-export const FontSize: Story<TextProps> = (args) => (
+export const Size: Story<TextProps> = (args) => (
   <Flex direction="column" gap="4">
-    <Text {...args} fontSize="9">
+    <Text {...args} size="9">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text {...args} fontSize="8">
+    <Text {...args} size="8">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text {...args} fontSize="7">
+    <Text {...args} size="7">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text {...args} fontSize="6">
+    <Text {...args} size="6">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text {...args} fontSize="5">
+    <Text {...args} size="5">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text {...args} fontSize="4">
+    <Text {...args} size="4">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text {...args} fontSize="3">
+    <Text {...args} size="3">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text {...args} fontSize="2">
+    <Text {...args} size="2">
       Almost before we knew it, we had left the ground.
     </Text>
-  </Flex>
-);
-
-export const FontWeight: Story<TextProps> = (args) => (
-  <Flex direction="column" gap="4">
-    <Text {...args} fontWeight="normal">
-      Almost before we knew it, we had left the ground.
-    </Text>
-    <Text {...args} fontWeight="medium">
-      Almost before we knew it, we had left the ground.
-    </Text>
-    <Text {...args} fontWeight="semibold">
-      Almost before we knew it, we had left the ground.
-    </Text>
-    <Text {...args} fontWeight="bold">
-      Almost before we knew it, we had left the ground.
-    </Text>
-  </Flex>
-);
-
-export const Status: Story<TextProps> = (args) => (
-  <Flex direction="column" gap="4">
-    <Text {...args} status="success">
-      Almost before we knew it, we had left the ground.
-    </Text>
-    <Text {...args} status="warning">
-      Almost before we knew it, we had left the ground.
-    </Text>
-    <Text {...args} status="danger">
-      Almost before we knew it, we had left the ground.
-    </Text>
-    <Text {...args} status="info">
+    <Text {...args} size="1">
       Almost before we knew it, we had left the ground.
     </Text>
   </Flex>
@@ -84,8 +53,8 @@ export const Status: Story<TextProps> = (args) => (
 export const Truncated: Story<TextProps> = (args) => (
   <Box
     css={{
-      br: '$small',
-      border: '1px dashed $neutral3',
+      br: '$1',
+      border: '1px dashed $gray3',
       width: '300px',
       p: '$1',
       resize: 'horizontal',
@@ -103,7 +72,31 @@ export const Variant: Story<TextProps> = (args) => (
     <Text {...args} variant="contrast">
       Almost before we knew it, we had left the ground.
     </Text>
-    <Text {...args} variant="secondary">
+    <Text {...args} variant="gray">
+      Almost before we knew it, we had left the ground.
+    </Text>
+    <Text {...args} variant="red">
+      Almost before we knew it, we had left the ground.
+    </Text>
+    <Text {...args} variant="orange">
+      Almost before we knew it, we had left the ground.
+    </Text>
+    <Text {...args} variant="yellow">
+      Almost before we knew it, we had left the ground.
+    </Text>
+    <Text {...args} variant="green">
+      Almost before we knew it, we had left the ground.
+    </Text>
+    <Text {...args} variant="teal">
+      Almost before we knew it, we had left the ground.
+    </Text>
+    <Text {...args} variant="blue">
+      Almost before we knew it, we had left the ground.
+    </Text>
+    <Text {...args} variant="purple">
+      Almost before we knew it, we had left the ground.
+    </Text>
+    <Text {...args} variant="pink">
       Almost before we knew it, we had left the ground.
     </Text>
   </Flex>

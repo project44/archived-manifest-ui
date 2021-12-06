@@ -1,20 +1,19 @@
 export const borderWidths = {
-  small: '0.0625rem',
-  medium: '0.125rem',
-  large: '0.25rem',
+  1: '1px',
+  2: '2px',
+  3: '4px',
 };
 
 export const colors = {
-  // Palettes
-  neutral1: '#f3f3f5',
-  neutral2: '#e4e5ea',
-  neutral3: '#ced0d8',
-  neutral4: '#a5aab7',
-  neutral5: '#697187',
-  neutral6: '#434d69',
-  neutral7: '#303a52',
-  neutral8: '#1f2535',
-  neutral9: '#141822',
+  gray1: '#f3f3f5',
+  gray2: '#e4e5ea',
+  gray3: '#ced0d8',
+  gray4: '#a5aab7',
+  gray5: '#697187',
+  gray6: '#434d69',
+  gray7: '#303a52',
+  gray8: '#1f2535',
+  gray9: '#141822',
   red1: '#f4cfcd',
   red2: '#eca9a5',
   red3: '#e3837d',
@@ -87,36 +86,20 @@ export const colors = {
   pink7: '#7a234c',
   pink8: '#621c3d',
   pink9: '#49152e',
-  whiteA1: 'rgba(255, 255, 255, 0.01)',
-  whiteA2: 'rgba(255, 255, 255, 0.04)',
-  whiteA3: 'rgba(255, 255, 255, 0.08)',
-  whiteA4: 'rgba(255, 255, 255, 0.16)',
-  whiteA5: 'rgba(255, 255, 255, 0.24)',
-  whiteA6: 'rgba(255, 255, 255, 0.36)',
-  whiteA7: 'rgba(255, 255, 255, 0.48)',
-  whiteA8: 'rgba(255, 255, 255, 0.64)',
-  whiteA9: 'rgba(255, 255, 255, 0.80)',
-  whiteA10: 'rgba(255, 255, 255, 0.92)',
-  blackA1: 'rgba(0, 0, 0, 0.01)',
-  blackA2: 'rgba(0, 0, 0, 0.04)',
-  blackA3: 'rgba(0, 0, 0, 0.08)',
-  blackA4: 'rgba(0, 0, 0, 0.16)',
-  blackA5: 'rgba(0, 0, 0, 0.24)',
-  blackA6: 'rgba(0, 0, 0, 0.36)',
-  blackA7: 'rgba(0, 0, 0, 0.48)',
-  blackA8: 'rgba(0, 0, 0, 0.64)',
-  blackA9: 'rgba(0, 0, 0, 0.80)',
-  blackA10: 'rgba(0, 0, 0, 0.92)',
-
-  // Semantic
-  hiContrast: '$neutral9',
+  hiContrast: '$gray9',
   loContrast: 'white',
-  shadowLow: '$blackA1',
-  shadowHigh: '$blackA2',
+  link: '$blue7',
+  linkVisited: '$purple7',
+  text1: '$gray9',
+  text2: '$gray7',
+  surface1: 'white',
+  surface2: '$gray2',
+  surface3: '$gray3',
+  surface4: '$gray4',
 };
 
 export const fonts = {
-  body: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+  sans: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   mono: `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`,
 };
 
@@ -133,37 +116,53 @@ export const fontSizes = {
 };
 
 export const fontWeights = {
-  normal: 400,
-  medium: 500,
-  semibold: 600,
-  bold: 700,
+  4: 400,
+  5: 500,
+  6: 600,
+  7: 700,
 };
 
 export const letterSpacings = {
-  tight: '-0.025em',
-  normal: '0',
-  wide: '0.025em',
+  1: '-0.05em',
+  2: '-0.025em',
+  3: '0.025em',
+  4: '0.05em',
 };
 
 export const lineHeights = {
-  short: 1.25,
-  base: 1.5,
+  1: 1.25,
+  2: 1.375,
+  3: 1.5,
 };
 
 export const radii = {
-  small: '0.25rem',
-  medium: '0.5rem',
-  large: '2rem',
-  xlarge: '4rem',
-  full: '9999px',
+  1: '0.25rem',
+  2: '0.5rem',
+  3: '2rem',
+  4: '4rem',
+  round: '1e5px',
 };
 
 export const shadows = {
-  xsmall: '0px 1px 3px $colors$shadowLow, 0px 0px 1px $colors$shadowHigh',
-  small: '0px 2px 4px $colors$shadowLow, 0px 0px 1px $colors$shadowHigh',
-  medium: '0px 4px 8px $colors$shadowLow, 0px 0px 1px $colors$shadowHigh',
-  large: '0px 8px 16px $colors$shadowLow, 0px 0px 1px $colors$shadowHigh',
-  xlarge: '0px 16px 24px $colors$shadowLow, 0px 0px 1px $colors$shadowHigh',
+  color: '220 3% 15%',
+  strength: '1%',
+  1: `0 1px 2px -1px hsl($color / calc($strength + 9%))`,
+  2: `
+    0 3px 5px -2px hsl($color / calc($strength + 3%)),
+    0 7px 14px -5px hsl($color / calc($strength + 5%))`,
+  3: `
+    0 -1px 3px 0 hsl($color / calc($strength + 2%)),
+    0 1px 2px -5px hsl($color / calc($strength + 2%)),
+    0 2px 5px -5px hsl($color / calc($strength + 4%)),
+    0 4px 12px -5px hsl($color / calc($strength + 5%)),
+    0 12px 15px -5px hsl($color / calc($strength + 7%))`,
+  4: `
+    0 -2px 5px 0 hsl($color / calc($strength + 2%)),
+    0 1px 1px -2px hsl($color / calc($strength + 3%)),
+    0 2px 2px -2px hsl($color / calc($strength + 3%)),
+    0 5px 5px -2px hsl($color / calc($strength + 4%)),
+    0 9px 9px -2px hsl($color / calc($strength + 5%)),
+    0 16px 16px -2px hsl($color / calc($strength + 6%))`,
 };
 
 export const space = {
@@ -180,6 +179,15 @@ export const space = {
   11: '12rem',
 };
 
+export const sizes = {
+  content1: '20ch',
+  content2: '45ch',
+  content3: '60ch',
+  header1: '20ch',
+  header2: '25ch',
+  header3: '45rem',
+};
+
 const transitionProperties = {
   common:
     'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform',
@@ -187,9 +195,9 @@ const transitionProperties = {
 };
 
 const transitionDurations = {
-  fast: '125ms',
-  base: '200ms',
-  slow: '300ms',
+  1: '125ms',
+  2: '200ms',
+  3: '300ms',
 };
 
 const transitionTimingFunctions = {
@@ -205,10 +213,11 @@ const transitions = {
 };
 
 export const zIndices = {
-  hide: -1,
-  base: 0,
-  modal: 1400,
-  popover: 1500,
+  1: '100',
+  2: '200',
+  3: '300',
+  4: '400',
+  max: '2147483647',
 };
 
 export const lightTheme = {
@@ -222,6 +231,7 @@ export const lightTheme = {
   radii,
   shadows,
   space,
+  sizes,
   transitions,
   transitionProperties,
   transitionDurations,
@@ -231,10 +241,20 @@ export const lightTheme = {
 
 export const darkTheme = {
   colors: {
-    hiContrast: '$neutral90',
-    loContrast: '$neutral10',
-    shadowLow: 'rgba(0, 0, 0, 0.94)',
-    shadowHigh: 'rgba(0, 0, 0, 0.9)',
+    hiContrast: '$gray1',
+    loContrast: '$gray9',
+    link: '$blue3',
+    linkVisited: '$purple3',
+    text1: '$gray1',
+    text2: '$gray2',
+    surface1: '$gray9',
+    surface2: '$gray8',
+    surface3: '$gray7',
+    surface4: '$gray6',
+  },
+  shadows: {
+    color: '220 40% 2%',
+    strength: '25%',
   },
 };
 

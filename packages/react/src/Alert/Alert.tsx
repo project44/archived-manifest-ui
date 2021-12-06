@@ -7,15 +7,13 @@ export type AlertProps = ComponentProps<typeof Alert>;
 export type AlertVariants = VariantProps<typeof Alert>;
 
 export const Alert = styled('div', {
-  $$subtle: '$colors$neutral1',
-  $$solid: '$colors$neutral5',
+  $$subtle: '$colors$gray1',
+  $$solid: '$colors$gray5',
   display: 'flex',
   position: 'relative',
   alignItems: 'center',
   px: '$3',
-  overflow: 'hidden',
-  borderRadius: '$small',
-  fontFamily: '$body',
+  borderRadius: '$1',
 
   variants: {
     status: {
@@ -37,7 +35,7 @@ export const Alert = styled('div', {
       },
     },
     size: {
-      medium: { py: '$3' },
+      '1': { py: '$3' },
     },
     variant: {
       subtle: { bg: '$$subtle' },
@@ -45,7 +43,7 @@ export const Alert = styled('div', {
     },
   },
   defaultVariants: {
-    size: 'medium',
+    size: '1',
     variant: 'subtle',
   },
 });
@@ -59,11 +57,11 @@ export const AlertIcon = () => {
 };
 
 export const AlertTitle = styled('div', {
-  fontWeight: '$bold',
-  lineHeight: '$body',
+  fontWeight: '$7',
+  lineHeight: '$3',
 });
 
 export const AlertDescription = styled('div', {
   display: 'inline',
-  lineHeight: '$body',
+  lineHeight: '$3',
 });

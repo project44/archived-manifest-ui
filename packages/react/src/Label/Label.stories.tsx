@@ -13,15 +13,15 @@ const Template: Story<LabelProps> = (args) => <Label {...args} />;
 export const Basic = Template.bind({});
 Basic.args = {
   children: 'Label',
-  size: 'medium',
+  size: '2',
 };
 
 export const Size: Story<LabelProps> = (args) => (
   <Flex direction="column" gap="4">
-    <Label {...args} size="small">
+    <Label {...args} size="1">
       Label
     </Label>
-    <Label {...args} size="medium">
+    <Label {...args} size="2">
       Label
     </Label>
   </Flex>

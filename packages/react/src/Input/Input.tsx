@@ -10,8 +10,8 @@ export const Input = styled('input', {
   appearance: 'none',
   bg: '$loContrast',
   border: 'none',
-  borderRadius: '$small',
-  boxShadow: 'inset 0 0 0 1px $colors$neutral3',
+  borderRadius: '$1',
+  boxShadow: 'inset 0 0 0 1px $colors$gray3',
   boxSizing: 'border-box',
   color: '$hiContrast',
   fontFamily: '$body',
@@ -19,7 +19,7 @@ export const Input = styled('input', {
   margin: '0',
   outline: 'none',
   padding: '0',
-  transition: '$fast $ease',
+  transition: '$1 $ease',
   transitionProperty: '$common',
   WebkitTapHighlightColor: 'rgba(0,0,0,0)',
   width: '100%',
@@ -32,30 +32,30 @@ export const Input = styled('input', {
   },
   '&:disabled': {
     pointerEvents: 'none',
-    backgroundColor: '$neutral1',
-    color: '$neutral7',
+    backgroundColor: '$gray1',
+    color: '$gray7',
     cursor: 'not-allowed',
     '&::placeholder': {
-      color: '$neutral6',
+      color: '$gray6',
     },
   },
   '&::placeholder': {
-    color: '$neutral4',
+    color: '$gray4',
   },
   '&:read-only': {
-    backgroundColor: '$neutral1',
+    backgroundColor: '$gray1',
     '&:focus': {
-      boxShadow: 'inset 0px 0px 0px 1px $colors$neutral6',
+      boxShadow: 'inset 0px 0px 0px 1px $colors$gray6',
     },
   },
   variants: {
     size: {
-      small: {
+      '1': {
         fontSize: '$3',
         px: '$2',
         lineHeight: '$space$5',
       },
-      medium: {
+      '2': {
         fontSize: '$4',
         px: '$3',
         lineHeight: '$space$6',
@@ -66,7 +66,7 @@ export const Input = styled('input', {
         boxShadow: 'none',
         backgroundColor: 'transparent',
         '&:hover': {
-          boxShadow: 'inset 0 0 0 1px $colors$neutral3',
+          boxShadow: 'inset 0 0 0 1px $colors$gray3',
         },
         '&:focus': {
           backgroundColor: '$loContrast',
@@ -81,22 +81,18 @@ export const Input = styled('input', {
         },
       },
     },
-    status: {
-      success: {
+    state: {
+      valid: {
         $$border: '$colors$green5',
         $$outline: '$colors$green2',
       },
-      warning: {
-        $$border: '$colors$orange5',
-        $$outline: '$colors$orange2',
-      },
-      danger: {
+      invalid: {
         $$border: '$colors$red5',
         $$outline: '$colors$red2',
       },
     },
   },
   defaultVariants: {
-    size: 'medium',
+    size: '2',
   },
 });

@@ -14,24 +14,24 @@ const Template: Story = (args) => <Heading {...args} />;
 export const Basic = Template.bind({});
 Basic.args = {
   children: 'Almost before we knew it, we had left the ground.',
-  size: 'large',
+  size: '3',
 };
 
 export const Size: Story = (args) => (
   <Flex direction="column" gap="4">
-    <Heading {...args} size="xxlarge">
+    <Heading {...args} size="5">
       Almost before we knew it, we had left the ground.
     </Heading>
-    <Heading {...args} size="xlarge">
+    <Heading {...args} size="4">
       Almost before we knew it, we had left the ground.
     </Heading>
-    <Heading {...args} size="large">
+    <Heading {...args} size="3">
       Almost before we knew it, we had left the ground.
     </Heading>
-    <Heading {...args} size="medium">
+    <Heading {...args} size="2">
       Almost before we knew it, we had left the ground.
     </Heading>
-    <Heading {...args} size="small">
+    <Heading {...args} size="1">
       Almost before we knew it, we had left the ground.
     </Heading>
   </Flex>
@@ -40,8 +40,8 @@ export const Size: Story = (args) => (
 export const Truncated: Story = (args) => (
   <Box
     css={{
-      br: '$small',
-      border: '1px dashed $neutral3',
+      br: '$1',
+      border: '1px dashed $gray3',
       width: '300px',
       p: '$1',
       resize: 'horizontal',
