@@ -1,5 +1,12 @@
 # @manifest-ui/react
 
+## 0.1.4
+
+### Patch Changes
+
+- Updated dependencies [[`b104a06`](https://github.com/project44/manifest-ui/commit/b104a060f4e0fe7f3a60f5042d282345c8e63fe5)]:
+  - @manifest-ui/icons@0.0.4
+
 ## 0.1.3
 
 ### Patch Changes
