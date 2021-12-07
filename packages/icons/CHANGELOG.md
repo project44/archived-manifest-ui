@@ -1,5 +1,11 @@
 # @manifest-ui/icons
 
+## 0.0.4
+
+### Patch Changes
+
+- [#96](https://github.com/project44/manifest-ui/pull/96) [`b104a06`](https://github.com/project44/manifest-ui/commit/b104a060f4e0fe7f3a60f5042d282345c8e63fe5) Thanks [@samrose3](https://github.com/samrose3)! - Publish new icons: ChevronRight, ChevronUp, CloseCircle, CloseCircleOutline, External, Info, InfoOutline, Warning, WarningOutline.
+
 ## 0.0.3
 
 ### Patch Changes
