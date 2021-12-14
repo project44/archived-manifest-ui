@@ -23,8 +23,8 @@ export const Heading = React.forwardRef<
 >((props, ref) => {
   const { size = 3, css, ...textProps } = props;
   const textSize: Record<HeadingSizeVariants, TextSizeVariants['size']> = {
-    1: { '@initial': '3', '@bp2': '4' },
-    2: { '@initial': '4', '@bp2': '5' },
+    1: { '@initial': '4', '@bp2': '5' },
+    2: { '@initial': '5', '@bp2': '6' },
     3: { '@initial': '6', '@bp2': '7' },
     4: { '@initial': '7', '@bp2': '8' },
     5: { '@initial': '8', '@bp2': '9' },
