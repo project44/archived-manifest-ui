@@ -138,8 +138,9 @@ export const lineHeights = {
 export const radii = {
   1: '0.25rem',
   2: '0.5rem',
-  3: '2rem',
-  4: '4rem',
+  3: '1rem',
+  4: '2rem',
+  5: '4rem',
   round: '1e5px',
 };
 
