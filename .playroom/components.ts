@@ -11,7 +11,9 @@ export {
   Image,
   Input,
   Label,
+  Portal,
   Text,
+  VisuallyHidden,
   // Icons
   AddIcon,
   CheckIcon,
