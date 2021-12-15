@@ -181,12 +181,9 @@ export const space = {
 };
 
 export const sizes = {
-  content1: '20ch',
-  content2: '45ch',
-  content3: '60ch',
-  header1: '20ch',
-  header2: '25ch',
-  header3: '45rem',
+  1: '20ch',
+  2: '45ch',
+  3: '60ch',
 };
 
 const transitionProperties = {
