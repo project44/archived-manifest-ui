@@ -8,6 +8,7 @@ export {
   Grid,
   Heading,
   Icon,
+  Image,
   Input,
   Label,
   Text,
