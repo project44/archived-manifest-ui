@@ -8,6 +8,9 @@ export type { BoxProps } from './Box';
 export { Button } from './Button';
 export type { ButtonProps, ButtonVariants } from './Button';
 
+export { Container } from './Container';
+export type { ContainerProps } from './Container';
+
 export { Flex } from './Flex';
 export type { FlexProps } from './Flex';
 
@@ -19,6 +22,9 @@ export type { HeadingProps, HeadingVariants } from './Heading';
 
 export { Icon } from './Icon';
 export type { IconProps } from './Icon';
+
+export { Image } from './Image';
+export type { ImageProps } from './Image';
 
 export { Input } from './Input';
 export type { InputProps, InputVariants } from './Input';
