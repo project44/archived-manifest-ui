@@ -4,6 +4,7 @@ export {
   Box,
   Button,
   Flex,
+  Grid,
   Heading,
   Icon,
   Input,
