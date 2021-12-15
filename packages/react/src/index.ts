@@ -35,8 +35,14 @@ export type { LabelProps, LabelVariants } from './Label';
 export { ManifestProvider, useTheme } from './ManifestProvider';
 export type { ManifestProviderProps, ThemeContext } from './ManifestProvider';
 
+export { Portal } from './Portal';
+export type { PortalProps } from './Portal';
+
 export { Text } from './Text';
 export type { TextProps, TextVariants } from './Text';
+
+export { VisuallyHidden } from './VisuallyHidden';
+export type { VisuallyHiddenProps } from './VisuallyHidden';
 
 // Icons
 export {
