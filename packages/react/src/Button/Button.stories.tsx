@@ -14,6 +14,7 @@ export const Basic = Template.bind({});
 Basic.args = {
   children: 'Button',
   isDisabled: false,
+  isLoading: false,
   isFullWidth: false,
   size: '2',
   variant: 'solid',

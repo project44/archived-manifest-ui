@@ -13,6 +13,7 @@ export const Label = styled(LabelPrimitive.Root, Text, {
   verticalAlign: 'middle',
   cursor: 'default',
   fontWeight: '$5',
+  lineHeight: '$2',
 
   variants: {
     size: {

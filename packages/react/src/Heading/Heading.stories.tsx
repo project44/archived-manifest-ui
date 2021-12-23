@@ -14,7 +14,9 @@ const Template: Story = (args) => <Heading {...args} />;
 export const Basic = Template.bind({});
 Basic.args = {
   children: 'Almost before we knew it, we had left the ground.',
+  isTruncated: false,
   size: '3',
+  variant: 'contrast',
 };
 
 export const Size: Story = (args) => (

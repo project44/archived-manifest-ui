@@ -14,6 +14,7 @@ const Template: Story<AlertProps> = (args) => <Alert {...args} />;
 export const Basic = Template.bind({});
 Basic.args = {
   children: 'Manifest is going live. Get ready!',
+  size: '1',
   status: 'info',
   variant: 'subtle',
 };
