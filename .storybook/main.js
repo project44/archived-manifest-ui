@@ -3,6 +3,9 @@ const BrotliPlugin = require('brotli-webpack-plugin');
 const filterProps = ['as', 'css', 'ref'];
 
 module.exports = {
+  features: {
+    storyStoreV7: true,
+  },
   stories: [
     '../packages/**/*.stories.mdx',
     '../packages/**/*.stories.@(js|jsx|ts|tsx)',

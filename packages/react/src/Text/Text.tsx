@@ -7,7 +7,7 @@ export const Text = styled('span', {
   display: 'block',
   m: '0',
   fontWeight: '$4',
-  lineHeight: '1',
+  lineHeight: '$3',
 
   variants: {
     isTruncated: {
