@@ -1,5 +1,11 @@
 # @manifest-ui/react
 
+## 0.1.5
+
+### Patch Changes
+
+- [#103](https://github.com/project44/manifest-ui/pull/103) [`cf3bf2f`](https://github.com/project44/manifest-ui/commit/cf3bf2fa0ecd926560a9760489cb8a8a9df12f73) Thanks [@samrose3](https://github.com/samrose3)! - Add Layout and Utility components
+
 ## 0.1.4
 
 ### Patch Changes
