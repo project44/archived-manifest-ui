@@ -7,6 +7,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "commit": "git-cz",
     "format:check": "prettier --list-different \"./**/*.{md,mdx,ts,js,tsx,jsx}\"",
     "format:write": "prettier --write \"./**/*.{ts,tsx,js,jsx,json,md}\"",
     "lint": "eslint packages/**/src/ --ext .ts,.tsx",
@@ -17,6 +18,8 @@
     "packages/*/*"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^16.0.3",
+    "@commitlint/config-conventional": "^16.0.0",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "eslint": "^8.7.0",
