@@ -6,10 +6,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    project: [
-      './tsconfig.eslint.json',
-      './packages/*/tsconfig.json',
-    ],
+    project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json'],
     sourceType: 'module',
   },
   extends: [
@@ -23,7 +20,6 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:jest/recommended',
     'plugin:prettier/recommended',
-    'prettier/@typescript-eslint'
   ],
   env: {
     es6: true,
@@ -39,7 +35,7 @@ module.exports = {
     // Allow warn and error
     'no-console': ['error', { allow: ['warn', 'error'] }],
 
-    /** 
+    /**
      * Import plugin
      */
 
@@ -49,28 +45,25 @@ module.exports = {
     // Eslint handling of named imports is inconsistent, turning off.
     'import/named': 'off',
 
-     // Require a newline after the imports
-     'import/newline-after-import': 'error',
+    // Require a newline after the imports
+    'import/newline-after-import': 'error',
 
-     // Do not use AMD imports
-     'import/no-amd': 'error',
+    // Do not use AMD imports
+    'import/no-amd': 'error',
 
-     // Acts wonky with workspaces, disabling.
-     'import/no-extraneous-dependencies': 'off',
+    // Acts wonky with workspaces, disabling.
+    'import/no-extraneous-dependencies': 'off',
 
-     // Enforce new line after imports.
-     'import/newline-after-import': 'error',
-
-     /**
-      * Simple-sort plugin
-      */
+    /**
+     * Simple-sort plugin
+     */
 
     'simple-import-sort/imports': 'error',
 
     /**
      * Typescript plugin
      */
-    
+
     // Ban all ts comments except for errors, but require a description
     '@typescript-eslint/ban-ts-comment': [
       'error',
@@ -94,7 +87,7 @@ module.exports = {
     '@typescript-eslint/prefer-as-const': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
     '@typescript-eslint/prefer-optional-chain': 'error',
-    
+
     /**
      * React plugin
      */
@@ -111,17 +104,14 @@ module.exports = {
     /**
      * React hooks plugin
      */
-    
+
     // Require hook dependencies
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
   },
   overrides: [
     {
-      files: [
-        'packages/*/tests/**/*.spec.ts',
-        'packages/*/tests/**/*.test.ts',
-      ],
+      files: ['packages/*/tests/**/*.spec.ts', 'packages/*/tests/**/*.test.ts'],
       plugins: ['jest'],
       env: {
         'jest/globals': true,
@@ -153,7 +143,7 @@ module.exports = {
         'jest/prefer-to-have-length': 'warn',
         'jest/valid-expect': 'error',
         'jest/valid-title': 'error',
-      }
-    }
-  ]
+      },
+    },
+  ],
 };
