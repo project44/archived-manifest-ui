@@ -1,5 +1,4 @@
 {
   "extends": "./tsconfig.options.json",
-  "files": [],
-  "references": []
+  "include": ["packages/**/*"]
 }

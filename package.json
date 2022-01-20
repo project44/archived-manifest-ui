@@ -1,88 +1,35 @@
 {
   "name": "manifest-ui",
   "private": true,
-  "author": "project44",
+  "repository": "project44/manifest-ui",
+  "contributors": [
+    "Brandon Clark"
+  ],
   "license": "MIT",
   "scripts": {
-    "pkg": "manypkg run",
-    "build": "preconstruct build",
-    "playroom": "playroom start",
-    "playroom:build": "playroom build",
-    "storybook": "start-storybook -p 6006",
-    "storybook:build": "build-storybook -o dist",
-    "format": "prettier --write .",
-    "lint": "manypkg check && eslint . && prettier --check . && tsc",
-    "test": "jest",
-    "release": "yarn build && changeset publish",
-    "version": "changeset version && yarn",
-    "prepare": "husky install"
+    "format:check": "prettier --list-different \"./**/*.{md,mdx,ts,js,tsx,jsx}\"",
+    "format:write": "prettier --write \"./**/*.{ts,tsx,js,jsx,json,md}\"",
+    "lint": "eslint packages/**/src/ --ext .ts,.tsx",
+    "prepare": "husky install",
+    "types": "tsc --noEmit"
   },
   "workspaces": [
-    "packages/**/*"
+    "packages/*/*"
   ],
-  "preconstruct": {
-    "packages": [
-      "packages/**/*"
-    ]
-  },
-  "volta": {
-    "node": "14.17.6",
-    "yarn": "1.22.15"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "all"
-  },
-  "lint-staged": {
-    "**/*.{ts,tsx,js,jsx}": [
-      "prettier --write"
-    ],
-    "**/*.{md,yml,json}": [
-      "prettier --write"
-    ]
-  },
-  "dependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/preset-react": "^7.14.5",
-    "@babel/preset-typescript": "^7.15.0",
-    "@changesets/changelog-github": "^0.4.0",
-    "@changesets/cli": "^2.16.0",
-    "@manypkg/cli": "^0.18.0",
-    "@percy/cli": "^1.0.0-beta.70",
-    "@percy/storybook": "^4.1.0",
-    "@preconstruct/cli": "^2.1.4",
-    "@storybook/addon-actions": "^6.5.0-alpha.5",
-    "@storybook/addon-essentials": "^6.5.0-alpha.5",
-    "@storybook/addon-links": "^6.5.0-alpha.5",
-    "@storybook/react": "^6.5.0-alpha.5",
-    "@types/jest": "^27.0.2",
-    "@types/lodash": "^4.14.173",
-    "@types/node": "^16.9.2",
-    "@types/react": "17.0.14",
-    "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "^5.1.0",
-    "@typescript-eslint/parser": "^5.1.0",
-    "babel-loader": "^8.2.3",
-    "brotli-webpack-plugin": "^1.1.0",
-    "dedent": "^0.7.0",
-    "eslint": "^8.1.0",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.0",
+    "@typescript-eslint/parser": "^5.10.0",
+    "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-storybook": "^0.5.5",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^25.7.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^7.0.4",
-    "jest": "^27.3.1",
-    "lint-staged": "^11.2.4",
-    "lodash": "^4.17.21",
-    "playroom": "^0.27.7",
-    "prettier": "^2.3.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "ts-jest": "^27.0.7",
-    "typescript": "^4.4.3"
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.4"
   }
 }
