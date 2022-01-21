@@ -5,6 +5,7 @@ const config: BeemoConfig = {
   drivers: [
     'babel',
     'eslint',
+    'jest',
     'prettier',
     'typescript'
   ],

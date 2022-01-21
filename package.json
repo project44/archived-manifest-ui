@@ -11,13 +11,18 @@
     "build:cjs": "yarn run beemo babel --workspaces=*",
     "build:esm": "yarn run beemo babel --workspaces=* --esm",
     "build:types": "yarn run beemo typescript --build",
+    "clean": "yarn run clean:build && yarn run clean:types",
+    "clean:build": "rimraf 'packages/**/*/{lib,esm}'",
+    "clean:types": "rimraf 'packages/**/*/{dts,*.tsbuildinfo}'",
+    "coverage": "yarn run test --coverage",
     "format": "yarn format:eslint && yarn format:prettier",
     "format:eslint": "yarn run beemo eslint --fix packages/*/src/**/*.ts",
     "format:prettier": "yarn run beemo prettier",
     "lint": "yarn run lint:eslint && yarn run lint:types",
     "lint:eslint": "yarn run beemo eslint",
     "lint:types": "yarn run beemo typescript --noEmit --emitDeclarationOnly false",
-    "prepare": "husky install && beemo create-config babel eslint prettier"
+    "prepare": "husky install && beemo create-config babel eslint prettier",
+    "test": "yarn run beemo jest"
   },
   "workspaces": [
     "packages/*"
