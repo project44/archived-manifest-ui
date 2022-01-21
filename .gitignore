@@ -1,18 +1,41 @@
 # Logs
-*.Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+logs/
+*.log
 
-# Editors
+# Cache
+.eslintcache
 .idea
-.vscode/*
+.npm
+.vscode
+.yarn
+.yarnclean
 
-# Test coverage
+# Directories
+build/
+cjs/
 coverage/
-
-# Build artifacts
+dist/
+dts/
+esm/
+lib/
+mjs/
 node_modules/
+tmp/
+storybook-static/
 
 # Configs
+.babelrc
+.eslintignore
+.eslintrc.js
+.flowconfig
+.prettierignore
+*.config.js
+*.config.ts
 *.tsbuildinfo
+
+# Custom
+*.min.js
+*.map
+
+# MacOS
+.DS_Store

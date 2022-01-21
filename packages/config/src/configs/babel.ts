@@ -13,7 +13,7 @@ const config: BabelConfig = {
   comments: false,
   presets: [
     [
-      require('@babel/preset-env'),
+      '@babel/preset-env',
       {
         bugfixes: true,
         exclude: [
@@ -26,7 +26,7 @@ const config: BabelConfig = {
         useBuiltIns: false,
       },
     ],
-    [require('@babel/preset-typescript'), { allowDeclareFields: true }],
+    ['@babel/preset-typescript', { allowDeclareFields: true }],
     [
       '@babel/preset-react',
       {
@@ -36,9 +36,9 @@ const config: BabelConfig = {
     ],
   ],
   plugins: [
-    [require('@babel/plugin-proposal-decorators'), { legacy: true }],
-    [require('@babel/plugin-proposal-class-properties'), { loose: true }],
-    [require('@babel/plugin-proposal-private-methods'), { loose: true }],
+    ['@babel/plugin-proposal-decorators', { legacy: true }],
+    ['@babel/plugin-proposal-class-properties', { loose: true }],
+    ['@babel/plugin-proposal-private-methods', { loose: true }],
   ],
 };
 
