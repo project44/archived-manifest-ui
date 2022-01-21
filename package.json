@@ -15,7 +15,7 @@
     "types": "tsc --noEmit"
   },
   "workspaces": [
-    "packages/*/*"
+    "packages/*"
   ],
   "devDependencies": {
     "@commitlint/cli": "^16.0.3",

@@ -1,0 +1,28 @@
+{
+  "name": "@manifest-ui/config",
+  "private": true,
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:project-44/manifest-ui.git",
+    "directory": "packages/config"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "dependencies": {
+    "@beemo/cli": "^2.0.5",
+    "@beemo/core": "^2.1.3",
+    "@beemo/driver-babel": "^2.0.5",
+    "@beemo/driver-eslint": "^2.0.4",
+    "@beemo/driver-jest": "^2.0.4",
+    "@beemo/driver-prettier": "^2.0.5",
+    "@beemo/driver-typescript": "^2.1.1"
+  }
+}
