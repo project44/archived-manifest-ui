@@ -1,20 +1,36 @@
-module.exports = {
+import { IGNORE_LIST, ROOT, TSCONFIG_JSON_PATH } from '../constants';
+import type { ESLintConfig } from '@beemo/driver-eslint';
+import fs from 'fs';
+import { getRootProjectReferences } from '../helpers/getRootProjectReferences';
+import path from 'path';
+
+let project: string[] | string = '';
+
+const tsConfigEslintPath = path.join(ROOT, 'tsconfig.eslint.json');
+
+if (fs.existsSync(tsConfigEslintPath)) {
+  project = tsConfigEslintPath;
+}
+
+if (!project) {
+  project =
+    getRootProjectReferences()?.map(ref => path.join(ROOT, ref.path, 'tsconfig.json')) ??
+    TSCONFIG_JSON_PATH;
+}
+
+const config: ESLintConfig = {
   root: true,
-  parser: '@typescript-eslint/parser',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2020,
     ecmaFeatures: {
       jsx: true,
     },
-    project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json'],
     sourceType: 'module',
   },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:react-hooks/recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
@@ -26,18 +42,11 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: ['@typescript-eslint', 'jsx-a11y', 'react', 'react-hooks', 'simple-import-sort'],
+  ignore: [...IGNORE_LIST, '*.min.js', '*.map', '*.snap'],
+  plugins: ['@typescript-eslint', 'jsx-a11y', 'react', 'react-hooks'],
   rules: {
-    /**
-     * Eslint plugin
-     */
-
     // Allow warn and error
     'no-console': ['error', { allow: ['warn', 'error'] }],
-
-    /**
-     * Import plugin
-     */
 
     // Import statements should be first
     'import/first': 'error',
@@ -54,43 +63,19 @@ module.exports = {
     // Acts wonky with workspaces, disabling.
     'import/no-extraneous-dependencies': 'off',
 
-    /**
-     * Simple-sort plugin
-     */
+    // No lines between import statements
+    'import/order': ['error', { groups: [], 'newlines-between': 'never' }],
 
-    'simple-import-sort/imports': 'error',
-
-    /**
-     * Typescript plugin
-     */
-
-    // Ban all ts comments except for errors, but require a description
-    '@typescript-eslint/ban-ts-comment': [
+    // Sort imports
+    'sort-imports': [
       'error',
       {
-        'ts-expect-error': 'allow-with-description',
-        'ts-ignore': true,
-        'ts-nocheck': true,
-        'ts-check': false,
-        minimumDescriptionLength: 5,
+        ignoreCase: true,
+        ignoreDeclarationSort: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
       },
     ],
-
-    // Require interfaces over types
-    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-
-    // Just not a fan of these rules :)
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/unbound-method': 'off',
-
-    // Let's use the latest TS features
-    '@typescript-eslint/prefer-as-const': 'error',
-    '@typescript-eslint/prefer-nullish-coalescing': 'error',
-    '@typescript-eslint/prefer-optional-chain': 'error',
-
-    /**
-     * React plugin
-     */
 
     // Allowing spreading of props
     'react/jsx-props-no-spreading': 'off',
@@ -101,15 +86,49 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/sort-prop-types': 'off',
 
-    /**
-     * React hooks plugin
-     */
-
     // Require hook dependencies
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
   },
   overrides: [
+    {
+      extends: [
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:import/typescript',
+      ],
+      files: ['*.{ts,tsx}'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project,
+      },
+      plugins: ['@typescript-eslint'],
+      rules: {
+        // Ban all ts comments except for errors, but require a description
+        '@typescript-eslint/ban-ts-comment': [
+          'error',
+          {
+            'ts-expect-error': 'allow-with-description',
+            'ts-ignore': true,
+            'ts-nocheck': true,
+            'ts-check': false,
+            minimumDescriptionLength: 5,
+          },
+        ],
+
+        // Require interfaces over types
+        '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+
+        // Just not a fan of these rules :)
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/unbound-method': 'off',
+
+        // Let's use the latest TS features
+        '@typescript-eslint/prefer-as-const': 'error',
+        '@typescript-eslint/prefer-nullish-coalescing': 'error',
+        '@typescript-eslint/prefer-optional-chain': 'error',
+      },
+    },
     {
       files: ['packages/*/tests/**/*.spec.ts', 'packages/*/tests/**/*.test.ts'],
       plugins: ['jest'],
@@ -146,4 +165,11 @@ module.exports = {
       },
     },
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };
+
+export default config;

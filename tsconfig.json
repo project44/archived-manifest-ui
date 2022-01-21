@@ -1,5 +1,9 @@
 {
   "extends": "./tsconfig.options.json",
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "packages/config"
+    }
+  ]
 }

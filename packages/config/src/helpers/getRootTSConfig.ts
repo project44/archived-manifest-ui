@@ -1,6 +1,6 @@
+import { parseJSON } from './parseJSON';
 import { TSCONFIG_JSON_PATH } from '../constants';
 import { TSConfigJSON } from '../types';
-import { parseJSON } from './parseJSON';
 
 let tsconfigJson: TSConfigJSON | undefined;
 
