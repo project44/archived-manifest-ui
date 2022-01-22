@@ -30,7 +30,6 @@ const config: ESLintConfig = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:import/recommended',
     'plugin:react-hooks/recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
@@ -43,7 +42,7 @@ const config: ESLintConfig = {
     node: true,
   },
   ignore: [...IGNORE_LIST, '*.min.js', '*.map', '*.snap'],
-  plugins: ['@typescript-eslint', 'jsx-a11y', 'react', 'react-hooks'],
+  plugins: ['@typescript-eslint', 'import', 'jsx-a11y', 'react', 'react-hooks'],
   rules: {
     // Allow warn and error
     'no-console': ['error', { allow: ['warn', 'error'] }],
@@ -95,7 +94,6 @@ const config: ESLintConfig = {
       extends: [
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'plugin:import/typescript',
       ],
       files: ['*.{ts,tsx}'],
       parser: '@typescript-eslint/parser',
@@ -121,6 +119,9 @@ const config: ESLintConfig = {
 
         // Just not a fan of these rules :)
         '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/no-unsafe-assignment': 'off',
+        '@typescript-eslint/no-unsafe-member-access': 'off',
+        '@typescript-eslint/no-unsafe-call': 'off',
         '@typescript-eslint/unbound-method': 'off',
 
         // Let's use the latest TS features

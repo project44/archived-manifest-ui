@@ -1,0 +1,28 @@
+{
+  "name": "@manifest-ui/styled-system",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:project-44/manifest-ui.git",
+    "directory": "packages/styled-system"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "dependencies": {
+    "@styled-system/css": "^5.1.5",
+    "csstype": "^3.0.10",
+    "styled-system": "^5.1.5"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "react": "^17.0.2"
+  }
+}

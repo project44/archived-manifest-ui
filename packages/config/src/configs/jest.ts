@@ -24,7 +24,7 @@ const config: JestConfig = {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { rootMode: 'upward' }],
   },
   testEnvironment: 'jsdom',
-  testMatch: ['**/{src,__tests__}/**/*.spec.{js,jsx,ts,tsx}'],
+  testMatch: ['**/{src,test}/**/*.spec.{js,jsx,ts,tsx}'],
   testRunner: 'jest-circus/runner',
 };
 

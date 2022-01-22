@@ -4,6 +4,15 @@
   "references": [
     {
       "path": "packages/config"
+    },
+    {
+      "path": "packages/styled"
+    },
+    {
+      "path": "packages/styled-system"
+    },
+    {
+      "path": "packages/theme"
     }
   ]
 }

@@ -1,0 +1,32 @@
+{
+  "name": "@manifest-ui/styled",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:project-44/manifest-ui.git",
+    "directory": "packages/styled"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "react": "^16.8 || ^17.0"
+  },
+  "dependencies": {
+    "@manifest-ui/styled-system": "^0.0.0",
+    "@manifest-ui/theme": "^0.0.0",
+    "lodash.capitalize": "^4.2.1",
+    "lodash.get": "^4.4.2",
+    "lodash.isempty": "^4.4.0",
+    "lodash.mergewith": "^4.6.2",
+    "lodash.omitby": "^4.6.0"
+  }
+}
