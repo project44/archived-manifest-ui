@@ -1,6 +1,5 @@
 {
-  "name": "@manifest-ui/config",
-  "private": true,
+  "name": "@manifest-ui/box",
   "version": "0.0.0",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
@@ -12,8 +11,14 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:project-44/manifest-ui.git",
-    "directory": "packages/config"
+    "directory": "packages/styled"
   },
   "author": "project44",
-  "license": "MIT"
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0"
+  },
+  "dependencies": {
+    "@manifest-ui/styled": "^0.0.0"
+  }
 }

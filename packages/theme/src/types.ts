@@ -3,52 +3,38 @@ import { SystemStyleObject } from '@styled-system/css';
 export type Color = Partial<Record<ColorScale, string>>;
 
 export interface Colors {
-  active: string;
-  background: string;
   black: string;
-  disabled: string;
-  divider: string;
+  brand: Color;
   error: Color;
-  focus: string;
-  hover: string;
   info: Color;
   neutral: Color;
-  primary: string;
-  selected: string;
   success: Color;
-  text: string;
   warning: Color;
   white: string;
 }
 
 export interface ColorsInput {
-  active?: string;
-  background?: string;
   black?: string;
-  disabled?: string;
-  divider?: string;
+  brand?: Color;
   error?: Color;
-  focus?: string;
-  hover?: string;
   info?: Color;
   neutral?: Color;
-  primary?: string;
-  selected?: string;
   success?: Color;
-  text?: string;
   warning?: Color;
   white?: string;
 }
 
 export interface ComponentOverride {
-  defaultProps?: Record<string, any>;
+  overrides?: SystemStyleObject;
   sizes?: Record<string, SystemStyleObject>;
-  slots?: Record<string, SystemStyleObject>;
   variants?: Record<string, SystemStyleObject>;
 }
 
 export type Direction = 'ltr' | 'rtl';
 
+/**
+ * Scale definitions for each theme.
+ */
 export type BorderWidthScale = 'x-small' | 'small' | 'medium' | 'large' | 'x-large';
 export type ColorScale = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
 export type FontScale = 'body' | 'heading' | 'mono';

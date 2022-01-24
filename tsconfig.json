@@ -3,6 +3,9 @@
   "files": [],
   "references": [
     {
+      "path": "packages/box"
+    },
+    {
       "path": "packages/config"
     },
     {

@@ -2,16 +2,24 @@ import { css, SystemStyleObject } from '@manifest-ui/styled-system';
 import { defaultTheme, Theme } from '@manifest-ui/theme';
 import emotionStyled, { CSSObject } from '@emotion/styled';
 import { As } from './types';
-import capitalize from 'lodash.capitalize';
 import { shouldForwardProp as defaultShouldForwardProp } from './shouldForwardProp';
 import isEmpty from 'lodash.isempty';
 import { isStyleProp } from './isStyleProp';
 import omitBy from 'lodash.omitby';
 
 interface StyledOptions {
-  name?: string;
-  shouldForwardProp?: (prop: string) => boolean;
-  slot?: string;
+  /**
+   * The pretty label for the component.
+   */
+  label?: string;
+  /**
+   * Function to determine if a prop should be forwarded on to a component.
+   */
+  shouldForwardProp?(prop: string): boolean;
+  /**
+   * The theme key to determine component overrides.
+   */
+  themeKey?: string;
 }
 
 type StyleResolverProps = SystemStyleObject & {
@@ -22,70 +30,46 @@ type StyleResolverProps = SystemStyleObject & {
 };
 
 export function styled<T extends As>(tag: T, options?: StyledOptions) {
-  const {
-    name: componentName = '',
-    slot: componentSlot = '',
-    shouldForwardProp = defaultShouldForwardProp,
-  } = options ?? {};
-
-  let label;
-
-  if (process.env.NODE_ENV !== 'production' && componentName) {
-    label = `${componentName}-${componentSlot || 'root'}`;
-  }
+  const { label, shouldForwardProp = defaultShouldForwardProp, themeKey = '' } = options ?? {};
 
   const emotionResolver = emotionStyled(tag as React.ComponentType<any>, {
     label,
     shouldForwardProp,
   });
 
-  const styleResolver = (...stylesArgs: SystemStyleObject[]) => {
-    const styleArgs = stylesArgs.map(interpolation => {
-      return (props: StyleResolverProps) => {
-        const { sx, theme: themeProp, ...other } = props;
+  const styleResolver = (stylesArg: SystemStyleObject) => {
+    const styles = (props: StyleResolverProps) => {
+      const { size: sizeProp, sx, theme: themeProp, variant: variantProp, ...other } = props;
 
-        const theme = isEmpty(themeProp) ? defaultTheme : themeProp;
-        const baseStyles =
-          typeof interpolation === 'function' ? interpolation({ ...props, theme }) : interpolation;
-        const overrides = theme?.components?.[componentName];
-        const slots = overrides?.slots;
-        const slot = slots?.[componentSlot];
+      const theme = isEmpty(themeProp) ? defaultTheme : themeProp;
 
-        const mergedStyles = Object.assign({}, baseStyles, slot);
+      const componentTheme = theme?.components?.[themeKey];
+      const overrides = componentTheme?.overrides;
 
-        const styleProps = omitBy(other, (_, prop) => !isStyleProp(prop));
-        const composedStyles = Object.assign({}, mergedStyles, styleProps, sx);
-        const computedCSS = css(composedStyles as SystemStyleObject)(theme);
+      const sizes = componentTheme?.sizes;
+      const variants = componentTheme?.variants;
 
-        return computedCSS as CSSObject;
-      };
-    });
+      const baseStyles =
+        typeof stylesArg === 'function' ? stylesArg({ ...props, theme }) : stylesArg;
+      const mergedStyles = Object.assign({}, baseStyles, overrides);
+      const styleProps = omitBy(other, (_, prop) => !isStyleProp(prop));
 
-    if (componentName) {
-      styleArgs.push((props: StyleResolverProps) => {
-        const { size: sizeProp, theme: themeProp, variant: variantProp } = props;
+      const size = sizeProp ? sizes?.[sizeProp] : {};
+      const variant = variantProp ? variants?.[variantProp] : {};
 
-        const theme = isEmpty(themeProp) ? defaultTheme : themeProp;
-        const sizes = theme?.components?.[componentName]?.sizes;
-        const variants = theme?.components?.[componentName]?.variants;
+      const composedStyles = Object.assign({}, mergedStyles, styleProps, size, variant, sx);
+      const computedCSS = css(composedStyles as SystemStyleObject)(theme);
 
-        const size = sizeProp ? sizes?.[sizeProp] : {};
-        const variant = variantProp ? variants?.[variantProp] : {};
+      return computedCSS as CSSObject;
+    };
 
-        const composedStyles = Object.assign({}, size, variant);
-        const computedCSS = css(composedStyles as SystemStyleObject)(theme);
-
-        return computedCSS as CSSObject;
-      });
-    }
-
-    const Component = emotionResolver(styleArgs);
+    const Component = emotionResolver(styles);
 
     if (process.env.NODE_ENV !== 'production') {
       let displayName = 'Styled';
 
-      if (componentName) {
-        displayName = `${componentName}${capitalize(componentSlot) || ''}`;
+      if (label) {
+        displayName = label;
       }
 
       Component.displayName = displayName;

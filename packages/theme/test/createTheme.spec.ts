@@ -1,25 +1,27 @@
 import { createTheme } from '../src';
 
 describe('@dolly/theme - createTheme', () => {
-  it('should have colors', () => {
+  it('should return a the default theme', () => {
     const theme = createTheme({});
 
     expect(typeof createTheme).toEqual('function');
-    expect(typeof theme.colors).toEqual('object');
+    expect(typeof theme).toEqual('object');
   });
 
-  it('should have the custom colors', () => {
+  it('should support overrides', () => {
     const theme = createTheme({
-      colors: { primary: 'black' },
+      sizes: { small: '50px' },
     });
 
-    expect(theme.colors.primary).toEqual('black');
+    expect(theme.sizes.small).toEqual('50px');
   });
 
   it('should support partial overrides', () => {
-    const theme = createTheme({ colors: { primary: 'black' } });
+    const theme = createTheme({
+      sizes: { small: '50px' },
+    });
 
-    expect(theme.colors.primary).toEqual('black');
-    expect(theme.colors.active).toEqual('#005CBE');
+    expect(theme.sizes.small).toEqual('50px');
+    expect(theme.borderWidths.small).toEqual(2);
   });
 });

@@ -12,11 +12,18 @@ export const defaultTheme: Theme = {
     'x-large': 6,
   },
   colors: {
-    active: '#005CBE',
-    background: '#FFFFF',
     black: '#000000',
-    disabled: '#D5D7D9',
-    divider: '#B8BBBF',
+    brand: {
+      900: '#0a2c8a',
+      800: '#1040ac',
+      700: '#1856cd',
+      600: '#2170ef',
+      500: '#5699f5',
+      400: '#78b4fa',
+      300: '#a1cdfe',
+      200: '#d2eafe',
+      100: '#eef7ff',
+    },
     error: {
       900: '#6f0929',
       800: '#8a0e2a',
@@ -28,8 +35,6 @@ export const defaultTheme: Theme = {
       200: '#fbded1',
       100: '#fdf2ed',
     },
-    focus: '#C9E1FB',
-    hover: '#00458E',
     info: {
       900: '#0a2c8a',
       800: '#1040ac',
@@ -52,7 +57,6 @@ export const defaultTheme: Theme = {
       200: '#D5D7D9',
       100: '#F4F4F5',
     },
-    primary: '#0072EC',
     success: {
       900: '#0d681a',
       800: '#14821b',
@@ -64,8 +68,6 @@ export const defaultTheme: Theme = {
       200: '#e4fbd4',
       100: '#f5fdef',
     },
-    selected: '#005CBE',
-    text: '#0A1521',
     warning: {
       900: '#904400',
       800: '#b35c00',
@@ -81,9 +83,9 @@ export const defaultTheme: Theme = {
   },
   direction: 'ltr',
   fonts: {
-    body: 'system-ui, sans-serif',
-    heading: 'Georgia, serif',
-    mono: 'Menlo, monospace',
+    body: `"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    heading: '',
+    mono: `SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace`,
   },
   fontSizes: {
     1: '96px',
