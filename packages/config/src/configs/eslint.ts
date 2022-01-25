@@ -128,6 +128,15 @@ const config: ESLintConfig = {
         '@typescript-eslint/prefer-as-const': 'error',
         '@typescript-eslint/prefer-nullish-coalescing': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
+
+        '@typescript-eslint/ban-types': [
+          'error',
+          {
+            types: {
+              '{}': false,
+            },
+          },
+        ],
       },
     },
     {

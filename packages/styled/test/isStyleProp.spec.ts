@@ -1,6 +1,6 @@
 import { isStyleProp } from '../src';
 
-describe('@dolly/system - isStyleProp', () => {
+describe('@@manifest-ui/styled - isStyleProp', () => {
   it('should return true for a styled prop', () => {
     const result = isStyleProp('backgroundColor');
 

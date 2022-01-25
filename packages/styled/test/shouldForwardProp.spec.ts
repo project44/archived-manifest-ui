@@ -1,6 +1,6 @@
 import { shouldForwardProp, systemProps } from '../src';
 
-describe('@dolly/system - shouldForwardProps', () => {
+describe('@@manifest-ui/styled - shouldForwardProps', () => {
   const randomPropNames = ['children', 'to', 'passHref', 'maxItems', 'strict'];
 
   it.each(randomPropNames)('should forward %s prop', propName => {

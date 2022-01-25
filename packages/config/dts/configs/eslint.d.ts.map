@@ -1,1 +1,1 @@
-{"version":3,"file":"eslint.d.ts","sourceRoot":"","sources":["../../src/configs/eslint.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,sBAAsB,CAAC;AAmBzD,QAAA,MAAM,MAAM,EAAE,YAyJb,CAAC;AAEF,eAAe,MAAM,CAAC"}
+{"version":3,"file":"eslint.d.ts","sourceRoot":"","sources":["../../src/configs/eslint.ts"],"names":[],"mappings":"AACA,OAAO,KAAK,EAAE,YAAY,EAAE,MAAM,sBAAsB,CAAC;AAmBzD,QAAA,MAAM,MAAM,EAAE,YAkKb,CAAC;AAEF,eAAe,MAAM,CAAC"}

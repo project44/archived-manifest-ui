@@ -74,6 +74,7 @@
     "@types/lodash.capitalize": "^4.2.6",
     "@types/lodash.get": "^4.4.6",
     "@types/lodash.isempty": "^4.4.6",
+    "@types/lodash.isnumber": "^3.0.6",
     "@types/lodash.merge": "^4.6.6",
     "@types/lodash.mergewith": "^4.6.6",
     "@types/lodash.omitby": "^4.6.6",

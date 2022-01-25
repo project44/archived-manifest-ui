@@ -6,36 +6,17 @@ import {
   FlexboxProps,
   GridProps,
   LayoutProps,
+  OtherProps,
   PositionProps,
   ShadowProps,
   SpaceProps,
   TypographyProps,
-} from 'styled-system';
-import { ResponsiveValue } from 'styled-system';
+} from './props';
+import { ObjectOrArray, TLengthStyledSystem } from 'styled-system';
 
-export interface OtherProps {
-  animation?: ResponsiveValue<CSS.Property.Animation>;
-  appearance?: ResponsiveValue<CSS.Property.Appearance>;
-  cursor?: ResponsiveValue<CSS.Property.Cursor>;
-  fill?: StyleProps['color'];
-  float?: ResponsiveValue<CSS.Property.Float>;
-  objectFit?: ResponsiveValue<CSS.Property.ObjectFit>;
-  objectPosition?: ResponsiveValue<CSS.Property.ObjectPosition<string | 0 | number>>;
-  outline?: ResponsiveValue<CSS.Property.Outline<string | 0 | number>>;
-  outlineOffset?: ResponsiveValue<CSS.Property.OutlineOffset<string | 0 | number>>;
-  overflowWrap?: ResponsiveValue<CSS.Property.OverflowWrap>;
-  pointerEvents?: ResponsiveValue<CSS.Property.PointerEvents>;
-  resize?: ResponsiveValue<CSS.Property.Resize>;
-  stroke?: StyleProps['color'];
-  textDecoration?: ResponsiveValue<CSS.Property.TextDecoration>;
-  textTransform?: ResponsiveValue<CSS.Property.TextTransform>;
-  transform?: ResponsiveValue<CSS.Property.Transform>;
-  transformOrigin?: ResponsiveValue<CSS.Property.TransformOrigin<string | 0 | number>>;
-  userSelect?: ResponsiveValue<CSS.Property.UserSelect>;
-  visibility?: ResponsiveValue<CSS.Property.Visibility>;
-  whiteSpace?: ResponsiveValue<CSS.Property.WhiteSpace>;
-  willChange?: ResponsiveValue<CSS.Property.WillChange>;
-}
+export { SystemStyleObject } from '@styled-system/css';
+
+export type RequiredTheme = Required<Theme>;
 
 export type StyleProps = BackgroundProps &
   BorderProps &
@@ -43,8 +24,27 @@ export type StyleProps = BackgroundProps &
   FlexboxProps &
   GridProps &
   LayoutProps &
+  OtherProps &
   PositionProps &
   ShadowProps &
   SpaceProps &
-  TypographyProps &
-  OtherProps;
+  TypographyProps;
+
+export interface Theme<TLength = TLengthStyledSystem> {
+  borders?: ObjectOrArray<CSS.Property.Border<{}>> | undefined;
+  borderStyles?: ObjectOrArray<CSS.Property.Border<{}>> | undefined;
+  borderWidths?: ObjectOrArray<CSS.Property.BorderWidth<TLength>> | undefined;
+  breakpoints?: ObjectOrArray<number | string | symbol> | undefined;
+  fontSizes?: ObjectOrArray<CSS.Property.FontSize<number>> | undefined;
+  colors?: ObjectOrArray<CSS.Property.Color> | undefined;
+  fonts?: ObjectOrArray<CSS.Property.FontFamily> | undefined;
+  fontWeights?: ObjectOrArray<CSS.Property.FontWeight> | undefined;
+  lineHeights?: ObjectOrArray<CSS.Property.LineHeight<TLength>> | undefined;
+  letterSpacings?: ObjectOrArray<CSS.Property.LetterSpacing<TLength>> | undefined;
+  mediaQueries?: { [size: string]: string } | undefined;
+  radii?: ObjectOrArray<CSS.Property.BorderRadius<TLength>> | undefined;
+  shadows?: ObjectOrArray<CSS.Property.BoxShadow> | undefined;
+  sizes?: ObjectOrArray<CSS.Property.Height<{}> | CSS.Property.Width<{}>> | undefined;
+  space?: ObjectOrArray<CSS.Property.Margin<number | string>> | undefined;
+  zIndices?: ObjectOrArray<CSS.Property.ZIndex> | undefined;
+}

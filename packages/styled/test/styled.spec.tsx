@@ -2,7 +2,7 @@ import * as React from 'react';
 import { render, screen } from '../../../test/utils';
 import { styled } from '../src';
 
-describe('@dolly/system - styled', () => {
+describe('@manifest-ui/styled - styled', () => {
   it('should use the componentName if available', () => {
     const TestComponent = styled('div', { label: 'TestComponent' })({});
 
@@ -13,22 +13,22 @@ describe('@dolly/system - styled', () => {
     const Button = styled('button', {
       themeKey: 'button',
     })({
-      backgroundColor: 'brand.500',
+      backgroundColor: 'primary',
     });
 
     render(<Button>Hello</Button>);
 
-    expect(screen.getByText('Hello')).toHaveStyle('background-color: #5699f5');
+    expect(screen.getByText('Hello')).toHaveStyle('background-color: #0072EC');
   });
 
   it('should handle being called without options', () => {
     const Button = styled('button')({
-      backgroundColor: 'brand.500',
+      backgroundColor: 'primary',
     });
 
     render(<Button>Hello</Button>);
 
-    expect(screen.getByText('Hello')).toHaveStyle('background-color: #5699f5');
+    expect(screen.getByText('Hello')).toHaveStyle('background-color: #0072EC');
   });
 
   it('should support theme overrides', () => {

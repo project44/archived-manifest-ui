@@ -3,24 +3,32 @@ import { SystemStyleObject } from '@styled-system/css';
 export type Color = Partial<Record<ColorScale, string>>;
 
 export interface Colors {
+  accent: string;
+  active: string;
+  background: string;
+  backgroundContrast: string;
   black: string;
-  brand: Color;
-  error: Color;
-  info: Color;
-  neutral: Color;
-  success: Color;
-  warning: Color;
+  border: string;
+  focus: string;
+  hover: string;
+  primary: string;
+  text: string;
+  textContrast: string;
   white: string;
 }
 
 export interface ColorsInput {
+  accent?: string;
+  active?: string;
+  background?: string;
+  backgroundContrast?: string;
   black?: string;
-  brand?: Color;
-  error?: Color;
-  info?: Color;
-  neutral?: Color;
-  success?: Color;
-  warning?: Color;
+  border?: string;
+  focus?: string;
+  hover?: string;
+  primary?: string;
+  text?: string;
+  textContrast?: string;
   white?: string;
 }
 
@@ -36,7 +44,7 @@ export type Direction = 'ltr' | 'rtl';
  * Scale definitions for each theme.
  */
 export type BorderWidthScale = 'x-small' | 'small' | 'medium' | 'large' | 'x-large';
-export type ColorScale = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
+export type ColorScale = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
 export type FontScale = 'body' | 'heading' | 'mono';
 export type FontWeightScale = 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
 export type LetterSpacingScale = 'tight' | 'tighter' | 'normal' | 'wide';
