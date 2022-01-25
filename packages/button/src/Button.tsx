@@ -85,14 +85,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     if (as !== 'button') {
       buttonProps = {
-        'aria-disabled': !isDisabled || as === 'input' ? undefined : isDisabled,
-        disabled: as === 'input' ? isDisabled : undefined,
+        'aria-disabled': !isDisabled ? undefined : isDisabled,
         href: as === 'a' && isDisabled ? undefined : href,
         rel: as === 'a' ? rel : undefined,
         role: 'button',
         tabIndex: isDisabled ? undefined : 0,
         target: as === 'a' ? target : undefined,
-        type: as === 'input' ? type : undefined,
       };
     } else {
       buttonProps = {
