@@ -31,20 +31,25 @@ export type StyleProps = BackgroundProps &
   TypographyProps;
 
 export interface Theme<TLength = TLengthStyledSystem> {
-  borders?: ObjectOrArray<CSS.Property.Border<{}>> | undefined;
-  borderStyles?: ObjectOrArray<CSS.Property.Border<{}>> | undefined;
-  borderWidths?: ObjectOrArray<CSS.Property.BorderWidth<TLength>> | undefined;
-  breakpoints?: ObjectOrArray<number | string | symbol> | undefined;
-  fontSizes?: ObjectOrArray<CSS.Property.FontSize<number>> | undefined;
-  colors?: ObjectOrArray<CSS.Property.Color> | undefined;
-  fonts?: ObjectOrArray<CSS.Property.FontFamily> | undefined;
-  fontWeights?: ObjectOrArray<CSS.Property.FontWeight> | undefined;
-  lineHeights?: ObjectOrArray<CSS.Property.LineHeight<TLength>> | undefined;
-  letterSpacings?: ObjectOrArray<CSS.Property.LetterSpacing<TLength>> | undefined;
-  mediaQueries?: { [size: string]: string } | undefined;
-  radii?: ObjectOrArray<CSS.Property.BorderRadius<TLength>> | undefined;
-  shadows?: ObjectOrArray<CSS.Property.BoxShadow> | undefined;
-  sizes?: ObjectOrArray<CSS.Property.Height<{}> | CSS.Property.Width<{}>> | undefined;
-  space?: ObjectOrArray<CSS.Property.Margin<number | string>> | undefined;
-  zIndices?: ObjectOrArray<CSS.Property.ZIndex> | undefined;
+  borders?: ObjectOrArray<CSS.Property.Border<{}>>;
+  borderStyles?: ObjectOrArray<CSS.Property.Border<{}>>;
+  borderWidths?: ObjectOrArray<CSS.Property.BorderWidth<TLength>>;
+  breakpoints?: ObjectOrArray<number | string | symbol>;
+  fontSizes?: ObjectOrArray<CSS.Property.FontSize<number>>;
+  colors?: ObjectOrArray<CSS.Property.Color>;
+  fonts?: ObjectOrArray<CSS.Property.FontFamily>;
+  fontWeights?: ObjectOrArray<CSS.Property.FontWeight>;
+  lineHeights?: ObjectOrArray<CSS.Property.LineHeight<TLength>>;
+  letterSpacings?: ObjectOrArray<CSS.Property.LetterSpacing<TLength>>;
+  mediaQueries?: { [size: string]: string };
+  radii?: ObjectOrArray<CSS.Property.BorderRadius<TLength>>;
+  shadows?: ObjectOrArray<CSS.Property.BoxShadow>;
+  sizes?: ObjectOrArray<CSS.Property.Height<{}> | CSS.Property.Width<{}>>;
+  space?: ObjectOrArray<CSS.Property.Margin<number | string>>;
+  transitions?: {
+    duration: ObjectOrArray<CSS.Property.TransitionDuration<{}>>;
+    property: ObjectOrArray<CSS.Property.TransitionProperty>;
+    timingFunction: ObjectOrArray<CSS.Property.TransitionTimingFunction>;
+  };
+  zIndices?: ObjectOrArray<CSS.Property.ZIndex>;
 }

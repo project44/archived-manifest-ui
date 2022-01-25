@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ThemeProvider, useTheme } from '../src';
 import { renderHook } from '../../../test/utils';
 
-describe('@dolly/theme - ThemeProvider', () => {
+describe('@manifest-ui/theme - ThemeProvider', () => {
   it('should return a theme', () => {
     const wrapper = ({ children }) => (
       <ThemeProvider theme={{ direction: 'ltr' }}>{children}</ThemeProvider>

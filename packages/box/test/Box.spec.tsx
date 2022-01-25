@@ -2,7 +2,7 @@ import * as React from 'react';
 import { render, screen } from '../../../test/utils';
 import { Box } from '../src';
 
-describe('@dolly/layout - Box', () => {
+describe('@manifest-ui/box - Box', () => {
   it('should render', () => {
     const box = 'box-content';
 

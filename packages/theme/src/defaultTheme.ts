@@ -50,9 +50,8 @@ export const defaultTheme: Theme = {
     bold: 700,
   },
   letterSpacings: {
-    tighter: '-0.02em',
-    tight: '-0.01em',
-    normal: '0.02em',
+    tight: '-0.02em',
+    normal: '-0.01em',
     wide: '0.04em',
   },
   lineHeights: {
@@ -105,6 +104,23 @@ export const defaultTheme: Theme = {
     'x-large': '16px',
     'xx-large': '20px',
     'xxx-large': '40px',
+  },
+  transition: {
+    duration: {
+      base: '200ms',
+      fast: '125ms',
+      slow: '300ms',
+    },
+    property: {
+      common: 'background-color, border-color, color, fill, stroke, opacity, box-shadow, transform',
+      colors: 'background-color, border-color, color, fill, stroke',
+    },
+    timingFunction: {
+      ease: 'cubic-bezier(0.25, 0.1, 0.25, 1)',
+      easeIn: 'cubic-bezier(0.4, 0, 1, 1)',
+      easeInOut: 'cubic-bezier(0.4, 0, 0.2, 1)',
+      easeOut: 'cubic-bezier(0, 0, 0.2, 1)',
+    },
   },
   zIndices: {
     dropdown: 1000,

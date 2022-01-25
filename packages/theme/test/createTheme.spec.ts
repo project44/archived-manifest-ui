@@ -1,6 +1,6 @@
 import { createTheme } from '../src';
 
-describe('@dolly/theme - createTheme', () => {
+describe('@manifest-ui/theme - createTheme', () => {
   it('should return a the default theme', () => {
     const theme = createTheme({});
 

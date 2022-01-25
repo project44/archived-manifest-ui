@@ -6,6 +6,9 @@
       "path": "packages/box"
     },
     {
+      "path": "packages/button"
+    },
+    {
       "path": "packages/config"
     },
     {
@@ -16,6 +19,9 @@
     },
     {
       "path": "packages/theme"
+    },
+    {
+      "path": "packages/typography"
     }
   ]
 }

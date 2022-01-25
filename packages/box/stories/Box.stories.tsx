@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, BoxProps } from '../src';
+import { Box } from '../src';
 
 export default {
   title: 'Components/Box',

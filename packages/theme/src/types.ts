@@ -76,6 +76,9 @@ export type ZIndexScale =
   | 'dropdown'
   | 'tooltip';
 export type ThemeScale<S extends string | number, T = string> = Partial<Record<S, T>>;
+export type TransitionDurationScale = 'base' | 'fast' | 'slow';
+export type TransitionPropertiesScale = 'colors' | 'common';
+export type TransitionTimingScale = 'ease' | 'easeIn' | 'easeInOut' | 'easeOut';
 
 export type Mode = 'dark' | 'light';
 
@@ -96,6 +99,7 @@ export interface Theme {
   shadow: ThemeScale<ShadowScale, string | number>;
   sizes: ThemeScale<SizeScale, string | number>;
   space: ThemeScale<SpaceScale, string | number>;
+  transition: Transitions;
   zIndices: ThemeScale<ZIndexScale, number>;
 }
 
@@ -119,5 +123,18 @@ export interface ThemeOptions {
   shadow?: ThemeScale<ShadowScale, string | number>;
   sizes?: ThemeScale<SizeScale, string | number>;
   space?: ThemeScale<SpaceScale, string | number>;
+  transition?: TransitionsInput;
   zIndices?: ThemeScale<ZIndexScale, number>;
+}
+
+export interface Transitions {
+  duration: ThemeScale<TransitionDurationScale, string | number>;
+  property: ThemeScale<TransitionPropertiesScale, string>;
+  timingFunction: ThemeScale<TransitionTimingScale, string>;
+}
+
+export interface TransitionsInput {
+  duration?: ThemeScale<TransitionDurationScale, string | number>;
+  property?: ThemeScale<TransitionPropertiesScale, string>;
+  timingFunction?: ThemeScale<TransitionTimingScale, string>;
 }

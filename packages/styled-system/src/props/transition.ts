@@ -1,5 +1,5 @@
 import * as CSS from 'csstype';
-import { Config, ResponsiveValue, system, TLengthStyledSystem } from 'styled-system';
+import { Config, ResponsiveValue, system } from 'styled-system';
 import { RequiredTheme, Theme } from '../types';
 
 export interface TransitionProps<ThemeType extends Theme = RequiredTheme> {
