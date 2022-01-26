@@ -3,10 +3,6 @@ import { Button } from '../src';
 
 <Meta title="Components/Button" component={Button} />
 
-# Button
-
-Buttons communicate actions that users can take.
-
 ## Installation
 
 ```sh
@@ -22,11 +18,11 @@ import { Button } from '@manifest-ui/button';
 ### Default
 
 <Canvas>
-  <Story name="Default">{Template.bind({})}</Story>
+  <Story name="Default">
+    <Button>Default</Button>
+  </Story>
 </Canvas>
 
 #### Props
 
 <ArgsTable of={Button} />
-
-export const Template = args => <Button {...args}>Default</Button>;
