@@ -1,8 +1,8 @@
+import { CreateStyled, StyledProps } from './types';
 import { css, SystemStyleObject } from '@manifest-ui/styled-system';
-import { defaultTheme, Theme } from '@manifest-ui/theme';
-import emotionStyled, { CSSObject } from '@emotion/styled';
-import { As } from './types';
 import { shouldForwardProp as defaultShouldForwardProp } from './shouldForwardProp';
+import { defaultTheme } from '@manifest-ui/theme';
+import emotionStyled from '@emotion/styled';
 import isEmpty from 'lodash.isempty';
 import { isStyleProp } from './isStyleProp';
 import omitBy from 'lodash.omitby';
@@ -22,49 +22,53 @@ interface StyledOptions {
   themeKey?: string;
 }
 
-type StyleResolverProps = SystemStyleObject & {
-  size?: string;
-  sx?: SystemStyleObject;
-  theme: Theme;
-  variant?: string;
-};
+export function createStyled(): CreateStyled<StyledOptions> {
+  return (tag: any, options?: StyledOptions) => {
+    const { label, shouldForwardProp = defaultShouldForwardProp, themeKey = '' } = options ?? {};
 
-export function styled<T extends As>(tag: T, options?: StyledOptions) {
-  const { label, shouldForwardProp = defaultShouldForwardProp, themeKey = '' } = options ?? {};
+    const emotionResolver = emotionStyled(tag as React.ComponentType<any>, {
+      label,
+      shouldForwardProp,
+    });
 
-  const emotionResolver = emotionStyled(tag as React.ComponentType<any>, {
-    label,
-    shouldForwardProp,
-  });
+    const styleResolver = (stylesArg: any) => {
+      const styles = (props: StyledProps) => {
+        const { size: sizeProp, sx, theme: themeProp, variant: variantProp, ...other } = props;
 
-  const styleResolver = (stylesArg: SystemStyleObject) => {
-    const styles = (props: StyleResolverProps) => {
-      const { size: sizeProp, sx, theme: themeProp, variant: variantProp, ...other } = props;
+        const theme = isEmpty(themeProp) ? defaultTheme : themeProp;
 
-      const theme = isEmpty(themeProp) ? defaultTheme : themeProp;
+        const componentTheme = theme?.components?.[themeKey];
+        const overrides = componentTheme?.overrides;
 
-      const componentTheme = theme?.components?.[themeKey];
-      const overrides = componentTheme?.overrides;
+        const sizes = componentTheme?.sizes;
+        const variants = componentTheme?.variants;
 
-      const sizes = componentTheme?.sizes;
-      const variants = componentTheme?.variants;
+        const baseStyles =
+          typeof stylesArg === 'function' ? stylesArg({ ...props, theme }) : stylesArg;
+        const mergedStyles = Object.assign({}, baseStyles, overrides);
+        const styleProps = omitBy(other, (_, prop) => !isStyleProp(prop));
 
-      const baseStyles =
-        typeof stylesArg === 'function' ? stylesArg({ ...props, theme }) : stylesArg;
-      const mergedStyles = Object.assign({}, baseStyles, overrides);
-      const styleProps = omitBy(other, (_, prop) => !isStyleProp(prop));
+        const size = sizeProp ? sizes?.[sizeProp] : {};
+        const variant = variantProp ? variants?.[variantProp] : {};
 
-      const size = sizeProp ? sizes?.[sizeProp] : {};
-      const variant = variantProp ? variants?.[variantProp] : {};
+        const composedStyles: SystemStyleObject = Object.assign(
+          {},
+          mergedStyles,
+          styleProps,
+          size,
+          variant,
+          sx,
+        );
+        const computedCSS = css(composedStyles)(theme);
 
-      const composedStyles = Object.assign({}, mergedStyles, styleProps, size, variant, sx);
-      const computedCSS = css(composedStyles as SystemStyleObject)(theme);
+        return computedCSS;
+      };
 
-      return computedCSS as CSSObject;
+      return emotionResolver(styles);
     };
 
-    return emotionResolver(styles);
+    return styleResolver;
   };
-
-  return styleResolver;
 }
+
+export const styled = createStyled();

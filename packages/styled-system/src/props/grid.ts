@@ -1,27 +1,24 @@
 import * as CSS from 'csstype';
-import { Config, ResponsiveValue, system, TLengthStyledSystem } from 'styled-system';
-import { RequiredTheme, Theme } from '../types';
+import { Configs, Length, ResponsiveValue } from '../types';
+import { system } from '../core';
 
-export interface GridProps<ThemeType extends Theme = RequiredTheme> {
-  gridGap?: ResponsiveValue<CSS.Property.GridGap<TLengthStyledSystem>, ThemeType>;
-  gap?: ResponsiveValue<CSS.Property.Gap<TLengthStyledSystem>, ThemeType>;
-  gridRowGap?: ResponsiveValue<CSS.Property.GridRowGap<TLengthStyledSystem>, ThemeType>;
-  gridColumnGap?: ResponsiveValue<CSS.Property.GridColumnGap<TLengthStyledSystem>, ThemeType>;
-  gridRow?: ResponsiveValue<CSS.Property.GridRow, ThemeType>;
-  gridColumn?: ResponsiveValue<CSS.Property.GridColumn, ThemeType>;
-  gridAutoFlow?: ResponsiveValue<CSS.Property.GridAutoFlow, ThemeType>;
-  gridAutoRows?: ResponsiveValue<CSS.Property.GridAutoRows<TLengthStyledSystem>, ThemeType>;
-  gridAutoColumns?: ResponsiveValue<CSS.Property.GridAutoColumns<TLengthStyledSystem>, ThemeType>;
-  gridTemplateRows?: ResponsiveValue<CSS.Property.GridTemplateRows<TLengthStyledSystem>, ThemeType>;
-  gridTemplateColumns?: ResponsiveValue<
-    CSS.Property.GridTemplateColumns<TLengthStyledSystem>,
-    ThemeType
-  >;
-  gridTemplateAreas?: ResponsiveValue<CSS.Property.GridTemplateAreas, ThemeType>;
-  gridArea?: ResponsiveValue<CSS.Property.GridArea, ThemeType>;
+export interface GridProps {
+  gridGap?: ResponsiveValue<CSS.Property.GridGap<Length>>;
+  gap?: ResponsiveValue<CSS.Property.Gap<Length>>;
+  gridRowGap?: ResponsiveValue<CSS.Property.GridRowGap<Length>>;
+  gridColumnGap?: ResponsiveValue<CSS.Property.GridColumnGap<Length>>;
+  gridRow?: ResponsiveValue<CSS.Property.GridRow>;
+  gridColumn?: ResponsiveValue<CSS.Property.GridColumn>;
+  gridAutoFlow?: ResponsiveValue<CSS.Property.GridAutoFlow>;
+  gridAutoRows?: ResponsiveValue<CSS.Property.GridAutoRows<Length>>;
+  gridAutoColumns?: ResponsiveValue<CSS.Property.GridAutoColumns<Length>>;
+  gridTemplateRows?: ResponsiveValue<CSS.Property.GridTemplateRows<Length>>;
+  gridTemplateColumns?: ResponsiveValue<CSS.Property.GridTemplateColumns<Length>>;
+  gridTemplateAreas?: ResponsiveValue<CSS.Property.GridTemplateAreas>;
+  gridArea?: ResponsiveValue<CSS.Property.GridArea>;
 }
 
-const config: Config = {
+const config: Configs = {
   gridColumnGap: {
     property: 'gridColumnGap',
     scale: 'space',

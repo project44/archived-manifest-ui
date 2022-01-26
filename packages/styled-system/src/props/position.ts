@@ -1,18 +1,52 @@
 import * as CSS from 'csstype';
-import { Config, ResponsiveValue, system, TLengthStyledSystem } from 'styled-system';
-import { RequiredTheme, Theme } from '../types';
+import { Configs, Length, ResponsiveValue, Scale } from '../types';
+import get from 'lodash.get';
+import isNumber from 'lodash/isNumber';
+import isString from 'lodash/isString';
+import { system } from '../core';
 
-export interface PositionProps<ThemeType extends Theme = RequiredTheme> {
-  position?: ResponsiveValue<CSS.Property.Position, ThemeType>;
-  pos?: ResponsiveValue<CSS.Property.Position, ThemeType>;
-  zIndex?: ResponsiveValue<CSS.Property.ZIndex, ThemeType>;
-  top?: ResponsiveValue<CSS.Property.Top<TLengthStyledSystem>, ThemeType>;
-  right?: ResponsiveValue<CSS.Property.Right<TLengthStyledSystem>, ThemeType>;
-  bottom?: ResponsiveValue<CSS.Property.Bottom<TLengthStyledSystem>, ThemeType>;
-  left?: ResponsiveValue<CSS.Property.Left<TLengthStyledSystem>, ThemeType>;
+export interface PositionProps {
+  position?: ResponsiveValue<CSS.Property.Position>;
+  pos?: ResponsiveValue<CSS.Property.Position>;
+  zIndex?: ResponsiveValue<CSS.Property.ZIndex>;
+  top?: ResponsiveValue<CSS.Property.Top<Length>>;
+  right?: ResponsiveValue<CSS.Property.Right<Length>>;
+  bottom?: ResponsiveValue<CSS.Property.Bottom<Length>>;
+  left?: ResponsiveValue<CSS.Property.Left<Length>>;
 }
 
-const config: Config = {
+function positiveOrNegative(scale?: Scale, path?: any): any {
+  if (!isNumber(path)) {
+    if (isString(path) && path.startsWith('-')) {
+      const raw = path.slice(1);
+      const value = get(scale, raw, raw);
+
+      if (isNumber(value)) {
+        return value * -1;
+      }
+
+      return `-${String(value)}`;
+    }
+
+    return get(scale, path, path);
+  }
+
+  const isNegative = path < 0;
+  const abs = Math.abs(path);
+  const value = get(scale, abs, abs);
+
+  if (isNumber(value)) {
+    return value * (isNegative ? -1 : 1);
+  }
+
+  if (value == null) {
+    return;
+  }
+
+  return isNegative ? `-${String(value)}` : value;
+}
+
+const config: Configs = {
   position: true,
   zIndex: {
     property: 'zIndex',
@@ -21,18 +55,22 @@ const config: Config = {
   top: {
     property: 'top',
     scale: 'space',
+    transform: positiveOrNegative,
   },
   right: {
     property: 'right',
     scale: 'space',
+    transform: positiveOrNegative,
   },
   bottom: {
     property: 'bottom',
     scale: 'space',
+    transform: positiveOrNegative,
   },
   left: {
     property: 'left',
     scale: 'space',
+    transform: positiveOrNegative,
   },
 };
 

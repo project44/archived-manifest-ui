@@ -1,29 +1,29 @@
 import * as CSS from 'csstype';
-import { Config, ResponsiveValue, system } from 'styled-system';
-import { RequiredTheme, Theme } from '../types';
+import { Configs, ResponsiveValue } from '../types';
+import { system } from '../core';
 
-export interface TransitionProps<ThemeType extends Theme = RequiredTheme> {
-  transition?: ResponsiveValue<CSS.Property.Transition, ThemeType>;
-  transitionProperty?: ResponsiveValue<CSS.Property.TransitionProperty, ThemeType>;
-  transitionDuration?: ResponsiveValue<CSS.Property.TransitionDuration, ThemeType>;
-  transitionTimingFunction?: ResponsiveValue<CSS.Property.TransitionTimingFunction, ThemeType>;
-  transitionDelay?: ResponsiveValue<CSS.Property.TransitionDelay, ThemeType>;
+export interface TransitionProps {
+  transition?: ResponsiveValue<CSS.Property.Transition>;
+  transitionProperty?: ResponsiveValue<CSS.Property.TransitionProperty>;
+  transitionDuration?: ResponsiveValue<CSS.Property.TransitionDuration>;
+  transitionTimingFunction?: ResponsiveValue<CSS.Property.TransitionTimingFunction>;
+  transitionDelay?: ResponsiveValue<CSS.Property.TransitionDelay>;
 }
 
-const config: Config = {
+const config: Configs = {
   transition: true,
   transitionDelay: true,
   transitionProperty: {
     property: 'transitionProperty',
-    scale: 'transitions.property',
+    scale: 'transition.property',
   },
   transitionDuration: {
     property: 'transitionDuration',
-    scale: 'transitions.duration',
+    scale: 'transition.duration',
   },
   transitionTimingFunction: {
     property: 'transitionTimingFunction',
-    scale: 'transitions.timingFunction',
+    scale: 'transition.timingFunction',
   },
 };
 

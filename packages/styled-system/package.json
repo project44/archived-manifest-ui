@@ -16,14 +16,10 @@
   "author": "project44",
   "license": "MIT",
   "dependencies": {
-    "@styled-system/css": "^5.1.5",
     "csstype": "^3.0.10",
+    "lodash.get": "^4.4.2",
     "lodash.isnumber": "^3.0.3",
+    "lodash.merge": "^4.6.2",
     "styled-system": "^5.1.5"
-  },
-  "devDependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "react": "^17.0.2"
   }
 }

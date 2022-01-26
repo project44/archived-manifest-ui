@@ -1,58 +1,45 @@
 import * as CSS from 'csstype';
-import { Config, ResponsiveValue, system, TLengthStyledSystem } from 'styled-system';
-import { RequiredTheme, Theme } from '../types';
+import { Configs, Length, ResponsiveValue } from '../types';
+import { system } from '../core';
 
-export interface BorderProps<ThemeType extends Theme = RequiredTheme> {
-  border?: ResponsiveValue<CSS.Property.Border<TLengthStyledSystem>, ThemeType>;
-  borderWidth?: ResponsiveValue<CSS.Property.BorderWidth<TLengthStyledSystem>, ThemeType>;
-  borderStyle?: ResponsiveValue<CSS.Property.BorderStyle, ThemeType>;
-  borderColor?: ResponsiveValue<CSS.Property.BorderTopColor, ThemeType>;
-
-  borderRadius?: ResponsiveValue<CSS.Property.BorderRadius<TLengthStyledSystem>, ThemeType>;
-  borderBottomRadius?: ResponsiveValue<CSS.Property.BorderRadius, ThemeType>;
-  borderEndRadius?: ResponsiveValue<CSS.Property.BorderRadius, ThemeType>;
-  borderTopRadius?: ResponsiveValue<CSS.Property.BorderRadius, ThemeType>;
-  borderRightRadius?: ResponsiveValue<CSS.Property.BorderRadius, ThemeType>;
-  borderLeftRadius?: ResponsiveValue<CSS.Property.BorderRadius, ThemeType>;
-  borderStartRadius?: ResponsiveValue<CSS.Property.BorderRadius<TLengthStyledSystem>, ThemeType>;
-  borderTopLeftRadius?: ResponsiveValue<CSS.Property.BorderRadius<TLengthStyledSystem>, ThemeType>;
-  borderTopRightRadius?: ResponsiveValue<CSS.Property.BorderRadius<TLengthStyledSystem>, ThemeType>;
-  borderBottomLeftRadius?: ResponsiveValue<
-    CSS.Property.BorderRadius<TLengthStyledSystem>,
-    ThemeType
-  >;
-  borderBottomRightRadius?: ResponsiveValue<
-    CSS.Property.BorderRadius<TLengthStyledSystem>,
-    ThemeType
-  >;
-
-  borderTop?: ResponsiveValue<CSS.Property.BorderTop<TLengthStyledSystem>, ThemeType>;
-  borderTopWidth?: ResponsiveValue<CSS.Property.BorderWidth<TLengthStyledSystem>, ThemeType>;
-  borderTopStyle?: ResponsiveValue<CSS.Property.BorderTopStyle, ThemeType>;
-  borderTopColor?: ResponsiveValue<CSS.Property.BorderTopColor, ThemeType>;
-
-  borderRight?: ResponsiveValue<CSS.Property.BorderRight<TLengthStyledSystem>, ThemeType>;
-  borderRightWidth?: ResponsiveValue<CSS.Property.BorderWidth<TLengthStyledSystem>, ThemeType>;
-  borderRightStyle?: ResponsiveValue<CSS.Property.BorderRightStyle, ThemeType>;
-  borderRightColor?: ResponsiveValue<CSS.Property.BorderRightColor, ThemeType>;
-
-  borderBottom?: ResponsiveValue<CSS.Property.BorderBottom<TLengthStyledSystem>, ThemeType>;
-  borderBottomWidth?: ResponsiveValue<CSS.Property.BorderWidth<TLengthStyledSystem>, ThemeType>;
-  borderBottomStyle?: ResponsiveValue<CSS.Property.BorderBottomStyle, ThemeType>;
-  borderBottomColor?: ResponsiveValue<CSS.Property.BorderBottomColor, ThemeType>;
-
-  borderLeft?: ResponsiveValue<CSS.Property.BorderLeft<TLengthStyledSystem>, ThemeType>;
-  borderLeftWidth?: ResponsiveValue<CSS.Property.BorderWidth<TLengthStyledSystem>, ThemeType>;
-  borderLeftStyle?: ResponsiveValue<CSS.Property.BorderLeftStyle, ThemeType>;
-  borderLeftColor?: ResponsiveValue<CSS.Property.BorderLeftColor, ThemeType>;
-
-  borderX?: ResponsiveValue<CSS.Property.Border<TLengthStyledSystem>, ThemeType>;
-  borderY?: ResponsiveValue<CSS.Property.Border<TLengthStyledSystem>, ThemeType>;
-
-  borderCollapse?: ResponsiveValue<CSS.Property.BorderCollapse, ThemeType>;
+export interface BorderProps {
+  border?: ResponsiveValue<CSS.Property.Border<Length>>;
+  borderWidth?: ResponsiveValue<CSS.Property.BorderWidth<Length>>;
+  borderStyle?: ResponsiveValue<CSS.Property.BorderStyle>;
+  borderCollapse?: ResponsiveValue<CSS.Property.BorderCollapse>;
+  borderColor?: ResponsiveValue<CSS.Property.BorderTopColor>;
+  borderRadius?: ResponsiveValue<CSS.Property.BorderRadius<Length>>;
+  borderBottomRadius?: ResponsiveValue<CSS.Property.BorderRadius>;
+  borderEndRadius?: ResponsiveValue<CSS.Property.BorderRadius>;
+  borderTopRadius?: ResponsiveValue<CSS.Property.BorderRadius>;
+  borderRightRadius?: ResponsiveValue<CSS.Property.BorderRadius>;
+  borderLeftRadius?: ResponsiveValue<CSS.Property.BorderRadius>;
+  borderStartRadius?: ResponsiveValue<CSS.Property.BorderRadius<Length>>;
+  borderTopLeftRadius?: ResponsiveValue<CSS.Property.BorderRadius<Length>>;
+  borderTopRightRadius?: ResponsiveValue<CSS.Property.BorderRadius<Length>>;
+  borderBottomLeftRadius?: ResponsiveValue<CSS.Property.BorderRadius<Length>>;
+  borderBottomRightRadius?: ResponsiveValue<CSS.Property.BorderRadius<Length>>;
+  borderTop?: ResponsiveValue<CSS.Property.BorderTop<Length>>;
+  borderTopWidth?: ResponsiveValue<CSS.Property.BorderWidth<Length>>;
+  borderTopStyle?: ResponsiveValue<CSS.Property.BorderTopStyle>;
+  borderTopColor?: ResponsiveValue<CSS.Property.BorderTopColor>;
+  borderRight?: ResponsiveValue<CSS.Property.BorderRight<Length>>;
+  borderRightWidth?: ResponsiveValue<CSS.Property.BorderWidth<Length>>;
+  borderRightStyle?: ResponsiveValue<CSS.Property.BorderRightStyle>;
+  borderRightColor?: ResponsiveValue<CSS.Property.BorderRightColor>;
+  borderBottom?: ResponsiveValue<CSS.Property.BorderBottom<Length>>;
+  borderBottomWidth?: ResponsiveValue<CSS.Property.BorderWidth<Length>>;
+  borderBottomStyle?: ResponsiveValue<CSS.Property.BorderBottomStyle>;
+  borderBottomColor?: ResponsiveValue<CSS.Property.BorderBottomColor>;
+  borderLeft?: ResponsiveValue<CSS.Property.BorderLeft<Length>>;
+  borderLeftWidth?: ResponsiveValue<CSS.Property.BorderWidth<Length>>;
+  borderLeftStyle?: ResponsiveValue<CSS.Property.BorderLeftStyle>;
+  borderLeftColor?: ResponsiveValue<CSS.Property.BorderLeftColor>;
+  borderX?: ResponsiveValue<CSS.Property.Border<Length>>;
+  borderY?: ResponsiveValue<CSS.Property.Border<Length>>;
 }
 
-const config: Config = {
+const config: Configs = {
   border: {
     property: 'border',
     scale: 'borders',

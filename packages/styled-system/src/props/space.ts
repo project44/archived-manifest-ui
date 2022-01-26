@@ -1,100 +1,73 @@
 import * as CSS from 'csstype';
-import { Config, get, ResponsiveValue, Scale, system, TLengthStyledSystem } from 'styled-system';
-import { RequiredTheme, Theme } from '../types';
-import isNumber from 'lodash.isnumber';
+import { Configs, Length, ResponsiveValue, Scale } from '../types';
+import get from 'lodash.get';
+import isNumber from 'lodash/isNumber';
+import { system } from '../core';
 
-export interface SpaceProps<ThemeType extends Theme = RequiredTheme> {
-  m?: ResponsiveValue<CSS.Property.Margin<TLengthStyledSystem>, ThemeType>;
-  margin?: ResponsiveValue<CSS.Property.Margin<TLengthStyledSystem>, ThemeType>;
-
-  mt?: ResponsiveValue<CSS.Property.MarginTop<TLengthStyledSystem>, ThemeType>;
-  marginTop?: ResponsiveValue<CSS.Property.MarginTop<TLengthStyledSystem>, ThemeType>;
-
-  mr?: ResponsiveValue<CSS.Property.MarginRight<TLengthStyledSystem>, ThemeType>;
-  marginRight?: ResponsiveValue<CSS.Property.MarginRight<TLengthStyledSystem>, ThemeType>;
-
-  mb?: ResponsiveValue<CSS.Property.MarginBottom<TLengthStyledSystem>, ThemeType>;
-  marginBottom?: ResponsiveValue<CSS.Property.MarginBottom<TLengthStyledSystem>, ThemeType>;
-
-  ml?: ResponsiveValue<CSS.Property.MarginLeft<TLengthStyledSystem>, ThemeType>;
-  marginLeft?: ResponsiveValue<CSS.Property.MarginLeft<TLengthStyledSystem>, ThemeType>;
-
-  mx?: ResponsiveValue<CSS.Property.Margin<TLengthStyledSystem>, ThemeType>;
-  marginX?: ResponsiveValue<CSS.Property.Margin<TLengthStyledSystem>, ThemeType>;
-
-  my?: ResponsiveValue<CSS.Property.Margin<TLengthStyledSystem>, ThemeType>;
-  marginY?: ResponsiveValue<CSS.Property.Margin<TLengthStyledSystem>, ThemeType>;
-
-  marginBlockStart?: ResponsiveValue<CSS.Property.MarginBlockStart<TLengthStyledSystem>, ThemeType>;
-  marginBlockEnd?: ResponsiveValue<CSS.Property.MarginBlockEnd<TLengthStyledSystem>, ThemeType>;
-
-  marginInlineStart?: ResponsiveValue<
-    CSS.Property.MarginInlineStart<TLengthStyledSystem>,
-    ThemeType
-  >;
-  marginStart?: ResponsiveValue<CSS.Property.MarginInlineStart<TLengthStyledSystem>, ThemeType>;
-  ms?: ResponsiveValue<CSS.Property.MarginInlineStart<TLengthStyledSystem>, ThemeType>;
-
-  marginInlineEnd?: ResponsiveValue<CSS.Property.MarginInlineEnd<TLengthStyledSystem>, ThemeType>;
-  marginEnd?: ResponsiveValue<CSS.Property.MarginInlineEnd<TLengthStyledSystem>, ThemeType>;
-  me?: ResponsiveValue<CSS.Property.MarginInlineEnd<TLengthStyledSystem>, ThemeType>;
-
-  p?: ResponsiveValue<CSS.Property.Padding<TLengthStyledSystem>, ThemeType>;
-  padding?: ResponsiveValue<CSS.Property.Padding<TLengthStyledSystem>, ThemeType>;
-
-  pt?: ResponsiveValue<CSS.Property.PaddingTop<TLengthStyledSystem>, ThemeType>;
-  paddingTop?: ResponsiveValue<CSS.Property.PaddingTop<TLengthStyledSystem>, ThemeType>;
-
-  pr?: ResponsiveValue<CSS.Property.PaddingRight<TLengthStyledSystem>, ThemeType>;
-  paddingRight?: ResponsiveValue<CSS.Property.PaddingRight<TLengthStyledSystem>, ThemeType>;
-
-  pb?: ResponsiveValue<CSS.Property.PaddingBottom<TLengthStyledSystem>, ThemeType>;
-  paddingBottom?: ResponsiveValue<CSS.Property.PaddingBottom<TLengthStyledSystem>, ThemeType>;
-
-  pl?: ResponsiveValue<CSS.Property.PaddingLeft<TLengthStyledSystem>, ThemeType>;
-  paddingLeft?: ResponsiveValue<CSS.Property.PaddingLeft<TLengthStyledSystem>, ThemeType>;
-
-  px?: ResponsiveValue<CSS.Property.Padding<TLengthStyledSystem>, ThemeType>;
-  paddingX?: ResponsiveValue<CSS.Property.Padding<TLengthStyledSystem>, ThemeType>;
-
-  py?: ResponsiveValue<CSS.Property.Padding<TLengthStyledSystem>, ThemeType>;
-  paddingY?: ResponsiveValue<CSS.Property.Padding<TLengthStyledSystem>, ThemeType>;
-
-  paddingBlockStart?: ResponsiveValue<
-    CSS.Property.PaddingBlockStart<TLengthStyledSystem>,
-    ThemeType
-  >;
-  paddingBlockEnd?: ResponsiveValue<CSS.Property.PaddingBlockEnd<TLengthStyledSystem>, ThemeType>;
-
-  paddingInlineStart?: ResponsiveValue<
-    CSS.Property.PaddingInlineStart<TLengthStyledSystem>,
-    ThemeType
-  >;
-  paddingStart?: ResponsiveValue<CSS.Property.PaddingInlineStart<TLengthStyledSystem>, ThemeType>;
-  ps?: ResponsiveValue<CSS.Property.PaddingInlineStart<TLengthStyledSystem>, ThemeType>;
-
-  paddingInlineEnd?: ResponsiveValue<CSS.Property.PaddingInlineEnd<TLengthStyledSystem>, ThemeType>;
-  paddingEnd?: ResponsiveValue<CSS.Property.PaddingInlineEnd<TLengthStyledSystem>, ThemeType>;
-  pe?: ResponsiveValue<CSS.Property.PaddingInlineEnd<TLengthStyledSystem>, ThemeType>;
+export interface SpaceProps {
+  m?: ResponsiveValue<CSS.Property.Margin<Length>>;
+  margin?: ResponsiveValue<CSS.Property.Margin<Length>>;
+  mt?: ResponsiveValue<CSS.Property.MarginTop<Length>>;
+  marginTop?: ResponsiveValue<CSS.Property.MarginTop<Length>>;
+  mr?: ResponsiveValue<CSS.Property.MarginRight<Length>>;
+  marginRight?: ResponsiveValue<CSS.Property.MarginRight<Length>>;
+  mb?: ResponsiveValue<CSS.Property.MarginBottom<Length>>;
+  marginBottom?: ResponsiveValue<CSS.Property.MarginBottom<Length>>;
+  ml?: ResponsiveValue<CSS.Property.MarginLeft<Length>>;
+  marginLeft?: ResponsiveValue<CSS.Property.MarginLeft<Length>>;
+  mx?: ResponsiveValue<CSS.Property.Margin<Length>>;
+  marginX?: ResponsiveValue<CSS.Property.Margin<Length>>;
+  my?: ResponsiveValue<CSS.Property.Margin<Length>>;
+  marginY?: ResponsiveValue<CSS.Property.Margin<Length>>;
+  marginBlockStart?: ResponsiveValue<CSS.Property.MarginBlockStart<Length>>;
+  marginBlockEnd?: ResponsiveValue<CSS.Property.MarginBlockEnd<Length>>;
+  marginInlineStart?: ResponsiveValue<CSS.Property.MarginInlineStart<Length>>;
+  marginStart?: ResponsiveValue<CSS.Property.MarginInlineStart<Length>>;
+  ms?: ResponsiveValue<CSS.Property.MarginInlineStart<Length>>;
+  marginInlineEnd?: ResponsiveValue<CSS.Property.MarginInlineEnd<Length>>;
+  marginEnd?: ResponsiveValue<CSS.Property.MarginInlineEnd<Length>>;
+  me?: ResponsiveValue<CSS.Property.MarginInlineEnd<Length>>;
+  p?: ResponsiveValue<CSS.Property.Padding<Length>>;
+  padding?: ResponsiveValue<CSS.Property.Padding<Length>>;
+  pt?: ResponsiveValue<CSS.Property.PaddingTop<Length>>;
+  paddingTop?: ResponsiveValue<CSS.Property.PaddingTop<Length>>;
+  pr?: ResponsiveValue<CSS.Property.PaddingRight<Length>>;
+  paddingRight?: ResponsiveValue<CSS.Property.PaddingRight<Length>>;
+  pb?: ResponsiveValue<CSS.Property.PaddingBottom<Length>>;
+  paddingBottom?: ResponsiveValue<CSS.Property.PaddingBottom<Length>>;
+  pl?: ResponsiveValue<CSS.Property.PaddingLeft<Length>>;
+  paddingLeft?: ResponsiveValue<CSS.Property.PaddingLeft<Length>>;
+  px?: ResponsiveValue<CSS.Property.Padding<Length>>;
+  paddingX?: ResponsiveValue<CSS.Property.Padding<Length>>;
+  py?: ResponsiveValue<CSS.Property.Padding<Length>>;
+  paddingY?: ResponsiveValue<CSS.Property.Padding<Length>>;
+  paddingBlockStart?: ResponsiveValue<CSS.Property.PaddingBlockStart<Length>>;
+  paddingBlockEnd?: ResponsiveValue<CSS.Property.PaddingBlockEnd<Length>>;
+  paddingInlineStart?: ResponsiveValue<CSS.Property.PaddingInlineStart<Length>>;
+  paddingStart?: ResponsiveValue<CSS.Property.PaddingInlineStart<Length>>;
+  ps?: ResponsiveValue<CSS.Property.PaddingInlineStart<Length>>;
+  paddingInlineEnd?: ResponsiveValue<CSS.Property.PaddingInlineEnd<Length>>;
+  paddingEnd?: ResponsiveValue<CSS.Property.PaddingInlineEnd<Length>>;
+  pe?: ResponsiveValue<CSS.Property.PaddingInlineEnd<Length>>;
 }
 
-const getMargin = (n: number, scale?: Scale) => {
-  if (!isNumber(n)) {
-    return get(scale, n, n) as string;
+function getMargin(scale?: Scale, path?: any): any {
+  if (!isNumber(path)) {
+    return get(scale, path, path);
   }
 
-  const isNegative = n < 0;
-  const absolute = Math.abs(n);
+  const isNegative = path < 0;
+  const absolute = Math.abs(path);
   const value = get(scale, absolute, absolute);
 
   if (!isNumber(value)) {
-    return (isNegative ? `-${String(value)}` : value) as string;
+    return isNegative ? `-${String(value)}` : value;
   }
 
   return value * (isNegative ? -1 : 1);
-};
+}
 
-const config: Config = {
+const config: Configs = {
   margin: {
     property: 'margin',
     scale: 'space',

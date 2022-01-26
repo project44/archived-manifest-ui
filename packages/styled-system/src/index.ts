@@ -1,4 +1,4 @@
-export * from './system';
+export * from './core';
+export * from './css';
+export * from './props';
 export * from './types';
-
-export { css } from '@styled-system/css';

@@ -1,44 +1,31 @@
 import * as CSS from 'csstype';
-import { Config, get, ResponsiveValue, Scale, system, TLengthStyledSystem } from 'styled-system';
-import { RequiredTheme, Theme } from '../types';
-import isNumber from 'lodash.isnumber';
+import { Configs, Length, ResponsiveValue } from '../types';
+import { system } from '../core';
 
-export interface LayoutProps<ThemeType extends Theme = RequiredTheme> {
-  boxSize?: ResponsiveValue<CSS.Property.Width<TLengthStyledSystem>, ThemeType>;
-  boxSizing?: ResponsiveValue<CSS.Property.BoxSizing, ThemeType>;
-
-  width?: ResponsiveValue<CSS.Property.Width<TLengthStyledSystem>, ThemeType>;
-  w?: ResponsiveValue<CSS.Property.Width<TLengthStyledSystem>, ThemeType>;
-
-  height?: ResponsiveValue<CSS.Property.Height<TLengthStyledSystem>, ThemeType>;
-  h?: ResponsiveValue<CSS.Property.Height<TLengthStyledSystem>, ThemeType>;
-
-  minWidth?: ResponsiveValue<CSS.Property.MinWidth<TLengthStyledSystem>, ThemeType>;
-  minW?: ResponsiveValue<CSS.Property.MinWidth<TLengthStyledSystem>, ThemeType>;
-
-  maxWidth?: ResponsiveValue<CSS.Property.MaxWidth<TLengthStyledSystem>, ThemeType>;
-  maxW?: ResponsiveValue<CSS.Property.MaxWidth<TLengthStyledSystem>, ThemeType>;
-
-  minHeight?: ResponsiveValue<CSS.Property.MinHeight<TLengthStyledSystem>, ThemeType>;
-  minH?: ResponsiveValue<CSS.Property.MinHeight<TLengthStyledSystem>, ThemeType>;
-
-  maxHeight?: ResponsiveValue<CSS.Property.MaxHeight<TLengthStyledSystem>, ThemeType>;
-  maxH?: ResponsiveValue<CSS.Property.MaxHeight<TLengthStyledSystem>, ThemeType>;
-
-  display?: ResponsiveValue<CSS.Property.Display, ThemeType>;
-  d?: ResponsiveValue<CSS.Property.Display, ThemeType>;
-
-  verticalAlign?: ResponsiveValue<CSS.Property.VerticalAlign<TLengthStyledSystem>, ThemeType>;
-
-  overflow?: ResponsiveValue<CSS.Property.Overflow, ThemeType>;
-  overflowX?: ResponsiveValue<CSS.Property.OverflowX, ThemeType>;
-  overflowY?: ResponsiveValue<CSS.Property.OverflowY, ThemeType>;
+export interface LayoutProps {
+  boxSize?: ResponsiveValue<CSS.Property.Width<Length>>;
+  boxSizing?: CSS.Property.BoxSizing;
+  width?: ResponsiveValue<CSS.Property.Width<Length>>;
+  w?: ResponsiveValue<CSS.Property.Width<Length>>;
+  height?: ResponsiveValue<CSS.Property.Height<Length>>;
+  h?: ResponsiveValue<CSS.Property.Height<Length>>;
+  minWidth?: ResponsiveValue<CSS.Property.MinWidth<Length>>;
+  minW?: ResponsiveValue<CSS.Property.MinWidth<Length>>;
+  maxWidth?: ResponsiveValue<CSS.Property.MaxWidth<Length>>;
+  maxW?: ResponsiveValue<CSS.Property.MaxWidth<Length>>;
+  minHeight?: ResponsiveValue<CSS.Property.MinHeight<Length>>;
+  minH?: ResponsiveValue<CSS.Property.MinHeight<Length>>;
+  maxHeight?: ResponsiveValue<CSS.Property.MaxHeight<Length>>;
+  maxH?: ResponsiveValue<CSS.Property.MaxHeight<Length>>;
+  display?: ResponsiveValue<CSS.Property.Display>;
+  d?: ResponsiveValue<CSS.Property.Display>;
+  verticalAlign?: ResponsiveValue<CSS.Property.VerticalAlign<Length>>;
+  overflow?: ResponsiveValue<CSS.Property.Overflow>;
+  overflowX?: ResponsiveValue<CSS.Property.OverflowX>;
+  overflowY?: ResponsiveValue<CSS.Property.OverflowY>;
 }
 
-const getWidth = (n: number, scale?: Scale) =>
-  get(scale, n, !isNumber(n) || n > 1 ? n : `${n * 100}%`) as string | number;
-
-const config: Config = {
+const config: Configs = {
   boxSize: {
     properties: ['width', 'height'],
     scale: 'sizes',
@@ -46,7 +33,6 @@ const config: Config = {
   width: {
     property: 'width',
     scale: 'sizes',
-    transform: getWidth,
   },
   height: {
     property: 'height',

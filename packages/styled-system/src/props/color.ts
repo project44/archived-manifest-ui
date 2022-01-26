@@ -1,16 +1,16 @@
 import * as CSS from 'csstype';
-import { Config, ResponsiveValue, system } from 'styled-system';
-import { RequiredTheme, Theme } from '../types';
+import { Configs, ResponsiveValue } from '../types';
+import { system } from '../core';
 
-export interface ColorProps<ThemeType extends Theme = RequiredTheme> {
-  color?: ResponsiveValue<CSS.Property.Color, ThemeType>;
-  fill?: ResponsiveValue<CSS.Property.Color, ThemeType>;
-  opacity?: ResponsiveValue<CSS.Property.Opacity, ThemeType>;
-  stroke?: ResponsiveValue<CSS.Property.Color, ThemeType>;
-  textColor?: ResponsiveValue<CSS.Property.Color, ThemeType>;
+export interface ColorProps {
+  color?: ResponsiveValue<CSS.Property.Color>;
+  fill?: ResponsiveValue<CSS.Property.Color>;
+  opacity?: ResponsiveValue<CSS.Property.Opacity>;
+  stroke?: ResponsiveValue<CSS.Property.Color>;
+  textColor?: ResponsiveValue<CSS.Property.Color>;
 }
 
-const config: Config = {
+const config: Configs = {
   color: {
     property: 'color',
     scale: 'colors',

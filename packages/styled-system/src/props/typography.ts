@@ -1,26 +1,23 @@
 import * as CSS from 'csstype';
-import { Config, ResponsiveValue, system, TLengthStyledSystem } from 'styled-system';
-import { RequiredTheme, Theme } from '../types';
+import { Configs, Length, ResponsiveValue } from '../types';
+import { system } from '../core';
 
-export interface TypographyProps<ThemeType extends Theme = RequiredTheme> {
-  fontFamily?: ResponsiveValue<CSS.Property.FontFamily, ThemeType>;
-  fontSize?: ResponsiveValue<CSS.Property.FontSize<TLengthStyledSystem>, ThemeType>;
-  fontStyle?: ResponsiveValue<CSS.Property.FontStyle, ThemeType>;
-  fontWeight?: ResponsiveValue<string | number, ThemeType>;
-
-  letterSpacing?: ResponsiveValue<CSS.Property.LetterSpacing<TLengthStyledSystem>, ThemeType>;
-  lineHeight?: ResponsiveValue<CSS.Property.LineHeight<TLengthStyledSystem>, ThemeType>;
-
-  textAlign?: ResponsiveValue<CSS.Property.TextAlign, ThemeType>;
-  textDecoration?: ResponsiveValue<CSS.Property.TextDecoration, ThemeType>;
-  textOverflow?: ResponsiveValue<CSS.Property.TextOverflow, ThemeType>;
-  textTransform?: ResponsiveValue<CSS.Property.TextTransform, ThemeType>;
-
-  whiteSpace?: ResponsiveValue<CSS.Property.WhiteSpace, ThemeType>;
-  wordBreak?: ResponsiveValue<CSS.Property.WordBreak, ThemeType>;
+export interface TypographyProps {
+  fontFamily?: ResponsiveValue<CSS.Property.FontFamily>;
+  fontSize?: ResponsiveValue<CSS.Property.FontSize<Length>>;
+  fontStyle?: ResponsiveValue<CSS.Property.FontStyle>;
+  fontWeight?: ResponsiveValue<string | number>;
+  letterSpacing?: ResponsiveValue<CSS.Property.LetterSpacing<Length>>;
+  lineHeight?: ResponsiveValue<CSS.Property.LineHeight<Length>>;
+  textAlign?: ResponsiveValue<CSS.Property.TextAlign>;
+  textDecoration?: ResponsiveValue<CSS.Property.TextDecoration>;
+  textOverflow?: ResponsiveValue<CSS.Property.TextOverflow>;
+  textTransform?: ResponsiveValue<CSS.Property.TextTransform>;
+  whiteSpace?: ResponsiveValue<CSS.Property.WhiteSpace>;
+  wordBreak?: ResponsiveValue<CSS.Property.WordBreak>;
 }
 
-const config: Config = {
+const config: Configs = {
   fontFamily: {
     property: 'fontFamily',
     scale: 'fonts',

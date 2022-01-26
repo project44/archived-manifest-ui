@@ -1,41 +1,43 @@
 import { ComponentProps, styled } from '@manifest-ui/styled';
-import { StyleProps } from '@manifest-ui/styled-system';
+import { SystemProps } from '@manifest-ui/styled-system';
 
-export interface FlexProps extends ComponentProps<typeof Flex> {
+export interface FlexOptions {
   /**
    * Shorthand for `alignItems` style prop
    */
-  align?: StyleProps['alignItems'];
+  align?: SystemProps['alignItems'];
   /**
    * Shorthand for `flexBasis` style prop
    */
-  basis?: StyleProps['flexBasis'];
+  basis?: SystemProps['flexBasis'];
   /**
    * Shorthand for `flexDirection` style prop
    */
-  direction?: StyleProps['flexDirection'];
+  direction?: SystemProps['flexDirection'];
   /**
    * Shorthand for `flexGrow` style prop
    */
-  grow?: StyleProps['flexGrow'];
+  grow?: SystemProps['flexGrow'];
   /**
    * Shorthand for `justifyContent` style prop
    */
-  justify?: StyleProps['justifyContent'];
+  justify?: SystemProps['justifyContent'];
   /**
    * Shorthand for `flexShrink` style prop
    */
-  shrink?: StyleProps['flexShrink'];
+  shrink?: SystemProps['flexShrink'];
   /**
    * Shorthand for `flexWrap` style prop
    */
-  wrap?: StyleProps['flexWrap'];
+  wrap?: SystemProps['flexWrap'];
 }
+
+export type FlexProps = ComponentProps<typeof Flex>;
 
 export const Flex = styled('div', {
   label: 'Flex',
   themeKey: 'flex',
-})(({ align, basis, direction, grow, justify, shrink, wrap }) => ({
+})<FlexOptions>(({ align, basis, direction, grow, justify, shrink, wrap }) => ({
   alignItems: align,
   boxSizing: 'border-box',
   display: 'flex',
