@@ -63,19 +63,7 @@ export function styled<T extends As>(tag: T, options?: StyledOptions) {
       return computedCSS as CSSObject;
     };
 
-    const Component = emotionResolver(styles);
-
-    if (process.env.NODE_ENV !== 'production') {
-      let displayName = 'Styled';
-
-      if (label) {
-        displayName = label;
-      }
-
-      Component.displayName = displayName;
-    }
-
-    return Component;
+    return emotionResolver(styles);
   };
 
   return styleResolver;

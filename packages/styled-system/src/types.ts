@@ -12,11 +12,11 @@ import {
   SpaceProps,
   TypographyProps,
 } from './props';
-import { ObjectOrArray, TLengthStyledSystem } from 'styled-system';
+import { ObjectOrArray, ResponsiveValue, TLengthStyledSystem } from 'styled-system';
 
 export { SystemStyleObject } from '@styled-system/css';
 
-export { ObjectOrArray };
+export { ObjectOrArray, ResponsiveValue };
 
 export type RequiredTheme = Required<Theme>;
 

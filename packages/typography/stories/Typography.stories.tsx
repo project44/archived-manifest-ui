@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react';
 import { Typography, TypographyProps } from '../src';
-import { Box } from '@manifest-ui/box';
+import { Box } from '@manifest-ui/layout';
 
 export default {
   title: 'Components/Typography',

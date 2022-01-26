@@ -3,13 +3,13 @@
   "files": [],
   "references": [
     {
-      "path": "packages/box"
-    },
-    {
       "path": "packages/button"
     },
     {
       "path": "packages/config"
+    },
+    {
+      "path": "packages/layout"
     },
     {
       "path": "packages/styled"

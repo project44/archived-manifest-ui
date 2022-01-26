@@ -1,5 +1,5 @@
 {
-  "name": "@manifest-ui/box",
+  "name": "@manifest-ui/layout",
   "version": "0.0.0",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
@@ -11,7 +11,7 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:project-44/manifest-ui.git",
-    "directory": "packages/box"
+    "directory": "packages/layout"
   },
   "author": "project44",
   "license": "MIT",

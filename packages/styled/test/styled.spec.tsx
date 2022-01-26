@@ -13,7 +13,7 @@ describe('@manifest-ui/styled - styled', () => {
     const Button = styled('button', {
       themeKey: 'button',
     })({
-      backgroundColor: 'primary',
+      backgroundColor: 'brand.500',
     });
 
     render(<Button>Hello</Button>);
@@ -23,7 +23,7 @@ describe('@manifest-ui/styled - styled', () => {
 
   it('should handle being called without options', () => {
     const Button = styled('button')({
-      backgroundColor: 'primary',
+      backgroundColor: 'brand.500',
     });
 
     render(<Button>Hello</Button>);

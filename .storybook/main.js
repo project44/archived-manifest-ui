@@ -5,10 +5,6 @@ const toPath = _path => path.join(process.cwd(), _path);
 module.exports = {
   stories: ['../packages/**/*.stories.@(js|ts|tsx|mdx)'],
   addons: [
-    {
-      name: '@storybook/preset-typescript',
-      options: { transpileManager: true },
-    },
     '@storybook/addon-docs',
     '@storybook/addon-storysource',
     '@storybook/addon-controls',
@@ -16,7 +12,10 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-viewport'
   ],
-  // Storybooks emotion instance is replacing our theme
+  features: {
+    postcss: false,
+    emotionAlias: false,
+  },
   webpackFinal: async config => {
     return {
       ...config,
