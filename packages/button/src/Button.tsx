@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ComponentProps, styled } from '@manifest-ui/styled';
 import { Typography } from '@manifest-ui/typography';
 
-export interface ButtonProps extends ComponentProps<typeof StyledButton> {
+export interface ButtonOptions {
   /**
    * Href value used if the button is rendered as an `<a>` tag.
    */
@@ -10,11 +10,11 @@ export interface ButtonProps extends ComponentProps<typeof StyledButton> {
   /**
    * Whether the button is active
    */
-  isActive: boolean;
+  isActive?: boolean;
   /**
    * Whether the button is disabled.
    */
-  isDisabled: boolean;
+  isDisabled?: boolean;
   /**
    * Rel value used if the button is rendered as an `<a>` tag.
    */
@@ -29,10 +29,12 @@ export interface ButtonProps extends ComponentProps<typeof StyledButton> {
   type?: 'button' | 'reset' | 'submit';
 }
 
+export type ButtonProps = ComponentProps<typeof StyledButton>;
+
 export const StyledButton = styled('button', {
   label: 'Button',
   themeKey: 'button',
-})({
+})<ButtonOptions>({
   alignItems: 'center',
   appearance: 'none',
   backgroundImage: 'linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)',

@@ -1,0 +1,34 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Box } from '../src';
+
+<Meta title="Components/Box" component={Box} />
+
+# Box
+
+A Box is a component primitive that bundles all the styled props from the `@manifest-ui/styled-system`.
+
+## Installation
+
+```sh
+yarn add @manifest-ui/layout
+```
+
+## Usage
+
+```tsx
+import { Box } from '@manifest-ui/layout';
+```
+
+### SX prop
+
+Each prop from the `styled-system` are availale in the `sx` prop, additionally standard css can also be specified within the prop.
+
+<Canvas>
+  <Story name="Default">
+    <Box sx={{ backgroundColor: 'brand.500', height: 200, width: 200 }} />
+  </Story>
+</Canvas>
+
+#### Props
+
+<ArgsTable of={Box} />

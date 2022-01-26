@@ -1,0 +1,35 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Flex, Box } from '../src';
+
+<Meta title="Components/Flex" component={Flex} />
+
+# Flex
+
+Flex is a layout primitive used to easliy create flexbox based layouts.
+
+## Installation
+
+```sh
+yarn add @manifest-ui/layout
+```
+
+## Usage
+
+```tsx
+import { Flex } from '@manifest-ui/layout';
+```
+
+### Default
+
+<Canvas>
+  <Story name="Default">
+    <Flex align="center" direction="row">
+      <Box sx={{ backgroundColor: 'brand.500', flex: 1, p: 4 }}>Box</Box>
+      <Box sx={{ backgroundColor: 'neutral.500', flex: 1, p: 4 }}>Box</Box>
+    </Flex>
+  </Story>
+</Canvas>
+
+#### Props
+
+<ArgsTable of={Box} />

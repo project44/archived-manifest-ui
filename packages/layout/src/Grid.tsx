@@ -15,7 +15,7 @@ export interface GridOptions {
   columnWidth?: SystemProps['width'];
 }
 
-export interface GridProps extends ComponentProps<typeof Grid>, GridOptions {}
+export type GridProps = ComponentProps<typeof Grid>;
 
 export const Grid = styled('div', {
   label: 'Grid',
