@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ComponentProps, styled } from '@manifest-ui/styled';
 
-export interface TypographyProps extends ComponentProps<typeof StyledTypography> {
+export interface TypographyOptions {
   /**
    * The size of the typography element.
    *
@@ -11,7 +11,7 @@ export interface TypographyProps extends ComponentProps<typeof StyledTypography>
   /**
    * The variant of the typography element.
    *
-   * @default 'body1'
+   * @default 'body2'
    */
   variants?:
     | 'heading1'
@@ -27,10 +27,12 @@ export interface TypographyProps extends ComponentProps<typeof StyledTypography>
     | 'footnote2';
 }
 
+export type TypographyProps = ComponentProps<typeof StyledTypography>;
+
 export const StyledTypography = styled('span', {
   label: 'Typography',
   themeKey: 'typography',
-})(({ size, variant }) => ({
+})<TypographyOptions>(({ size, variant }) => ({
   margin: 0,
 
   ...((variant === 'heading1' || variant === 'heading2') && {
@@ -174,7 +176,7 @@ export const StyledTypography = styled('span', {
 
 export const Typography = React.forwardRef<HTMLSpanElement, TypographyProps>(
   (props: TypographyProps, ref) => {
-    const { size = 'medium', variant = 'body1', ...other } = props;
+    const { size = 'medium', variant = 'body2', ...other } = props;
 
     return <StyledTypography ref={ref} size={size} variant={variant} {...other} />;
   },

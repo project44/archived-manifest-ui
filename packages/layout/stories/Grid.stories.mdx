@@ -1,0 +1,80 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Grid, Box } from '../src';
+
+<Meta title="Components/Grid" component={Grid} />
+
+# Grid
+
+Grid is a layout primitive used to easliy create css-grid based layouts.
+
+## Installation
+
+```sh
+yarn add @manifest-ui/layout
+```
+
+## Usage
+
+```tsx
+import { Grid } from '@manifest-ui/layout';
+```
+
+### Default
+
+<Canvas>
+  <Story name="Default">
+    <Grid columns={2}>
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+    </Grid>
+  </Story>
+</Canvas>
+
+#### Props
+
+<ArgsTable of={Grid} />
+
+### Column width
+
+<Canvas>
+  <Story name="ColumnWidth">
+    <Grid columnWidth="200px">
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+    </Grid>
+  </Story>
+</Canvas>
+
+### Responsive
+
+The Grid component can easliy support responsive layouts by passing an array value to the column prop.
+
+<Canvas>
+  <Story name="Responsive">
+    <Grid columns={[1, 1, 2, 3]}>
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+    </Grid>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Responsive Column Width">
+    <Grid columnWidth={[null, 100, 128, 192]}>
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+      <Box sx={{ backgroundColor: 'brand.500', height: 64 }} />
+    </Grid>
+  </Story>
+</Canvas>
