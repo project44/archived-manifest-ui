@@ -10,7 +10,6 @@
     "build": "yarn run build:cjs && yarn run build:esm && yarn run build:types",
     "build:cjs": "yarn run beemo babel --workspaces=*",
     "build:esm": "yarn run beemo babel --workspaces=* --esm",
-    "build:storybook": "build-storybook -o dist",
     "build:types": "yarn run beemo typescript --build",
     "clean": "yarn run clean:build && yarn run clean:types",
     "clean:build": "rimraf 'packages/**/*/{lib,esm}'",
@@ -26,9 +25,11 @@
     "lint:eslint": "yarn run beemo eslint",
     "lint:types": "yarn run beemo typescript --noEmit --emitDeclarationOnly false",
     "prepare": "husky install && beemo create-config babel eslint prettier",
+    "release": "yarn build && changeset publish",
     "storybook:dev": "start-storybook -p 6006",
     "storybook:build": "build-storybook -o dist",
-    "test": "yarn run beemo jest"
+    "test": "yarn run beemo jest",
+    "version": "changeset version && yarn"
   },
   "workspaces": [
     "packages/*"
@@ -55,6 +56,7 @@
     "@beemo/driver-jest": "^2.0.4",
     "@beemo/driver-prettier": "^2.0.5",
     "@beemo/driver-typescript": "^2.1.1",
+    "@changesets/cli": "^2.20.0",
     "@commitlint/cli": "^16.0.3",
     "@commitlint/config-conventional": "^16.0.0",
     "@emotion/react": "^11.7.1",
