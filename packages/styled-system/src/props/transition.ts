@@ -15,15 +15,15 @@ const config: Config = {
   transitionDelay: true,
   transitionProperty: {
     property: 'transitionProperty',
-    scale: 'transition.property',
+    scale: 'transitions.property',
   },
   transitionDuration: {
     property: 'transitionDuration',
-    scale: 'transition.duration',
+    scale: 'transitions.duration',
   },
   transitionTimingFunction: {
     property: 'transitionTimingFunction',
-    scale: 'transition.timingFunction',
+    scale: 'transitions.timingFunction',
   },
 };
 

@@ -16,6 +16,8 @@ import { ObjectOrArray, TLengthStyledSystem } from 'styled-system';
 
 export { SystemStyleObject } from '@styled-system/css';
 
+export { ObjectOrArray };
+
 export type RequiredTheme = Required<Theme>;
 
 export type StyleProps = BackgroundProps &

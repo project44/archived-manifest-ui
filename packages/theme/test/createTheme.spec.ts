@@ -10,18 +10,9 @@ describe('@manifest-ui/theme - createTheme', () => {
 
   it('should support overrides', () => {
     const theme = createTheme({
-      sizes: { small: '50px' },
+      colors: { text: 'black' },
     });
 
-    expect(theme.sizes.small).toEqual('50px');
-  });
-
-  it('should support partial overrides', () => {
-    const theme = createTheme({
-      sizes: { small: '50px' },
-    });
-
-    expect(theme.sizes.small).toEqual('50px');
-    expect(theme.borderWidths.small).toEqual(2);
+    expect(theme.colors.text).toEqual('black');
   });
 });
