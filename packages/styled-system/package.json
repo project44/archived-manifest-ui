@@ -19,7 +19,6 @@
     "csstype": "^3.0.10",
     "lodash.get": "^4.4.2",
     "lodash.isnumber": "^3.0.3",
-    "lodash.merge": "^4.6.2",
-    "styled-system": "^5.1.5"
+    "lodash.merge": "^4.6.2"
   }
 }

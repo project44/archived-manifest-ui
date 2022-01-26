@@ -9,6 +9,9 @@
       "path": "packages/config"
     },
     {
+      "path": "packages/image"
+    },
+    {
       "path": "packages/layout"
     },
     {
