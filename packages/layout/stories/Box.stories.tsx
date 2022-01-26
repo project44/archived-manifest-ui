@@ -6,4 +6,4 @@ export default {
   component: Box,
 };
 
-export const Default = () => <Box>hello world</Box>;
+export const Default = () => <Box>hello world!</Box>;
