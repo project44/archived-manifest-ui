@@ -39,9 +39,7 @@ _coming soon_ ✨
 
 ### Commands
 
-**`yarn playroom`**: starts the Playroom prototyping environment.
-
-**`yarn storybook`**: starts Storybook for building and testing components.
+**`yarn dev`**: starts Storybook for building and testing components.
 
 **`yarn build`**: run build for all component packages.
 
