@@ -1,13 +1,16 @@
-name: Release
+name: Release Workflow
 
 on:
   push:
+    paths:
+      - '.changeset/**'
+      - 'packages/**'
     branches:
       - main
 
 jobs:
   release:
-    name: Publish & Deploy
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -15,19 +18,24 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js 14.x
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14.x
+          node-version: 16.x
 
       - name: Install Dependencies
         run: yarn --immutable
 
-      - name: Create release PR or publish to npm
-        uses: changesets/action@master
+      - name: Build packages
+        run: yarn build
+
+      - name: Create release Pull Request or publish to NPM
+        id: changesets
+        uses: changesets/action@v1
         with:
+          commit: 'ci(changesets): version packages'
           version: yarn run version
           publish: yarn release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
