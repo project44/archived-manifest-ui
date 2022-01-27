@@ -16,6 +16,7 @@ module.exports = {
     postcss: false,
     emotionAlias: false,
   },
+  staticDirs: ['public'],
   webpackFinal: async config => {
     return {
       ...config,
