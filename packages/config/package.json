@@ -1,7 +1,7 @@
 {
   "name": "@manifest-ui/config",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.0",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
