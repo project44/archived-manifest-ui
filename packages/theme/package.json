@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/theme",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -16,7 +16,7 @@
   "author": "project44",
   "license": "MIT",
   "dependencies": {
-    "@manifest-ui/styled-system": "^0.0.0",
+    "@manifest-ui/styled-system": "^1.0.0",
     "lodash.merge": "^4.6.2"
   }
 }
