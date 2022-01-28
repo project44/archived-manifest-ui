@@ -1,9 +1,15 @@
 # @manifest-ui/icons
 
-## 0.0.5
+## 0.0.6
+
 ### Patch Changes
 
+- Updated dependencies []:
+  - @manifest-ui/icon@0.0.2
 
+## 0.0.5
+
+### Patch Changes
 
 - [#122](https://github.com/project44/manifest-ui/pull/122) [`673598c`](https://github.com/project44/manifest-ui/commit/673598c6ae79e667f2933a8adaf9fd763998e464) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Patch all components
 
