@@ -97,12 +97,12 @@ export const StyledTypography = styled('span', {
     fontWeight: 'semibold',
     letterSpacing: 'normal',
 
-    ...(size === 'medium' && {
+    ...(size === 'large' && {
       fontSize: 6,
       lineHeight: 3,
     }),
 
-    ...(size === 'small' && {
+    ...(size === 'medium' && {
       fontSize: 7,
       lineHeight: 4,
     }),
