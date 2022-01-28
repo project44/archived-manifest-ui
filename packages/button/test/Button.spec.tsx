@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { Button, ButtonProps } from '../src';
 import { render, screen, testA11y, triggerPress } from '../../../test/utils';
-import { Button } from '../src';
 
 describe('@manifest-ui/button', () => {
   it('should pass accessibility', async () => {
@@ -65,5 +65,23 @@ describe('@manifest-ui/button', () => {
 
     expect(button).toHaveAttribute('aria-disabled');
     expect(button).not.toHaveAttribute('tabIndex');
+  });
+
+  it.each(['brand', 'danger'])('should render %s colorTheme', colorTheme => {
+    render(<Button colorTheme={colorTheme as ButtonProps['colorTheme']}>Click Me</Button>);
+
+    expect(screen.getByRole('button')).toBeInTheDocument();
+  });
+
+  it.each(['medium', 'large'])('should render %s size', size => {
+    render(<Button size={size as ButtonProps['size']}>Click Me</Button>);
+
+    expect(screen.getByRole('button')).toBeInTheDocument();
+  });
+
+  it.each(['filled', 'outlined', 'text', 'tonal'])('should render %s variant', variant => {
+    render(<Button variant={variant as ButtonProps['variant']}>Click Me</Button>);
+
+    expect(screen.getByRole('button')).toBeInTheDocument();
   });
 });
