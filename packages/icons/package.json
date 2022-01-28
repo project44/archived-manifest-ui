@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/icons",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -14,7 +14,7 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/icon": "^0.0.0",
+    "@manifest-ui/icon": "^0.1.0",
     "lodash.map": "^4.6.0"
   }
 }
