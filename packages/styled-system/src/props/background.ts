@@ -30,7 +30,10 @@ const config: Configs = {
     property: 'backgroundColor',
     scale: 'colors',
   },
-  backgroundImage: true,
+  backgroundImage: {
+    property: 'backgroundImage',
+    scale: 'colors',
+  },
   backgroundSize: true,
   backgroundPosition: true,
   backgroundRepeat: true,

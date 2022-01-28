@@ -36,6 +36,12 @@ export const defaultTheme: Theme = {
       800: '#a3324f',
       900: '#7d2a47',
     },
+    gradient: {
+      0: `linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)`,
+      20: `linear-gradient(0deg, rgba(10, 21, 33, 0.2), rgba(10, 21, 33, 0.2)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+      40: `linear-gradient(0deg, rgba(10, 21, 33, 0.4), rgba(10, 21, 33, 0.4)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+      60: `linear-gradient(0deg, rgba(10, 21, 33, 0.6), rgba(10, 21, 33, 0.6)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+    },
     neutral: {
       50: '#FAFAFB',
       100: '#F4F4F5',
