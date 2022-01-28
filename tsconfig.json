@@ -9,6 +9,12 @@
       "path": "packages/config"
     },
     {
+      "path": "packages/icon"
+    },
+    {
+      "path": "packages/icons"
+    },
+    {
       "path": "packages/image"
     },
     {

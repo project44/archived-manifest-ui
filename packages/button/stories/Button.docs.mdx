@@ -1,4 +1,4 @@
-import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta, Props, Story } from '../../../.storybook/components';
 import { Button } from '../src';
 
 <Meta title="Components/Button" component={Button} />
@@ -15,14 +15,12 @@ yarn add @manifest-ui/button
 import { Button } from '@manifest-ui/button';
 ```
 
-### Default
-
 <Canvas>
-  <Story name="Default">
-    <Button>Default</Button>
-  </Story>
+  <Story id="components-button--base" />
 </Canvas>
 
-#### Props
+<Props />
 
-<ArgsTable of={Button} />
+### With Icons
+
+<Story id="components-button--with-icons" />
