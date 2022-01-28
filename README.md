@@ -27,7 +27,7 @@
   </a>
 </p>
 
-Themeable design system built using [Stitches] and [Radix] for project44.
+Themeable design system built using [Emotion] and [Radix] for project44.
 
 ## Documentation
 
@@ -35,15 +35,17 @@ Our documentation site lives at [p44design.systems]. You'll be able to find deta
 
 ## Installation
 
-Install `@manifest-ui/react` and necessary peer dependencies in your project with your package manager of choice:
+Install `@manifest-ui/[package_name]` and necessary peer dependencies in your project with your package manager of choice:
 
 ```sh
 # with npm
-npm install @manifest-ui/react
+npm install @manifest-ui/[package_name]
 
 # with yarn
-yarn add @manifest-ui/react
+yarn add @manifest-ui/[package_name]
 ```
+
+All Manifest UI packages can be found on [NPM].
 
 ## Usage
 
@@ -77,6 +79,7 @@ We love collaborating with folks inside and outside of project44 and welcome con
 > 👉 See the [contributing docs] for more info on code style, testing, coverage, and troubleshooting
 
 [p44design.systems]: https://p44design.systems
-[stitches]: https://stitches.dev/
+[emotion]: https://emotion.sh/docs/introduction
 [radix]: https://www.radix-ui.com/
 [contributing docs]: CONTRIBUTING.md
+[NPM]: https://www.npmjs.com/search?q=%40manifest-ui
