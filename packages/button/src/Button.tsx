@@ -8,9 +8,9 @@ export interface ButtonOptions {
   /**
    * The button color theme.
    *
-   * @default 'brand'
+   * @default 'gradient'
    */
-  colorTheme?: 'brand' | 'danger';
+  colorTheme?: 'brand' | 'danger' | 'gradient';
   /**
    * Icon added after the button text.
    */
@@ -89,25 +89,18 @@ const StyledButton = styled('button', {
     color: 'neutral.50',
 
     ...(colorTheme === 'brand' && {
-      backgroundImage: 'linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)',
+      backgroundColor: 'brand.500',
 
       '&:hover, &[data-hover]': {
-        backgroundImage:
-          'linear-gradient(0deg, rgba(10, 21, 33, 0.2), rgba(10, 21, 33, 0.2)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)',
+        backgroundColor: 'brand.600',
       },
 
       '&:focus, &[data-focus]': {
-        backgroundImage:
-          'linear-gradient(0deg, rgba(10, 21, 33, 0.4), rgba(10, 21, 33, 0.4)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)',
+        backgroundColor: 'brand.700',
       },
 
       '&:active, &[data-active]': {
-        backgroundImage:
-          'linear-gradient(0deg, rgba(10, 21, 33, 0.6), rgba(10, 21, 33, 0.6)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)',
-      },
-
-      '&[disabled], &[aria-disabled=true], &[data-disabled]': {
-        backgroundImage: 'linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)',
+        backgroundColor: 'brand.800',
       },
     }),
 
@@ -124,6 +117,22 @@ const StyledButton = styled('button', {
 
       '&:active, &[data-active]': {
         backgroundColor: 'danger.800',
+      },
+    }),
+
+    ...(colorTheme === 'gradient' && {
+      backgroundImage: 'gradient.0',
+
+      '&:hover, &[data-hover]': {
+        backgroundImage: 'gradient.20',
+      },
+
+      '&:focus, &[data-focus]': {
+        backgroundImage: 'gradient.40',
+      },
+
+      '&:active, &[data-active]': {
+        backgroundImage: 'gradient.60',
       },
     }),
   }),
@@ -214,7 +223,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const {
       as = 'button',
       children: childrenProp,
-      colorTheme = 'brand',
+      colorTheme = 'gradient',
       endIcon,
       href,
       isActive,
