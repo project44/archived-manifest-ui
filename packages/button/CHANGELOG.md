@@ -1,5 +1,11 @@
 # @manifest-ui/button
 
+## 0.0.3
+
+### Patch Changes
+
+- [#126](https://github.com/project44/manifest-ui/pull/126) [`7bcbb7a`](https://github.com/project44/manifest-ui/commit/7bcbb7a1c32387b87a035bcf514f8a2049810ca8) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Removing the fab component as the DS is not ready for this
+
 ## 0.0.2
 
 ### Patch Changes
