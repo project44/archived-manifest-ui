@@ -25,11 +25,9 @@
     "lint:eslint": "yarn run beemo eslint",
     "lint:types": "yarn run beemo typescript --noEmit --emitDeclarationOnly false",
     "prepare": "husky install && beemo create-config babel eslint prettier",
-    "release": "yarn build && changeset publish",
     "storybook:dev": "start-storybook -p 6006",
     "storybook:build": "build-storybook -o dist",
-    "test": "yarn run beemo jest",
-    "version": "changeset version && yarn"
+    "test": "yarn run beemo jest"
   },
   "workspaces": [
     "packages/*"
