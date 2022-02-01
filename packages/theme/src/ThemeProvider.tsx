@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { ThemeContext as EmotionContext } from '@emotion/react';
-import merge from 'lodash.merge';
-import { Theme } from './types';
+import { PartialTheme, Theme } from './types';
+import { theme as defaultTheme } from './theme';
+import { mergeTheme } from './utils';
 
 export interface ThemeProviderProps {
   children?: React.ReactNode;
-  theme: Partial<Theme>;
+  theme?: PartialTheme;
 }
 
-export const ThemeContext = React.createContext<Theme>({} as Theme);
+export const ThemeContext = React.createContext<Theme>(defaultTheme);
 
 export const useTheme = () => React.useContext(ThemeContext);
 
@@ -18,12 +18,8 @@ export function ThemeProvider(props: ThemeProviderProps) {
   const outerTheme = useTheme();
 
   const theme = React.useMemo(() => {
-    return merge({}, outerTheme, localTheme) as Theme;
+    return mergeTheme(outerTheme, localTheme);
   }, [localTheme, outerTheme]);
 
-  return (
-    <ThemeContext.Provider value={theme}>
-      <EmotionContext.Provider value={theme}>{children}</EmotionContext.Provider>
-    </ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;
 }

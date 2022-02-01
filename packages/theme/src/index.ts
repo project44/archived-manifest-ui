@@ -1,4 +1,3 @@
-export * from './createTheme';
-export * from './defaultTheme';
+export * from './theme';
 export * from './ThemeProvider';
 export * from './types';

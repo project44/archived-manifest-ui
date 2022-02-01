@@ -122,7 +122,6 @@ export interface Theme {
   lineHeights?: ObjectOrArray<CSS.Property.LineHeight<Length>>;
   letterSpacings?: ObjectOrArray<CSS.Property.LetterSpacing<Length>>;
   mediaQueries?: { [size: string]: string };
-  opacities?: ObjectOrArray<CSS.Property.Opacity>;
   radii?: ObjectOrArray<CSS.Property.BorderRadius<Length>>;
   shadows?: ObjectOrArray<CSS.Property.BoxShadow>;
   sizes?: ObjectOrArray<CSS.Property.Height<{}> | CSS.Property.Width<{}>>;

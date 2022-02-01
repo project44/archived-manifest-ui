@@ -15,8 +15,11 @@
   },
   "author": "project44",
   "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0"
+  },
   "dependencies": {
     "@manifest-ui/styled-system": "^0.0.2",
-    "lodash.merge": "^4.6.2"
+    "deepmerge": "^4.2.2"
   }
 }

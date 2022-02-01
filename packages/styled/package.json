@@ -22,10 +22,6 @@
   },
   "dependencies": {
     "@manifest-ui/styled-system": "^0.0.2",
-    "@manifest-ui/theme": "^0.0.2",
-    "lodash.get": "^4.4.2",
-    "lodash.isempty": "^4.4.0",
-    "lodash.mergewith": "^4.6.2",
     "lodash.omitby": "^4.6.0"
   }
 }

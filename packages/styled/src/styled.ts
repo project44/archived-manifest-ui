@@ -1,9 +1,7 @@
 import { CreateStyled, StyledProps } from './types';
 import { css, SystemStyleObject } from '@manifest-ui/styled-system';
 import { shouldForwardProp as defaultShouldForwardProp } from './shouldForwardProp';
-import { defaultTheme } from '@manifest-ui/theme';
 import emotionStyled from '@emotion/styled';
-import isEmpty from 'lodash.isempty';
 import { isStyleProp } from './isStyleProp';
 import omitBy from 'lodash.omitby';
 
@@ -33,9 +31,7 @@ export function createStyled(): CreateStyled<StyledOptions> {
 
     const styleResolver = (stylesArg: any) => {
       const styles = (props: StyledProps) => {
-        const { size: sizeProp, sx, theme: themeProp, variant: variantProp, ...other } = props;
-
-        const theme = isEmpty(themeProp) ? defaultTheme : themeProp;
+        const { size: sizeProp, sx, theme, variant: variantProp, ...other } = props;
 
         const componentTheme = theme?.components?.[themeKey];
         const overrides = componentTheme?.overrides;
