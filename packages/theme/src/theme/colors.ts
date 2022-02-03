@@ -20,14 +20,14 @@ export type Fill =
   | 'red'
   | 'yellow';
 
-export type Gradient = 'gradient-0' | 'gradient-20' | 'gradient-40' | 'gradient-60';
+export type Gradient = 0 | 20 | 40 | 60;
 
 export type Status = 'danger' | 'success' | 'warning';
 
 export const black: CSS.Property.Color = '#000000';
 
 export const background: Record<Background, CSS.Property.Color> = {
-  body: '#FFFFFF',
+  body: '',
   card: '',
   footer: '',
   header: '',
@@ -200,7 +200,14 @@ export const fill: Record<Fill, Record<Color, CSS.Property.Color>> = {
   },
 };
 
-export const primary: Record<Color & Gradient, CSS.Property.Color> = {
+const gradient: Record<Gradient, CSS.Property.BackgroundImage> = {
+  0: `linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)`,
+  20: `linear-gradient(0deg, rgba(10, 21, 33, 0.2), rgba(10, 21, 33, 0.2)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+  40: `linear-gradient(0deg, rgba(10, 21, 33, 0.4), rgba(10, 21, 33, 0.4)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+  60: `linear-gradient(0deg, rgba(10, 21, 33, 0.6), rgba(10, 21, 33, 0.6)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+};
+
+export const primary: Record<Color, CSS.Property.Color> & Record<'gradient', typeof gradient> = {
   50: '#ECF4FE',
   100: '#C9E1FB',
   200: '#95C5F8',
@@ -211,10 +218,7 @@ export const primary: Record<Color & Gradient, CSS.Property.Color> = {
   700: '#00458E',
   800: '#003772',
   900: '#002956',
-  'gradient.0': `linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)`,
-  'gradient.20': `linear-gradient(0deg, rgba(10, 21, 33, 0.2), rgba(10, 21, 33, 0.2)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
-  'gradient.40': `linear-gradient(0deg, rgba(10, 21, 33, 0.4), rgba(10, 21, 33, 0.4)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
-  'gradient.60': `linear-gradient(0deg, rgba(10, 21, 33, 0.6), rgba(10, 21, 33, 0.6)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+  gradient,
 };
 
 export const neutral: Record<Color, CSS.Property.Color> = {
