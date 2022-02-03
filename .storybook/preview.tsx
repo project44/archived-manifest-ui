@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { defaultTheme, ThemeProvider } from '@manifest-ui/theme';
+import { Provider } from '@manifest-ui/provider';
 import { Story } from '@storybook/react';
 
 export const decorators = [
   (StoryFn: Story) => (
-    <ThemeProvider theme={defaultTheme}>
+    <Provider>
       <StoryFn />
-    </ThemeProvider>
+    </Provider>
   ),
 ];
 

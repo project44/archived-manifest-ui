@@ -1,4 +1,12 @@
-import { Cache, Prop, Props, ResponsiveArray, ResponsiveObject, Scale, Theme } from '../types';
+import {
+  Cache,
+  Prop,
+  Props,
+  ResponsiveArray,
+  ResponsiveObject,
+  Scale,
+  SystemTheme,
+} from '../types';
 import get from 'lodash.get';
 import { SystemConfig } from './systemConfig';
 
@@ -13,7 +21,7 @@ export function parseBreakpoints(breakpoints: Prop<string | number>) {
 export function parseResponsiveStyle(options: {
   cache: Cache;
   props: Props;
-  propValue: Array<string | number | ((theme: Theme | undefined) => string | number)>;
+  propValue: Array<string | number | ((theme: SystemTheme | undefined) => string | number)>;
   scale: Scale;
   systemConfig: SystemConfig;
 }) {
@@ -24,7 +32,7 @@ export function parseResponsiveStyle(options: {
 
   propValue.slice(0, mediaQueries.length).forEach((item, index) => {
     const media = mediaQueries[index];
-    const value = typeof item === 'function' ? item(props.theme as Theme) : item;
+    const value = typeof item === 'function' ? item(props.theme as SystemTheme) : item;
     const style = systemConfig(value, scale, props);
 
     styles = !media
@@ -39,7 +47,7 @@ export function parseResponsiveObject(options: {
   cache: Cache;
   props: Props;
   propValue: {
-    [x: string]: string | number | ((theme: Theme | undefined) => string | number);
+    [x: string]: string | number | ((theme: SystemTheme | undefined) => string | number);
   };
   scale: Scale;
   systemConfig: SystemConfig;
@@ -52,7 +60,7 @@ export function parseResponsiveObject(options: {
   for (const key in propValue) {
     const breakpoint = breakpoints[key];
     const item = propValue[key];
-    const value = typeof item === 'function' ? item(props.theme as Theme) : item;
+    const value = typeof item === 'function' ? item(props.theme as SystemTheme) : item;
     const style = systemConfig(value, scale, props);
 
     if (!breakpoint) {
@@ -68,7 +76,7 @@ export function parseResponsiveObject(options: {
 }
 
 export function responsive(styles?: Record<string, any>) {
-  return (theme: Theme) => {
+  return (theme: SystemTheme) => {
     const result: { [key: string]: any } = {};
     const breakpoints = get(theme, 'breakpoints', defaultBreakpoints) as Prop<string | number>;
 

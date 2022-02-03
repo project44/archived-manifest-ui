@@ -15,24 +15,16 @@ const StyledIconButton = styled(Button, {
   justifyContent: 'center',
   padding: 0,
 
-  ...(size === 'large' && { height: 40, width: 40 }),
-  ...(size === 'medium' && { height: 32, width: 32 }),
+  ...(size === 'medium' && { height: 40, width: 40 }),
+  ...(size === 'small' && { height: 32, width: 32 }),
   ...(variant === 'outlined' && { padding: 0 }),
 }));
 
 export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
   (props: IconButtonProps, ref) => {
-    const { size = 'large', variant = 'filled', ...other } = props;
+    const { size = 'medium', variant = 'filled', ...other } = props;
 
-    return (
-      <StyledIconButton
-        className="manifest-ui-icon-button"
-        ref={ref}
-        size={size}
-        variant={variant}
-        {...other}
-      />
-    );
+    return <StyledIconButton ref={ref} size={size} variant={variant} {...other} />;
   },
 );
 

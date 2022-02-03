@@ -9,24 +9,20 @@ describe('@manifest-ui/styled - styled', () => {
     expect(TestComponent).toHaveProperty('displayName', 'TestComponent');
   });
 
-  it('should use to default theme', () => {
-    const Button = styled('button', {
-      themeKey: 'button',
-    })({
-      backgroundColor: 'brand.500',
-    });
-
-    render(<Button>Hello</Button>);
-
-    expect(screen.getByText('Hello')).toHaveStyle('background-color: #0072EC');
-  });
-
   it('should handle being called without options', () => {
+    const theme = {
+      colors: {
+        primary: {
+          500: '#0072EC',
+        },
+      },
+    };
+
     const Button = styled('button')({
-      backgroundColor: 'brand.500',
+      backgroundColor: 'primary.500',
     });
 
-    render(<Button>Hello</Button>);
+    render(<Button theme={theme}>Hello</Button>);
 
     expect(screen.getByText('Hello')).toHaveStyle('background-color: #0072EC');
   });
@@ -39,14 +35,17 @@ describe('@manifest-ui/styled - styled', () => {
       },
       components: {
         button: {
-          overrides: {
-            width: 'medium',
+          slots: {
+            root: {
+              width: 'medium',
+            },
           },
         },
       },
     };
 
     const Button = styled('button', {
+      slot: 'root',
       themeKey: 'button',
     })({
       width: 'small',
@@ -57,7 +56,7 @@ describe('@manifest-ui/styled - styled', () => {
     expect(screen.getByText('Hello')).toHaveStyle('width: 300px');
   });
 
-  it('should support theme  variants', () => {
+  it('should support theme variants', () => {
     const theme = {
       components: {
         button: {
@@ -135,11 +134,20 @@ describe('@manifest-ui/styled - styled', () => {
     expect(screen.getByText('Hello')).toHaveStyle('height: 200px');
   });
 
-  it('should support the sx prop', () => {
+  it('should support the sx prop as the highest priority', () => {
     const theme = {
       sizes: {
         small: 200,
         medium: 300,
+      },
+      components: {
+        button: {
+          variants: {
+            outlined: {
+              border: '1px solid pink',
+            },
+          },
+        },
       },
     };
 
