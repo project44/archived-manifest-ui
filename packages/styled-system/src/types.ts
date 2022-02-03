@@ -39,13 +39,13 @@ export type CSSWithMultiValues = {
 };
 
 export interface ComponentOverride {
-  overrides?: SystemStyleObject;
+  slots?: Record<string, SystemStyleObject>;
   sizes?: Record<string, SystemStyleObject>;
   variants?: Record<string, SystemStyleObject>;
 }
 
 export interface FunctionCSSInterpolation {
-  (theme: Theme): CSSObject;
+  (theme: SystemTheme): CSSObject;
 }
 
 export type Length = string | 0 | number;
@@ -54,7 +54,7 @@ export type ObjectOrArray<T, K extends keyof any = keyof any> =
   | T[]
   | Record<K, T | Record<K, T> | T[]>;
 
-export type Prop<T> = T | ResponsiveValue<T> | ((theme: Theme) => T | ResponsiveValue<T>);
+export type Prop<T> = T | ResponsiveValue<T> | ((theme: SystemTheme) => T | ResponsiveValue<T>);
 
 type PropertyValue<K extends keyof SystemCSSProperties> = ThemeThunk<
   ResponsiveValue<boolean | number | string | SystemCSSProperties[K]>
@@ -109,15 +109,15 @@ export interface SystemCSSProperties
 
 export type SystemStyleObject = CSSObject | FunctionCSSInterpolation;
 
-export interface Theme {
+export interface SystemTheme {
   borders?: ObjectOrArray<CSS.Property.Border<{}>>;
   borderStyles?: ObjectOrArray<CSS.Property.Border<{}>>;
   borderWidths?: ObjectOrArray<CSS.Property.BorderWidth<Length>>;
   breakpoints?: ObjectOrArray<number | string | symbol>;
   colors?: ObjectOrArray<CSS.Property.Color>;
   components?: Record<string, ComponentOverride>;
-  fontSizes?: ObjectOrArray<CSS.Property.FontSize<number>>;
   fonts?: ObjectOrArray<CSS.Property.FontFamily>;
+  fontSizes?: ObjectOrArray<CSS.Property.FontSize<string | number>>;
   fontWeights?: ObjectOrArray<CSS.Property.FontWeight>;
   lineHeights?: ObjectOrArray<CSS.Property.LineHeight<Length>>;
   letterSpacings?: ObjectOrArray<CSS.Property.LetterSpacing<Length>>;
@@ -130,4 +130,4 @@ export interface Theme {
   zIndices?: ObjectOrArray<CSS.Property.ZIndex>;
 }
 
-export type ThemeThunk<T> = T | ((theme: Theme) => T);
+export type ThemeThunk<T> = T | ((theme: SystemTheme) => T);

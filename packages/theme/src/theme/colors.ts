@@ -1,13 +1,48 @@
-import { Mode } from '../types';
+import * as CSS from 'csstype';
 
-export const EMPHASIS_COLORS = {
-  disabled: 'rgba(10, 21, 33, 0.32)',
-  high: '#0A1521',
-  low: '#80858C',
-  medium: '#49515A',
+export type Background = 'body' | 'card' | 'footer' | 'header';
+
+export type Color = 50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
+
+export type Emphasis = 'disabled' | 'primary' | 'secondary' | 'tertiary';
+
+export type Fill =
+  | 'blue'
+  | 'brown'
+  | 'cerulean'
+  | 'cyan'
+  | 'green'
+  | 'indigo'
+  | 'mint'
+  | 'orange'
+  | 'pink'
+  | 'purple'
+  | 'red'
+  | 'yellow';
+
+export type Gradient = 'gradient-0' | 'gradient-20' | 'gradient-40' | 'gradient-60';
+
+export type Status = 'danger' | 'success' | 'warning';
+
+export const black: CSS.Property.Color = '#000000';
+
+export const background: Record<Background, CSS.Property.Color> = {
+  body: '#FFFFFF',
+  card: '',
+  footer: '',
+  header: '',
 };
 
-export const FILL_COLORS = {
+export const border: CSS.Property.Color = '#D5D7D9';
+
+export const emphasis: Record<Emphasis, CSS.Property.Color> = {
+  disabled: 'rgba(10, 21, 33, 0.32)',
+  primary: '#0A1521',
+  secondary: '#80858C',
+  tertiary: '#49515A',
+};
+
+export const fill: Record<Fill, Record<Color, CSS.Property.Color>> = {
   blue: {
     50: '#e1f5fd',
     100: '#b3e5fb',
@@ -165,33 +200,24 @@ export const FILL_COLORS = {
   },
 };
 
-export const MAIN_COLORS = {
-  black: '#000000',
-
-  brand: {
-    50: '#ECF4FE',
-    100: '#C9E1FB',
-    200: '#95C5F8',
-    300: '#62A9F4',
-    400: '#308DF1',
-    500: '#0072EC',
-    600: '#005CBE',
-    700: '#00458E',
-    800: '#003772',
-    900: '#002956',
-  },
-
-  brandGradient: {
-    0: `linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)`,
-    20: `linear-gradient(0deg, rgba(10, 21, 33, 0.2), rgba(10, 21, 33, 0.2)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
-    40: `linear-gradient(0deg, rgba(10, 21, 33, 0.4), rgba(10, 21, 33, 0.4)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
-    60: `linear-gradient(0deg, rgba(10, 21, 33, 0.6), rgba(10, 21, 33, 0.6)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
-  },
-
-  white: '#FFFFFF',
+export const primary: Record<Color & Gradient, CSS.Property.Color> = {
+  50: '#ECF4FE',
+  100: '#C9E1FB',
+  200: '#95C5F8',
+  300: '#62A9F4',
+  400: '#308DF1',
+  500: '#0072EC',
+  600: '#005CBE',
+  700: '#00458E',
+  800: '#003772',
+  900: '#002956',
+  'gradient.0': `linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)`,
+  'gradient.20': `linear-gradient(0deg, rgba(10, 21, 33, 0.2), rgba(10, 21, 33, 0.2)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+  'gradient.40': `linear-gradient(0deg, rgba(10, 21, 33, 0.4), rgba(10, 21, 33, 0.4)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+  'gradient.60': `linear-gradient(0deg, rgba(10, 21, 33, 0.6), rgba(10, 21, 33, 0.6)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
 };
 
-export const NEUTRAL_COLORS = {
+export const neutral: Record<Color, CSS.Property.Color> = {
   50: '#FAFAFB',
   100: '#F4F4F5',
   200: '#D5D7D9',
@@ -204,7 +230,7 @@ export const NEUTRAL_COLORS = {
   900: '#0A1521',
 };
 
-export const STATUS_COLOR = {
+export const status: Record<Status, Record<Color, CSS.Property.Color>> = {
   danger: {
     50: '#fbe5ea',
     100: '#f6becb',
@@ -245,17 +271,4 @@ export const STATUS_COLOR = {
   },
 };
 
-export const colors = {
-  colors: {
-    emphasis: EMPHASIS_COLORS,
-    fill: FILL_COLORS,
-    main: MAIN_COLORS,
-    modes: {
-      dark: {},
-      light: {},
-    },
-    neutral: NEUTRAL_COLORS,
-    status: STATUS_COLOR,
-  },
-  mode: 'light' as Mode,
-};
+export const white: CSS.Property.Color = '#FFFFFF';

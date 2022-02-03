@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { PartialTheme, Theme } from './types';
-import { theme as defaultTheme } from './theme';
-import { mergeTheme } from './utils';
+import { theme as defaultTheme, Theme } from './theme';
+import { mergeTheme, ThemeInput } from './utils';
+import { ThemeContext as EmotionContext } from '@emotion/react';
 
 export interface ThemeProviderProps {
   children?: React.ReactNode;
-  theme?: PartialTheme;
+  theme?: ThemeInput;
 }
 
 export const ThemeContext = React.createContext<Theme>(defaultTheme);
@@ -21,5 +21,9 @@ export function ThemeProvider(props: ThemeProviderProps) {
     return mergeTheme(outerTheme, localTheme);
   }, [localTheme, outerTheme]);
 
-  return <ThemeContext.Provider value={theme}>{children}</ThemeContext.Provider>;
+  return (
+    <ThemeContext.Provider value={theme}>
+      <EmotionContext.Provider value={theme}>{children}</EmotionContext.Provider>
+    </ThemeContext.Provider>
+  );
 }

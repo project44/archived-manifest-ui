@@ -1,8 +1,5 @@
 import * as React from 'react';
 import { ComponentProps, shouldForwardProp, styled } from '@manifest-ui/styled';
-import { Typography } from '@manifest-ui/typography';
-
-const props = new Set(['colorTheme']);
 
 export interface ButtonOptions {
   /**
@@ -10,7 +7,7 @@ export interface ButtonOptions {
    *
    * @default 'gradient'
    */
-  colorTheme?: 'brand' | 'danger' | 'gradient';
+  colorTheme?: 'primary' | 'danger' | 'gradient';
   /**
    * Icon added after the button text.
    */
@@ -34,9 +31,9 @@ export interface ButtonOptions {
   /**
    * The size of the button.
    *
-   * @default 'large'
+   * @default 'medium'
    */
-  size?: 'medium' | 'large';
+  size?: 'medium' | 'small';
   /**
    * Icon added before the button text.
    */
@@ -61,7 +58,7 @@ export type ButtonProps = ComponentProps<typeof StyledButton>;
 
 const StyledButton = styled('button', {
   label: 'Button',
-  shouldForwardProp: (prop: string) => shouldForwardProp(prop) && !props.has(prop),
+  shouldForwardProp: (prop: string) => shouldForwardProp(prop) && prop !== 'colorTheme',
   themeKey: 'button',
 })<ButtonOptions>(({ colorTheme, variant }) => ({
   alignItems: 'center',
@@ -88,51 +85,51 @@ const StyledButton = styled('button', {
   ...(variant === 'filled' && {
     color: 'neutral.50',
 
-    ...(colorTheme === 'brand' && {
-      backgroundColor: 'brand.500',
+    ...(colorTheme === 'primary' && {
+      backgroundColor: 'primary.500',
 
       '&:hover, &[data-hover]': {
-        backgroundColor: 'brand.600',
+        backgroundColor: 'primary.600',
       },
 
       '&:focus, &[data-focus]': {
-        backgroundColor: 'brand.700',
+        backgroundColor: 'primary.700',
       },
 
       '&:active, &[data-active]': {
-        backgroundColor: 'brand.800',
+        backgroundColor: 'primary.800',
       },
     }),
 
     ...(colorTheme === 'danger' && {
-      backgroundColor: 'danger.500',
+      backgroundColor: 'status.danger.500',
 
       '&:hover, &[data-hover]': {
-        backgroundColor: 'danger.600',
+        backgroundColor: 'status.danger.600',
       },
 
       '&:focus, &[data-focus]': {
-        backgroundColor: 'danger.700',
+        backgroundColor: 'status.danger.700',
       },
 
       '&:active, &[data-active]': {
-        backgroundColor: 'danger.800',
+        backgroundColor: 'status.danger.800',
       },
     }),
 
     ...(colorTheme === 'gradient' && {
-      backgroundImage: 'gradient.0',
+      backgroundImage: 'primary.gradient.0',
 
       '&:hover, &[data-hover]': {
-        backgroundImage: 'gradient.20',
+        backgroundImage: 'primary.gradient.20',
       },
 
       '&:focus, &[data-focus]': {
-        backgroundImage: 'gradient.40',
+        backgroundImage: 'primary.gradient.40',
       },
 
       '&:active, &[data-active]': {
-        backgroundImage: 'gradient.60',
+        backgroundImage: 'primary.gradient.60',
       },
     }),
   }),
@@ -180,43 +177,71 @@ const StyledButton = styled('button', {
   }),
 
   ...(variant === 'tonal' && {
-    backgroundColor: 'danger.50',
-    borderColor: 'danger.50',
+    backgroundColor: 'status.danger.50',
+    borderColor: 'status.danger.50',
     borderStyle: 'solid',
     borderWidth: 1,
-    color: 'danger.500',
+    color: 'status.danger.500',
     px: '0.938rem',
     py: '0.438rem',
 
     '&:hover, &[data-hover]': {
-      borderColor: 'danger.500',
+      borderColor: 'status.danger.500',
     },
 
     '&:focus, &[data-focus]': {
-      backgroundColor: 'danger.100',
-      borderColor: 'danger.500',
+      backgroundColor: 'status.danger.100',
+      borderColor: 'status.danger.500',
     },
 
     '&:active, &[data-active]': {
-      backgroundColor: 'danger.100',
-      borderColor: 'danger.500',
+      backgroundColor: 'status.danger.100',
+      borderColor: 'status.danger.500',
     },
   }),
 }));
 
-const StyledEndIcon = styled('span')({
+const StyledEndIcon = styled('span', {
+  label: 'ButtonEndIcon',
+  slot: 'endIcon',
+  themeKey: 'button',
+})({
   alignSelf: 'center',
   display: 'inline-flex',
   flexShrink: 0,
   ml: 2,
 });
 
-const StyledStartIcon = styled('span')({
+const StyledStartIcon = styled('span', {
+  label: 'ButtonStartIcon',
+  slot: 'startIcon',
+  themeKey: 'button',
+})({
   alignSelf: 'center',
   display: 'inline-flex',
   flexShrink: 0,
   mr: 2,
 });
+
+const StyledButtonText = styled('span', {
+  label: 'ButtonText',
+  slot: 'text',
+  themeKey: 'button',
+})(({ size }) => ({
+  fontFamily: 'body',
+  fontWeight: 'semibold',
+  letterSpacing: 'normal',
+
+  ...(size === 'medium' && {
+    fontSize: 'medium',
+    lineHeight: 'large',
+  }),
+
+  ...(size === 'small' && {
+    fontSize: 'small',
+    lineHeight: 'medium',
+  }),
+}));
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (props: ButtonProps, ref) => {
@@ -229,7 +254,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       isActive,
       isDisabled,
       rel,
-      size = 'large',
+      size = 'medium',
       startIcon,
       target,
       tabIndex,
@@ -257,17 +282,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     let children = childrenProp;
 
     if (typeof children === 'string') {
-      children = (
-        <Typography className="manifest-ui-button__text" size={size} variant="button">
-          {children}
-        </Typography>
-      );
+      children = <StyledButtonText size={size}>{children}</StyledButtonText>;
     }
 
     return (
       <StyledButton
         as={as}
-        className="manifest-ui-button"
         colorTheme={colorTheme}
         data-active={isActive ? '' : null}
         data-disabled={isDisabled ? '' : null}
@@ -276,13 +296,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...ariaProps}
         {...other}
       >
-        {startIcon && (
-          <StyledStartIcon className="manifest-ui-button__start-icon">{startIcon}</StyledStartIcon>
-        )}
+        {startIcon && <StyledStartIcon>{startIcon}</StyledStartIcon>}
         {children}
-        {endIcon && (
-          <StyledEndIcon className="manifest-ui-button__end-icon">{endIcon}</StyledEndIcon>
-        )}
+        {endIcon && <StyledEndIcon>{endIcon}</StyledEndIcon>}
       </StyledButton>
     );
   },

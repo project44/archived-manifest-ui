@@ -15,6 +15,10 @@ interface StyledOptions {
    */
   shouldForwardProp?(prop: string): boolean;
   /**
+   * Name of the component slot. Useful for overriding nested elements within a component from the theme.
+   */
+  slot?: string;
+  /**
    * The theme key to determine component overrides.
    */
   themeKey?: string;
@@ -22,7 +26,12 @@ interface StyledOptions {
 
 export function createStyled(): CreateStyled<StyledOptions> {
   return (tag: any, options?: StyledOptions) => {
-    const { label, shouldForwardProp = defaultShouldForwardProp, themeKey = '' } = options ?? {};
+    const {
+      label,
+      shouldForwardProp = defaultShouldForwardProp,
+      slot: slotOption = 'root',
+      themeKey = '',
+    } = options ?? {};
 
     const emotionResolver = emotionStyled(tag as React.ComponentType<any>, {
       label,
@@ -34,14 +43,15 @@ export function createStyled(): CreateStyled<StyledOptions> {
         const { size: sizeProp, sx, theme, variant: variantProp, ...other } = props;
 
         const componentTheme = theme?.components?.[themeKey];
-        const overrides = componentTheme?.overrides;
+        const slots = componentTheme?.slots;
+        const slot = slots?.[slotOption];
 
         const sizes = componentTheme?.sizes;
         const variants = componentTheme?.variants;
 
         const baseStyles =
           typeof stylesArg === 'function' ? stylesArg({ ...props, theme }) : stylesArg;
-        const mergedStyles = Object.assign({}, baseStyles, overrides);
+        const mergedStyles = Object.assign({}, baseStyles, slot);
         const styleProps = omitBy(other, (_, prop) => !isStyleProp(prop));
 
         const size = sizeProp ? sizes?.[sizeProp] : {};
@@ -50,9 +60,9 @@ export function createStyled(): CreateStyled<StyledOptions> {
         const composedStyles: SystemStyleObject = Object.assign(
           {},
           mergedStyles,
-          styleProps,
           size,
           variant,
+          styleProps,
           sx,
         );
         const computedCSS = css(composedStyles)(theme);
