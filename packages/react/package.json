@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/react",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -20,16 +20,16 @@
   },
   "dependencies": {
     "@manifest-ui/button": "0.0.3",
-    "@manifest-ui/css-baseline": "0.0.0",
+    "@manifest-ui/css-baseline": "0.0.1",
     "@manifest-ui/icon": "0.0.2",
     "@manifest-ui/image": "0.0.2",
     "@manifest-ui/layout": "0.0.2",
     "@manifest-ui/link": "0.0.1",
-    "@manifest-ui/provider": "0.0.1",
-    "@manifest-ui/spinner": "0.0.1",
+    "@manifest-ui/provider": "0.0.2",
+    "@manifest-ui/spinner": "0.0.2",
     "@manifest-ui/styled": "^0.0.2",
     "@manifest-ui/table": "0.0.1",
     "@manifest-ui/typography": "0.0.2",
-    "@manifest-ui/visually-hidden": "0.0.1"
+    "@manifest-ui/visually-hidden": "0.0.2"
   }
 }
