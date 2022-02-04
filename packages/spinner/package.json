@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/spinner",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "@manifest-ui/styled": "^0.0.2",
-    "@manifest-ui/visually-hidden": "^0.0.1"
+    "@manifest-ui/visually-hidden": "^0.0.2"
   }
 }
