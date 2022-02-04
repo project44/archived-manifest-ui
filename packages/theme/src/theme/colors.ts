@@ -200,14 +200,7 @@ export const fill: Record<Fill, Record<Color, CSS.Property.Color>> = {
   },
 };
 
-const gradient: Record<Gradient, CSS.Property.BackgroundImage> = {
-  0: `linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)`,
-  20: `linear-gradient(0deg, rgba(10, 21, 33, 0.2), rgba(10, 21, 33, 0.2)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
-  40: `linear-gradient(0deg, rgba(10, 21, 33, 0.4), rgba(10, 21, 33, 0.4)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
-  60: `linear-gradient(0deg, rgba(10, 21, 33, 0.6), rgba(10, 21, 33, 0.6)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
-};
-
-export const primary: Record<Color, CSS.Property.Color> & Record<'gradient', typeof gradient> = {
+export const primary: Record<Color & Gradient, CSS.Property.Color> = {
   50: '#ECF4FE',
   100: '#C9E1FB',
   200: '#95C5F8',
@@ -218,7 +211,10 @@ export const primary: Record<Color, CSS.Property.Color> & Record<'gradient', typ
   700: '#00458E',
   800: '#003772',
   900: '#002956',
-  gradient,
+  'gradient-0': `linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)`,
+  'gradient-20': `linear-gradient(0deg, rgba(10, 21, 33, 0.2), rgba(10, 21, 33, 0.2)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+  'gradient-40': `linear-gradient(0deg, rgba(10, 21, 33, 0.4), rgba(10, 21, 33, 0.4)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
+  'gradient-60': `linear-gradient(0deg, rgba(10, 21, 33, 0.6), rgba(10, 21, 33, 0.6)), linear-gradient(90deg, #0072EC 0%, #8C18E2 191.59%)`,
 };
 
 export const neutral: Record<Color, CSS.Property.Color> = {

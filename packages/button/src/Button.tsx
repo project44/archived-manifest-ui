@@ -118,18 +118,18 @@ const StyledButton = styled('button', {
     }),
 
     ...(colorTheme === 'gradient' && {
-      backgroundImage: 'primary.gradient.0',
+      backgroundImage: 'primary.gradient-0',
 
       '&:hover, &[data-hover]': {
-        backgroundImage: 'primary.gradient.20',
+        backgroundImage: 'primary.gradient-20',
       },
 
       '&:focus, &[data-focus]': {
-        backgroundImage: 'primary.gradient.40',
+        backgroundImage: 'primary.gradient-40',
       },
 
       '&:active, &[data-active]': {
-        backgroundImage: 'primary.gradient.60',
+        backgroundImage: 'primary.gradient-60',
       },
     }),
   }),
