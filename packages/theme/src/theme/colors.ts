@@ -38,8 +38,8 @@ export const border: CSS.Property.Color = '#D5D7D9';
 export const emphasis: Record<Emphasis, CSS.Property.Color> = {
   disabled: 'rgba(10, 21, 33, 0.32)',
   primary: '#0A1521',
-  secondary: '#80858C',
-  tertiary: '#49515A',
+  secondary: '#49515A',
+  tertiary: '#80858C',
 };
 
 export const fill: Record<Fill, Record<Color, CSS.Property.Color>> = {

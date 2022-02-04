@@ -33,6 +33,9 @@
       "path": "packages/styled-system"
     },
     {
+      "path": "packages/table"
+    },
+    {
       "path": "packages/theme"
     },
     {
