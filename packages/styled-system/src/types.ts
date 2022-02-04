@@ -35,6 +35,7 @@ export interface ColorMode {
   border?: CSS.Property.Color;
   emphasis?: Record<string, CSS.Property.Color>;
   fill?: Record<string, Partial<Color>>;
+  gradient?: CSS.Property.BackgroundImage;
   neutral?: Partial<Color>;
   primary?: Partial<Color>;
   secondary?: Partial<Color>;

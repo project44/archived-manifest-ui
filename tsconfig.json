@@ -6,6 +6,9 @@
       "path": "packages/button"
     },
     {
+      "path": "packages/checkbox"
+    },
+    {
       "path": "packages/color"
     },
     {
