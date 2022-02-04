@@ -30,6 +30,9 @@
       "path": "packages/provider"
     },
     {
+      "path": "packages/react"
+    },
+    {
       "path": "packages/spinner"
     },
     {

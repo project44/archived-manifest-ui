@@ -2212,6 +2212,22 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
+"@manifest-ui/provider@0.0.0":
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/@manifest-ui/provider/-/provider-0.0.0.tgz#36a2e86b8ed6ea3fdfc1543196bde90c13fd2ac0"
+  integrity sha512-uQvYlmFgqT0bXjpmIUOnsZA4mJzC0v2yI2WOUqtmpwkUIXAdQ4ISsOOhtJqTXlaIXdEA2koiIDXdorgI0Frwpg==
+  dependencies:
+    "@manifest-ui/css-baseline" "^0.0.0"
+    "@manifest-ui/theme" "^0.0.2"
+
+"@manifest-ui/theme@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@manifest-ui/theme/-/theme-0.0.2.tgz#3cd480536c5293edd1451b256ea8d432a1523ec6"
+  integrity sha512-CnlPUjFHgJ7K2FZhBUd80gdK9HZU7Nkf6+l/xYLbabkvoJgLr48HaFy2ep8slUzc45kRisaX5hmxBdKyCPS5Cg==
+  dependencies:
+    "@manifest-ui/styled-system" "^0.0.2"
+    lodash.merge "^4.6.2"
+
 "@manypkg/find-root@^1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@manypkg/find-root/-/find-root-1.1.0.tgz#a62d8ed1cd7e7d4c11d9d52a8397460b5d4ad29f"
