@@ -1,0 +1,25 @@
+{
+  "name": "@manifest-ui/spinner",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "module": "./esm/index.js",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "esm/**/*.{js,map}",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:project-44/manifest-ui.git",
+    "directory": "packages/spinner"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0"
+  },
+  "dependencies": {
+    "@manifest-ui/styled": "^0.0.2",
+    "@manifest-ui/visually-hidden": "^0.0.0"
+  }
+}
