@@ -6,46 +6,19 @@ describe('@manifest-ui/hooks - usePagination', () => {
     expect(usePagination).toBeDefined();
   });
 
-  it('should support pagination', () => {
-    let page = 1;
+  it('should return the correct number of pages', () => {
+    let currentPage = 1;
     let totalRowCount = 10;
 
-    const { result, rerender } = renderHook(() => usePagination({ page, totalRowCount }));
+    const { result, rerender } = renderHook(() =>
+      usePagination({ page: currentPage, totalRowCount }),
+    );
 
     let { pages } = result.current;
 
-    // Disables previous and next pages if page count equals 1.
-    expect(pages).toHaveLength(3);
-    expect(pages[0]).toHaveProperty('type', 'previous');
-    expect(pages[0]).toHaveProperty('isDisabled', true);
-    expect(pages[2]).toHaveProperty('type', 'next');
-    expect(pages[2]).toHaveProperty('isDisabled', true);
+    // Should display 1 page number and next and previous
+    expect(pages).toHaveLength(1);
 
-    totalRowCount = 20;
-
-    rerender();
-
-    ({ pages } = result.current);
-
-    // Enables next button if page count is greater than 1
-    expect(pages[0]).toHaveProperty('type', 'previous');
-    expect(pages[0]).toHaveProperty('isDisabled', true);
-    expect(pages[3]).toHaveProperty('type', 'next');
-    expect(pages[3]).toHaveProperty('isDisabled', false);
-
-    page = 2;
-
-    rerender();
-
-    ({ pages } = result.current);
-
-    // Enables previous and disables next button if page equals total page count.
-    expect(pages[0]).toHaveProperty('type', 'previous');
-    expect(pages[0]).toHaveProperty('isDisabled', false);
-    expect(pages[3]).toHaveProperty('type', 'next');
-    expect(pages[3]).toHaveProperty('isDisabled', true);
-
-    page = 1;
     totalRowCount = 80;
 
     rerender();
@@ -53,11 +26,10 @@ describe('@manifest-ui/hooks - usePagination', () => {
     ({ pages } = result.current);
 
     // Display end dots
-    expect(pages).toHaveLength(9);
-    expect(pages[2]).toHaveProperty('children', 2);
-    expect(pages[6]).toHaveProperty('type', 'dots');
+    expect(pages).toHaveLength(7);
+    expect(pages.filter(item => item === 'dots')).toHaveLength(1);
 
-    page = 5;
+    currentPage = 5;
     totalRowCount = 80;
 
     rerender();
@@ -65,10 +37,10 @@ describe('@manifest-ui/hooks - usePagination', () => {
     ({ pages } = result.current);
 
     // Display start dots
-    expect(pages[2]).toHaveProperty('type', 'dots');
-    expect(pages[6]).toHaveProperty('children', 7);
+    expect(pages).toHaveLength(7);
+    expect(pages.filter(item => item === 'dots')).toHaveLength(1);
 
-    page = 5;
+    currentPage = 5;
     totalRowCount = 90;
 
     rerender();
@@ -76,7 +48,37 @@ describe('@manifest-ui/hooks - usePagination', () => {
     ({ pages } = result.current);
 
     // Display both dots
-    expect(pages[2]).toHaveProperty('type', 'dots');
-    expect(pages[6]).toHaveProperty('type', 'dots');
+    expect(pages).toHaveLength(7);
+    expect(pages.filter(item => item === 'dots')).toHaveLength(2);
+  });
+
+  it('should handle setting the correct page', () => {
+    const { result } = renderHook(() => usePagination({ totalRowCount: 100 }));
+
+    let { next, page, previous, setPage } = result.current;
+
+    act(() => {
+      setPage(5);
+    });
+
+    ({ next, page, previous, setPage } = result.current);
+
+    expect(page).toEqual(5);
+
+    act(() => {
+      next();
+    });
+
+    ({ next, page, previous, setPage } = result.current);
+
+    expect(page).toEqual(6);
+
+    act(() => {
+      previous();
+    });
+
+    ({ page, setPage } = result.current);
+
+    expect(page).toEqual(5);
   });
 });

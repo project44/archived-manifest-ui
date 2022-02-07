@@ -21,10 +21,12 @@
   "dependencies": {
     "@manifest-ui/button": "0.0.3",
     "@manifest-ui/css-baseline": "0.0.1",
+    "@manifest-ui/hooks": "0.0.0",
     "@manifest-ui/icon": "0.0.2",
     "@manifest-ui/image": "0.0.2",
     "@manifest-ui/layout": "0.0.2",
     "@manifest-ui/link": "0.0.1",
+    "@manifest-ui/pagination": "0.0.0",
     "@manifest-ui/provider": "0.0.2",
     "@manifest-ui/spinner": "0.0.2",
     "@manifest-ui/styled": "^0.0.2",

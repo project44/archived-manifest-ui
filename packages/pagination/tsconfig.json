@@ -10,6 +10,15 @@
   "include": ["src/**/*", "types/**/*", "../../types/**/*"],
   "references": [
     {
+      "path": "../button"
+    },
+    {
+      "path": "../icons"
+    },
+    {
+      "path": "../hooks"
+    },
+    {
       "path": "../styled"
     }
   ]

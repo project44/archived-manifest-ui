@@ -12,6 +12,9 @@
       "path": "packages/css-baseline"
     },
     {
+      "path": "packages/hooks"
+    },
+    {
       "path": "packages/icon"
     },
     {
@@ -25,6 +28,9 @@
     },
     {
       "path": "packages/link"
+    },
+    {
+      "path": "packages/pagination"
     },
     {
       "path": "packages/provider"
