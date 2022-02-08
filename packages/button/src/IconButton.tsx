@@ -13,11 +13,13 @@ const StyledIconButton = styled(Button, {
   themeKey: 'iconButton',
 })(({ size, variant }) => ({
   justifyContent: 'center',
-  padding: 0,
 
-  ...(size === 'medium' && { height: 40, width: 40 }),
-  ...(size === 'small' && { height: 32, width: 32 }),
-  ...(variant === 'outlined' && { padding: 0 }),
+  ...(size === 'medium' && { padding: 2 }),
+  ...(size === 'small' && { padding: 1 }),
+  ...(variant === 'outlined' && {
+    ...(size === 'medium' && { padding: '0.4375rem' }),
+    ...(size === 'small' && { padding: '0.1875rem' }),
+  }),
 }));
 
 export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(

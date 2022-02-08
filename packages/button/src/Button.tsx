@@ -70,7 +70,7 @@ const StyledButton = styled('button', {
   display: 'inline-flex',
   margin: 0,
   outline: 0,
-  px: 4,
+  px: 3,
   py: 2,
   transitionDuration: 'base',
   transitionProperty: 'colors',
@@ -140,8 +140,8 @@ const StyledButton = styled('button', {
     borderStyle: 'solid',
     borderWidth: 1,
     color: 'neutral.900',
-    px: '0.938rem',
-    py: '0.438rem',
+    px: '0.8125rem',
+    py: '0.4375rem',
 
     '&:hover, &[data-hover]': {
       backgroundColor: 'neutral.50',
