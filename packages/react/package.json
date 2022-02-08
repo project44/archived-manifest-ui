@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/react",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -19,14 +19,14 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/button": "0.0.3",
+    "@manifest-ui/button": "0.0.4",
     "@manifest-ui/css-baseline": "0.0.1",
-    "@manifest-ui/hooks": "0.0.0",
+    "@manifest-ui/hooks": "0.0.1",
     "@manifest-ui/icon": "0.0.2",
     "@manifest-ui/image": "0.0.2",
     "@manifest-ui/layout": "0.0.2",
     "@manifest-ui/link": "0.0.1",
-    "@manifest-ui/pagination": "0.0.0",
+    "@manifest-ui/pagination": "0.0.1",
     "@manifest-ui/provider": "0.0.2",
     "@manifest-ui/spinner": "0.0.2",
     "@manifest-ui/styled": "^0.0.2",
