@@ -16,6 +16,38 @@ import {
 
 export type Cache = Map<string, any>;
 
+export interface Color {
+  50: CSS.Property.Color;
+  100: CSS.Property.Color;
+  200: CSS.Property.Color;
+  300: CSS.Property.Color;
+  400: CSS.Property.Color;
+  500: CSS.Property.Color;
+  600: CSS.Property.Color;
+  700: CSS.Property.Color;
+  800: CSS.Property.Color;
+  900: CSS.Property.Color;
+}
+
+export interface ColorMode {
+  background?: Record<string, CSS.Property.Color>;
+  black?: CSS.Property.Color;
+  border?: CSS.Property.Color;
+  emphasis?: Record<string, CSS.Property.Color>;
+  fill?: Record<string, Partial<Color>>;
+  neutral?: Partial<Color>;
+  primary?: Partial<Color>;
+  secondary?: Partial<Color>;
+  status?: Record<string, Partial<Color>>;
+  white?: CSS.Property.Color;
+}
+
+export type Colors = ColorMode & {
+  modes?: {
+    [key in Mode]: ColorMode;
+  };
+};
+
 export interface ConfigStyle {
   defaultScale?: Array<string | number>;
   properties?: Array<keyof CSS.Properties | (string & {})>;
@@ -44,17 +76,21 @@ export interface ComponentOverride {
   variants?: Record<string, SystemStyleObject>;
 }
 
+export type Direction = 'ltr' | 'rtl';
+
 export interface FunctionCSSInterpolation {
-  (theme: SystemTheme): CSSObject;
+  (theme: Theme): CSSObject;
 }
 
 export type Length = string | 0 | number;
+
+export type Mode = 'dark' | 'light';
 
 export type ObjectOrArray<T, K extends keyof any = keyof any> =
   | T[]
   | Record<K, T | Record<K, T> | T[]>;
 
-export type Prop<T> = T | ResponsiveValue<T> | ((theme: SystemTheme) => T | ResponsiveValue<T>);
+export type Prop<T> = T | ResponsiveValue<T> | ((theme: Theme) => T | ResponsiveValue<T>);
 
 type PropertyValue<K extends keyof SystemCSSProperties> = ThemeThunk<
   ResponsiveValue<boolean | number | string | SystemCSSProperties[K]>
@@ -109,12 +145,12 @@ export interface SystemCSSProperties
 
 export type SystemStyleObject = CSSObject | FunctionCSSInterpolation;
 
-export interface SystemTheme {
+export interface Theme {
   borders?: ObjectOrArray<CSS.Property.Border<{}>>;
   borderStyles?: ObjectOrArray<CSS.Property.Border<{}>>;
   borderWidths?: ObjectOrArray<CSS.Property.BorderWidth<Length>>;
   breakpoints?: ObjectOrArray<number | string | symbol>;
-  colors?: ObjectOrArray<CSS.Property.Color>;
+  colors?: Colors;
   components?: Record<string, ComponentOverride>;
   fonts?: ObjectOrArray<CSS.Property.FontFamily>;
   fontSizes?: ObjectOrArray<CSS.Property.FontSize<string | number>>;
@@ -130,4 +166,4 @@ export interface SystemTheme {
   zIndices?: ObjectOrArray<CSS.Property.ZIndex>;
 }
 
-export type ThemeThunk<T> = T | ((theme: SystemTheme) => T);
+export type ThemeThunk<T> = T | ((theme: Theme) => T);

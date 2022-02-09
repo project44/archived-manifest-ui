@@ -11,6 +11,9 @@
   "references": [
     {
       "path": "../styled-system"
+    },
+    {
+      "path": "../themes"
     }
   ]
 }

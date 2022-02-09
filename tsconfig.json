@@ -6,6 +6,9 @@
       "path": "packages/button"
     },
     {
+      "path": "packages/color"
+    },
+    {
       "path": "packages/config"
     },
     {
@@ -52,6 +55,12 @@
     },
     {
       "path": "packages/theme"
+    },
+    {
+      "path": "packages/themes"
+    },
+    {
+      "path": "packages/types"
     },
     {
       "path": "packages/typography"

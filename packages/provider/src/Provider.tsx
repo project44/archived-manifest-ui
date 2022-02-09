@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { ThemeInput, ThemeProvider } from '@manifest-ui/theme';
 import { CSSBaseline } from '@manifest-ui/css-baseline';
+import { Theme } from '@manifest-ui/styled-system';
+import { ThemeProvider } from '@manifest-ui/theme';
 
 export interface ProviderProps {
   /**
@@ -16,7 +17,7 @@ export interface ProviderProps {
   /**
    * The application theme.
    */
-  theme?: ThemeInput;
+  theme?: Theme;
 }
 
 export function Provider(props: ProviderProps) {

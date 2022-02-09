@@ -1,1 +1,3 @@
-export type Length = string | 0 | number;
+import { Theme } from '@manifest-ui/styled-system';
+
+export type ThemeInput = { [P in keyof Theme]?: Partial<Theme[P]> };

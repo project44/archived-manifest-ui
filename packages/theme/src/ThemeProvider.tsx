@@ -1,16 +1,14 @@
 import * as React from 'react';
-import { theme as defaultTheme, Theme } from './theme';
-import { mergeTheme, ThemeInput } from './utils';
 import { ThemeContext as EmotionContext } from '@emotion/react';
+import { mergeTheme } from './mergeTheme';
+import { ThemeContext } from './context';
+import { ThemeInput } from './types';
+import { useTheme } from './useTheme';
 
 export interface ThemeProviderProps {
   children?: React.ReactNode;
   theme?: ThemeInput;
 }
-
-export const ThemeContext = React.createContext<Theme>(defaultTheme);
-
-export const useTheme = () => React.useContext(ThemeContext);
 
 export function ThemeProvider(props: ThemeProviderProps) {
   const { children, theme: localTheme } = props;
