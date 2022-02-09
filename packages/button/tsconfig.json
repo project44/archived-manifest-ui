@@ -10,6 +10,9 @@
   "include": ["src/**/*", "types/**/*", "../../types/**/*"],
   "references": [
     {
+      "path": "../color"
+    },
+    {
       "path": "../styled"
     },
     {
