@@ -1,7 +1,6 @@
 import merge from 'deepmerge';
-import { Theme } from '../theme';
-
-export type ThemeInput = { [P in keyof Theme]?: Partial<Theme[P]> };
+import { Theme } from '@manifest-ui/styled-system';
+import { ThemeInput } from './types';
 
 /**
  * Deeply merge theme values.
@@ -10,10 +9,10 @@ export type ThemeInput = { [P in keyof Theme]?: Partial<Theme[P]> };
  * responsive property values. Instead we pick the last array if available falling
  * back to original array value from the default theme.
  */
-export function mergeTheme(defaultTheme: Theme, themeInput?: ThemeInput): Theme {
-  if (!themeInput) return defaultTheme;
+export function mergeTheme(theme: Theme, themeInput?: ThemeInput): Theme {
+  if (!themeInput) return theme;
 
-  return merge(defaultTheme, themeInput, {
+  return merge(theme, themeInput, {
     arrayMerge: (leftArray: unknown[], rightArray: unknown[]) => rightArray || leftArray,
   }) as Theme;
 }

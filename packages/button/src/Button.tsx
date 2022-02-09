@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ComponentProps, shouldForwardProp, styled } from '@manifest-ui/styled';
+import { gradient, gradientActive, gradientFocus, gradientHover } from '@manifest-ui/color';
 
 export interface ButtonOptions {
   /**
@@ -60,7 +61,7 @@ const StyledButton = styled('button', {
   label: 'Button',
   shouldForwardProp: (prop: string) => shouldForwardProp(prop) && prop !== 'colorTheme',
   themeKey: 'button',
-})<ButtonOptions>(({ colorTheme, variant }) => ({
+})<ButtonOptions>(({ colorTheme, variant, theme }) => ({
   alignItems: 'center',
   appearance: 'none',
   border: 0,
@@ -70,6 +71,7 @@ const StyledButton = styled('button', {
   display: 'inline-flex',
   margin: 0,
   outline: 0,
+  position: 'relative',
   px: 3,
   py: 2,
   transitionDuration: 'base',
@@ -118,18 +120,18 @@ const StyledButton = styled('button', {
     }),
 
     ...(colorTheme === 'gradient' && {
-      backgroundImage: 'primary.gradient-0',
+      backgroundImage: gradient(theme),
 
       '&:hover, &[data-hover]': {
-        backgroundImage: 'primary.gradient-20',
+        backgroundImage: gradientHover(theme),
       },
 
       '&:focus, &[data-focus]': {
-        backgroundImage: 'primary.gradient-40',
+        backgroundImage: gradientFocus(theme),
       },
 
       '&:active, &[data-active]': {
-        backgroundImage: 'primary.gradient-60',
+        backgroundImage: gradientActive(theme),
       },
     }),
   }),

@@ -1,4 +1,4 @@
-import { CSSObject, SystemStyleObject, SystemTheme } from '@manifest-ui/styled-system';
+import { CSSObject, SystemStyleObject, Theme } from '@manifest-ui/styled-system';
 import { PropsOf } from '@emotion/react';
 
 export type PropsWithoutRef<P> = P extends any
@@ -99,17 +99,13 @@ export interface CreateStyledComponent<
    */
   <AdditionalProps extends {} = {}>(
     ...styles: Array<
-      Interpolation<
-        ComponentProps & SpecificComponentProps & AdditionalProps & { theme: SystemTheme }
-      >
+      Interpolation<ComponentProps & SpecificComponentProps & AdditionalProps & { theme: Theme }>
     >
   ): StyledComponent<ComponentProps & AdditionalProps, SpecificComponentProps, JSXProps>;
 
   (
     template: TemplateStringsArray,
-    ...styles: Array<
-      Interpolation<ComponentProps & SpecificComponentProps & { theme: SystemTheme }>
-    >
+    ...styles: Array<Interpolation<ComponentProps & SpecificComponentProps & { theme: Theme }>>
   ): StyledComponent<ComponentProps, SpecificComponentProps, JSXProps>;
 
   /**
@@ -118,9 +114,7 @@ export interface CreateStyledComponent<
   <AdditionalProps extends {}>(
     template: TemplateStringsArray,
     ...styles: Array<
-      Interpolation<
-        ComponentProps & SpecificComponentProps & AdditionalProps & { theme: SystemTheme }
-      >
+      Interpolation<ComponentProps & SpecificComponentProps & AdditionalProps & { theme: Theme }>
     >
   ): StyledComponent<ComponentProps & AdditionalProps, SpecificComponentProps, JSXProps>;
 }
@@ -192,6 +186,6 @@ export interface StyledProps {
   as?: React.ElementType;
   size?: string;
   sx?: SystemStyleObject;
-  theme?: SystemTheme;
+  theme?: Theme;
   variant?: string;
 }

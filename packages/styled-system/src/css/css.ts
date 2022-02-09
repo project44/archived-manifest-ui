@@ -13,7 +13,7 @@ import {
   typography,
 } from '../props';
 import { compose, responsive, SystemConfig } from '../core';
-import { SystemStyleObject, SystemTheme } from '../types';
+import { SystemStyleObject, Theme } from '../types';
 import get from 'lodash.get';
 
 const systemProps = compose(
@@ -59,7 +59,7 @@ systemProps.propNames.forEach((propName: string) => {
 });
 
 export function css(stylesOrFn: SystemStyleObject) {
-  return (theme: SystemTheme = {}) => {
+  return (theme: Theme = {}) => {
     if (!stylesOrFn) return {};
 
     const result: { [key: string]: any } = {};

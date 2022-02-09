@@ -1,7 +1,9 @@
 import { CreateStyled, StyledProps } from './types';
-import { css, SystemStyleObject } from '@manifest-ui/styled-system';
+import { css, SystemStyleObject, Theme } from '@manifest-ui/styled-system';
 import { shouldForwardProp as defaultShouldForwardProp } from './shouldForwardProp';
+import { defaultTheme } from '@manifest-ui/themes';
 import emotionStyled from '@emotion/styled';
+import isEmpty from 'lodash.isempty';
 import { isStyleProp } from './isStyleProp';
 import omitBy from 'lodash.omitby';
 
@@ -38,39 +40,43 @@ export function createStyled(): CreateStyled<StyledOptions> {
       shouldForwardProp,
     });
 
-    const styleResolver = (stylesArg: any) => {
-      const styles = (props: StyledProps) => {
-        const { size: sizeProp, sx, theme, variant: variantProp, ...other } = props;
+    const styleResolver = (...args: any[]) => {
+      const styleArgs = args.map(interpolation => {
+        return (props: StyledProps) => {
+          const { size: sizeProp, sx, theme: themeProp, variant: variantProp, ...other } = props;
 
-        const componentTheme = theme?.components?.[themeKey];
-        const slots = componentTheme?.slots;
-        const slot = slots?.[slotOption];
+          const theme: Theme | undefined = isEmpty(themeProp) ? defaultTheme : themeProp;
+          const componentTheme = theme?.components?.[themeKey];
+          const slots = componentTheme?.slots;
+          const slot = slots?.[slotOption] ?? {};
 
-        const sizes = componentTheme?.sizes;
-        const variants = componentTheme?.variants;
+          const sizes = componentTheme?.sizes;
+          const variants = componentTheme?.variants;
 
-        const baseStyles =
-          typeof stylesArg === 'function' ? stylesArg({ ...props, theme }) : stylesArg;
-        const mergedStyles = Object.assign({}, baseStyles, slot);
-        const styleProps = omitBy(other, (_, prop) => !isStyleProp(prop));
+          const baseStyles =
+            typeof interpolation === 'function'
+              ? interpolation({ ...props, theme })
+              : interpolation;
+          const mergedStyles = Object.assign({}, baseStyles, slot);
+          const styleProps = omitBy(other, (_, prop) => !isStyleProp(prop));
 
-        const size = sizeProp ? sizes?.[sizeProp] : {};
-        const variant = variantProp ? variants?.[variantProp] : {};
+          const size = sizeProp ? sizes?.[sizeProp] : {};
+          const variant = variantProp ? variants?.[variantProp] : {};
 
-        const composedStyles: SystemStyleObject = Object.assign(
-          {},
-          mergedStyles,
-          size,
-          variant,
-          styleProps,
-          sx,
-        );
-        const computedCSS = css(composedStyles)(theme);
+          const composedStyles: SystemStyleObject = Object.assign(
+            {},
+            mergedStyles,
+            size,
+            variant,
+            styleProps,
+            sx,
+          );
 
-        return computedCSS;
-      };
+          return css(composedStyles)(theme);
+        };
+      });
 
-      return emotionResolver(styles);
+      return emotionResolver(styleArgs);
     };
 
     return styleResolver;

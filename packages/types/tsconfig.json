@@ -8,15 +8,4 @@
   "exclude": ["dts", "tests"],
   "extends": "../../tsconfig.options.json",
   "include": ["src/**/*", "types/**/*", "../../types/**/*"],
-  "references": [
-    {
-      "path": "../color"
-    },
-    {
-      "path": "../styled"
-    },
-    {
-      "path": "../styled"
-    }
-  ]
 }

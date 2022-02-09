@@ -13,6 +13,9 @@
       "path": "../css-baseline"
     },
     {
+      "path": "../styled-system"
+    },
+    {
       "path": "../theme"
     }
   ]

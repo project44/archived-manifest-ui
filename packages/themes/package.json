@@ -1,6 +1,6 @@
 {
-  "name": "@manifest-ui/button",
-  "version": "0.0.4",
+  "name": "@manifest-ui/themes",
+  "version": "0.0.0",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -11,15 +11,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:project-44/manifest-ui.git",
-    "directory": "packages/button"
+    "directory": "packages/themes"
   },
   "author": "project44",
-  "license": "MIT",
-  "peerDependencies": {
-    "react": "^16.8 || ^17.0"
-  },
-  "dependencies": {
-    "@manifest-ui/color": "^0.0.0",
-    "@manifest-ui/styled": "^0.0.2"
-  }
+  "license": "MIT"
 }

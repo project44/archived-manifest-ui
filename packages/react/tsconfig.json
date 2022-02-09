@@ -40,6 +40,9 @@
       "path": "../table"
     },
     {
+      "path": "../theme"
+    },
+    {
       "path": "../typography"
     },
     {
