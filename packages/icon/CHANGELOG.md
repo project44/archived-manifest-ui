@@ -1,5 +1,12 @@
 # @manifest-ui/icon
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [[`d3ca961`](https://github.com/project44/manifest-ui/commit/d3ca961f66d0d696b332ea688d98fac2fdf025e5)]:
+  - @manifest-ui/styled@0.0.3
+
 ## 0.0.2
 
 ### Patch Changes

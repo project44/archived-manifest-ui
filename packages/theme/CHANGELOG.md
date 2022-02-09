@@ -1,5 +1,14 @@
 # @manifest-ui/theme
 
+## 0.0.4
+
+### Patch Changes
+
+- [#140](https://github.com/project44/manifest-ui/pull/140) [`d3ca961`](https://github.com/project44/manifest-ui/commit/d3ca961f66d0d696b332ea688d98fac2fdf025e5) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Adding themes package
+
+- Updated dependencies [[`d3ca961`](https://github.com/project44/manifest-ui/commit/d3ca961f66d0d696b332ea688d98fac2fdf025e5)]:
+  - @manifest-ui/themes@0.0.1
+
 ## 0.0.3
 
 ### Patch Changes
