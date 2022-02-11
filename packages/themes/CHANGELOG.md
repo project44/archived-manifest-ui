@@ -1,5 +1,11 @@
 # @manifest-ui/themes
 
+## 0.1.0
+
+### Minor Changes
+
+- [#142](https://github.com/project44/manifest-ui/pull/142) [`e4f2c56`](https://github.com/project44/manifest-ui/commit/e4f2c56cada2e9398b0071e039f3394903d8bd14) Thanks [@eemahoney](https://github.com/eemahoney)! - VOC Now (legacy) theme added to package
+
 ## 0.0.2
 
 ### Patch Changes
