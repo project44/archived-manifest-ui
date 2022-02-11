@@ -168,6 +168,7 @@ export const defaultTheme = {
         '900': '#90722f',
       },
     },
+    gradient: 'linear-gradient(90deg, #0072EC 0%, #4e00c6 163.65%, #8c18e2 191.59%)',
     neutral: {
       '50': '#FAFAFB',
       '100': '#F4F4F5',
