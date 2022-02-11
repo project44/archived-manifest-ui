@@ -1,25 +1,26 @@
 {
-  "name": "@manifest-ui/button",
-  "version": "0.0.6",
+  "name": "@manifest-ui/checkbox",
+  "version": "0.0.1",
   "main": "./lib/index.js",
+  "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
   "files": [
     "dts/**/*.d.ts",
+    "esm/**/*.{js,map}",
     "lib/**/*.{js,map}",
     "src/**/*.{ts,tsx,json}"
   ],
   "repository": {
     "type": "git",
     "url": "git@github.com:project-44/manifest-ui.git",
-    "directory": "packages/button"
+    "directory": "packages/checkbox"
   },
-  "author": "project44",
-  "license": "MIT",
   "peerDependencies": {
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/color": "^0.0.1",
+    "@manifest-ui/hooks": "^0.0.1",
+    "@manifest-ui/icons": "^0.0.9",
     "@manifest-ui/styled": "^0.0.4"
   }
 }

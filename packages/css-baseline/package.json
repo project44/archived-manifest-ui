@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/css-baseline",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -16,6 +16,6 @@
   "author": "project44",
   "license": "MIT",
   "dependencies": {
-    "@manifest-ui/styled-system": "^0.0.3"
+    "@manifest-ui/styled-system": "^0.0.4"
   }
 }

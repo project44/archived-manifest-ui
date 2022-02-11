@@ -1,5 +1,12 @@
 # @manifest-ui/css-baseline
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [[`50c0fea`](https://github.com/project44/manifest-ui/commit/50c0feae2c35746a8c95ad3ef6f9b319884d4e2f)]:
+  - @manifest-ui/styled-system@0.0.4
+
 ## 0.0.2
 
 ### Patch Changes
