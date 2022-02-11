@@ -1,5 +1,25 @@
 # @manifest-ui/react
 
+## 0.1.9
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/pagination@0.0.3
+  - @manifest-ui/css-baseline@0.0.3
+  - @manifest-ui/styled@0.0.4
+  - @manifest-ui/theme@0.0.5
+  - @manifest-ui/provider@0.0.4
+  - @manifest-ui/button@0.0.6
+  - @manifest-ui/icon@0.0.4
+  - @manifest-ui/image@0.0.4
+  - @manifest-ui/layout@0.0.4
+  - @manifest-ui/link@0.0.3
+  - @manifest-ui/spinner@0.0.4
+  - @manifest-ui/table@0.0.3
+  - @manifest-ui/typography@0.0.4
+  - @manifest-ui/visually-hidden@0.0.4
+
 ## 0.1.8
 
 ### Patch Changes

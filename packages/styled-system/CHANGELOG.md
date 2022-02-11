@@ -1,5 +1,11 @@
 # @manifest-ui/styled-system
 
+## 0.0.4
+
+### Patch Changes
+
+- [#143](https://github.com/project44/manifest-ui/pull/143) [`50c0fea`](https://github.com/project44/manifest-ui/commit/50c0feae2c35746a8c95ad3ef6f9b319884d4e2f) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Adding checkbox package
+
 ## 0.0.3
 
 ### Patch Changes
