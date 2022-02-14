@@ -1,5 +1,12 @@
 # @manifest-ui/icons
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/icon@0.0.5
+
 ## 0.0.9
 
 ### Patch Changes

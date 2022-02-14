@@ -1,5 +1,12 @@
 # @manifest-ui/link
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.5
+
 ## 0.0.3
 
 ### Patch Changes

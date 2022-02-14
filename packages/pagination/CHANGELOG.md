@@ -1,5 +1,14 @@
 # @manifest-ui/pagination
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.5
+  - @manifest-ui/button@0.0.7
+  - @manifest-ui/icons@0.0.10
+
 ## 0.0.3
 
 ### Patch Changes

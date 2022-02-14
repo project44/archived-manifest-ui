@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/checkbox",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@manifest-ui/hooks": "^0.0.1",
-    "@manifest-ui/icons": "^0.0.9",
-    "@manifest-ui/styled": "^0.0.4"
+    "@manifest-ui/icons": "^0.0.10",
+    "@manifest-ui/styled": "^0.0.5"
   }
 }
