@@ -15,4 +15,9 @@ export const parameters = {
   viewMode: 'docs',
   previewTabs: { 'storybook/docs/panel': { index: -1 } },
   actions: { argTypesRegex: '^on.*' },
+  options: {
+    storySort: {
+      order: ['Welcome', 'Components'],
+    },
+  },
 };
