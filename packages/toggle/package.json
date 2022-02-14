@@ -1,24 +1,25 @@
 {
-  "name": "@manifest-ui/hooks",
-  "version": "0.0.1",
+  "name": "@manifest-ui/toggle",
+  "version": "0.0.0",
   "main": "./lib/index.js",
+  "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
   "files": [
     "dts/**/*.d.ts",
+    "esm/**/*.{js,map}",
     "lib/**/*.{js,map}",
     "src/**/*.{ts,tsx,json}"
   ],
   "repository": {
     "type": "git",
     "url": "git@github.com:project-44/manifest-ui.git",
-    "directory": "packages/hooks"
+    "directory": "packages/toggle"
   },
-  "author": "project44",
-  "license": "MIT",
   "peerDependencies": {
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "lodash.uniqueid": "^4.0.1"
+    "@manifest-ui/hooks": "^0.0.1",
+    "@manifest-ui/styled": "^0.0.5"
   }
 }

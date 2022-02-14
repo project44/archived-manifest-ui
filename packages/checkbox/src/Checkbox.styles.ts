@@ -6,101 +6,30 @@ const themeKey = 'checkbox';
 export const StyledCheckboxContainer = styled('div', {
   slot: 'container',
   themeKey,
-})(({ theme }) => ({
-  borderRadius: 'medium',
-  boxSizing: 'border-box',
-  h: 18,
-  minH: 18,
-  minW: 18,
-  outline: 0,
-  position: 'relative',
-  w: 18,
-
-  '&:focus': {
-    ['& > .manifestui-checkbox-control']: {
-      '&:after': {
-        backgroundImage: `linear-gradient(0deg, rgba(10, 21, 33, 0.4), rgba(10, 21, 33, 0.4)), ${
-          theme.colors?.gradient as string
-        }`,
-      },
-
-      '&:before': {
-        borderColor: 'neutral.700',
-      },
-    },
-  },
-}));
-
-export const StyledCheckboxControl = styled('div', {
-  slot: 'control',
-  themeKey,
 })({
-  alignItems: 'center',
-  borderRadius: 'inherit',
   boxSizing: 'border-box',
   color: 'white',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'center',
-  position: 'absolute',
-  transitionDuration: 'base',
-  transitionProperty: 'common',
-  width: '100%',
-
-  '&:after': {
-    backgroundImage: 'gradient',
-    borderRadius: 'inherit',
-    content: '""',
-    height: '100%',
-    left: 0,
-    opacity: 0,
-    position: 'absolute',
-    top: 0,
-    width: '100%',
-  },
-
-  '&:before': {
-    borderRadius: 'inherit',
-    borderColor: 'neutral.500',
-    borderStyle: 'solid',
-    borderWidth: 'medium',
-    boxSizing: 'border-box',
-    content: '""',
-    height: '100%',
-    left: 0,
-    position: 'absolute',
-    top: 0,
-    transitionDuration: 'base',
-    transitionProperty: 'colors',
-    width: '100%',
-  },
-
-  '&[data-checked]': {
-    '&:after': {
-      opacity: 1,
-    },
-
-    '&:before': {
-      opacity: 0,
-    },
-  },
+  h: 18,
+  position: 'relative',
+  w: 18,
 });
 
 export const StyledCheckboxIcon = styled(Check, {
   slot: 'icon',
   themeKey,
 })({
+  bottom: 0,
   fontSize: 18,
-  height: 18,
+  h: 18,
+  left: 0,
   opacity: 0,
-  width: 18,
+  position: 'absolute',
+  right: 0,
+  top: 0,
   transitionDuration: 'base',
   transitionProperty: 'common',
+  w: 18,
   zIndex: 1,
-
-  '&[data-checked]': {
-    opacity: 1,
-  },
 });
 
 export const StyledCheckboxLabel = styled('label', {
@@ -112,7 +41,9 @@ export const StyledCheckboxLabel = styled('label', {
   display: 'inline-flex',
   justifyContent: 'flex-start',
   position: 'relative',
-  width: 'auto',
+  verticalAlign: 'top',
+  width: 'initial',
+
   '&[data-disabled]': {
     cursor: 'not-allowed',
     opacity: 0.38,
@@ -122,46 +53,60 @@ export const StyledCheckboxLabel = styled('label', {
 export const StyledCheckboxInput = styled('input', {
   slot: 'input',
   themeKey,
-})(({ theme }) => ({
+})({
+  appearance: 'none',
+  backgroundColor: 'white',
+  borderColor: 'neutral.500',
+  borderRadius: 'medium',
+  borderStyle: 'solid',
+  borderWidth: 'large',
+  boxSizing: 'border-box',
+  color: 'white',
   cursor: 'pointer',
-  height: '100%',
-  left: 0,
-  margin: 0,
-  opacity: 0,
-  padding: 0,
-  position: 'absolute',
-  top: 0,
-  width: '100%',
+  h: 18,
+  m: 0,
+  outline: 0,
+  p: 0,
+  w: 18,
 
   '&:disabled': {
     cursor: 'not-allowed',
+    opacity: 0.38,
   },
 
-  '&:active': {
-    ['& ~ .manifestui-checkbox-control']: {
-      '&:after': {
-        backgroundImage: `linear-gradient(0deg, rgba(10, 21, 33, 0.6), rgba(10, 21, 33, 0.6)), ${
-          theme.colors?.gradient as string
-        }`,
-      },
+  '&:checked': {
+    backgroundImage: 'gradient.default',
+    border: 0,
 
-      '&:before': {
-        borderColor: 'neutral.800',
-      },
+    '& + .manifestui-checkbox-icon': {
+      opacity: 1,
     },
+
+    '&:focus': {
+      backgroundImage: 'gradient.focus',
+    },
+
+    '&:hover:not(&:focus)': {
+      backgroundImage: 'gradient.hover',
+    },
+  },
+
+  '&:focus': {
+    borderColor: 'neutral.700',
   },
 
   '&:hover': {
-    ['& ~ .manifestui-checkbox-control']: {
-      '&:after': {
-        backgroundImage: `linear-gradient(0deg, rgba(10, 21, 33, 0.2), rgba(10, 21, 33, 0.2)), ${
-          theme.colors?.gradient as string
-        }`,
-      },
-
-      '&:before': {
-        borderColor: 'neutral.600',
-      },
-    },
+    borderColor: 'neutral.600',
   },
-}));
+});
+
+export const StyledCheckboxText = styled('span', {
+  slot: 'text',
+  themeKey,
+})({
+  fontFamily: 'body',
+  fontSize: 'small',
+  letterSpacing: 'normal',
+  lineHeight: 'medium',
+  marginInlineStart: 3,
+});

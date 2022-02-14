@@ -1,18 +1,10 @@
 import * as React from 'react';
-import { act, render, screen, testA11y, userEvent } from '../../../test/utils';
-import { Checkbox } from '../src';
+import { act, render, screen, userEvent } from '../../../test/utils';
+import { Toggle } from '../src';
 
-describe('@manifest-ui/checkbox', () => {
-  it('should pass accessibility without text', async () => {
-    await testA11y(<Checkbox aria-label="Checkbox" />);
-  });
-
-  it('should pass accessibility with text', async () => {
-    await testA11y(<Checkbox>Checkbox</Checkbox>);
-  });
-
-  it('should render a checkbox and checking events', () => {
-    render(<Checkbox>Checkbox</Checkbox>);
+describe('@manifest-ui/Toggle', () => {
+  it('should render a Toggle and checking events', () => {
+    render(<Toggle>Toggle</Toggle>);
 
     const input = screen.getByRole('checkbox');
 
@@ -48,9 +40,9 @@ describe('@manifest-ui/checkbox', () => {
     const changeSpy = jest.fn();
 
     render(
-      <Checkbox isChecked onChange={changeSpy}>
-        Checkbox
-      </Checkbox>,
+      <Toggle isChecked onChange={changeSpy}>
+        Toggle
+      </Toggle>,
     );
 
     const input = screen.getByRole('checkbox');
@@ -66,9 +58,9 @@ describe('@manifest-ui/checkbox', () => {
     const onChange = jest.fn();
 
     render(
-      <Checkbox isReadOnly isChecked onChange={onChange}>
-        Checkbox
-      </Checkbox>,
+      <Toggle isReadOnly isChecked onChange={onChange}>
+        Toggle
+      </Toggle>,
     );
 
     const input = screen.getByRole('checkbox');
