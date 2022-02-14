@@ -16,7 +16,7 @@ export const StyledInput = styled('input', {
   slot: 'input',
   themeKey,
 })(
-  {
+  ({ theme }) => ({
     appearance: 'none',
     borderColor: 'neutral.200',
     borderRadius: 'medium',
@@ -35,7 +35,7 @@ export const StyledInput = styled('input', {
     resize: 'none',
     textAlign: 'left',
     transitionDuration: 'base',
-    transitionProperty: 'colors',
+    transitionProperty: 'common',
     width: '100%',
 
     '&::placeholder': {
@@ -60,12 +60,19 @@ export const StyledInput = styled('input', {
     },
 
     '&:focus': {
-      borderColor: 'primary.200',
+      borderColor: 'primary.500',
+      boxShadow: `0 0 0 2px ${theme.colors?.primary?.[200] as string}`,
+      outline: 'none',
     },
 
     '&[data-invalid]': {
       borderColor: 'status.danger.500',
       color: 'status.danger.500',
+
+      '&:focus': {
+        boxShadow: `0 0 0 2px ${theme.colors?.status?.danger?.[200] as string}`,
+        outline: 'none',
+      },
     },
 
     '&[data-has-endIcon]': {
@@ -75,7 +82,7 @@ export const StyledInput = styled('input', {
     '&[data-has-startIcon]': {
       ps: 48,
     },
-  },
+  }),
   ({ size }) => ({
     ...(size === 'medium' && { minH: 40 }),
     ...(size === 'small' && { minH: 32 }),

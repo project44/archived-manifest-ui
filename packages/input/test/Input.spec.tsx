@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { act, render, screen, testA11y, userEvent } from '../../../test/utils';
+import { render, screen, testA11y, userEvent } from '../../../test/utils';
 import { Input } from '../src';
 import { Person } from '@manifest-ui/icons';
 

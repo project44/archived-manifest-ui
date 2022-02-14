@@ -1,52 +1,17 @@
 import * as React from 'react';
-import { ComponentProps, styled } from '@manifest-ui/styled';
 import { KeyboardArrowLeft, KeyboardArrowRight } from '@manifest-ui/icons';
+import {
+  StyledPagination,
+  StyledPaginationButton,
+  StyledPaginationEllipsis,
+  StyledPaginationText,
+} from './Pagination.styles';
 import { usePagination, UsePaginationOptions } from '@manifest-ui/hooks';
-import { Button } from '@manifest-ui/button';
+import { ComponentProps } from '@manifest-ui/styled';
 
-export interface PaginationOptions extends UsePaginationOptions {
-  /**
-   * The pagination variant.
-   *
-   * @default 'text'
-   */
-  variant?: 'outlined' | 'text';
-}
-
-export type PaginationProps = ComponentProps<typeof StyledPagination>;
-
-const StyledPagination = styled('div', {
-  label: 'Pagination',
-  themeKey: 'pagination',
-})<PaginationOptions>({
-  alignItems: 'center',
-  boxSizing: 'border-box',
-  columnGap: '8px',
-  display: 'flex',
-  flexWrap: 'wrap',
-  justifyContent: 'flex-start',
-  rowGap: '8px',
-});
-
-const StyledEllipsis = styled('div', {
-  label: 'Pagination',
-  slot: 'ellipsis',
-  themeKey: 'pagination',
-})({
-  fontFamily: 'body',
-  fontSize: 'small',
-  fontWeight: 'semibold',
-  height: 'auto',
-  letterSpacing: 'normal',
-  lineHeight: 'large',
-  px: 3,
-  py: 2,
-  textAlign: 'center',
-});
-
-const StyledNextText = styled('span')({ paddingEnd: 1 });
-
-const StyledPreviousText = styled('span')({ paddingStart: 1 });
+export interface PaginationProps
+  extends Omit<ComponentProps<typeof StyledPagination>, 'onChange'>,
+    UsePaginationOptions {}
 
 export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
   (props: PaginationProps, ref) => {
@@ -58,7 +23,6 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
       rowsPerPage,
       siblings,
       totalRowCount,
-      variant = 'text',
       ...other
     } = props;
 
@@ -73,45 +37,53 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
     });
 
     return (
-      <StyledPagination ref={ref} {...other}>
-        <Button
+      <StyledPagination className="manifestui-pagination" ref={ref} {...other}>
+        <StyledPaginationButton
           aria-label="go to previous page"
-          isDisabled={page === 1}
+          className="manifestui-pagination-button"
+          disabled={page === 1}
           onClick={previous}
-          variant={variant}
         >
           <KeyboardArrowLeft />
-          {variant === 'outlined' && <StyledPreviousText>Previous</StyledPreviousText>}
-        </Button>
+          <StyledPaginationText className="manifestui-pagination-text" data-placement="end">
+            Previous
+          </StyledPaginationText>
+        </StyledPaginationButton>
 
         {pages.map((item, index) => (
           <React.Fragment key={`${item}_${index}`}>
-            {item === 'dots' && <StyledEllipsis>...</StyledEllipsis>}
+            {item === 'dots' && (
+              <StyledPaginationEllipsis className="manifestui-pagination-ellipsis">
+                ...
+              </StyledPaginationEllipsis>
+            )}
             {item !== 'dots' && (
-              <Button
+              <StyledPaginationButton
                 aria-current={item === page ? 'true' : undefined}
                 aria-label={`${item === page ? '' : 'go to '}page ${String(item)}`}
-                isActive={item === page}
+                className="manifestui-pagination-button"
+                data-active={item === page ? '' : undefined}
                 onClick={() => {
                   setPage(item as number);
                 }}
-                variant={variant}
               >
                 {item.toString()}
-              </Button>
+              </StyledPaginationButton>
             )}
           </React.Fragment>
         ))}
 
-        <Button
+        <StyledPaginationButton
           aria-label="go to next page"
-          isDisabled={page === pageCount}
+          className="manifestui-pagination-button"
+          disabled={page === pageCount}
           onClick={next}
-          variant={variant}
         >
-          {variant === 'outlined' && <StyledNextText>Next</StyledNextText>}
+          <StyledPaginationText className="manifestui-pagination-text" data-placement="start">
+            Next
+          </StyledPaginationText>
           <KeyboardArrowRight />
-        </Button>
+        </StyledPaginationButton>
       </StyledPagination>
     );
   },

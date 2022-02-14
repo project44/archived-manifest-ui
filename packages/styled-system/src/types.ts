@@ -50,7 +50,7 @@ export type Colors = ColorMode & {
 };
 
 export interface ConfigStyle {
-  defaultScale?: Array<string | number>;
+  defaultScale?: Scale;
   properties?: Array<keyof CSS.Properties | (string & {})>;
   property?: keyof CSS.Properties | (string & {});
   scale?: string;

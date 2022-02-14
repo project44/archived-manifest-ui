@@ -24,7 +24,7 @@ export const StyledRadioGroup = styled('div', {
 export const StyledRadioInput = styled('input', {
   slot: 'input',
   themeKey,
-})({
+})(({ theme }) => ({
   alignItems: 'center',
   appearance: 'none',
   backgroundColor: 'white',
@@ -41,6 +41,8 @@ export const StyledRadioInput = styled('input', {
   m: 0,
   outline: 0,
   p: 0,
+  transitionDuration: 'base',
+  transitionProperty: 'box-shadow',
   w: 20,
 
   '&:disabled': {
@@ -64,6 +66,8 @@ export const StyledRadioInput = styled('input', {
 
     '&:focus': {
       backgroundImage: 'gradient.focus',
+      boxShadow: `0 0 0 2px ${theme.colors?.primary?.[200] as string}`,
+      outline: 'none',
     },
 
     '&:hover:not(&:focus)': {
@@ -71,10 +75,10 @@ export const StyledRadioInput = styled('input', {
     },
   },
 
-  '&:hover': {
+  '&:hover:not(&:focus)': {
     borderColor: 'neutral.600',
   },
-});
+}));
 
 export const StyledRadioLabel = styled('label', {
   slot: 'root',

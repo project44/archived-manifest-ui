@@ -1,14 +1,8 @@
 import * as React from 'react';
-import { ComponentProps, shouldForwardProp, styled } from '@manifest-ui/styled';
-import { gradient, gradientActive, gradientFocus, gradientHover } from '@manifest-ui/color';
+import { StyledButton, StyledButtonIcon, StyledButtonText } from './Button.styles';
+import { ComponentProps } from '@manifest-ui/styled';
 
 export interface ButtonOptions {
-  /**
-   * The button color theme.
-   *
-   * @default 'gradient'
-   */
-  colorTheme?: 'primary' | 'danger' | 'gradient';
   /**
    * Icon added after the button text.
    */
@@ -30,12 +24,6 @@ export interface ButtonOptions {
    */
   rel?: string | undefined;
   /**
-   * The size of the button.
-   *
-   * @default 'medium'
-   */
-  size?: 'medium' | 'small';
-  /**
    * Icon added before the button text.
    */
   startIcon?: React.ReactElement;
@@ -47,210 +35,16 @@ export interface ButtonOptions {
    * The button type.
    */
   type?: 'button' | 'reset' | 'submit';
-  /**
-   * The button variant.
-   *
-   * @default 'filled'
-   */
-  variant?: 'filled' | 'outlined' | 'text' | 'tonal';
 }
 
-export type ButtonProps = ComponentProps<typeof StyledButton>;
-
-const StyledButton = styled('button', {
-  label: 'Button',
-  shouldForwardProp: (prop: string) => shouldForwardProp(prop) && prop !== 'colorTheme',
-  themeKey: 'button',
-})<ButtonOptions>(({ colorTheme, variant, theme }) => ({
-  alignItems: 'center',
-  appearance: 'none',
-  border: 0,
-  borderRadius: 'medium',
-  boxSizing: 'border-box',
-  cursor: 'pointer',
-  display: 'inline-flex',
-  margin: 0,
-  outline: 0,
-  position: 'relative',
-  px: 3,
-  py: 2,
-  transitionDuration: 'base',
-  transitionProperty: 'colors',
-  textDecoration: 'none',
-  userSelect: 'none',
-
-  '&[disabled], &[aria-disabled=true], &[data-disabled]': {
-    opacity: 0.32,
-    pointerEvents: 'none',
-  },
-
-  ...(variant === 'filled' && {
-    color: 'neutral.50',
-
-    ...(colorTheme === 'primary' && {
-      backgroundColor: 'primary.500',
-
-      '&:hover, &[data-hover]': {
-        backgroundColor: 'primary.600',
-      },
-
-      '&:focus, &[data-focus]': {
-        backgroundColor: 'primary.700',
-      },
-
-      '&:active, &[data-active]': {
-        backgroundColor: 'primary.800',
-      },
-    }),
-
-    ...(colorTheme === 'danger' && {
-      backgroundColor: 'status.danger.500',
-
-      '&:hover, &[data-hover]': {
-        backgroundColor: 'status.danger.600',
-      },
-
-      '&:focus, &[data-focus]': {
-        backgroundColor: 'status.danger.700',
-      },
-
-      '&:active, &[data-active]': {
-        backgroundColor: 'status.danger.800',
-      },
-    }),
-
-    ...(colorTheme === 'gradient' && {
-      backgroundImage: gradient(theme),
-
-      '&:hover, &[data-hover]': {
-        backgroundImage: gradientHover(theme),
-      },
-
-      '&:focus, &[data-focus]': {
-        backgroundImage: gradientFocus(theme),
-      },
-
-      '&:active, &[data-active]': {
-        backgroundImage: gradientActive(theme),
-      },
-    }),
-  }),
-
-  ...(variant === 'outlined' && {
-    backgroundColor: 'transparent',
-    borderColor: 'neutral.200',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    color: 'neutral.900',
-    px: '0.8125rem',
-    py: '0.4375rem',
-
-    '&:hover, &[data-hover]': {
-      backgroundColor: 'neutral.50',
-      borderColor: 'neutral.400',
-    },
-
-    '&:focus, &[data-focus]': {
-      backgroundColor: 'neutral.100',
-      borderColor: 'neutral.400',
-    },
-
-    '&:active, &[data-active]': {
-      backgroundColor: 'neutral.200',
-      borderColor: 'neutral.400',
-    },
-  }),
-
-  ...(variant === 'text' && {
-    backgroundColor: 'transparent',
-    color: 'neutral.900',
-
-    '&:hover, &[data-hover]': {
-      backgroundColor: 'neutral.50',
-    },
-
-    '&:focus, &[data-focus]': {
-      backgroundColor: 'neutral.100',
-    },
-
-    '&:active, &[data-active]': {
-      backgroundColor: 'neutral.200',
-    },
-  }),
-
-  ...(variant === 'tonal' && {
-    backgroundColor: 'status.danger.50',
-    borderColor: 'status.danger.50',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    color: 'status.danger.500',
-    px: '0.938rem',
-    py: '0.438rem',
-
-    '&:hover, &[data-hover]': {
-      borderColor: 'status.danger.500',
-    },
-
-    '&:focus, &[data-focus]': {
-      backgroundColor: 'status.danger.100',
-      borderColor: 'status.danger.500',
-    },
-
-    '&:active, &[data-active]': {
-      backgroundColor: 'status.danger.100',
-      borderColor: 'status.danger.500',
-    },
-  }),
-}));
-
-const StyledEndIcon = styled('span', {
-  label: 'ButtonEndIcon',
-  slot: 'endIcon',
-  themeKey: 'button',
-})({
-  alignSelf: 'center',
-  display: 'inline-flex',
-  flexShrink: 0,
-  ml: 2,
-});
-
-const StyledStartIcon = styled('span', {
-  label: 'ButtonStartIcon',
-  slot: 'startIcon',
-  themeKey: 'button',
-})({
-  alignSelf: 'center',
-  display: 'inline-flex',
-  flexShrink: 0,
-  mr: 2,
-});
-
-const StyledButtonText = styled('span', {
-  label: 'ButtonText',
-  slot: 'text',
-  themeKey: 'button',
-})(({ size }) => ({
-  fontFamily: 'body',
-  fontWeight: 'semibold',
-  letterSpacing: 'normal',
-
-  ...(size === 'medium' && {
-    fontSize: 'medium',
-    lineHeight: 'large',
-  }),
-
-  ...(size === 'small' && {
-    fontSize: 'small',
-    lineHeight: 'medium',
-  }),
-}));
+export interface ButtonProps extends ComponentProps<typeof StyledButton>, ButtonOptions {}
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (props: ButtonProps, ref) => {
     const {
       as = 'button',
       children: childrenProp,
-      colorTheme = 'gradient',
+      colorTheme = 'primary',
       endIcon,
       href,
       isActive,
@@ -284,23 +78,33 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     let children = childrenProp;
 
     if (typeof children === 'string') {
-      children = <StyledButtonText size={size}>{children}</StyledButtonText>;
+      children = <StyledButtonText className="manifestui-button-text">{children}</StyledButtonText>;
     }
 
     return (
       <StyledButton
         as={as}
+        className="manifestui-button"
         colorTheme={colorTheme}
         data-active={isActive ? '' : null}
         data-disabled={isDisabled ? '' : null}
         ref={ref}
+        size={size}
         variant={variant}
         {...ariaProps}
         {...other}
       >
-        {startIcon && <StyledStartIcon>{startIcon}</StyledStartIcon>}
+        {startIcon && (
+          <StyledButtonIcon className="manifestui-button-endIcon" data-placement="start">
+            {startIcon}
+          </StyledButtonIcon>
+        )}
         {children}
-        {endIcon && <StyledEndIcon>{endIcon}</StyledEndIcon>}
+        {endIcon && (
+          <StyledButtonIcon className="manifestui-button-endIcon" data-placement="end">
+            {endIcon}
+          </StyledButtonIcon>
+        )}
       </StyledButton>
     );
   },

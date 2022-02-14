@@ -5,7 +5,7 @@ const themeKey = 'toggle';
 export const StyledToggleInput = styled('input', {
   slot: 'input',
   themeKey,
-})({
+})(({ theme }) => ({
   alignItems: 'center',
   appearance: 'none',
   backgroundColor: 'neutral.500',
@@ -53,6 +53,8 @@ export const StyledToggleInput = styled('input', {
 
     '&:focus': {
       backgroundImage: 'gradient.focus',
+      boxShadow: `0 0 0 2px ${theme.colors?.primary?.[200] as string}`,
+      outline: 'none',
     },
 
     '&:hover:not(&:focus)': {
@@ -62,12 +64,14 @@ export const StyledToggleInput = styled('input', {
 
   '&:focus': {
     backgroundColor: 'neutral.700',
+    boxShadow: `0 0 0 2px ${theme.colors?.neutral?.[200] as string}`,
+    outline: 'none',
   },
 
   '&:hover': {
     backgroundColor: 'neutral.600',
   },
-});
+}));
 
 export const StyledToggleLabel = styled('label', {
   slot: 'root',

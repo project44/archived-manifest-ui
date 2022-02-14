@@ -53,7 +53,7 @@ export const StyledCheckboxLabel = styled('label', {
 export const StyledCheckboxInput = styled('input', {
   slot: 'input',
   themeKey,
-})({
+})(({ theme }) => ({
   appearance: 'none',
   backgroundColor: 'white',
   borderColor: 'neutral.500',
@@ -67,6 +67,8 @@ export const StyledCheckboxInput = styled('input', {
   m: 0,
   outline: 0,
   p: 0,
+  transitionDuration: 'base',
+  transitionProperty: 'common',
   w: 18,
 
   '&:disabled': {
@@ -84,6 +86,8 @@ export const StyledCheckboxInput = styled('input', {
 
     '&:focus': {
       backgroundImage: 'gradient.focus',
+      boxShadow: `0 0 0 2px ${theme.colors?.primary?.[200] as string}`,
+      outline: 'none',
     },
 
     '&:hover:not(&:focus)': {
@@ -93,12 +97,14 @@ export const StyledCheckboxInput = styled('input', {
 
   '&:focus': {
     borderColor: 'neutral.700',
+    boxShadow: `0 0 0 2px ${theme.colors?.neutral?.[200] as string}`,
+    outline: 'none',
   },
 
   '&:hover': {
     borderColor: 'neutral.600',
   },
-});
+}));
 
 export const StyledCheckboxText = styled('span', {
   slot: 'text',
