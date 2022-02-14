@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/input",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -19,7 +19,7 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/hooks": "^0.0.1",
-    "@manifest-ui/styled": "^0.0.5"
+    "@manifest-ui/hooks": "^0.0.2",
+    "@manifest-ui/styled": "^0.0.6"
   }
 }

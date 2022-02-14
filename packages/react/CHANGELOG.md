@@ -1,5 +1,25 @@
 # @manifest-ui/react
 
+## 0.1.11
+
+### Patch Changes
+
+- Updated dependencies [[`a600034`](https://github.com/project44/manifest-ui/commit/a600034fc95cf1ab7c9c897077eefe0b3c6fff8c)]:
+  - @manifest-ui/hooks@0.0.2
+  - @manifest-ui/pagination@0.0.5
+  - @manifest-ui/css-baseline@0.0.4
+  - @manifest-ui/styled@0.0.6
+  - @manifest-ui/provider@0.0.6
+  - @manifest-ui/button@0.0.8
+  - @manifest-ui/icon@0.0.6
+  - @manifest-ui/image@0.0.6
+  - @manifest-ui/layout@0.0.6
+  - @manifest-ui/link@0.0.5
+  - @manifest-ui/spinner@0.0.6
+  - @manifest-ui/table@0.0.5
+  - @manifest-ui/typography@0.0.6
+  - @manifest-ui/visually-hidden@0.0.6
+
 ## 0.1.10
 
 ### Patch Changes

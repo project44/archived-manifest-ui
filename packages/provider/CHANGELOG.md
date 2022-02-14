@@ -1,5 +1,12 @@
 # @manifest-ui/provider
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/css-baseline@0.0.4
+
 ## 0.0.5
 
 ### Patch Changes
