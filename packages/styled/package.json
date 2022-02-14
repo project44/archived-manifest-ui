@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/styled",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@manifest-ui/styled-system": "^0.0.4",
-    "@manifest-ui/themes": "^0.0.2",
+    "@manifest-ui/themes": "^0.1.0",
     "lodash.isempty": "^4.4.0",
     "lodash.omitby": "^4.6.0"
   }
