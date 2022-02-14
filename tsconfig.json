@@ -30,6 +30,9 @@
       "path": "packages/image"
     },
     {
+      "path": "packages/input"
+    },
+    {
       "path": "packages/layout"
     },
     {
@@ -40,6 +43,9 @@
     },
     {
       "path": "packages/provider"
+    },
+    {
+      "path": "packages/radio"
     },
     {
       "path": "packages/react"
@@ -61,6 +67,9 @@
     },
     {
       "path": "packages/themes"
+    },
+    {
+      "path": "packages/toggle"
     },
     {
       "path": "packages/types"

@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {
   StyledCheckboxContainer,
-  StyledCheckboxControl,
   StyledCheckboxIcon,
   StyledCheckboxInput,
   StyledCheckboxLabel,
+  StyledCheckboxText,
 } from './Checkbox.styles';
+import { useControlled, useId } from '@manifest-ui/hooks';
 import { ComponentProps } from '@manifest-ui/styled';
-import { useControlled } from '@manifest-ui/hooks';
 
 export interface CheckboxOptions {
   /**
@@ -49,7 +49,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
     const {
       defaultChecked,
       children,
-      id,
+      id: idProp,
       isChecked: isCheckedProp,
       isDisabled,
       isInvalid,
@@ -60,6 +60,8 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
       value,
       ...other
     } = props;
+
+    const id = useId(idProp);
 
     const [isChecked, setIsChecked] = useControlled({
       defaultValue: defaultChecked ?? false,
@@ -82,24 +84,9 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
       [isChecked, isDisabled, isReadOnly, onChange, setIsChecked],
     );
 
-    const handleKeyDown = React.useCallback(
-      (event: any) => {
-        if (event.key === ' ') {
-          event.preventDefault();
-
-          handleChange(event as React.ChangeEvent<HTMLInputElement>);
-        }
-      },
-      [handleChange],
-    );
-
     return (
       <StyledCheckboxLabel className="manifestui-checkbox-label" data-disabled={isDisabled}>
-        <StyledCheckboxContainer
-          className="manifestui-checkbox-container"
-          onKeyDown={handleKeyDown}
-          tabIndex={isDisabled ? -1 : 0}
-        >
+        <StyledCheckboxContainer className="manifestui-checkbox-container">
           <StyledCheckboxInput
             aria-disabled={isDisabled}
             aria-invalid={isInvalid}
@@ -113,21 +100,14 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             readOnly={isReadOnly}
             required={isRequired}
             value={value}
-            tabIndex={-1}
             type="checkbox"
             {...other}
           />
-          <StyledCheckboxControl
-            className="manifestui-checkbox-control"
-            data-checked={isChecked ? '' : undefined}
-          >
-            <StyledCheckboxIcon
-              className="manifestui-checkbox-icon"
-              data-checked={isChecked ? '' : undefined}
-            />
-          </StyledCheckboxControl>
+          <StyledCheckboxIcon className="manifestui-checkbox-icon" />
         </StyledCheckboxContainer>
-        {children}
+        {children && (
+          <StyledCheckboxText className="manifestui-radio-text">{children}</StyledCheckboxText>
+        )}
       </StyledCheckboxLabel>
     );
   },
