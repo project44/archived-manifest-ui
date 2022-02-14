@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/image",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -14,6 +14,6 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/styled": "^0.0.5"
+    "@manifest-ui/styled": "^0.0.6"
   }
 }

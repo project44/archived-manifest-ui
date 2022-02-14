@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/provider",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -16,7 +16,7 @@
   "author": "project44",
   "license": "MIT",
   "dependencies": {
-    "@manifest-ui/css-baseline": "^0.0.3",
+    "@manifest-ui/css-baseline": "^0.0.4",
     "@manifest-ui/theme": "^0.0.6"
   }
 }
