@@ -1,5 +1,12 @@
 # @manifest-ui/table
 
+## 0.0.7
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.8
+
 ## 0.0.6
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @manifest-ui/toggle
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies [[`a098047`](https://github.com/project44/manifest-ui/commit/a098047c9eb021b31e2794b19ce86d5eee1f93d0)]:
+  - @manifest-ui/hooks@0.0.3
+  - @manifest-ui/styled@0.0.8
+
 ## 0.1.1
 
 ### Patch Changes

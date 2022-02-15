@@ -1,5 +1,12 @@
 # @manifest-ui/button
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.8
+
 ## 0.0.9
 
 ### Patch Changes

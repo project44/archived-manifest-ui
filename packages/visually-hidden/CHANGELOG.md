@@ -1,5 +1,12 @@
 # @manifest-ui/visually-hidden
 
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.8
+
 ## 0.0.7
 
 ### Patch Changes

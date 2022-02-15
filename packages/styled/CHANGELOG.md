@@ -1,5 +1,13 @@
 # @manifest-ui/styled
 
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies [[`a098047`](https://github.com/project44/manifest-ui/commit/a098047c9eb021b31e2794b19ce86d5eee1f93d0)]:
+  - @manifest-ui/styled-system@0.0.7
+  - @manifest-ui/themes@0.1.2
+
 ## 0.0.7
 
 ### Patch Changes
