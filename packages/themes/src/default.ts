@@ -268,7 +268,7 @@ export const defaultTheme = {
     medium: '1rem',
     small: '0.875rem',
     'x-small': '0.75rem',
-    'xx-small': '0.625',
+    'xx-small': '0.625rem',
   },
   fontWeights: {
     extrathin: 100,

@@ -34,6 +34,7 @@ const config: Configs = {
     property: 'backgroundImage',
     scale: 'colors',
   },
+  backgroundClip: true,
   backgroundSize: true,
   backgroundPosition: true,
   backgroundRepeat: true,

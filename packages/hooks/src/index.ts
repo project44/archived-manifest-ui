@@ -3,5 +3,7 @@ export * from './useControlled';
 export * from './useId';
 export * from './useIsomorphicLayoutEffect';
 export * from './useMergedCallbacks';
+export * from './useMergedRef';
 export * from './usePagination';
 export * from './useUncontrolled';
+export * from './useUpdatedRef';

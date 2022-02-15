@@ -3,6 +3,7 @@ import { Configs, Length, ResponsiveValue } from '../types';
 import { system } from '../core';
 
 export interface OtherProps {
+  animation?: ResponsiveValue<CSS.Property.Animation<Length>>;
   appearance?: ResponsiveValue<CSS.Property.Appearance>;
   visibility?: ResponsiveValue<CSS.Property.Visibility>;
   userSelect?: ResponsiveValue<CSS.Property.UserSelect>;
