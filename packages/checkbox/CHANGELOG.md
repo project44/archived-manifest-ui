@@ -1,5 +1,15 @@
 # @manifest-ui/checkbox
 
+## 0.0.4
+
+### Patch Changes
+
+- [#149](https://github.com/project44/manifest-ui/pull/149) [`9594156`](https://github.com/project44/manifest-ui/commit/9594156cdbade533187258f63461a7d2cea198e1) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Updating focus states for focusable elements
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.7
+  - @manifest-ui/icons@0.0.12
+
 ## 0.0.3
 
 ### Patch Changes
