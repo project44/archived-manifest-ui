@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/pagination",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -19,9 +19,9 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/button": "^0.0.8",
+    "@manifest-ui/button": "^0.0.9",
     "@manifest-ui/hooks": "^0.0.2",
-    "@manifest-ui/icons": "^0.0.11",
-    "@manifest-ui/styled": "^0.0.6"
+    "@manifest-ui/icons": "^0.0.12",
+    "@manifest-ui/styled": "^0.0.7"
   }
 }
