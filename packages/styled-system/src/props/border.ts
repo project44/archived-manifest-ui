@@ -88,7 +88,7 @@ const config: Configs = {
   },
   borderTopRadius: {
     properties: ['borderTopLeftRadius', 'borderTopRightRadius'],
-    scale: 'borders',
+    scale: 'radii',
   },
   borderBottomLeftRadius: {
     property: 'borderBottomLeftRadius',
@@ -100,15 +100,15 @@ const config: Configs = {
   },
   borderBottomRadius: {
     properties: ['borderBottomLeftRadius', 'borderBottomRightRadius'],
-    scale: 'borders',
+    scale: 'radii',
   },
   borderLeftRadius: {
     properties: ['borderBottomLeftRadius', 'borderTopLeftRadius'],
-    scale: 'borders',
+    scale: 'radii',
   },
   borderRightRadius: {
     properties: ['borderBottomRightRadius', 'borderTopRightRadius'],
-    scale: 'borders',
+    scale: 'radii',
   },
   borderInlineEndRadius: {
     properties: ['borderTopRightRadius', 'borderBottomRightRadius'],

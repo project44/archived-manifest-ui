@@ -63,6 +63,9 @@
       "path": "packages/table"
     },
     {
+      "path": "packages/tag"
+    },
+    {
       "path": "packages/theme"
     },
     {
