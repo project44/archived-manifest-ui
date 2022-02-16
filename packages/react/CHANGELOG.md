@@ -1,5 +1,11 @@
 # @manifest-ui/react
 
+## 2.3.0
+
+### Minor Changes
+
+- [#153](https://github.com/project44/manifest-ui/pull/153) [`0520d26`](https://github.com/project44/manifest-ui/commit/0520d260aa2cde96fc02d4092a194d6f29b07daa) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Bumping react package to 2.3.0
+
 ## 0.1.13
 
 ### Patch Changes
