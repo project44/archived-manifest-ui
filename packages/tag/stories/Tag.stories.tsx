@@ -9,7 +9,7 @@ export default {
   },
 };
 
-export const Default = (args: TagProps) => <Tag {...args} />;
-Default.args = {
+export const Base = (args: TagProps) => <Tag {...args} />;
+Base.args = {
   children: 'Default',
 };

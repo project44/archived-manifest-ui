@@ -7,16 +7,16 @@ export default {
   component: Input,
 };
 
-export const Default = (args: InputProps) => <Input {...args} />;
+export const Base = (args: InputProps) => <Input {...args} />;
 
-Default.args = {
-  placeholder: 'Default',
+Base.args = {
+  placeholder: 'Base',
 };
 
-export const WithIcons = Default.bind({});
+export const WithIcons = Base.bind({});
 
 WithIcons.args = {
-  placeholder: 'Default',
+  placeholder: 'Base',
   endIcon: <Search />,
   startIcon: <Person />,
 };
