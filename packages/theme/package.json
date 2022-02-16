@@ -20,7 +20,7 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/themes": "^0.1.0",
+    "@manifest-ui/themes": "^0.2.2",
     "deepmerge": "^4.2.2"
   }
 }

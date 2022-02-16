@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@manifest-ui/styled-system": "^0.0.7",
-    "@manifest-ui/themes": "^0.1.2",
+    "@manifest-ui/themes": "^0.2.2",
     "lodash.isempty": "^4.4.0",
     "lodash.omitby": "^4.6.0"
   }
