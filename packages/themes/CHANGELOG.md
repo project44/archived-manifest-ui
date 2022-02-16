@@ -1,5 +1,11 @@
 # @manifest-ui/themes
 
+## 0.1.2
+
+### Patch Changes
+
+- [#151](https://github.com/project44/manifest-ui/pull/151) [`a098047`](https://github.com/project44/manifest-ui/commit/a098047c9eb021b31e2794b19ce86d5eee1f93d0) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Adding tag package
+
 ## 0.1.1
 
 ### Patch Changes
