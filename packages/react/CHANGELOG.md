@@ -1,5 +1,29 @@
 # @manifest-ui/react
 
+## 2.3.1
+
+### Patch Changes
+
+- Updated dependencies [[`1b4a88b`](https://github.com/project44/manifest-ui/commit/1b4a88b5cb40b4694feec637ff492a0d0a611c30)]:
+  - @manifest-ui/styled@0.0.9
+  - @manifest-ui/theme@0.0.7
+  - @manifest-ui/button@0.0.11
+  - @manifest-ui/checkbox@0.0.6
+  - @manifest-ui/icon@0.0.9
+  - @manifest-ui/image@0.0.9
+  - @manifest-ui/input@0.1.3
+  - @manifest-ui/layout@0.0.9
+  - @manifest-ui/link@0.0.8
+  - @manifest-ui/pagination@0.0.8
+  - @manifest-ui/radio@0.1.3
+  - @manifest-ui/spinner@0.0.9
+  - @manifest-ui/table@0.0.8
+  - @manifest-ui/tag@0.1.1
+  - @manifest-ui/toggle@0.1.3
+  - @manifest-ui/typography@0.0.9
+  - @manifest-ui/visually-hidden@0.0.9
+  - @manifest-ui/provider@0.0.9
+
 ## 2.3.0
 
 ### Minor Changes

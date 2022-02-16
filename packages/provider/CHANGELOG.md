@@ -1,5 +1,12 @@
 # @manifest-ui/provider
 
+## 0.0.9
+
+### Patch Changes
+
+- Updated dependencies [[`1b4a88b`](https://github.com/project44/manifest-ui/commit/1b4a88b5cb40b4694feec637ff492a0d0a611c30)]:
+  - @manifest-ui/theme@0.0.7
+
 ## 0.0.8
 
 ### Patch Changes
