@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/tag",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@manifest-ui/hooks": "^0.0.3",
-    "@manifest-ui/icons": "^0.0.13",
-    "@manifest-ui/styled": "^0.0.8"
+    "@manifest-ui/icons": "^0.0.14",
+    "@manifest-ui/styled": "^0.0.9"
   }
 }

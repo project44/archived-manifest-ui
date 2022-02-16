@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/theme",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -20,7 +20,7 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/themes": "^0.2.2",
+    "@manifest-ui/themes": "^0.2.3",
     "deepmerge": "^4.2.2"
   }
 }

@@ -1,5 +1,11 @@
 # @manifest-ui/themes
 
+## 0.2.3
+
+### Patch Changes
+
+- [#155](https://github.com/project44/manifest-ui/pull/155) [`1b4a88b`](https://github.com/project44/manifest-ui/commit/1b4a88b5cb40b4694feec637ff492a0d0a611c30) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Fixing themes package version
+
 ## 0.1.2
 
 ### Patch Changes
