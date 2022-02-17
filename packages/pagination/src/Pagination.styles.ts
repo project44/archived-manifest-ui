@@ -7,7 +7,7 @@ export const StyledPagination = styled('div', {
 })({
   alignItems: 'center',
   boxSizing: 'border-box',
-  columnGap: '8px',
+  columnGap: '4px',
   display: 'flex',
   flexWrap: 'wrap',
   justifyContent: 'flex-start',
