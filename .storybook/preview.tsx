@@ -12,8 +12,7 @@ export const decorators = [
 
 
 export const parameters = {
-  viewMode: 'docs',
-  previewTabs: { 'storybook/docs/panel': { index: -1 } },
+  viewMode: 'story',
   actions: { argTypesRegex: '^on.*' },
   options: {
     storySort: {

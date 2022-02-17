@@ -1,18 +1,13 @@
 import * as React from 'react';
 import { Icon, IconProps } from '../src';
-// @ts-expect-error: TODO support mdx in ts files
-import docs from './Icon.docs.mdx';
 
 export default {
   title: 'Components/Icon',
   component: Icon,
-  parameters: {
-    docs: { page: docs },
-  },
 };
 
-export const Default = (args: IconProps) => <Icon {...args} />;
-Default.args = {
+export const Base = (args: IconProps) => <Icon {...args} />;
+Base.args = {
   children: (
     <>
       <path

@@ -10,7 +10,7 @@ export default {
   },
 } as Meta;
 
-export const Default = (args: ToggleProps) => <Toggle {...args} />;
-Default.args = {
+export const Base = (args: ToggleProps) => <Toggle {...args} />;
+Base.args = {
   children: 'Toggle',
 };

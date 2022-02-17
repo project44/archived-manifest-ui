@@ -1,15 +1,10 @@
 import * as React from 'react';
 import { Table, TableBody, TableCell, TableHeader, TableProps, TableRow } from '../src';
-// @ts-expect-error: TODO support mdx in ts files
-import docs from './Table.docs.mdx';
 
 export default {
   title: 'Components/Table',
   component: Table,
   subcomponents: { TableBody, TableCell, TableHeader, TableRow },
-  parameters: {
-    docs: { page: docs },
-  },
 };
 
 export const Base = (args: TableProps) => (
