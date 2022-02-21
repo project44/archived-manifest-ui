@@ -18,7 +18,7 @@ export interface StyledButtonOptions {
    *
    * @default 'filled'
    */
-  variant?: 'filled' | 'outlined' | 'text' | 'tonal';
+  variant?: 'filled' | 'outlined' | 'text';
 }
 
 const themeKey = 'button';
@@ -122,28 +122,6 @@ export const StyledButton = styled('button', {
 
         '&[data-active]': {
           backgroundColor: 'status.danger.800',
-        },
-      }),
-
-      ...(variant === 'tonal' && {
-        backgroundColor: 'status.danger.50',
-        borderColor: 'status.danger.50',
-        color: 'status.danger.500',
-
-        '&:hover': {
-          borderColor: 'status.danger.500',
-        },
-
-        '&:focus': {
-          backgroundColor: 'status.danger.100',
-          borderColor: 'status.danger.500',
-          boxShadow: `0 0 0 2px ${theme.colors?.status?.danger?.[200] as string}`,
-          outline: 'none',
-        },
-
-        '&[data-active]': {
-          backgroundColor: 'status.danger.100',
-          borderColor: 'status.danger.500',
         },
       }),
     }),
