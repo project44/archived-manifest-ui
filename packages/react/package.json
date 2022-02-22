@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/react",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -19,7 +19,7 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/button": "0.0.11",
+    "@manifest-ui/button": "0.0.12",
     "@manifest-ui/checkbox": "0.0.6",
     "@manifest-ui/css-baseline": "0.0.6",
     "@manifest-ui/hooks": "0.0.3",
@@ -28,7 +28,7 @@
     "@manifest-ui/input": "0.1.3",
     "@manifest-ui/layout": "0.0.9",
     "@manifest-ui/link": "0.0.8",
-    "@manifest-ui/pagination": "0.0.9",
+    "@manifest-ui/pagination": "0.0.10",
     "@manifest-ui/provider": "0.0.9",
     "@manifest-ui/radio": "0.1.3",
     "@manifest-ui/spinner": "0.0.9",
