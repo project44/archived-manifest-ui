@@ -1,5 +1,11 @@
 # @manifest-ui/pagination
 
+## 0.0.9
+
+### Patch Changes
+
+- [#158](https://github.com/project44/manifest-ui/pull/158) [`878e363`](https://github.com/project44/manifest-ui/commit/878e363663ecc443ae480e61de987f5ec9bb4f35) Thanks [@eemahoney](https://github.com/eemahoney)! - Update spacing to match design spec
+
 ## 0.0.8
 
 ### Patch Changes

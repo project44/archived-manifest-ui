@@ -1,5 +1,12 @@
 # @manifest-ui/react
 
+## 2.3.2
+
+### Patch Changes
+
+- Updated dependencies [[`878e363`](https://github.com/project44/manifest-ui/commit/878e363663ecc443ae480e61de987f5ec9bb4f35)]:
+  - @manifest-ui/pagination@0.0.9
+
 ## 2.3.1
 
 ### Patch Changes
