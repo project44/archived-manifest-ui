@@ -21,7 +21,7 @@ describe('@manifest-ui/button - IconButton', () => {
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
-  it.each(['filled', 'outlined', 'text', 'tonal'])('should render %s variant', variant => {
+  it.each(['filled', 'outlined', 'text'])('should render %s variant', variant => {
     render(<IconButton variant={variant as IconButtonProps['variant']} />);
 
     expect(screen.getByRole('button')).toBeInTheDocument();
