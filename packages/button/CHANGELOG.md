@@ -1,5 +1,11 @@
 # @manifest-ui/button
 
+## 0.0.12
+
+### Patch Changes
+
+- [#162](https://github.com/project44/manifest-ui/pull/162) [`7a663fd`](https://github.com/project44/manifest-ui/commit/7a663fd052ea9a003caa8752a062903d37f268c2) Thanks [@eemahoney](https://github.com/eemahoney)! - Removes tonal variant from component
+
 ## 0.0.11
 
 ### Patch Changes
