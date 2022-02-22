@@ -32,7 +32,7 @@ describe('@manifest-ui/pagination', () => {
     expect(screen.getAllByRole('button')[1]).toHaveAttribute('aria-current', 'true');
   });
 
-  it.each(['filled', 'outlined', 'text', 'tonal'])('should render %s variant', variant => {
+  it.each(['filled', 'outlined', 'text'])('should render %s variant', variant => {
     render(<Pagination totalRowCount={100} variant={variant as PaginationProps['variant']} />);
   });
 });

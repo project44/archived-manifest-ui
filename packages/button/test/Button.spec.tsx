@@ -79,7 +79,7 @@ describe('@manifest-ui/button', () => {
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
-  it.each(['filled', 'outlined', 'text', 'tonal'])('should render %s variant', variant => {
+  it.each(['filled', 'outlined', 'text'])('should render %s variant', variant => {
     render(<Button variant={variant as ButtonProps['variant']}>Click Me</Button>);
 
     expect(screen.getByRole('button')).toBeInTheDocument();
