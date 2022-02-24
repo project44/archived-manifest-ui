@@ -1,0 +1,78 @@
+import { Box, Flex } from '@manifest-ui/layout';
+import { Meta, Props, Sources, Story } from '../../../.storybook/components';
+import { Body } from '../src';
+
+<Meta component={Body} title="Components/Body" />
+
+# Body
+
+## Usage
+
+<Story
+  name="default"
+  parameters={{ docs: { source: { code: '<Body>Advanced Supply Chain Visibility</Body>' } } }}
+>
+  <Box sx={{ pb: 3 }}>
+    <Body>Advanced Supply Chain Visibility</Body>
+  </Box>
+</Story>
+
+### Variants
+
+The body comes in two variants:
+
+<Story
+  name="variants"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Body variant="body1">Advanced Supply Chain Visibility</Body>
+<Body variant="body2">Advanced Supply Chain Visibility</Body>
+        `,
+      },
+    },
+  }}
+>
+  <Flex direction="column" gap={2} sx={{ pb: 3 }}>
+    <Body variant="body1">Advanced Supply Chain Visibility</Body>
+    <Body variant="body2">Advanced Supply Chain Visibility</Body>
+  </Flex>
+</Story>
+
+### Bold
+
+The body can be rendered bold by using the `isBold` prop:
+
+<Story
+  name="bold"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Body isBold variant="body1">Advanced Supply Chain Visibility</Body>
+<Body isBold variant="body2">Advanced Supply Chain Visibility</Body>
+        `,
+      },
+    },
+  }}
+>
+  <Flex direction="column" gap={2} sx={{ pb: 3 }}>
+    <Body isBold variant="body1">
+      Advanced Supply Chain Visibility
+    </Body>
+    <Body isBold variant="body2">
+      Advanced Supply Chain Visibility
+    </Body>
+  </Flex>
+</Story>
+
+## API
+
+<Sources github="typography" npm="@manifest-ui/typography" />
+
+```tsx
+import { Body } from '@manifest-ui/react';
+```
+
+<Props />

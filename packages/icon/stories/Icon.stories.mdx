@@ -1,15 +1,31 @@
-import * as React from 'react';
-import { Icon, IconProps } from '../src';
+import { Meta, Props, Sources, Story } from '../../../.storybook/components';
+import { Box } from '@manifest-ui/layout';
+import { Icon } from '../src';
 
-export default {
-  title: 'Components/Icon',
-  component: Icon,
-};
+<Meta component={Icon} title="Components/Icon" />
 
-export const Base = (args: IconProps) => <Icon {...args} />;
-Base.args = {
-  children: (
-    <>
+# Icon
+
+## Usage
+
+<Story name="default" parameters={{ docs: { source: { code: '<Icon>...</Icon>' } } }}>
+  <Box sx={{ pd: 3 }}>
+    <Icon>
+      <path d="M12 6C13.1 6 14 6.9 14 8C14 9.1 13.1 10 12 10C10.9 10 10 9.1 10 8C10 6.9 10.9 6 12 6ZM12 16C14.7 16 17.8 17.29 18 18H6C6.23 17.28 9.31 16 12 16ZM12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" />
+    </Icon>
+  </Box>
+</Story>
+
+### Size
+
+Icons be be rendered with custom sizes using the `size` and `viewBox` props.
+
+<Story
+  name="size"
+  parameters={{ docs: { source: { code: '<Icon size="64px" viewBox="0 0 64 64">...</Icon>' } } }}
+>
+  <Box sx={{ pd: 3 }}>
+    <Icon size="64px" viewBox="0 0 64 64">
       <path
         d="M49.0996 64L36.8905 42.9903C36.2996 41.9738 36.4262 40.8165 37.0136 39.9723C37.5096 39.2618 38.3291 38.7694 39.3175 38.7694L53.9783 64H49.0996Z"
         fill="#0072EC"
@@ -71,8 +87,16 @@ Base.args = {
         d="M0 24.6641L25.2307 39.3248V37.2776C25.2307 36.349 24.9704 35.4591 24.499 34.6958C24.0805 34.0134 23.493 33.4331 22.779 33.018L0 19.7819V24.6641Z"
         fill="#0072EC"
       />
-    </>
-  ),
-  size: '64px',
-  viewBox: '0 0 64 64',
-};
+    </Icon>
+  </Box>
+</Story>
+
+## API
+
+<Sources github="icon" npm="@manifest-ui/icon" />
+
+```tsx
+import { Icon } from '@manifest-ui/react';
+```
+
+<Props />

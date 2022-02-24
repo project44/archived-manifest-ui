@@ -1,0 +1,38 @@
+import { Meta, Props, Sources, Story } from '../../../.storybook/components';
+import { Box } from '@manifest-ui/layout';
+import { Checkbox } from '../src';
+
+<Meta component={Checkbox} title="Components/Checkbox" />
+
+# Checkbox
+
+## Usage
+
+<Story name="default" parameters={{ docs: { source: { code: '<Checkbox>Checkbox</Checkbox>' } } }}>
+  <Box sx={{ pb: 3 }}>
+    <Checkbox>Checkbox</Checkbox>
+  </Box>
+</Story>
+
+### Disabled
+
+The checkbox can be disabled using the isDisabled prop:
+
+<Story
+  name="disabled"
+  parameters={{ docs: { source: { code: '<Checkbox isDisabled>Checkbox</Checkbox>' } } }}
+>
+  <Box sx={{ pb: 3 }}>
+    <Checkbox isDisabled>Checkbox</Checkbox>
+  </Box>
+</Story>
+
+## API
+
+<Sources github="checkbox" npm="@manifest-ui/checkbox" />
+
+```tsx
+import { Checkbox } from '@manifest-ui/react';
+```
+
+<Props />

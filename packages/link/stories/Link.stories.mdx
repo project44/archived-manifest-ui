@@ -1,0 +1,55 @@
+import { Box, Flex } from '@manifest-ui/layout';
+import { Meta, Props, Sources, Story } from '../../../.storybook/components';
+import { Link } from '../src';
+
+<Meta component={Link} title="Components/Link" />
+
+# Link
+
+## Usage
+
+<Story
+  name="default"
+  parameters={{ docs: { source: { code: '<Link href="https://p44design.systems/">Link</Link>' } } }}
+>
+  <Box sx={{ pb: 3 }}>
+    <Link href="https://p44design.systems/">Link</Link>
+  </Box>
+</Story>
+
+### Variants
+
+The link comes with two variants:
+
+<Story
+  name="variants"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Link variant="link1">Link1</Link>
+<Link variant="link2">Link2</Link>
+        `,
+      },
+    },
+  }}
+>
+  <Flex align="center" gap={2} sx={{ pb: 3 }}>
+    <Link href="https://p44design.systems/" variant="link1">
+      Link1
+    </Link>
+    <Link href="https://p44design.systems/" variant="link2">
+      Link2
+    </Link>
+  </Flex>
+</Story>
+
+## API
+
+<Sources github="link" npm="@manifest-ui/link" />
+
+```tsx
+import { Link } from '@manifest-ui/react';
+```
+
+<Props />

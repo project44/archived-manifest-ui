@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Canvas, Story as StorybookStory } from '@storybook/addon-docs';
 
 const Story = (props) => (

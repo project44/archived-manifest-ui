@@ -1,0 +1,73 @@
+import { Meta, Props, Sources, Story } from '../../../.storybook/components';
+import { Table, TableBody, TableCell, TableHeader, TableProps, TableRow } from '../src';
+
+<Meta component={Table} title="Components/Table" />
+
+# Table
+
+## Usage
+
+<Story
+  name="default"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Table>
+  <TableHeader>
+    <TableRow>
+      <TableCell>ID#</TableCell>
+      <TableCell>Origin</TableCell>
+      <TableCell>Destination</TableCell>
+      <TableCell>Status</TableCell>
+      <TableCell>Timing</TableCell>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>23423-435</TableCell>
+      <TableCell>Alachua Distribution Center, Chicago, IL</TableCell>
+      <TableCell>S01541, Northborough, Massachusetts</TableCell>
+      <TableCell>In Transit</TableCell>
+      <TableCell>On Track</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+        `,
+      },
+    },
+  }}
+>
+  <Box sx={{ pb: 3 }}>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableCell>ID#</TableCell>
+          <TableCell>Origin</TableCell>
+          <TableCell>Destination</TableCell>
+          <TableCell>Status</TableCell>
+          <TableCell>Timing</TableCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableCell>23423-435</TableCell>
+          <TableCell>Alachua Distribution Center, Chicago, IL</TableCell>
+          <TableCell>S01541, Northborough, Massachusetts</TableCell>
+          <TableCell>In Transit</TableCell>
+          <TableCell>On Track</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  </Box>
+</Story>
+
+## API
+
+<Sources github="table" npm="@manifest-ui/table" />
+
+```tsx
+import { Table, TableBody, TableCell, TableHeader, TableProps, TableRow } from '@manifest-ui/react';
+```
+
+<Props />

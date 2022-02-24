@@ -3,13 +3,10 @@ const path = require('path');
 const toPath = _path => path.join(process.cwd(), _path);
 
 module.exports = {
-  stories: ['../packages/Welcome.stories.tsx', '../packages/**/*.stories.@(js|ts|tsx)'],
+  stories: ['../packages/**/*.stories.mdx', '../docs/**/*.stories.mdx'],
   addons: [
-    '@storybook/addon-storysource',
-    '@storybook/addon-controls',
-    '@storybook/addon-actions',
-    '@storybook/addon-a11y',
-    '@storybook/addon-viewport'
+    '@storybook/addon-essentials',
+    '@storybook/addon-a11y'
   ],
   features: {
     postcss: false,

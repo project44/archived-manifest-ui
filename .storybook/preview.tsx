@@ -1,6 +1,7 @@
-import * as React from 'react';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs';
 import { Provider } from '@manifest-ui/provider';
 import { Story } from '@storybook/react';
+import theme from './theme';
 
 export const decorators = [
   (StoryFn: Story) => (
@@ -10,14 +11,19 @@ export const decorators = [
   ),
 ];
 
-
 export const parameters = {
-  viewMode: 'story',
   actions: { argTypesRegex: '^on.*' },
+  docs: {
+    theme,
+    container: DocsContainer,
+    page: DocsPage,
+  },
   options: {
     storySort: {
       method: 'alphabetical',
       order: ['Welcome', 'Components'],
     },
   },
+  previewTabs: { 'storybook/docs/panel': { index: -1 } },
+  viewMode: 'docs',
 };

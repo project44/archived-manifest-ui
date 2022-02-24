@@ -3,7 +3,7 @@ import { defaultTheme } from '@manifest-ui/themes';
 
 const blue = defaultTheme.colors.primary[500];
 const white = defaultTheme.colors.white;
-const black = defaultTheme.colors.black;
+const text = defaultTheme.colors.emphasis.primary;
 
 export default create({
   base: 'light',
@@ -22,16 +22,16 @@ export default create({
   fontCode: defaultTheme.fonts.mono,
 
   // Text colors
-  textColor: black,
+  textColor: text,
   textInverseColor: white,
 
   // Toolbar default and active colors
-  barTextColor: black,
+  barTextColor: text,
   barSelectedColor: blue,
 
   // Form colors
   inputBorder: white,
-  inputTextColor: black,
+  inputTextColor: text,
   inputBorderRadius: defaultTheme.radii.medium,
 
   //branding

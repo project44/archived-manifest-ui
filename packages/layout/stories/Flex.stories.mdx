@@ -1,0 +1,324 @@
+import { Box, Flex } from '../src';
+import { Meta, Props, Sources, Story } from '../../../.storybook/components';
+
+<Meta component={Flex} title="Components/Flex" />
+
+# Flex
+
+## Usage
+
+<Story
+  name="default"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Flex>
+  <Box />
+  <Box />
+</Flex>
+        `,
+      },
+    },
+  }}
+>
+  <Flex>
+    <Box sx={{ backgroundColor: 'primary.500', p: 4, width: 32 }} />
+    <Box sx={{ backgroundColor: 'neutral.500', p: 4, width: 32 }} />
+  </Flex>
+</Story>
+
+### Direction
+
+Change the direction of the children using the `direction` prop:
+
+<Story
+  name="direction"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Flex direction="row">
+  <Box />
+  <Box />
+</Flex>
+<Flex direction="column">
+  <Box />
+  <Box />
+</Flex>
+<Flex direction="row-reverse">
+  <Box />
+  <Box />
+</Flex>
+<Flex direction="column-reverse">
+  <Box />
+  <Box />
+</Flex>
+        `,
+      },
+    },
+  }}
+>
+  <Flex direction="column" gap={3}>
+    <Flex
+      direction="row"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+    <Flex
+      direction="column"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4, width: 32 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4, width: 32 }} />
+    </Flex>
+    <Flex
+      direction="row-reverse"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+    <Flex
+      direction="column-reverse"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4, width: 32 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4, width: 32 }} />
+    </Flex>
+  </Flex>
+</Story>
+
+### Align
+
+Change the alignment of the children using the `align` prop:
+
+<Story
+  name="align"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Flex align="flex-start">
+  <Box />
+  <Box />
+</Flex>
+<Flex align="center">
+  <Box />
+  <Box />
+</Flex>
+<Flex align="flex-end">
+  <Box />
+  <Box />
+</Flex>
+<Flex align="stretch">
+  <Box />
+  <Box />
+</Flex>
+        `,
+      },
+    },
+  }}
+>
+  <Flex direction="column" gap={3}>
+    <Flex
+      align="flex-start"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        height: 92,
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+    <Flex
+      align="center"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        height: 92,
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+    <Flex
+      align="flex-end"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        height: 92,
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+    <Flex
+      align="stretch"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        height: 92,
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+  </Flex>
+</Story>
+
+### Justify
+
+Change the justification of the children using the `align` prop:
+
+<Story
+  name="justify"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Flex justify="flex-start">
+  <Box />
+  <Box />
+</Flex>
+<Flex justify="center">
+  <Box />
+  <Box />
+</Flex>
+<Flex justify="flex-end">
+  <Box />
+  <Box />
+</Flex>
+<Flex justify="space-between">
+  <Box />
+  <Box />
+</Flex>
+<Flex justify="space-around">
+  <Box />
+  <Box />
+</Flex>
+<Flex justify="space-evenly">
+  <Box />
+  <Box />
+</Flex>
+        `,
+      },
+    },
+  }}
+>
+  <Flex direction="column" gap={3}>
+    <Flex
+      justify="flex-start"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+    <Flex
+      justify="center"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+    <Flex
+      justify="flex-end"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+    <Flex
+      justify="space-between"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+    <Flex
+      justify="space-around"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+    <Flex
+      justify="space-evenly"
+      sx={{
+        borderColor: 'neutral.200',
+        borderStyle: 'solid',
+        borderWidth: 'small',
+        p: 3,
+      }}
+    >
+      <Box sx={{ backgroundColor: 'primary.500', p: 4 }} />
+      <Box sx={{ backgroundColor: 'neutral.500', p: 4 }} />
+    </Flex>
+  </Flex>
+</Story>
+
+## API
+
+<Sources github="layout" npm="@manifest-ui/layout" />
+
+```tsx
+import { Flex } from '@manifest-ui/react';
+```
+
+<Props />
