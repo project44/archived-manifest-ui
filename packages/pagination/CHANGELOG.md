@@ -1,5 +1,12 @@
 # @manifest-ui/pagination
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies [[`7a663fd`](https://github.com/project44/manifest-ui/commit/7a663fd052ea9a003caa8752a062903d37f268c2)]:
+  - @manifest-ui/button@0.0.12
+
 ## 0.0.9
 
 ### Patch Changes
