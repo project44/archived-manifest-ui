@@ -1,0 +1,57 @@
+import { Meta, Props, Sources, Story } from '../../../.storybook/components';
+import { Box } from '../src';
+
+<Meta component={Box} title="Components/Box" />
+
+# Box
+
+## Usage
+
+<Story name="default">
+  <Box>Box</Box>
+</Story>
+
+### SX Prop
+
+Apply styled props to the box component using the `sx` prop:
+
+<Story
+  name="sx"
+  parameters={{
+    docs: { source: { code: `<Box sx={{ backgroundColor: 'primary.500', boxSize: 200 }} />` } },
+  }}
+>
+  <Box sx={{ backgroundColor: 'primary.500', boxSize: 200 }} />
+</Story>
+
+### As Prop
+
+Overrided the default element using the `as` prop:
+
+<Story
+  name="as"
+  parameters={{
+    docs: {
+      source: {
+        code: `<Box as="span" sx={{borderColor: 'neutral.200', borderStyle: 'solid', borderWidth: 'small', p: 4 }} />`,
+      },
+    },
+  }}
+>
+  <Box
+    as="span"
+    sx={{ borderColor: 'neutral.200', borderStyle: 'solid', borderWidth: 'small', p: 4 }}
+  >
+    Span
+  </Box>
+</Story>
+
+## API
+
+<Sources github="layout" npm="@manifest-ui/layout" />
+
+```tsx
+import { Box } from '@manifest-ui/react';
+```
+
+<Props />

@@ -1,0 +1,138 @@
+import { Box, Flex } from '@manifest-ui/layout';
+import { Meta, Props, Sources, Story } from '../../../.storybook/components';
+import { Check } from '@manifest-ui/icons';
+import { Tag } from '../src';
+
+<Meta component={Tag} title="Components/Tag" />
+
+# Tag
+
+## Usage
+
+<Story name="default" parameters={{ docs: { source: { code: '<Tag>Default</Tag>' } } }}>
+  <Box sx={{ pb: 3 }}>
+    <Tag>Default</Tag>
+  </Box>
+</Story>
+
+### Variants
+
+The tag comes in two variants:
+
+<Story
+  name="variants"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Tag variant="outlined">Outlined</Tag>
+<Tag variant="filled">Filled</Tag>
+        `,
+      },
+    },
+  }}
+>
+  <Flex align="center" gap={2} sx={{ pb: 3 }}>
+    <Tag variant="outlined">Outlined</Tag>
+    <Tag variant="filled">Filled</Tag>
+  </Flex>
+</Story>
+
+### Sizes
+
+The tag comes in three sizes:
+
+<Story
+  name="sizes"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Tag size="small">Small</Tag>
+<Tag size="medium">Medium</Tag>
+<Tag size="large">Large</Tag>
+        `,
+      },
+    },
+  }}
+>
+  <Flex align="center" gap={2} sx={{ pb: 3 }}>
+    <Tag size="small">Small</Tag>
+    <Tag size="medium">Medium</Tag>
+    <Tag size="large">Large</Tag>
+  </Flex>
+</Story>
+
+### Icons
+
+The tag can be decorated with icons using the `icon` prop:
+
+<Story
+  name="icons"
+  parameters={{ docs: { source: { code: '<Tag icon={<Check />}>Small</Tag>' } } }}
+>
+  <Box sx={{ pb: 3 }}>
+    <Tag icon={<Check />}>Default</Tag>
+  </Box>
+</Story>
+
+### Dismiss
+
+The tag can be marked as dismissible using the `isDismissible` prop:
+
+<Story
+  name="dismiss"
+  parameters={{ docs: { source: { code: '<Tag isDismissible>Dismiss</Tag>' } } }}
+>
+  <Box sx={{ pb: 3 }}>
+    <Tag isDismissible>Dismiss</Tag>
+  </Box>
+</Story>
+
+### Click
+
+The tag can be rendered as a clickable element using the `isClickable` prop:
+
+<Story
+  name="clickable"
+  parameters={{ docs: { source: { code: '<Tag isDismissible>Clickable</Tag>' } } }}
+>
+  <Box sx={{ pb: 3 }}>
+    <Tag isClickable>Clickable</Tag>
+  </Box>
+</Story>
+
+### Disabled
+
+The tag can be disabled using the `isDisabled` prop:
+
+<Story
+  name="disabled"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Tag isDisabled>Disabled</Tag>
+<Tag isDisabled variant="filled">Disabled</Tag>
+        `,
+      },
+    },
+  }}
+>
+  <Flex align="center" gap={2} sx={{ pb: 3 }}>
+    <Tag isDisabled>Disabled</Tag>
+    <Tag isDisabled variant="filled">
+      Disabled
+    </Tag>
+  </Flex>
+</Story>
+
+## API
+
+<Sources github="tag" npm="@manifest-ui/tag" />
+
+```tsx
+import { Tag } from '@manifest-ui/react';
+```
+
+<Props />

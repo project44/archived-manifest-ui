@@ -1,0 +1,75 @@
+import { Box, Flex } from '@manifest-ui/layout';
+import { Meta, Props, Sources, Story } from '../../../.storybook/components';
+import { Footnote } from '../src';
+
+<Meta component={Footnote} title="Components/Footnote" />
+
+# Footnote
+
+## Usage
+
+<Story name="default" parameters={{ docs: { source: { code: '<Footnote>Footnote</Footnote>' } } }}>
+  <Box sx={{ pb: 3 }}>
+    <Footnote>Footnote</Footnote>
+  </Box>
+</Story>
+
+### Variants
+
+The footnote comes in two variants:
+
+<Story
+  name="variants"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Footnote variant="footnote1">Footnote</Footnote>
+<Footnote variant="footnode2">Footnote</Footnote>
+        `,
+      },
+    },
+  }}
+>
+  <Flex direction="column" gap={2} sx={{ pb: 3 }}>
+    <Footnote variant="footnote1">Footnote</Footnote>
+    <Footnote variant="footnote2">Footnote</Footnote>
+  </Flex>
+</Story>
+
+### Bold
+
+The footnote can be rendered bold by using the `isBold` prop:
+
+<Story
+  name="bold"
+  parameters={{
+    docs: {
+      source: {
+        code: `
+<Footnote isBold variant="footnote1">Footnote</Footnote>
+<Footnote isBold variant="footnote2">Footnote</Footnote>
+        `,
+      },
+    },
+  }}
+>
+  <Flex direction="column" gap={2} sx={{ pb: 3 }}>
+    <Footnote isBold variant="footnote1">
+      Footnote
+    </Footnote>
+    <Footnote isBold variant="footnote2">
+      Footnote
+    </Footnote>
+  </Flex>
+</Story>
+
+## API
+
+<Sources github="typography" npm="@manifest-ui/typography" />
+
+```tsx
+import { Footnote } from '@manifest-ui/react';
+```
+
+<Props />
