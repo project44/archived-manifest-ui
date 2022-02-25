@@ -6,7 +6,8 @@ module.exports = {
   stories: ['../packages/**/*.stories.mdx', '../docs/**/*.stories.mdx'],
   addons: [
     '@storybook/addon-essentials',
-    '@storybook/addon-a11y'
+    '@storybook/addon-a11y',
+    'storybook-addon-theme-playground'
   ],
   features: {
     postcss: false,
