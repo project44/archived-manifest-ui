@@ -9,8 +9,8 @@ export default {
   },
 };
 
-export const Base = (args: BoxProps) => <Box {...args} />;
+export const Default = (args: BoxProps) => <Box {...args} />;
 
-Base.args = {
+Default.args = {
   sx: { backgroundColor: 'primary.500', height: 200, width: 200 },
 };

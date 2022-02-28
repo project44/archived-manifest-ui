@@ -9,9 +9,9 @@ export default {
   },
 };
 
-export const Base = (args: FlexProps) => <Flex {...args} />;
+export const Default = (args: FlexProps) => <Flex {...args} />;
 
-Base.args = {
+Default.args = {
   children: (
     <>
       <Box sx={{ backgroundColor: 'primary.500', flex: 1, p: 4 }}>Box</Box>

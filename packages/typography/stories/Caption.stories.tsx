@@ -9,8 +9,8 @@ export default {
   },
 };
 
-export const Base = (args: CaptionProps) => <Caption {...args} />;
+export const Default = (args: CaptionProps) => <Caption {...args} />;
 
-Base.args = {
+Default.args = {
   children: 'Caption',
 };

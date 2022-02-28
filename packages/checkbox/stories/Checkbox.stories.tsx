@@ -9,7 +9,7 @@ export default {
   },
 };
 
-export const Base = (args: CheckboxProps) => <Checkbox {...args} />;
-Base.args = {
+export const Default = (args: CheckboxProps) => <Checkbox {...args} />;
+Default.args = {
   children: 'Checkbox',
 };

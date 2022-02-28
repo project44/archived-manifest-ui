@@ -9,8 +9,8 @@ export default {
   },
 };
 
-export const Base = (args: BodyProps) => <Body {...args} />;
+export const Default = (args: BodyProps) => <Body {...args} />;
 
-Base.args = {
+Default.args = {
   children: 'Advanced Supply Chain Visibility',
 };

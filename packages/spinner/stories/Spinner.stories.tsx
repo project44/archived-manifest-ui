@@ -9,6 +9,6 @@ export default {
   },
 };
 
-export const Base = (args: SpinnerProps) => <Spinner {...args} />;
+export const Default = (args: SpinnerProps) => <Spinner {...args} />;
 
-Base.args = {};
+Default.args = {};

@@ -9,8 +9,8 @@ export default {
   },
 };
 
-export const Base = (args: ButtonProps) => <Button {...args} />;
+export const Default = (args: ButtonProps) => <Button {...args} />;
 
-Base.args = {
+Default.args = {
   children: 'Button',
 };

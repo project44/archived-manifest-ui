@@ -7,9 +7,9 @@ export default {
   component: IconButton,
 };
 
-export const Base = (args: IconButtonProps) => <IconButton {...args} />;
+export const Default = (args: IconButtonProps) => <IconButton {...args} />;
 
-Base.args = {
+Default.args = {
   onClick: () => alert('Hello'),
   children: <Add />,
 };

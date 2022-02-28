@@ -9,9 +9,9 @@ export default {
   },
 };
 
-export const Base = (args: LinkProps) => <Link {...args} />;
+export const Default = (args: LinkProps) => <Link {...args} />;
 
-Base.args = {
+Default.args = {
   children: 'Link',
   href: 'https://p44design.systems/',
 };

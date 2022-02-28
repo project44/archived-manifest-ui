@@ -9,8 +9,8 @@ export default {
   },
 };
 
-export const Base = (args: OverlineProps) => <Overline {...args} />;
+export const Default = (args: OverlineProps) => <Overline {...args} />;
 
-Base.args = {
+Default.args = {
   children: 'Overline',
 };

@@ -8,7 +8,7 @@ export default {
   component: RadioGroup,
 } as Meta;
 
-export const Base = (args: RadioGroupProps) => (
+export const Default = (args: RadioGroupProps) => (
   <RadioGroup defaultValue="one" {...args}>
     <Radio value="one">One</Radio>
     <Radio value="two">Two</Radio>

@@ -9,9 +9,9 @@ export default {
   },
 };
 
-export const Base = (args: GridProps) => <Grid {...args} />;
+export const Default = (args: GridProps) => <Grid {...args} />;
 
-Base.args = {
+Default.args = {
   columns: 2,
   children: (
     <>

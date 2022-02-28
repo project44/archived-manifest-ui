@@ -6,8 +6,8 @@ export default {
   component: Pagination,
 };
 
-export const Base = (args: PaginationProps) => <Pagination {...args} />;
+export const Default = (args: PaginationProps) => <Pagination {...args} />;
 
-Base.args = {
+Default.args = {
   totalRowCount: 100,
 };

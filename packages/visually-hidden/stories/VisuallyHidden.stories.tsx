@@ -9,7 +9,7 @@ export default {
   },
 };
 
-export const Base = (args: VisuallyHiddenProps) => <VisuallyHidden {...args} />;
-Base.args = {
+export const Default = (args: VisuallyHiddenProps) => <VisuallyHidden {...args} />;
+Default.args = {
   children: 'Visually Hidden Text',
 };

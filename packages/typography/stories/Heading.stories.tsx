@@ -9,8 +9,8 @@ export default {
   },
 };
 
-export const Base = (args: HeadingProps) => <Heading {...args} />;
+export const Default = (args: HeadingProps) => <Heading {...args} />;
 
-Base.args = {
+Default.args = {
   children: 'Advanced Supply Chain Visibility',
 };

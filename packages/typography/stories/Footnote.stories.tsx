@@ -9,8 +9,8 @@ export default {
   },
 };
 
-export const Base = (args: FootnoteProps) => <Footnote {...args} />;
+export const Default = (args: FootnoteProps) => <Footnote {...args} />;
 
-Base.args = {
+Default.args = {
   children: 'Footnote',
 };
