@@ -3,9 +3,17 @@ const path = require('path');
 const toPath = _path => path.join(process.cwd(), _path);
 
 module.exports = {
-  stories: ['../packages/**/*.stories.mdx', '../docs/**/*.stories.mdx'],
+  stories: ['../docs/**/*.stories.mdx', '../packages/**/*.stories.tsx'],
   addons: [
-    '@storybook/addon-essentials',
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        actions: false,
+        backgrounds: false,
+        measure: false,
+        outline: false
+      }
+    },
     '@storybook/addon-a11y',
     'storybook-addon-theme-playground'
   ],
