@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { ComponentProps, styled } from '@manifest-ui/styled';
-import { useTableContext } from './context';
+import { useMergedCallbacks, useMergedRef } from '@manifest-ui/hooks';
+import { ComponentProps } from '@manifest-ui/styled';
+import { StyledTableCell } from './Table.styles';
 
 export interface TableCellOptions {
   /**
@@ -9,79 +10,42 @@ export interface TableCellOptions {
   align?: 'center' | 'inherit' | 'justify' | 'left' | 'right';
 }
 
-const TableCellRoot = styled('td', {
-  label: 'Table',
-  slot: 'td',
-  themeKey: 'table',
-})<TableCellOptions>(({ variant }) => ({
-  borderBottomColor: 'border',
-  borderBottomStyle: 'solid',
-  borderBottomWidth: 1,
-  display: 'table-cell',
-  fontFamily: 'body',
-  fontSize: 'small',
-  fontWeight: 'normal',
-  letterSpacing: 'normal',
-  lineHeight: 'large',
-  px: 3,
-  py: 4,
-  textAlign: 'left',
-  verticalAlign: 'inherit',
-
-  '&:first-of-type': {
-    pl: 6,
-  },
-
-  '&:last-of-type': {
-    pr: 6,
-  },
-
-  ...(variant === 'body' && {
-    color: 'emphasis.primary',
-  }),
-
-  ...(variant === 'header' && {
-    borderTopColor: 'border',
-    borderTopStyle: 'solid',
-    borderTopWidth: 1,
-    color: 'emphasis.secondary',
-    fontWeight: 'semibold',
-  }),
-
-  ['&[data-align=left]']: {
-    textAlign: 'left',
-  },
-
-  ['&[data-align=center]']: {
-    textAlign: 'center',
-  },
-
-  ['&[data-align=right]']: {
-    textAlign: 'right',
-    flexDirection: 'row-reverse',
-  },
-
-  ['&[data-align=justify]']: {
-    textAlign: 'justify',
-  },
-}));
-
-export type TableCellProps = ComponentProps<typeof TableCellRoot>;
+export interface TableCellProps
+  extends Omit<ComponentProps<typeof StyledTableCell>, 'align'>,
+    TableCellOptions {}
 
 export const TableCell = React.forwardRef<HTMLTableCellElement, TableCellProps>(
   (props: TableCellProps, ref) => {
-    const { align, ...other } = props;
+    const { align, children, onMouseEnter, ...other } = props;
 
-    const { variant } = useTableContext();
+    const title = typeof children === 'string' ? children : '';
+
+    const cellRef = React.useRef<HTMLTableCellElement>(null);
+
+    const [isOverflown, setIsOverflown] = React.useState(false);
+
+    const handleMouseEnter = React.useCallback(
+      (event: React.MouseEvent<HTMLTableCellElement>) => {
+        const cell = cellRef?.current;
+
+        if (cell) {
+          setIsOverflown(cell.scrollWidth > cell.offsetWidth);
+        }
+      },
+      [cellRef],
+    );
 
     return (
-      <TableCellRoot
-        as={variant === 'header' ? 'th' : 'td'}
+      <StyledTableCell
+        className="manifestui-table-cell"
         data-align={align}
-        ref={ref}
-        variant={variant}
+        onMouseEnter={useMergedCallbacks(handleMouseEnter, onMouseEnter)}
+        ref={useMergedRef(cellRef, ref)}
+        title={isOverflown ? title : undefined}
         {...other}
-      />
+      >
+        {children}
+      </StyledTableCell>
     );
   },
 );

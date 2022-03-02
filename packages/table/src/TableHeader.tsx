@@ -1,20 +1,12 @@
 import * as React from 'react';
-import { ComponentProps, styled } from '@manifest-ui/styled';
-import { TableContext } from './context';
+import { ComponentProps } from '@manifest-ui/styled';
+import { StyledTableHeader } from './Table.styles';
 
-export type TableHeaderProps = ComponentProps<typeof TableHeaderRoot>;
-
-const TableHeaderRoot = styled('thead', {
-  label: 'Table',
-  slot: 'thead',
-  themeKey: 'table',
-})({ display: 'table-header-group' });
+export type TableHeaderProps = ComponentProps<typeof StyledTableHeader>;
 
 export const TableHeader = React.forwardRef<HTMLTableSectionElement, TableHeaderProps>(
   (props: TableHeaderProps, ref) => (
-    <TableContext.Provider value={{ variant: 'header' }}>
-      <TableHeaderRoot ref={ref} {...props} />
-    </TableContext.Provider>
+    <StyledTableHeader className="manifestui-table-header" ref={ref} {...props} />
   ),
 );
 

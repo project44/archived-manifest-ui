@@ -1903,6 +1903,11 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
+"@ctrl/tinycolor@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.4.0.tgz#c3c5ae543c897caa9c2a68630bed355be5f9990f"
+  integrity sha512-JZButFdZ1+/xAfpguQHoabIXkcqRRKpMrWKBkpEZZyxfY9C1DpADFB8PEqGSTeFr135SaTRfKqGKx5xSCLI7ZQ==
+
 "@discoveryjs/json-ext@^0.5.3":
   version "0.5.6"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.6.tgz#d5e0706cf8c6acd8c6032f8d54070af261bbbb2f"
@@ -2719,6 +2724,26 @@
     global "^4.4.0"
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
+
+"@storybook/addon-storysource@^6.4.19":
+  version "6.4.19"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-6.4.19.tgz#09ec47b0c9f68ba9590edfcc7bd72984c048d272"
+  integrity sha512-WcjPgd0/m9rGMQbf6H2/wvXUhW5lSELWdXeCCK1taQHQUjhs8tq83fa7OkI9kE25drPiUJuPzObbCoYr94hftQ==
+  dependencies:
+    "@storybook/addons" "6.4.19"
+    "@storybook/api" "6.4.19"
+    "@storybook/client-logger" "6.4.19"
+    "@storybook/components" "6.4.19"
+    "@storybook/router" "6.4.19"
+    "@storybook/source-loader" "6.4.19"
+    "@storybook/theming" "6.4.19"
+    core-js "^3.8.2"
+    estraverse "^5.2.0"
+    loader-utils "^2.0.0"
+    prettier ">=2.2.1 <=2.3.0"
+    prop-types "^15.7.2"
+    react-syntax-highlighter "^13.5.3"
+    regenerator-runtime "^0.13.7"
 
 "@storybook/addon-toolbars@6.4.19":
   version "6.4.19"
@@ -9843,7 +9868,7 @@ lodash.debounce@^4.0.8:
 
 lodash.get@^4.4.2:
   version "4.4.2"
-  resolved "https://registry.npmjs.org/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
 lodash.isempty@^4.4.0:
