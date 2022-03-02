@@ -20,11 +20,6 @@ export const parameters = {
       order: ['Welcome', 'Components'],
     },
   },
-  previewTabs: {
-    'storybook/docs/panel': {
-      hidden: true,
-    },
-  },
   themePlayground: {
     theme: [
       { name: 'Default', theme: defaultTheme },

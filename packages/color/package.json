@@ -14,5 +14,9 @@
     "directory": "packages/color"
   },
   "author": "project44",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@ctrl/tinycolor": "^3.4.0",
+    "lodash.get": "^4.4.2"
+  }
 }

@@ -305,7 +305,7 @@ export const defaultTheme = {
     full: 9999,
   },
   shadows: {
-    small: '',
+    small: '0px 1px 3px rgba(24, 24, 25, 0.16)',
     medium: '',
     large: '',
     'x-large':

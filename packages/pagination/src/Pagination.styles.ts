@@ -10,7 +10,7 @@ export const StyledPagination = styled('div', {
   columnGap: '4px',
   display: 'flex',
   flexWrap: 'wrap',
-  justifyContent: 'flex-start',
+  justifyContent: 'flex-end',
   rowGap: '8px',
 });
 
@@ -29,7 +29,12 @@ export const StyledPaginationButton = styled('button', {
   color: 'emphasis.secondary',
   cursor: 'pointer',
   display: 'inline-flex',
+  fontFamily: 'body',
+  fontSize: 'small',
+  fontWeight: 'semibold',
   h: 32,
+  letterSpacing: 'normal',
+  lineHeight: 'medium',
   margin: 0,
   outline: 0,
   position: 'relative',
