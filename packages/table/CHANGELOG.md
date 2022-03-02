@@ -1,5 +1,11 @@
 # @manifest-ui/table
 
+## 0.1.0
+
+### Minor Changes
+
+- [#169](https://github.com/project44/manifest-ui/pull/169) [`ecb38fc`](https://github.com/project44/manifest-ui/commit/ecb38fc8d9fe71286dec3312182fe0f02407b13c) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Updated table design and functionality
+
 ## 0.0.8
 
 ### Patch Changes

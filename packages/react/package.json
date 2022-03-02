@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/react",
-  "version": "2.3.3",
+  "version": "2.4.0",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -33,7 +33,7 @@
     "@manifest-ui/radio": "0.1.3",
     "@manifest-ui/spinner": "0.0.9",
     "@manifest-ui/styled": "^0.0.9",
-    "@manifest-ui/table": "0.0.8",
+    "@manifest-ui/table": "0.1.0",
     "@manifest-ui/tag": "0.1.1",
     "@manifest-ui/theme": "0.0.7",
     "@manifest-ui/toggle": "0.1.3",
