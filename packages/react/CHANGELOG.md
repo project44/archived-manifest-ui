@@ -1,5 +1,12 @@
 # @manifest-ui/react
 
+## 2.4.1
+
+### Patch Changes
+
+- Updated dependencies [[`f121f8b`](https://github.com/project44/manifest-ui/commit/f121f8b495c0adaf81df84c0664f8f6267a69ef2)]:
+  - @manifest-ui/table@0.1.1
+
 ## 2.4.0
 
 ### Minor Changes
