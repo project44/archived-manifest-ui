@@ -42,6 +42,9 @@
       "path": "packages/pagination"
     },
     {
+      "path": "packages/portal"
+    },
+    {
       "path": "packages/provider"
     },
     {

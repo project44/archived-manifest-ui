@@ -29,6 +29,7 @@
     "@manifest-ui/layout": "0.0.9",
     "@manifest-ui/link": "0.0.8",
     "@manifest-ui/pagination": "0.0.10",
+    "@manifest-ui/portal": "0.0.0",
     "@manifest-ui/provider": "0.0.9",
     "@manifest-ui/radio": "0.1.3",
     "@manifest-ui/spinner": "0.0.9",
