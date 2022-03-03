@@ -107,6 +107,7 @@ export const StyledTableContainer = styled('div', {
 })({
   backgroundColor: 'white',
   borderColor: 'border',
+  borderRadius: 'medium',
   borderStyle: 'solid',
   borderWidth: 'small',
   boxShadow: 'small',
