@@ -37,6 +37,9 @@
       "path": "../pagination"
     },
     {
+      "path": "../portal"
+    },
+    {
       "path": "../provider"
     },
     {
