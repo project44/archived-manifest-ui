@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { useMergedCallbacks, useMergedRef } from '@manifest-ui/hooks';
+import { chainCallbacks } from '@manifest-ui/utils';
 import { ComponentProps } from '@manifest-ui/styled';
 import { StyledTableCell } from './Table.styles';
+import { useMergedRef } from '@manifest-ui/hooks';
 
 export interface TableCellOptions {
   /**
@@ -24,22 +25,19 @@ export const TableCell = React.forwardRef<HTMLTableCellElement, TableCellProps>(
 
     const [isOverflown, setIsOverflown] = React.useState(false);
 
-    const handleMouseEnter = React.useCallback(
-      (event: React.MouseEvent<HTMLTableCellElement>) => {
-        const cell = cellRef?.current;
+    const handleMouseEnter = React.useCallback(() => {
+      const cell = cellRef?.current;
 
-        if (cell) {
-          setIsOverflown(cell.scrollWidth > cell.offsetWidth);
-        }
-      },
-      [cellRef],
-    );
+      if (cell) {
+        setIsOverflown(cell.scrollWidth > cell.offsetWidth);
+      }
+    }, [cellRef]);
 
     return (
       <StyledTableCell
         className="manifestui-table-cell"
         data-align={align}
-        onMouseEnter={useMergedCallbacks(handleMouseEnter, onMouseEnter)}
+        onMouseEnter={chainCallbacks(handleMouseEnter, onMouseEnter)}
         ref={useMergedRef(cellRef, ref)}
         title={isOverflown ? title : undefined}
         {...other}

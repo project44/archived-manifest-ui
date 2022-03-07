@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledTableColumn, StyledTableSortButton, StyledTableSortIcon } from './Table.styles';
+import { chainCallbacks } from '@manifest-ui/utils';
 import { ComponentProps } from '@manifest-ui/styled';
-import { useMergedCallbacks } from '@manifest-ui/hooks';
 
 export interface TableColumnOptions {
   /**
@@ -67,14 +67,6 @@ export const TableColumn = React.forwardRef<HTMLTableCellElement, TableColumnPro
       ariaSort = sortDirection === 'asc' ? 'ascending' : 'descending';
     }
 
-    const handleMouseEnter = useMergedCallbacks((event: React.MouseEvent<HTMLButtonElement>) => {
-      setIsHovered(true);
-    }, onMouseEnter);
-
-    const handleMouseLeave = useMergedCallbacks((event: React.MouseEvent<HTMLButtonElement>) => {
-      setIsHovered(false);
-    }, onMouseLeave);
-
     return (
       <StyledTableColumn
         aria-sort={isSortable ? (ariaSort as React.AriaAttributes['aria-sort']) : undefined}
@@ -92,8 +84,8 @@ export const TableColumn = React.forwardRef<HTMLTableCellElement, TableColumnPro
             className="manifestui-table-sort"
             data-align={align}
             onClick={onClick}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={chainCallbacks(() => setIsHovered(true), onMouseEnter)}
+            onMouseLeave={chainCallbacks(() => setIsHovered(false), onMouseLeave)}
             type="button"
           >
             {children}
