@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/icons",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
