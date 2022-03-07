@@ -1,5 +1,11 @@
 # @manifest-ui/icons
 
+## 0.0.15
+
+### Patch Changes
+
+- [#175](https://github.com/project44/manifest-ui/pull/175) [`4f1ad34`](https://github.com/project44/manifest-ui/commit/4f1ad34139a0a0bb4839d5aa3a2f499967da5949) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Adding UnfoldMore icon
+
 ## 0.0.14
 
 ### Patch Changes

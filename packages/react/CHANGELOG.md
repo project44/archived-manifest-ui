@@ -1,5 +1,15 @@
 # @manifest-ui/react
 
+## 2.4.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/checkbox@0.0.7
+  - @manifest-ui/pagination@0.0.11
+  - @manifest-ui/table@0.1.2
+  - @manifest-ui/tag@0.1.2
+
 ## 2.4.1
 
 ### Patch Changes

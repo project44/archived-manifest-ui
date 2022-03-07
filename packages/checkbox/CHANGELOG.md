@@ -1,5 +1,12 @@
 # @manifest-ui/checkbox
 
+## 0.0.7
+
+### Patch Changes
+
+- Updated dependencies [[`4f1ad34`](https://github.com/project44/manifest-ui/commit/4f1ad34139a0a0bb4839d5aa3a2f499967da5949)]:
+  - @manifest-ui/icons@0.0.15
+
 ## 0.0.6
 
 ### Patch Changes
