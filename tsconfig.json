@@ -42,6 +42,9 @@
       "path": "packages/pagination"
     },
     {
+      "path": "packages/popper"
+    },
+    {
       "path": "packages/portal"
     },
     {
@@ -52,6 +55,9 @@
     },
     {
       "path": "packages/react"
+    },
+    {
+      "path": "packages/slot"
     },
     {
       "path": "packages/spinner"
@@ -82,6 +88,9 @@
     },
     {
       "path": "packages/typography"
+    },
+    {
+      "path": "packages/utils"
     },
     {
       "path": "packages/visually-hidden"

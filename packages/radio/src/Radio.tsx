@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { StyledRadioInput, StyledRadioLabel, StyledRadioText } from './Radio.styles';
-import { useId, useMergedCallbacks } from '@manifest-ui/hooks';
+import { chainCallbacks } from '@manifest-ui/utils';
 import { ComponentProps } from '@manifest-ui/styled';
+import { useId } from '@manifest-ui/hooks';
 import { useRadioGroupContext } from './context';
 
 export interface RadioOptions {
@@ -51,8 +52,6 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>((props: Radi
 
   const id = useId(idProp);
 
-  const handleChange = useMergedCallbacks(group?.onChange, onChange);
-
   let isChecked = isCheckedProp;
 
   if (group?.value && value) {
@@ -72,7 +71,7 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>((props: Radi
         disabled={isDisabled}
         id={id}
         name={name}
-        onChange={handleChange}
+        onChange={chainCallbacks(group?.onChange, onChange)}
         ref={ref}
         readOnly={isReadOnly}
         required={isRequired}
