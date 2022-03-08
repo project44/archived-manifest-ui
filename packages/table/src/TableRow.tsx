@@ -1,7 +1,7 @@
 import * as React from 'react';
+import { chainCallbacks } from '@manifest-ui/utils';
 import { ComponentProps } from '@manifest-ui/styled';
 import { StyledTableRow } from './Table.styles';
-import { useMergedCallbacks } from '@manifest-ui/hooks';
 import { useTableContext } from './context';
 
 export type TableRowProps = ComponentProps<typeof StyledTableRow>;
@@ -14,28 +14,18 @@ export const TableRow = React.forwardRef<HTMLTableRowElement, TableRowProps>(
 
     const [isHovered, setIsHovered] = React.useState(false);
 
-    const handleMouseEnter = React.useCallback(
-      (event: React.MouseEvent<HTMLTableRowElement>) => {
-        if (!showHover) return;
+    const handleMouseEnter = React.useCallback(() => {
+      if (!showHover) return;
 
-        setIsHovered(true);
-      },
-      [setIsHovered, showHover],
-    );
-
-    const handleMouseLeave = React.useCallback(
-      (event: React.MouseEvent<HTMLTableRowElement>) => {
-        setIsHovered(false);
-      },
-      [setIsHovered],
-    );
+      setIsHovered(true);
+    }, [setIsHovered, showHover]);
 
     return (
       <StyledTableRow
         data-hovered={isHovered ? '' : undefined}
         className="manifestui-table-row"
-        onMouseEnter={useMergedCallbacks(handleMouseEnter, onMouseEnter, onMouseEnterProp)}
-        onMouseLeave={useMergedCallbacks(handleMouseLeave, onMouseLeave, onMouseLeaveProp)}
+        onMouseEnter={chainCallbacks(handleMouseEnter, onMouseEnter, onMouseEnterProp)}
+        onMouseLeave={chainCallbacks(() => setIsHovered(false), onMouseLeave, onMouseLeaveProp)}
         ref={ref}
         {...other}
       />
