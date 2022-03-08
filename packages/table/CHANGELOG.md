@@ -1,5 +1,12 @@
 # @manifest-ui/table
 
+## 0.1.3
+
+### Patch Changes
+
+- Updated dependencies [[`5a5d2ac`](https://github.com/project44/manifest-ui/commit/5a5d2ac0d4ddb5d65a72acd4198460c998c65dff)]:
+  - @manifest-ui/color@0.1.0
+
 ## 0.1.2
 
 ### Patch Changes
