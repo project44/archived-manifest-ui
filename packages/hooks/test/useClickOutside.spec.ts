@@ -12,7 +12,7 @@ describe('@manifest-ui/hooks - useClickOutside', () => {
     document.body.appendChild(target);
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-    renderHook(() => useClickOutside({ current: target }, handler));
+    renderHook(() => useClickOutside(handler, [{ current: target }]));
   });
 
   afterEach(() => {

@@ -18,6 +18,9 @@
       "path": "packages/css-baseline"
     },
     {
+      "path": "packages/focus-trap"
+    },
+    {
       "path": "packages/hooks"
     },
     {
@@ -40,6 +43,9 @@
     },
     {
       "path": "packages/pagination"
+    },
+    {
+      "path": "packages/popover"
     },
     {
       "path": "packages/popper"

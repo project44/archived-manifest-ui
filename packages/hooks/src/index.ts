@@ -3,7 +3,6 @@ export * from './useClickOutside';
 export * from './useControlled';
 export * from './useEscapeKey';
 export * from './useEventListener';
-export * from './useFocusTrap';
 export * from './useId';
 export * from './useIsomorphicLayoutEffect';
 export * from './useMergedRef';

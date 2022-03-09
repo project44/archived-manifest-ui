@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { fireEvent, render, screen, testA11y, waitFor, within } from '../../../test/utils';
-import { Popper, PopperAnchor, PopperContent, PopperProps } from '../src';
+import { Popper, PopperAnchor, PopperContent } from '../src';
+import { render, screen, testA11y, waitFor, within } from '../../../test/utils';
 
 describe('@manifest-ui/popper', () => {
   it('should pass accessibility', async () => {
@@ -30,7 +30,7 @@ describe('@manifest-ui/popper', () => {
     });
 
     rerender(
-      <Popper placement="top">
+      <Popper placement="top-start">
         <PopperAnchor>
           <button>click me</button>
         </PopperAnchor>
@@ -38,37 +38,7 @@ describe('@manifest-ui/popper', () => {
       </Popper>,
     );
 
-    // Should render with a top placement
-    await waitFor(() => {
-      expect(screen.getByText('hello world')).toBeInTheDocument();
-      expect(screen.getByRole('tooltip')).toHaveAttribute('data-popper-placement', 'top');
-    });
-
-    rerender(
-      <Popper align="start">
-        <PopperAnchor>
-          <button>click me</button>
-        </PopperAnchor>
-        <PopperContent>hello world</PopperContent>
-      </Popper>,
-    );
-
-    // Should render with a start aligment
-    await waitFor(() => {
-      expect(screen.getByText('hello world')).toBeInTheDocument();
-      expect(screen.getByRole('tooltip')).toHaveAttribute('data-popper-placement', 'bottom-start');
-    });
-
-    rerender(
-      <Popper align="start" placement="top">
-        <PopperAnchor>
-          <button>click me</button>
-        </PopperAnchor>
-        <PopperContent>hello world</PopperContent>
-      </Popper>,
-    );
-
-    // Should render with a start aligment and top placement
+    // Should render with a top-start placement
     await waitFor(() => {
       expect(screen.getByText('hello world')).toBeInTheDocument();
       expect(screen.getByRole('tooltip')).toHaveAttribute('data-popper-placement', 'top-start');
