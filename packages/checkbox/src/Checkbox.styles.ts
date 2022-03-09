@@ -14,7 +14,7 @@ export const StyledCheckboxContainer = styled('div', {
   w: 18,
 });
 
-export const StyledCheckboxIcon = styled(Check, {
+export const StyledCheckboxIcon = styled('svg', {
   slot: 'icon',
   themeKey,
 })({
@@ -59,7 +59,7 @@ export const StyledCheckboxInput = styled('input', {
   borderColor: 'neutral.500',
   borderRadius: 'medium',
   borderStyle: 'solid',
-  borderWidth: 'large',
+  borderWidth: 'medium',
   boxSizing: 'border-box',
   color: 'white',
   cursor: 'pointer',
@@ -76,7 +76,7 @@ export const StyledCheckboxInput = styled('input', {
     opacity: 0.38,
   },
 
-  '&:checked': {
+  '&:checked, &[aria-checked=mixed]': {
     backgroundImage: 'gradient.default',
     border: 0,
 

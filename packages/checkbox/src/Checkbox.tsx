@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Check, Remove } from '@manifest-ui/icons';
 import {
   StyledCheckboxContainer,
   StyledCheckboxIcon,
@@ -15,29 +16,33 @@ export interface CheckboxOptions {
    */
   children?: React.ReactNode;
   /**
-   * Whether the toggle is checked by default.
+   * Whether the checkbox is checked by default.
    */
   defaultChecked?: boolean;
   /**
-   * Whether the toggle is checked or indeterminate.
+   * Whether the checkbox is checked or indeterminate.
    */
   isChecked?: boolean;
   /**
-   * Whether the toggle is disabled.
+   * Whether the checkbox is disabled.
    */
   isDisabled?: boolean;
   /**
-   * Whether the toggle is readonly.
+   * Whether the checkbox is in an indeterminate state.
+   */
+  isIndeterminate?: boolean;
+  /**
+   * Whether the checkbox is invalid.
+   */
+  isInvalid?: boolean;
+  /**
+   * Whether the checkbox is readonly.
    */
   isReadOnly?: boolean;
   /**
-   * Whether the toggle is required.
+   * Whether the checkbox is required.
    */
   isRequired?: boolean;
-  /**
-   * Whether the toggle is invalid.
-   */
-  isInvalid?: boolean;
 }
 
 export interface CheckboxProps
@@ -52,6 +57,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
       id: idProp,
       isChecked: isCheckedProp,
       isDisabled,
+      isIndeterminate,
       isInvalid,
       isReadOnly,
       isRequired,
@@ -89,6 +95,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
         <StyledCheckboxContainer className="manifestui-checkbox-container">
           <StyledCheckboxInput
             aria-disabled={isDisabled}
+            aria-checked={isIndeterminate ? 'mixed' : isChecked}
             aria-invalid={isInvalid}
             checked={isChecked}
             className="manifestui-checkbox-input"
@@ -103,7 +110,10 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             type="checkbox"
             {...other}
           />
-          <StyledCheckboxIcon className="manifestui-checkbox-icon" />
+          <StyledCheckboxIcon
+            as={isIndeterminate ? Remove : Check}
+            className="manifestui-checkbox-icon"
+          />
         </StyledCheckboxContainer>
         {children && (
           <StyledCheckboxText className="manifestui-radio-text">{children}</StyledCheckboxText>
