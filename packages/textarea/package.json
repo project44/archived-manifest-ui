@@ -1,5 +1,5 @@
 {
-  "name": "@manifest-ui/input",
+  "name": "@manifest-ui/textarea",
   "version": "0.1.3",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
@@ -13,7 +13,7 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:project-44/manifest-ui.git",
-    "directory": "packages/input"
+    "directory": "packages/textarea"
   },
   "peerDependencies": {
     "react": "^16.8 || ^17.0"

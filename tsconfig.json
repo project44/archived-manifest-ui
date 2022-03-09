@@ -84,6 +84,9 @@
       "path": "packages/tag"
     },
     {
+      "path": "packages/textarea"
+    },
+    {
       "path": "packages/theme"
     },
     {
