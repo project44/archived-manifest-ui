@@ -1,7 +1,6 @@
 const path = require('path');
 
 const toPath = _path => path.join(process.cwd(), _path);
-const styledProps = new Set(['as', 'sx']);
 
 module.exports = {
   addons: [
@@ -30,18 +29,19 @@ module.exports = {
     checkOptions: {},
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
-      shouldExtractLiteralValuesFromEnum: true,
-      shouldRemoveUndefinedFromOptional: true,
+      compilerOptions: {
+        allowSyntheticDefaultImports: false,
+      },
       propFilter: prop => {
-        // Remove styled props that do not have a description.
-        if (!styledProps.has(prop.name) && !prop.description) return;
-
-        if (config.reactDocgenTypescriptOptions.propFilter) {
-          return config.reactDocgenTypescriptOptions.propFilter(prop);
+        if (['theme'].includes(prop.name)) {
+          return false;
         }
 
-        return true;
+        return prop.parent
+          ? /@manifest-ui/.test(prop.parent.fileName) || !/node_modules/.test(prop.parent.fileName)
+          : true;
       },
+      shouldExtractLiteralValuesFromEnum: true,
     },
   }),
   webpackFinal: async config => {

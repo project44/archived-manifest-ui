@@ -22,7 +22,6 @@
     "@manifest-ui/hooks": "^0.0.3",
     "@manifest-ui/portal": "^0.0.0",
     "@manifest-ui/slot": "^0.0.0",
-    "@popperjs/core": "^2.11.2",
-    "react-popper": "^2.2.5"
+    "@popperjs/core": "^2.11.2"
   }
 }

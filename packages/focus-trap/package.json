@@ -1,5 +1,5 @@
 {
-  "name": "@manifest-ui/utils",
+  "name": "@manifest-ui/focus-trap",
   "version": "0.0.0",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
@@ -11,7 +11,7 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:project-44/manifest-ui.git",
-    "directory": "packages/utils"
+    "directory": "packages/focus-trap"
   },
   "author": "project44",
   "license": "MIT",
@@ -19,6 +19,6 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "clsx": "^1.1.1"
+    "react-focus-lock": "^2.8.1"
   }
 }
