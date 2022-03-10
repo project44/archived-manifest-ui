@@ -1,3 +1,4 @@
+import { focusStyles } from '@manifest-ui/theme';
 import { styled } from '@manifest-ui/styled';
 
 const themeKey = 'input';
@@ -5,23 +6,47 @@ const themeKey = 'input';
 export const StyledInputContainer = styled('div', {
   slot: 'container',
   themeKey,
-})({
-  border: 0,
-  m: 0,
-  p: 0,
-  position: 'relative',
+})(({ theme }) => focusStyles({ borderWidth: 'small', theme }), {
+  borderColor: 'neutral.200',
+  borderRadius: 'medium',
+  borderStyle: 'solid',
+  borderWidth: 'small',
+  bottom: 0,
+  boxSizing: 'border-box',
+  left: 0,
+  pointerEvents: 'none',
+  position: 'absolute',
+  right: 0,
+  top: 0,
+  zIndex: 10,
+
+  '&[data-disabled]': {
+    backgroundColor: 'neutral.100',
+    color: 'emphasis.disabled',
+
+    '&::placeholder': {
+      color: 'emphasis.disabled',
+    },
+  },
+
+  '&[data-hover]': {
+    borderColor: 'neutral.400',
+  },
+
+  '&[data-invalid]': {
+    borderColor: 'status.danger.500',
+    color: 'status.danger.500',
+  },
 });
 
 export const StyledInput = styled('input', {
   slot: 'input',
   themeKey,
 })(
-  ({ theme }) => ({
+  {
     appearance: 'none',
-    borderColor: 'neutral.200',
-    borderRadius: 'medium',
-    borderStyle: 'solid',
-    borderWidth: 'small',
+    background: 'none',
+    border: 'none',
     color: 'emphasis.primary',
     fontFamily: 'body',
     fontSize: 'small',
@@ -29,6 +54,7 @@ export const StyledInput = styled('input', {
     lineHeight: 'medium',
     letterSpacing: 'normal',
     m: 0,
+    minW: 0,
     outline: 0,
     px: 3,
     resize: 'none',
@@ -36,17 +62,9 @@ export const StyledInput = styled('input', {
     transitionDuration: 'base',
     transitionProperty: 'common',
     width: '100%',
-
-    '&::placeholder': {
-      color: 'emphasis.tertiary',
-      opacity: 1,
-      userSelect: 'none',
-    },
+    zIndex: 20,
 
     '&:disabled': {
-      backgroundColor: 'neutral.100',
-      color: 'emphasis.disabled',
-      cursor: 'not-allowed',
       pointerEvents: 'none',
 
       '&::placeholder': {
@@ -54,34 +72,20 @@ export const StyledInput = styled('input', {
       },
     },
 
-    '&:hover': {
-      borderColor: 'neutral.400',
+    '&::placeholder': {
+      color: 'emphasis.tertiary',
+      opacity: 1,
+      userSelect: 'none',
     },
 
-    '&:focus': {
-      borderColor: 'primary.500',
-      boxShadow: `0 0 0 2px ${theme.colors?.primary?.[200] as string}`,
-      outline: 'none',
+    '&[data-has-end-icon]': {
+      pe: 0,
     },
 
-    '&[data-invalid]': {
-      borderColor: 'status.danger.500',
-      color: 'status.danger.500',
-
-      '&:focus': {
-        boxShadow: `0 0 0 2px ${theme.colors?.status?.danger?.[200] as string}`,
-        outline: 'none',
-      },
+    '&[data-has-start-icon]': {
+      ps: 0,
     },
-
-    '&[data-has-endIcon]': {
-      pe: 48,
-    },
-
-    '&[data-has-startIcon]': {
-      ps: 48,
-    },
-  }),
+  },
   ({ size }) => ({
     ...(size === 'medium' && { minH: 40 }),
     ...(size === 'small' && { minH: 32 }),
@@ -93,21 +97,28 @@ export const StyledInputIcon = styled('div', {
   themeKey,
 })({
   alignItems: 'center',
-  bottom: 0,
+  color: 'emphasis.tertiary',
   display: 'flex',
   justifyContent: 'center',
-  pe: 3,
-  ps: 3,
+  pe: 2,
+  ps: 2,
   pointerEvents: 'none',
-  position: 'absolute',
-  top: 0,
-  zIndex: 1,
+});
 
-  '&[data-placement=start]': {
-    left: 0,
-  },
+export const StyledInputWrapper = styled('div', {
+  slot: 'wrapper',
+  themeKey,
+})({
+  alignItems: 'center',
+  border: 0,
+  color: 'emphasis.secondary',
+  cursor: 'text',
+  display: 'flex',
+  m: 0,
+  p: 0,
+  position: 'relative',
 
-  '&[data-placement=end]': {
-    right: 0,
+  '&[data-disabled]': {
+    cursor: 'not-allowed',
   },
 });

@@ -22,6 +22,7 @@
     "@manifest-ui/button": "^0.0.12",
     "@manifest-ui/hooks": "^0.0.3",
     "@manifest-ui/icons": "^0.0.15",
-    "@manifest-ui/styled": "^0.0.9"
+    "@manifest-ui/styled": "^0.0.9",
+    "@manifest-ui/theme": "^0.0.7"
   }
 }

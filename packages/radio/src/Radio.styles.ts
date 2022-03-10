@@ -1,6 +1,49 @@
+import { focusStyles, visuallyHiddenStyles } from '@manifest-ui/theme';
 import { styled } from '@manifest-ui/styled';
 
 const themeKey = 'radio';
+
+export const StyledRadioContainer = styled('div', {
+  slot: 'container',
+  themeKey,
+})(
+  {
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderColor: 'neutral.500',
+    borderRadius: 'full',
+    borderStyle: 'solid',
+    borderWidth: 'large',
+    boxSizing: 'border-box',
+    color: 'white',
+    cursor: 'pointer',
+    display: 'inline-flex',
+    h: 20,
+    justifyContent: 'center',
+    w: 20,
+
+    '&[data-disabled]': {
+      cursor: 'not-allowed',
+      opacity: 0.38,
+    },
+
+    '&[data-checked]': {
+      backgroundImage: 'gradient.default',
+      borderColor: 'transparent',
+
+      '&::before': {
+        background: 'currentColor',
+        borderRadius: 10,
+        content: '""',
+        display: 'inline-block',
+        h: 10,
+        position: 'relative',
+        w: 10,
+      },
+    },
+  },
+  ({ theme }) => focusStyles({ borderRadius: 'full', borderWidth: 'large', theme }),
+);
 
 export const StyledRadioGroup = styled('div', {
   slot: 'group',
@@ -24,61 +67,7 @@ export const StyledRadioGroup = styled('div', {
 export const StyledRadioInput = styled('input', {
   slot: 'input',
   themeKey,
-})(({ theme }) => ({
-  alignItems: 'center',
-  appearance: 'none',
-  backgroundColor: 'white',
-  borderColor: 'neutral.500',
-  borderRadius: 'full',
-  borderStyle: 'solid',
-  borderWidth: 'large',
-  boxSizing: 'border-box',
-  color: 'white',
-  cursor: 'pointer',
-  display: 'inline-flex',
-  h: 20,
-  justifyContent: 'center',
-  m: 0,
-  outline: 0,
-  p: 0,
-  transitionDuration: 'base',
-  transitionProperty: 'box-shadow',
-  w: 20,
-
-  '&:disabled': {
-    cursor: 'not-allowed',
-    opacity: 0.38,
-  },
-
-  '&:checked': {
-    backgroundImage: 'gradient.default',
-    border: 0,
-
-    '&::before': {
-      background: 'currentColor',
-      borderRadius: 10,
-      content: '""',
-      display: 'inline-block',
-      h: 10,
-      position: 'relative',
-      w: 10,
-    },
-
-    '&:focus': {
-      backgroundImage: 'gradient.focus',
-      boxShadow: `0 0 0 2px ${theme.colors?.primary?.[200] as string}`,
-      outline: 'none',
-    },
-
-    '&:hover:not(&:focus)': {
-      backgroundImage: 'gradient.hover',
-    },
-  },
-
-  '&:hover:not(&:focus)': {
-    borderColor: 'neutral.600',
-  },
-}));
+})(visuallyHiddenStyles);
 
 export const StyledRadioLabel = styled('label', {
   slot: 'root',

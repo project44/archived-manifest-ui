@@ -1,4 +1,5 @@
 import { Clear } from '@manifest-ui/icons';
+import { focusStyles } from '@manifest-ui/theme';
 import { styled } from '@manifest-ui/styled';
 
 export interface StyledTagOptions {
@@ -21,7 +22,7 @@ const themeKey = 'tag';
 export const StyledTag = styled('div', {
   themeKey,
 })<StyledTagOptions>(
-  {
+  ({ theme }) => ({
     alignItems: 'center',
     backgroundColor: 'transparent',
     border: 'solid',
@@ -40,7 +41,7 @@ export const StyledTag = styled('div', {
     p: 0,
     textDecoration: 'none',
     transitionDuration: 'base',
-    transitionProperty: 'colors',
+    transitionProperty: 'common',
     verticalAlign: 'middle',
     whiteSpace: 'nowrap',
 
@@ -64,8 +65,10 @@ export const StyledTag = styled('div', {
     '&[data-clickable]': {
       cursor: 'pointer',
       userSelect: 'none',
+
+      ...focusStyles({ borderRadius: 'full', borderWidth: 'small', theme }),
     },
-  },
+  }),
   ({ variant }) => ({
     ...(variant === 'outlined' && {
       borderColor: 'neutral.200',
@@ -78,11 +81,6 @@ export const StyledTag = styled('div', {
 
         '&:hover': {
           backgroundColor: 'neutral.50',
-          borderColor: 'neutral.400',
-        },
-
-        '&:focus': {
-          backgroundColor: 'neutral.100',
           borderColor: 'neutral.400',
         },
       },
@@ -98,10 +96,6 @@ export const StyledTag = styled('div', {
 
         '&:hover': {
           backgroundColor: 'neutral.200',
-        },
-
-        '&:focus': {
-          backgroundColor: 'neutral.300',
         },
       },
     }),

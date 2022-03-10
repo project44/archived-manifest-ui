@@ -1,4 +1,7 @@
 import { shouldForwardProp, styled } from '@manifest-ui/styled';
+import { focusStyles } from '@manifest-ui/theme';
+
+const props = new Set(['colorTheme', 'isActive']);
 
 export interface StyledButtonOptions {
   /**
@@ -25,7 +28,7 @@ const themeKey = 'button';
 
 export const StyledButton = styled('button', {
   label: 'Button',
-  shouldForwardProp: (prop: string) => shouldForwardProp(prop) && prop !== 'colorTheme',
+  shouldForwardProp: (prop: string) => shouldForwardProp(prop) && !props.has(prop),
   themeKey: 'button',
 })<StyledButtonOptions>(
   {
@@ -56,7 +59,7 @@ export const StyledButton = styled('button', {
     },
   },
 
-  ({ colorTheme, theme, variant }) => ({
+  ({ colorTheme, variant }) => ({
     ...(colorTheme === 'primary' && {
       ...(variant === 'filled' && {
         backgroundImage: 'gradient.default',
@@ -64,12 +67,6 @@ export const StyledButton = styled('button', {
 
         '&:hover': {
           backgroundImage: 'gradient.hover',
-        },
-
-        '&:focus': {
-          backgroundImage: 'gradient.focus',
-          boxShadow: `0 0 0 2px ${theme.colors?.primary?.[200] as string}`,
-          outline: 'none',
         },
 
         '&[data-active]': {
@@ -83,25 +80,12 @@ export const StyledButton = styled('button', {
         backgroundColor: 'neutral.300',
       },
 
-      '&:focus': {
-        backgroundColor: 'neutral.200',
-        boxShadow: `0 0 0 2px ${theme.colors?.neutral?.[100] as string}`,
-        outline: 'none',
-      },
-
       '&:hover:not(&:focus)': {
         backgroundColor: 'neutral.100',
       },
 
       ...(variant === 'outlined' && {
         borderColor: 'neutral.200',
-
-        '&:focus': {
-          backgroundColor: 'neutral.200',
-          borderColor: 'neutral.400',
-          boxShadow: `0 0 0 2px ${theme.colors?.neutral?.[200] as string}`,
-          outline: 'none',
-        },
       }),
     }),
 
@@ -112,12 +96,6 @@ export const StyledButton = styled('button', {
 
         '&:hover': {
           backgroundColor: 'status.danger.600',
-        },
-
-        '&:focus': {
-          backgroundColor: 'status.danger.700',
-          boxShadow: `0 0 0 2px ${theme.colors?.status?.danger?.[200] as string}`,
-          outline: 'none',
         },
 
         '&[data-active]': {
@@ -145,6 +123,7 @@ export const StyledButton = styled('button', {
       },
     }),
   }),
+  ({ theme }) => focusStyles({ borderWidth: 'small', theme }),
 );
 
 export const StyledButtonIcon = styled('span', {
