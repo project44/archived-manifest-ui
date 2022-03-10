@@ -39,6 +39,7 @@ export const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentPro
 
     return (
       <StyledPopoverContent
+        className="manifestui-popover"
         id={id}
         ref={useMergedRef(popoverRef, ref)}
         role="dialog"
