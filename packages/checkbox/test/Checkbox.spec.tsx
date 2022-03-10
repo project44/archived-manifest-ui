@@ -44,6 +44,26 @@ describe('@manifest-ui/checkbox', () => {
     expect(input).not.toBeChecked();
   });
 
+  it('should support indeterminate state', () => {
+    const changeSpy = jest.fn();
+
+    render(
+      <Checkbox isIndeterminate onChange={changeSpy}>
+        Checkbox
+      </Checkbox>,
+    );
+
+    const input = screen.getByRole('checkbox');
+
+    expect(input).toHaveAttribute('aria-checked', 'mixed');
+
+    act(() => {
+      userEvent.click(input);
+    });
+
+    expect(changeSpy).toHaveBeenCalled();
+  });
+
   it('should support controlled states', () => {
     const changeSpy = jest.fn();
 

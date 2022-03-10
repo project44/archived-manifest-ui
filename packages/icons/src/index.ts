@@ -6,5 +6,6 @@ export * from './ExpandMore';
 export * from './KeyboardArrowLeft';
 export * from './KeyboardArrowRight';
 export * from './Person';
+export * from './Remove';
 export * from './Search';
 export * from './UnfoldMore';
