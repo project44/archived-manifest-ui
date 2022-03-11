@@ -19,6 +19,7 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/styled": "^0.0.9"
+    "@manifest-ui/styled": "^0.0.9",
+    "@manifest-ui/theme": "^0.0.7"
   }
 }

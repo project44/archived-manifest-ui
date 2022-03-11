@@ -1,16 +1,15 @@
+import { focusStyles } from '@manifest-ui/theme';
 import { styled } from '@manifest-ui/styled';
 
 const themeKey = 'textarea';
 
 export const StyledTextarea = styled('textarea', {
   themeKey,
-})(({ theme }) => ({
+})({
   appearance: 'none',
-  borderColor: 'neutral.200',
-  borderRadius: 'medium',
+  background: 'none',
+  border: 'none',
   boxSizing: 'border-box',
-  borderStyle: 'solid',
-  borderWidth: 'small',
   color: 'emphasis.primary',
   fontFamily: 'body',
   fontSize: 'small',
@@ -28,6 +27,7 @@ export const StyledTextarea = styled('textarea', {
   transitionDuration: 'base',
   transitionProperty: 'common',
   width: '100%',
+  zIndex: 20,
 
   '&::placeholder': {
     color: 'emphasis.tertiary',
@@ -36,33 +36,60 @@ export const StyledTextarea = styled('textarea', {
   },
 
   '&:disabled': {
-    backgroundColor: 'neutral.100',
-    color: 'emphasis.disabled',
-    cursor: 'not-allowed',
     pointerEvents: 'none',
 
     '&::placeholder': {
       color: 'emphasis.disabled',
     },
   },
+});
 
-  '&:hover': {
-    borderColor: 'neutral.400',
+export const StyledTextareaContainer = styled('div', {
+  slot: 'container',
+  themeKey,
+})(({ theme }) => focusStyles({ borderWidth: 'small', theme }), {
+  borderColor: 'neutral.200',
+  borderRadius: 'medium',
+  borderStyle: 'solid',
+  borderWidth: 'small',
+  bottom: 0,
+  boxSizing: 'border-box',
+  left: 0,
+  pointerEvents: 'none',
+  position: 'absolute',
+  right: 0,
+  top: 0,
+  zIndex: 10,
+
+  '&[data-disabled]': {
+    backgroundColor: 'neutral.100',
+    color: 'emphasis.disabled',
   },
 
-  '&:focus': {
-    borderColor: 'primary.500',
-    boxShadow: `0 0 0 2px ${theme.colors?.primary?.[200] as string}`,
-    outline: 'none',
+  '&[data-hover]': {
+    borderColor: 'neutral.400',
   },
 
   '&[data-invalid]': {
     borderColor: 'status.danger.500',
     color: 'status.danger.500',
-
-    '&:focus': {
-      boxShadow: `0 0 0 2px ${theme.colors?.status?.danger?.[200] as string}`,
-      outline: 'none',
-    },
   },
-}));
+});
+
+export const StyledTextareaWrapper = styled('div', {
+  slot: 'wrapper',
+  themeKey,
+})({
+  alignItems: 'center',
+  border: 0,
+  color: 'emphasis.secondary',
+  cursor: 'text',
+  display: 'flex',
+  m: 0,
+  p: 0,
+  position: 'relative',
+
+  '&[data-disabled]': {
+    cursor: 'not-allowed',
+  },
+});

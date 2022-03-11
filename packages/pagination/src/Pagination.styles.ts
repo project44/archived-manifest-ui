@@ -1,3 +1,4 @@
+import { focusStyles } from '@manifest-ui/theme';
 import { styled } from '@manifest-ui/styled';
 
 const themeKey = 'pagination';
@@ -17,63 +18,56 @@ export const StyledPagination = styled('div', {
 export const StyledPaginationButton = styled('button', {
   slot: 'button',
   themeKey,
-})(({ theme }) => ({
-  alignItems: 'center',
-  appearance: 'none',
-  backgroundColor: 'rgba(128, 133, 140, 0.04)',
-  borderColor: 'rgba(128, 133, 140, 0.16)',
-  borderStyle: 'solid',
-  borderRadius: 'medium',
-  borderWidth: 'small',
-  boxSizing: 'border-box',
-  color: 'emphasis.secondary',
-  cursor: 'pointer',
-  display: 'inline-flex',
-  fontFamily: 'body',
-  fontSize: 'small',
-  fontWeight: 'semibold',
-  h: 32,
-  letterSpacing: 'normal',
-  lineHeight: 'medium',
-  margin: 0,
-  outline: 0,
-  position: 'relative',
-  px: 3,
-  py: '7px',
-  transitionDuration: 'base',
-  transitionProperty: 'common',
-  textDecoration: 'none',
-  userSelect: 'none',
-  width: 'auto',
+})(
+  {
+    alignItems: 'center',
+    appearance: 'none',
+    backgroundColor: 'rgba(128, 133, 140, 0.04)',
+    borderColor: 'rgba(128, 133, 140, 0.16)',
+    borderStyle: 'solid',
+    borderRadius: 'medium',
+    borderWidth: 'small',
+    boxSizing: 'border-box',
+    color: 'emphasis.secondary',
+    cursor: 'pointer',
+    display: 'inline-flex',
+    fontFamily: 'body',
+    fontSize: 'small',
+    fontWeight: 'semibold',
+    h: 32,
+    letterSpacing: 'normal',
+    lineHeight: 'medium',
+    margin: 0,
+    outline: 0,
+    position: 'relative',
+    px: 3,
+    py: '7px',
+    transitionDuration: 'base',
+    transitionProperty: 'common',
+    textDecoration: 'none',
+    userSelect: 'none',
+    width: 'auto',
 
-  '&:disabled': {
-    backgroundColor: 'transparent',
-    opacity: 0.38,
-    pointerEvents: 'none',
-  },
-
-  '&:hover': {
-    backgroundColor: 'rgba(128, 133, 140, 0.08)',
-  },
-
-  '&[data-active]': {
-    backgroundColor: 'rgba(128, 133, 140, 0.16)',
+    '&:disabled': {
+      backgroundColor: 'transparent',
+      opacity: 0.38,
+      pointerEvents: 'none',
+    },
 
     '&:hover': {
+      backgroundColor: 'rgba(128, 133, 140, 0.08)',
+    },
+
+    '&[data-active]': {
       backgroundColor: 'rgba(128, 133, 140, 0.16)',
+
+      '&:hover': {
+        backgroundColor: 'rgba(128, 133, 140, 0.16)',
+      },
     },
   },
-
-  '&:focus': {
-    backgroundColor: 'rgba(128, 133, 140, 0.12)',
-    boxShadow: `0 0 0 2px ${theme.colors?.primary?.[100] as string}`,
-    outline: 'none',
-
-    '&:hover': {
-      backgroundColor: 'rgba(128, 133, 140, 0.12)',
-    },
-  },
-}));
+  focusStyles,
+);
 
 export const StyledPaginationEllipsis = styled('div', {
   slot: 'ellipsis',
