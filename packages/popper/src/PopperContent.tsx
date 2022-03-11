@@ -9,23 +9,48 @@ export type PopperContentProps = ComponentProps<'div'>;
 
 export const PopperContent = React.forwardRef<HTMLDivElement, PopperContentProps>(
   (props: PopperContentProps, ref) => {
-    const { anchorElement, config, disablePortal, isOpen, popperElement, setPopperElement } =
-      usePoppperContext();
+    const {
+      anchorElement,
+      gutter,
+      disablePortal,
+      isOpen,
+      modifiers = [],
+      placement,
+      popperElement,
+      setPopperElement,
+    } = usePoppperContext();
 
     const instanceRef = React.useRef<Instance | null>(null);
     const mergedRef = useMergedRef(ref, setPopperElement) as any;
 
     useIsomorphicLayoutEffect(() => {
-      if (instanceRef.current) {
-        void instanceRef.current.setOptions({ ...config });
-      }
-    }, [config]);
-
-    useIsomorphicLayoutEffect(() => {
       if (!anchorElement || !isOpen) return;
 
       if (popperElement) {
-        instanceRef.current = createPopper(anchorElement, popperElement, config);
+        instanceRef.current = createPopper(anchorElement, popperElement, {
+          placement,
+          modifiers: [
+            {
+              name: 'flip',
+              options: {
+                padding: gutter,
+              },
+            },
+            {
+              name: 'offset',
+              options: {
+                offset: [0, gutter],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                boundary: 'clippingParents',
+              },
+            },
+            ...modifiers,
+          ],
+        });
 
         instanceRef.current.forceUpdate();
       }
@@ -36,7 +61,7 @@ export const PopperContent = React.forwardRef<HTMLDivElement, PopperContentProps
           instanceRef.current = null;
         }
       };
-    }, [anchorElement, config, isOpen, popperElement]);
+    }, [anchorElement, gutter, isOpen, modifiers, placement, popperElement]);
 
     const content = <div ref={mergedRef} role="tooltip" {...props} />;
 

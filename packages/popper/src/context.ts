@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { Options, VirtualElement } from '@popperjs/core';
+import { Options, Placement, VirtualElement } from '@popperjs/core';
 
 export interface PopperContextOptions {
   anchorElement?: HTMLElement | VirtualElement | null;
-  config?: Partial<Options>;
   disablePortal?: boolean;
+  gutter?: number;
   isOpen?: boolean;
+  modifiers?: Options['modifiers'];
+  placement?: Placement;
   popperElement?: HTMLElement | null;
   setAnchorElement?(node: HTMLElement | VirtualElement | null): void;
   setPopperElement?(node: HTMLElement | null): void;
