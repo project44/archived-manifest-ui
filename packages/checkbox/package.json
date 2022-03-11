@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/checkbox",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -19,10 +19,10 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/hooks": "^0.0.3",
-    "@manifest-ui/icons": "^0.0.15",
+    "@manifest-ui/hooks": "^0.1.0",
+    "@manifest-ui/icons": "^0.1.0",
     "@manifest-ui/styled": "^0.0.9",
-    "@manifest-ui/theme": "^0.0.7",
-    "@manifest-ui/utils": "^0.0.0"
+    "@manifest-ui/theme": "^0.1.0",
+    "@manifest-ui/utils": "^0.1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/hooks",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -19,7 +19,7 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/utils": "^0.0.0",
+    "@manifest-ui/utils": "^0.1.0",
     "lodash.uniqueid": "^4.0.1"
   }
 }

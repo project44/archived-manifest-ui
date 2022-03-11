@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/tooltip",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -19,8 +19,8 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/hooks": "^0.0.3",
-    "@manifest-ui/popper": "^0.0.0",
+    "@manifest-ui/hooks": "^0.1.0",
+    "@manifest-ui/popper": "^0.1.0",
     "@manifest-ui/styled": "^0.0.9"
   }
 }

@@ -1,5 +1,36 @@
 # @manifest-ui/react
 
+## 2.5.0
+
+### Minor Changes
+
+- [#190](https://github.com/project44/manifest-ui/pull/190) [`51569c8`](https://github.com/project44/manifest-ui/commit/51569c80ae817503a1b16aec80b917f65fbd84fe) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Releasing v2.5.0 components
+
+### Patch Changes
+
+- Updated dependencies [[`51569c8`](https://github.com/project44/manifest-ui/commit/51569c80ae817503a1b16aec80b917f65fbd84fe)]:
+  - @manifest-ui/card@0.1.0
+  - @manifest-ui/hooks@0.1.0
+  - @manifest-ui/popover@0.1.0
+  - @manifest-ui/popper@0.1.0
+  - @manifest-ui/portal@0.1.0
+  - @manifest-ui/slot@0.1.0
+  - @manifest-ui/table@0.2.0
+  - @manifest-ui/textarea@0.1.0
+  - @manifest-ui/theme@0.1.0
+  - @manifest-ui/tooltip@0.1.0
+  - @manifest-ui/utils@0.1.0
+  - @manifest-ui/button@0.0.13
+  - @manifest-ui/checkbox@0.0.8
+  - @manifest-ui/input@0.1.4
+  - @manifest-ui/pagination@0.0.12
+  - @manifest-ui/radio@0.1.4
+  - @manifest-ui/tag@0.1.3
+  - @manifest-ui/toggle@0.1.4
+  - @manifest-ui/visually-hidden@0.0.10
+  - @manifest-ui/provider@0.0.10
+  - @manifest-ui/spinner@0.0.10
+
 ## 2.4.3
 
 ### Patch Changes
