@@ -2223,31 +2223,6 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@manifest-ui/styled-system@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@manifest-ui/styled-system/-/styled-system-0.0.6.tgz#14543e45bde27ba3bd04abcfe3f51acd1e2e87fc"
-  integrity sha512-241uSTdVbnGSc3OH0RV/lQqfVZ73m9DcAV4qf/IBFoa2byrwmSe8w+ZyP9WQOARL1SDXD2K53eZWCyQh4Out+w==
-  dependencies:
-    csstype "^3.0.10"
-    lodash.get "^4.4.2"
-    lodash.isnumber "^3.0.3"
-    lodash.merge "^4.6.2"
-
-"@manifest-ui/styled@^0.0.7":
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/@manifest-ui/styled/-/styled-0.0.7.tgz#fe7cc2371d5e8e5c1a21fbe9987ce0476844b5c5"
-  integrity sha512-xA46NIycYOK8vkXsSNBY5mmDdbcRiXhKZ3O0kA6pPSVN5IOCYrV3KWYT5VMvrgV9/UJg9GWokVuFuRtaUWz1+w==
-  dependencies:
-    "@manifest-ui/styled-system" "^0.0.6"
-    "@manifest-ui/themes" "^0.1.1"
-    lodash.isempty "^4.4.0"
-    lodash.omitby "^4.6.0"
-
-"@manifest-ui/themes@^0.1.1":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@manifest-ui/themes/-/themes-0.1.4.tgz#38f051e5efe845d6cd189ce68ccd43083002fd92"
-  integrity sha512-g2hIqpDhWigukD9oo5Sgr6JD0KY+K65y6wjJaR9euxZaTkL+ZclTFwZLJw5tGbKe5hbnO+yxbnzaqrpxeU2UOw==
-
 "@manypkg/find-root@^1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@manypkg/find-root/-/find-root-1.1.0.tgz#a62d8ed1cd7e7d4c11d9d52a8397460b5d4ad29f"
