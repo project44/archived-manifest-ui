@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/portal",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -20,6 +20,6 @@
     "react-dom": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/hooks": "0.0.3"
+    "@manifest-ui/hooks": "0.1.0"
   }
 }

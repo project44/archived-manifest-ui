@@ -1,5 +1,11 @@
 # @manifest-ui/themes
 
+## 0.2.4
+
+### Patch Changes
+
+- [#190](https://github.com/project44/manifest-ui/pull/190) [`51569c8`](https://github.com/project44/manifest-ui/commit/51569c80ae817503a1b16aec80b917f65fbd84fe) Thanks [@bclark-p44](https://github.com/bclark-p44)! - Releasing v2.5.0 components
+
 ## 0.2.3
 
 ### Patch Changes
