@@ -1,0 +1,27 @@
+{
+  "name": "@manifest-ui/popover",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:project-44/manifest-ui.git",
+    "directory": "packages/popover"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0"
+  },
+  "dependencies": {
+    "@manifest-ui/hooks": "^0.0.3",
+    "@manifest-ui/popper": "^0.0.0",
+    "@manifest-ui/styled": "^0.0.9",
+    "@manifest-ui/utils": "^0.0.0"
+  }
+}

@@ -18,6 +18,7 @@
     "@manifest-ui/hooks": "^0.0.3",
     "@manifest-ui/icons": "^0.0.15",
     "@manifest-ui/pagination": "^0.0.11",
-    "@manifest-ui/styled": "^0.0.9"
+    "@manifest-ui/styled": "^0.0.9",
+    "@manifest-ui/theme": "^0.0.7"
   }
 }

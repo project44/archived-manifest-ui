@@ -1,19 +1,7 @@
 import * as React from 'react';
+import { mergeRefs } from '@manifest-ui/utils';
 
-export function setRef<T>(
-  ref: React.MutableRefObject<T | null> | ((instance: T | null) => void) | null | undefined,
-  value: T | null,
-): void {
-  if (typeof ref === 'function') {
-    ref(value);
-  } else if (ref) {
-    ref.current = value;
-  }
-}
-
-export function useMergedRef<T>(...refs: React.Ref<T>[]) {
-  return React.useCallback((node: T | null) => {
-    refs.forEach(ref => setRef(ref, node));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, refs);
+export function useMergedRef<T>(...refs: (React.Ref<T> | undefined)[]) {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  return React.useCallback(mergeRefs(...refs), refs);
 }

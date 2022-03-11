@@ -1,0 +1,27 @@
+{
+  "name": "@manifest-ui/popper",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:project-44/manifest-ui.git",
+    "directory": "packages/popper"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0"
+  },
+  "dependencies": {
+    "@manifest-ui/hooks": "^0.0.3",
+    "@manifest-ui/portal": "^0.0.0",
+    "@manifest-ui/slot": "^0.0.0",
+    "@popperjs/core": "^2.11.2"
+  }
+}

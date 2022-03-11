@@ -6,6 +6,9 @@
       "path": "packages/button"
     },
     {
+      "path": "packages/card"
+    },
+    {
       "path": "packages/checkbox"
     },
     {
@@ -16,6 +19,9 @@
     },
     {
       "path": "packages/css-baseline"
+    },
+    {
+      "path": "packages/focus-trap"
     },
     {
       "path": "packages/hooks"
@@ -42,6 +48,12 @@
       "path": "packages/pagination"
     },
     {
+      "path": "packages/popover"
+    },
+    {
+      "path": "packages/popper"
+    },
+    {
       "path": "packages/portal"
     },
     {
@@ -52,6 +64,9 @@
     },
     {
       "path": "packages/react"
+    },
+    {
+      "path": "packages/slot"
     },
     {
       "path": "packages/spinner"
@@ -69,6 +84,9 @@
       "path": "packages/tag"
     },
     {
+      "path": "packages/textarea"
+    },
+    {
       "path": "packages/theme"
     },
     {
@@ -78,10 +96,16 @@
       "path": "packages/toggle"
     },
     {
+      "path": "packages/tooltip"
+    },
+    {
       "path": "packages/types"
     },
     {
       "path": "packages/typography"
+    },
+    {
+      "path": "packages/utils"
     },
     {
       "path": "packages/visually-hidden"

@@ -19,6 +19,7 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
+    "@manifest-ui/utils": "^0.0.0",
     "lodash.uniqueid": "^4.0.1"
   }
 }

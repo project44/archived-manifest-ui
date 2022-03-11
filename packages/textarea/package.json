@@ -1,0 +1,26 @@
+{
+  "name": "@manifest-ui/textarea",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "module": "./esm/index.js",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "esm/**/*.{js,map}",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:project-44/manifest-ui.git",
+    "directory": "packages/textarea"
+  },
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0"
+  },
+  "dependencies": {
+    "@manifest-ui/styled": "^0.0.9",
+    "@manifest-ui/theme": "^0.0.7",
+    "@manifest-ui/utils": "^0.0.0"
+  }
+}
