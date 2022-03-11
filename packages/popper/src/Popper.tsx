@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Options, Placement, VirtualElement } from '@popperjs/core';
 import { PoppperContext } from './context';
-import { StrictModifier } from 'react-popper';
 
 export interface PopperProps {
   /**
@@ -29,7 +28,7 @@ export interface PopperProps {
   /**
    * Modifiers passed to the popperjs instance.
    */
-  modifiers?: StrictModifier[];
+  modifiers?: Options['modifiers'];
   /**
    * The placement of the popper element in relation to its anchor element.
    *
@@ -45,7 +44,7 @@ export function Popper(props: PopperProps) {
     gutter = 8,
     isOpen = true,
     modifiers = [],
-    placement: placementProp = 'bottom',
+    placement = 'bottom',
   } = props;
 
   // Using state instead of refs to ensure popper state updates correctly.
@@ -53,39 +52,16 @@ export function Popper(props: PopperProps) {
     null,
   );
   const [popperElement, setPopperElement] = React.useState<HTMLElement | null>(null);
-  const [placement, setPlacement] = React.useState<Placement>(placementProp);
-
-  const config = React.useMemo(
-    (): Partial<Options> => ({
-      placement,
-      modifiers: [
-        {
-          name: 'offset',
-          options: {
-            offset: [0, gutter],
-          },
-        },
-        {
-          name: 'setPlacement',
-          enabled: true,
-          phase: 'main',
-          fn({ state }) {
-            setPlacement(state.placement);
-          },
-        },
-        ...modifiers,
-      ],
-    }),
-    [gutter, placement, modifiers],
-  );
 
   return (
     <PoppperContext.Provider
       value={{
         anchorElement,
         disablePortal,
-        config,
+        gutter,
         isOpen,
+        modifiers,
+        placement,
         popperElement,
         setAnchorElement,
         setPopperElement,

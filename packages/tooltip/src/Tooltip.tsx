@@ -13,7 +13,7 @@ export interface TooltipOptions {
    */
   closeDelay?: number;
   /**
-   * Whether the popover is open by default.
+   * Whether the tooltip is open by default.
    */
   defaultOpen?: boolean;
   /**
@@ -21,7 +21,7 @@ export interface TooltipOptions {
    */
   label?: React.ReactNode;
   /**
-   * Whether the popover is open.
+   * Whether the tooltip is open.
    *
    * @default false
    */
@@ -33,7 +33,7 @@ export interface TooltipOptions {
    */
   openDelay?: number;
   /**
-   * Callback executed on popover state change.
+   * Callback executed on tooltip state change.
    */
   onChange?(isOpen: boolean): void;
   /**
