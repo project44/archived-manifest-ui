@@ -1,3 +1,4 @@
+import { focusStyles } from '@manifest-ui/theme';
 import { styled } from '@manifest-ui/styled';
 import { transparentize } from '@manifest-ui/color';
 import { UnfoldMore } from '@manifest-ui/icons';
@@ -152,55 +153,54 @@ export const StyledTableRow = styled('tr', {
 export const StyledTableSortButton = styled('button', {
   slot: 'sort',
   themeKey,
-})(alignmentStyles, ({ theme }) => ({
-  alignItems: 'center',
-  appearance: 'none',
-  backgroundColor: 'transparent',
-  border: 0,
-  borderRadius: 'medium',
-  boxSizing: 'border-box',
-  color: 'inherit',
-  cursor: 'pointer',
-  display: 'inline-flex',
-  fontFamily: 'body',
-  fontSize: 'small',
-  fontWeight: 'semibold',
-  justifyContent: 'space-between',
-  letterSpacing: 'normal',
-  lineHeight: 'large',
-  m: 0,
-  minH: '100%',
-  outline: 0,
-  px: '0.4375rem',
-  py: 2,
-  position: 'relative',
-  transitionDuration: 'base',
-  transitionProperty: 'colors',
-  verticalAlign: 'initial',
-  w: '100%',
+})(
+  alignmentStyles,
+  {
+    alignItems: 'center',
+    appearance: 'none',
+    backgroundColor: 'transparent',
+    border: 0,
+    borderRadius: 'medium',
+    boxSizing: 'border-box',
+    color: 'inherit',
+    cursor: 'pointer',
+    display: 'inline-flex',
+    fontFamily: 'body',
+    fontSize: 'small',
+    fontWeight: 'semibold',
+    justifyContent: 'space-between',
+    letterSpacing: 'normal',
+    lineHeight: 'large',
+    m: 0,
+    minH: '100%',
+    outline: 0,
+    px: '0.4375rem',
+    py: 2,
+    position: 'relative',
+    transitionDuration: 'base',
+    transitionProperty: 'common',
+    verticalAlign: 'initial',
+    w: '100%',
 
-  '&:focus': {
-    outline: 'none',
-    boxShadow: `0 0 0 2px ${theme.colors?.primary?.[200] as string}`,
-  },
+    '&[data-align=left]': {
+      textAlign: 'left',
+    },
 
-  '&[data-align=left]': {
-    textAlign: 'left',
-  },
+    '&[data-align=center]': {
+      textAlign: 'center',
+    },
 
-  '&[data-align=center]': {
-    textAlign: 'center',
-  },
+    '&[data-align=right]': {
+      flexDirection: 'row-reverse',
+      textAlign: 'right',
+    },
 
-  '&[data-align=right]': {
-    flexDirection: 'row-reverse',
-    textAlign: 'right',
+    '&[data-align=justify]': {
+      textAlign: 'justify',
+    },
   },
-
-  '&[data-align=justify]': {
-    textAlign: 'justify',
-  },
-}));
+  focusStyles,
+);
 
 export const StyledTableSortIcon = styled(UnfoldMore)({
   fill: 'emphasis.tertiary',

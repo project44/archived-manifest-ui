@@ -21,6 +21,7 @@
   "dependencies": {
     "@manifest-ui/hooks": "^0.0.3",
     "@manifest-ui/styled": "^0.0.9",
+    "@manifest-ui/theme": "^0.0.7",
     "@manifest-ui/utils": "^0.0.0"
   }
 }
