@@ -1,114 +1,20 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Vessel",
   "extends": "./tsconfig.options.json",
   "files": [],
   "references": [
     {
-      "path": "packages/button"
-    },
-    {
-      "path": "packages/card"
-    },
-    {
-      "path": "packages/checkbox"
-    },
-    {
-      "path": "packages/color"
-    },
-    {
-      "path": "packages/config"
-    },
-    {
-      "path": "packages/css-baseline"
-    },
-    {
-      "path": "packages/focus-trap"
-    },
-    {
-      "path": "packages/hooks"
-    },
-    {
-      "path": "packages/icon"
-    },
-    {
-      "path": "packages/icons"
-    },
-    {
-      "path": "packages/image"
-    },
-    {
-      "path": "packages/input"
-    },
-    {
-      "path": "packages/layout"
-    },
-    {
-      "path": "packages/link"
-    },
-    {
-      "path": "packages/pagination"
-    },
-    {
-      "path": "packages/popover"
-    },
-    {
-      "path": "packages/popper"
-    },
-    {
-      "path": "packages/portal"
-    },
-    {
-      "path": "packages/provider"
-    },
-    {
-      "path": "packages/radio"
-    },
-    {
       "path": "packages/react"
     },
     {
-      "path": "packages/slot"
-    },
-    {
-      "path": "packages/spinner"
-    },
-    {
-      "path": "packages/styled"
-    },
-    {
-      "path": "packages/styled-system"
-    },
-    {
-      "path": "packages/table"
-    },
-    {
-      "path": "packages/tag"
-    },
-    {
-      "path": "packages/textarea"
-    },
-    {
-      "path": "packages/theme"
+      "path": "packages/system"
     },
     {
       "path": "packages/themes"
     },
     {
-      "path": "packages/toggle"
-    },
-    {
-      "path": "packages/tooltip"
-    },
-    {
-      "path": "packages/types"
-    },
-    {
-      "path": "packages/typography"
-    },
-    {
       "path": "packages/utils"
-    },
-    {
-      "path": "packages/visually-hidden"
     }
   ]
 }

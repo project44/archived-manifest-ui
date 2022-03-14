@@ -7,15 +7,13 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "lib": [
-      "dom",
       "esnext"
     ],
     "module": "esnext",
     "moduleResolution": "node",
-    "noEmitOnError": true,
+    "noEmitOnError": false,
     "noImplicitReturns": true,
     "pretty": true,
-    "jsx": "react-jsx",
     "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
