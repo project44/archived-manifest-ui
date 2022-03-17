@@ -13,6 +13,9 @@
   ],
   "references": [
     {
+      "path": "../focus-trap"
+    },
+    {
       "path": "../popover"
     },
     {
