@@ -1,6 +1,5 @@
-import { focusStyles } from '@manifest-ui/theme';
+import { focusStyles, transparentize } from '@manifest-ui/theme';
 import { styled } from '@manifest-ui/styled';
-import { transparentize } from '@manifest-ui/color';
 import { UnfoldMore } from '@manifest-ui/icons';
 
 const themeKey = 'table';
