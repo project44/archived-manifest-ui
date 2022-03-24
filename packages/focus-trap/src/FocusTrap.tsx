@@ -1,13 +1,8 @@
 import * as React from 'react';
 import FocusLock from 'react-focus-lock';
 
-export interface FocusTrapProps {
-  /**
-   * Whether to automattically focus the first focusable element within the trap.
-   *
-   * @default true
-   */
-  autoFocus?: boolean;
+export interface FocusTrapProps
+  extends Omit<React.ComponentPropsWithRef<typeof FocusLock>, 'disbled' | 'returnFocus'> {
   /**
    * Whether the focus trap is disabled.
    */
@@ -21,14 +16,9 @@ export interface FocusTrapProps {
 }
 
 export const FocusTrap: React.FC<FocusTrapProps> = props => {
-  const { autoFocus = true, children, isDisabled, restoreFocus = true } = props;
+  const { isDisabled, restoreFocus = true, ...other } = props;
 
-  return (
-    // eslint-disable-next-line jsx-a11y/no-autofocus
-    <FocusLock autoFocus={autoFocus} disabled={isDisabled} returnFocus={restoreFocus}>
-      {children}
-    </FocusLock>
-  );
+  return <FocusLock disabled={isDisabled} returnFocus={restoreFocus} {...other} />;
 };
 
 FocusTrap.displayName = 'FocusTrap';

@@ -20,7 +20,9 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
+    "@ctrl/tinycolor": "^3.4.0",
     "@manifest-ui/themes": "^0.2.4",
-    "deepmerge": "^4.2.2"
+    "deepmerge": "^4.2.2",
+    "lodash.get": "^4.4.2"
   }
 }

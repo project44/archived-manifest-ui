@@ -21,6 +21,9 @@
       "path": "packages/css-baseline"
     },
     {
+      "path": "packages/dropdown"
+    },
+    {
       "path": "packages/focus-trap"
     },
     {
@@ -45,6 +48,9 @@
       "path": "packages/link"
     },
     {
+      "path": "packages/menu"
+    },
+    {
       "path": "packages/pagination"
     },
     {
@@ -64,6 +70,9 @@
     },
     {
       "path": "packages/react"
+    },
+    {
+      "path": "packages/separator"
     },
     {
       "path": "packages/slot"
