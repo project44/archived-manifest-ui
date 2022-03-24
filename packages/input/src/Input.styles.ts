@@ -18,6 +18,8 @@ export const StyledInputContainer = styled('div', {
   position: 'absolute',
   right: 0,
   top: 0,
+  transitionDuration: 'base',
+  transitionProperty: 'common',
   zIndex: 10,
 
   '&[data-disabled]': {

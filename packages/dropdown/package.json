@@ -1,0 +1,22 @@
+{
+  "name": "@manifest-ui/dropdown",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "module": "./esm/index.js",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "esm/**/*.{js,map}",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0"
+  },
+  "dependencies": {
+    "@manifest-ui/popover": "^0.1.0",
+    "@manifest-ui/styled": "^0.0.9",
+    "@manifest-ui/theme": "^0.1.0",
+    "@radix-ui/react-roving-focus": "^0.1.5"
+  }
+}
