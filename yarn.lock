@@ -2223,6 +2223,14 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@manifest-ui/color@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@manifest-ui/color/-/color-0.2.0.tgz#97df3a5333a6df8c13cb30e58eca918a4755cfee"
+  integrity sha512-pSwxxj7NBTUyRbWhFpDUsYyWe6EtnBRqEP5jycycCSzj0StWOwtECh7k8nGQXbC3tinUweeJaPue0pp8Yt4beg==
+  dependencies:
+    "@ctrl/tinycolor" "^3.4.0"
+    lodash.get "^4.4.2"
+
 "@manypkg/find-root@^1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@manypkg/find-root/-/find-root-1.1.0.tgz#a62d8ed1cd7e7d4c11d9d52a8397460b5d4ad29f"
