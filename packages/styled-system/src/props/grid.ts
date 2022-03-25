@@ -19,6 +19,11 @@ export interface GridProps {
 }
 
 const config: Configs = {
+  gridArea: true,
+  gridAutoColumns: true,
+  gridAutoFlow: true,
+  gridAutoRows: true,
+  gridColumn: true,
   gridColumnGap: {
     property: 'gridColumnGap',
     scale: 'space',
@@ -27,19 +32,14 @@ const config: Configs = {
     property: 'gridGap',
     scale: 'space',
   },
+  gridRow: true,
   gridRowGap: {
     property: 'gridRowGap',
     scale: 'space',
   },
-  gridRow: true,
-  gridColumn: true,
-  gridAutoFlow: true,
-  gridAutoRows: true,
-  gridAutoColumns: true,
-  gridTemplateRows: true,
-  gridTemplateColumns: true,
   gridTemplateAreas: true,
-  gridArea: true,
+  gridTemplateColumns: true,
+  gridTemplateRows: true,
   placeItems: true,
 };
 

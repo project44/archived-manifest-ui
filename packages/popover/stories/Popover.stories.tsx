@@ -3,7 +3,6 @@ import { Box, Flex } from '@manifest-ui/layout';
 import { Popover, PopoverAnchor, PopoverContent, PopoverProps, PopoverTrigger } from '../src';
 import { Button } from '@manifest-ui/button';
 import { Input } from '@manifest-ui/input';
-import { FocusTrap as MUIFocusTrap } from '@manifest-ui/focus-trap';
 
 export default {
   title: 'Components/Popover',
@@ -38,27 +37,3 @@ export const Anchor = (args: PopoverProps) => (
   </Popover>
 );
 Anchor.args = {};
-
-export const FocusTrap = (args: PopoverProps) => (
-  <Popover {...args}>
-    <PopoverTrigger>
-      <Button>Open Popover</Button>
-    </PopoverTrigger>
-    <PopoverContent>
-      <MUIFocusTrap>
-        <Flex sx={{ gap: 2, p: 5 }}>
-          <Button colorTheme="neutral" variant="outlined">
-            button 1
-          </Button>
-          <Button colorTheme="neutral" variant="outlined">
-            button 2
-          </Button>
-          <Button colorTheme="neutral" variant="outlined">
-            button 3
-          </Button>
-        </Flex>
-      </MUIFocusTrap>
-    </PopoverContent>
-  </Popover>
-);
-FocusTrap.args = {};

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { fireEvent, render, screen, testA11y, userEvent, waitFor } from '../../../test/utils';
+import { act, fireEvent, render, screen, testA11y, userEvent, waitFor } from '../../../test/utils';
 import { Tooltip, TooltipProps } from '../src';
 
 function ControlledTooltip() {
@@ -14,10 +14,12 @@ function ControlledTooltip() {
 
 describe('@manifest-ui/tooltip', () => {
   it('should pass accessibility', async () => {
-    await testA11y(
-      <Tooltip isOpen>
-        <button>Open Tooltip</button>
-      </Tooltip>,
+    await act(() =>
+      testA11y(
+        <Tooltip isOpen>
+          <button>Open Tooltip</button>
+        </Tooltip>,
+      ),
     );
   });
 
@@ -36,7 +38,7 @@ describe('@manifest-ui/tooltip', () => {
 
     userEvent.unhover(screen.getByText('Open Tooltip'));
 
-    await waitFor(() => expect(screen.queryByRole('tooltip')).not.toBeInTheDocument());
+    expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
 
     userEvent.hover(screen.getByText('Open Tooltip'));
 
@@ -44,7 +46,7 @@ describe('@manifest-ui/tooltip', () => {
 
     fireEvent.keyDown(screen.getByRole('tooltip'), { key: 'Escape' });
 
-    await waitFor(() => expect(screen.queryByRole('tooltip')).not.toBeInTheDocument());
+    expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
   });
 
   it('should support controlled state', async () => {
@@ -58,6 +60,34 @@ describe('@manifest-ui/tooltip', () => {
 
     userEvent.unhover(screen.getByText('Open Tooltip'));
 
-    await waitFor(() => expect(screen.queryByRole('tooltip')).not.toBeInTheDocument());
+    expect(screen.queryByRole('tooltip')).not.toBeInTheDocument();
+  });
+
+  it.each(['center', 'end', 'start'])('should align %s', async alignment => {
+    render(
+      <Tooltip align={alignment as TooltipProps['align']}>
+        <button>Open Tooltip</button>
+      </Tooltip>,
+    );
+
+    userEvent.hover(screen.getByText('Open Tooltip'));
+
+    await waitFor(() =>
+      expect(screen.getByRole('tooltip').parentNode).toHaveAttribute('data-align', alignment),
+    );
+  });
+
+  it.each(['bottom', 'left', 'right', 'top'])('should place %s', async placement => {
+    render(
+      <Tooltip placement={placement as TooltipProps['placement']}>
+        <button>Open Tooltip</button>
+      </Tooltip>,
+    );
+
+    userEvent.hover(screen.getByText('Open Tooltip'));
+
+    await waitFor(() =>
+      expect(screen.getByRole('tooltip').parentNode).toHaveAttribute('data-side', placement),
+    );
   });
 });

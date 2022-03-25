@@ -32,7 +32,6 @@
     "@manifest-ui/link": "0.0.8",
     "@manifest-ui/pagination": "0.0.12",
     "@manifest-ui/popover": "0.1.0",
-    "@manifest-ui/popper": "0.1.0",
     "@manifest-ui/portal": "0.1.0",
     "@manifest-ui/provider": "0.0.10",
     "@manifest-ui/radio": "0.1.4",

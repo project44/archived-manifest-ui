@@ -5,13 +5,9 @@ import {
   StyledDropdownItemText,
 } from './Dropdown.styles';
 import { ComponentProps } from '@manifest-ui/styled';
-import { RovingFocusGroupItem } from '@radix-ui/react-roving-focus';
+import { DropdownMenuItem as RadixDropdownMenuItem } from '@radix-ui/react-dropdown-menu';
 
-export interface DropdownItemProps extends ComponentProps<typeof StyledDropdownItem> {
-  /**
-   * Text rendered below the primary text.
-   */
-  description?: string;
+export interface DropdownItemOptions {
   /**
    * Icon added after the button text.
    */
@@ -30,30 +26,26 @@ export interface DropdownItemProps extends ComponentProps<typeof StyledDropdownI
   startIcon?: React.ReactElement;
 }
 
+export interface DropdownItemProps
+  extends ComponentProps<typeof StyledDropdownItem>,
+    DropdownItemOptions {}
+
 export const DropdownItem = React.forwardRef<HTMLButtonElement, DropdownItemProps>(
   (props: DropdownItemProps, ref) => {
-    const {
-      children,
-      description,
-      endIcon,
-      isSelected,
-      isDisabled,
-      startIcon,
-      tabIndex,
-      ...other
-    } = props;
+    const { children, endIcon, isSelected, isDisabled, onClick, startIcon, ...other } = props;
 
     return (
-      <RovingFocusGroupItem asChild focusable={!isDisabled}>
+      <RadixDropdownMenuItem
+        asChild
+        disabled={isDisabled}
+        onSelect={onClick as unknown as (event: Event) => void}
+      >
         <StyledDropdownItem
           className="manifestui-dropdown-item"
           data-disabled={isDisabled ? '' : null}
           data-selected={isSelected ? '' : null}
           disabled={isDisabled}
           ref={ref}
-          role="menuitem"
-          tabIndex={isDisabled ? -1 : tabIndex}
-          type="button"
           {...other}
         >
           {startIcon && (
@@ -76,7 +68,7 @@ export const DropdownItem = React.forwardRef<HTMLButtonElement, DropdownItemProp
             </StyledDropdownItemIcon>
           )}
         </StyledDropdownItem>
-      </RovingFocusGroupItem>
+      </RadixDropdownMenuItem>
     );
   },
 );

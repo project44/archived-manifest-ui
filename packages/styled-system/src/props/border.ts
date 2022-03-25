@@ -44,71 +44,41 @@ const config: Configs = {
     property: 'border',
     scale: 'borders',
   },
-  borderTop: {
-    property: 'borderTop',
-    scale: 'borders',
-  },
-  borderRight: {
-    property: 'borderRight',
-    scale: 'borders',
-  },
   borderBottom: {
     property: 'borderBottom',
     scale: 'borders',
   },
-  borderLeft: {
-    property: 'borderLeft',
-    scale: 'borders',
-  },
-  borderX: {
-    properties: ['borderLeft', 'borderRight'],
-    scale: 'borders',
-  },
-  borderY: {
-    properties: ['borderTop', 'borderBottom'],
-    scale: 'borders',
-  },
-  borderCollapse: {
-    property: 'borderCollapse',
-    scale: 'borders',
-  },
-
-  // Radii
-  borderRadius: {
-    property: 'borderRadius',
-    scale: 'radii',
-  },
-  borderTopLeftRadius: {
-    property: 'borderTopLeftRadius',
-    scale: 'radii',
-  },
-  borderTopRightRadius: {
-    property: 'borderTopRightRadius',
-    scale: 'radii',
-  },
-  borderTopRadius: {
-    properties: ['borderTopLeftRadius', 'borderTopRightRadius'],
-    scale: 'radii',
+  borderBottomColor: {
+    property: 'borderBottomColor',
+    scale: 'colors',
   },
   borderBottomLeftRadius: {
     property: 'borderBottomLeftRadius',
-    scale: 'radii',
-  },
-  borderBottomRightRadius: {
-    property: 'borderBottomRightRadius',
     scale: 'radii',
   },
   borderBottomRadius: {
     properties: ['borderBottomLeftRadius', 'borderBottomRightRadius'],
     scale: 'radii',
   },
-  borderLeftRadius: {
-    properties: ['borderBottomLeftRadius', 'borderTopLeftRadius'],
+  borderBottomRightRadius: {
+    property: 'borderBottomRightRadius',
     scale: 'radii',
   },
-  borderRightRadius: {
-    properties: ['borderBottomRightRadius', 'borderTopRightRadius'],
-    scale: 'radii',
+  borderBottomStyle: {
+    property: 'borderBottomStyle',
+    scale: 'borderStyles',
+  },
+  borderBottomWidth: {
+    property: 'borderBottomWidth',
+    scale: 'borderWidths',
+  },
+  borderCollapse: {
+    property: 'borderCollapse',
+    scale: 'borders',
+  },
+  borderColor: {
+    property: 'borderColor',
+    scale: 'colors',
   },
   borderInlineEndRadius: {
     properties: ['borderTopRightRadius', 'borderBottomRightRadius'],
@@ -118,71 +88,94 @@ const config: Configs = {
     properties: ['borderTopLeftRadius', 'borderBottomLeftRadius'],
     scale: 'radii',
   },
-
-  // Widths
-  borderWidth: {
-    property: 'borderWidth',
-    scale: 'borderWidths',
-  },
-  borderTopWidth: {
-    property: 'borderTopWidth',
-    scale: 'borderWidths',
-  },
-  borderBottomWidth: {
-    property: 'borderBottomWidth',
-    scale: 'borderWidths',
-  },
-  borderLeftWidth: {
-    property: 'borderLeftWidth',
-    scale: 'borderWidths',
-  },
-  borderRightWidth: {
-    property: 'borderRightWidth',
-    scale: 'borderWidths',
-  },
-
-  // Style
-  borderStyle: {
-    property: 'borderStyle',
-    scale: 'borderStyles',
-  },
-  borderTopStyle: {
-    property: 'borderTopStyle',
-    scale: 'borderStyles',
-  },
-  borderBottomStyle: {
-    property: 'borderBottomStyle',
-    scale: 'borderStyles',
-  },
-  borderLeftStyle: {
-    property: 'borderLeftStyle',
-    scale: 'borderStyles',
-  },
-  borderRightStyle: {
-    property: 'borderRightStyle',
-    scale: 'borderStyles',
-  },
-
-  // Color
-  borderColor: {
-    property: 'borderColor',
-    scale: 'colors',
-  },
-  borderTopColor: {
-    property: 'borderTopColor',
-    scale: 'colors',
-  },
-  borderBottomColor: {
-    property: 'borderBottomColor',
-    scale: 'colors',
+  borderLeft: {
+    property: 'borderLeft',
+    scale: 'borders',
   },
   borderLeftColor: {
     property: 'borderLeftColor',
     scale: 'colors',
   },
+  borderLeftRadius: {
+    properties: ['borderBottomLeftRadius', 'borderTopLeftRadius'],
+    scale: 'radii',
+  },
+  borderLeftStyle: {
+    property: 'borderLeftStyle',
+    scale: 'borderStyles',
+  },
+  borderLeftWidth: {
+    property: 'borderLeftWidth',
+    scale: 'borderWidths',
+  },
+  borderRadius: {
+    property: 'borderRadius',
+    scale: 'radii',
+  },
+  borderRight: {
+    property: 'borderRight',
+    scale: 'borders',
+  },
   borderRightColor: {
     property: 'borderRightColor',
     scale: 'colors',
+  },
+  borderRightRadius: {
+    properties: ['borderBottomRightRadius', 'borderTopRightRadius'],
+    scale: 'radii',
+  },
+  borderRightStyle: {
+    property: 'borderRightStyle',
+    scale: 'borderStyles',
+  },
+  borderRightWidth: {
+    property: 'borderRightWidth',
+    scale: 'borderWidths',
+  },
+  borderStyle: {
+    property: 'borderStyle',
+    scale: 'borderStyles',
+  },
+  borderTop: {
+    property: 'borderTop',
+    scale: 'borders',
+  },
+  borderTopColor: {
+    property: 'borderTopColor',
+    scale: 'colors',
+  },
+  borderTopLeftRadius: {
+    property: 'borderTopLeftRadius',
+    scale: 'radii',
+  },
+  borderTopRadius: {
+    properties: ['borderTopLeftRadius', 'borderTopRightRadius'],
+    scale: 'radii',
+  },
+  borderTopRightRadius: {
+    property: 'borderTopRightRadius',
+    scale: 'radii',
+  },
+  borderTopStyle: {
+    property: 'borderTopStyle',
+    scale: 'borderStyles',
+  },
+  borderTopWidth: {
+    property: 'borderTopWidth',
+    scale: 'borderWidths',
+  },
+  // Widths
+  borderWidth: {
+    property: 'borderWidth',
+    scale: 'borderWidths',
+  },
+  borderX: {
+    properties: ['borderLeft', 'borderRight'],
+    scale: 'borders',
+  },
+  borderY: {
+    properties: ['borderTop', 'borderBottom'],
+    scale: 'borders',
   },
 };
 

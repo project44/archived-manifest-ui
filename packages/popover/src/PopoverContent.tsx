@@ -1,51 +1,27 @@
 import * as React from 'react';
-import { useClickOutside, useEscapeKey } from '@manifest-ui/hooks';
 import { ComponentProps } from '@manifest-ui/styled';
+import { Content as RadixPopoverContent } from '@radix-ui/react-popover';
 import { StyledPopoverContent } from './Popover.styles';
-import { useMergedRef } from '@manifest-ui/hooks';
 import { usePopoverContext } from './context';
 
 export type PopoverContentProps = ComponentProps<typeof StyledPopoverContent>;
 
 export const PopoverContent = React.forwardRef<HTMLDivElement, PopoverContentProps>(
   (props: PopoverContentProps, ref) => {
-    const {
-      anchorRef,
-      id,
-      isOpen,
-      onClickOutside,
-      onEscapeKeyDown,
-      popoverRef,
-      setIsOpen,
-      triggerRef,
-    } = usePopoverContext();
-
-    useClickOutside(
-      (event: MouseEvent | TouchEvent) => {
-        onClickOutside?.(event);
-
-        setIsOpen?.(false);
-      },
-      [popoverRef, anchorRef, triggerRef],
-    );
-
-    useEscapeKey((event: KeyboardEvent) => {
-      if (!isOpen) return;
-
-      onEscapeKeyDown?.(event);
-
-      setIsOpen?.(false);
-    });
+    const { align, offset, placement, onOutsideClick, onEscapeKeyDown } = usePopoverContext();
 
     return (
-      <StyledPopoverContent
-        className="manifestui-popover"
-        id={id}
-        ref={useMergedRef(popoverRef, ref)}
-        role="dialog"
-        tabIndex={-1}
-        {...props}
-      />
+      <RadixPopoverContent
+        asChild
+        align={align}
+        alignOffset={offset?.[0]}
+        side={placement}
+        sideOffset={offset?.[1]}
+        onInteractOutside={onOutsideClick}
+        onEscapeKeyDown={onEscapeKeyDown}
+      >
+        <StyledPopoverContent className="manifestui-popover" ref={ref} {...props} />
+      </RadixPopoverContent>
     );
   },
 );
