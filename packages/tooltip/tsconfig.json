@@ -10,12 +10,6 @@
   "include": ["src/**/*", "types/**/*", "../../types/**/*"],
   "references": [
     {
-      "path": "../hooks"
-    },
-    {
-      "path": "../popper"
-    },
-    {
       "path": "../styled"
     }
   ]

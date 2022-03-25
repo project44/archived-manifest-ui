@@ -9,7 +9,6 @@ export * from '@manifest-ui/layout';
 export * from '@manifest-ui/link';
 export * from '@manifest-ui/pagination';
 export * from '@manifest-ui/popover';
-export * from '@manifest-ui/popper';
 export * from '@manifest-ui/provider';
 export * from '@manifest-ui/radio';
 export * from '@manifest-ui/slot';

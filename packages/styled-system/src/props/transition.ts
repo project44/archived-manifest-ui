@@ -13,13 +13,13 @@ export interface TransitionProps {
 const config: Configs = {
   transition: true,
   transitionDelay: true,
-  transitionProperty: {
-    property: 'transitionProperty',
-    scale: 'transitions.property',
-  },
   transitionDuration: {
     property: 'transitionDuration',
     scale: 'transitions.duration',
+  },
+  transitionProperty: {
+    property: 'transitionProperty',
+    scale: 'transitions.property',
   },
   transitionTimingFunction: {
     property: 'transitionTimingFunction',

@@ -73,13 +73,13 @@ const config: Configs = {
     scale: 'space',
     transform: getMargin,
   },
-  marginTop: {
-    property: 'marginTop',
+  marginBlockEnd: {
+    property: 'marginBlockEnd',
     scale: 'space',
     transform: getMargin,
   },
-  marginRight: {
-    property: 'marginRight',
+  marginBlockStart: {
+    property: 'marginBlockStart',
     scale: 'space',
     transform: getMargin,
   },
@@ -88,8 +88,33 @@ const config: Configs = {
     scale: 'space',
     transform: getMargin,
   },
+  marginInline: {
+    property: 'marginInline',
+    scale: 'space',
+    transform: getMargin,
+  },
+  marginInlineEnd: {
+    property: 'marginInlineEnd',
+    scale: 'space',
+    transform: getMargin,
+  },
+  marginInlineStart: {
+    property: 'marginInlineStart',
+    scale: 'space',
+    transform: getMargin,
+  },
   marginLeft: {
     property: 'marginLeft',
+    scale: 'space',
+    transform: getMargin,
+  },
+  marginRight: {
+    property: 'marginRight',
+    scale: 'space',
+    transform: getMargin,
+  },
+  marginTop: {
+    property: 'marginTop',
     scale: 'space',
     transform: getMargin,
   },
@@ -103,49 +128,44 @@ const config: Configs = {
     scale: 'space',
     transform: getMargin,
   },
-  marginBlockStart: {
-    property: 'marginBlockStart',
-    scale: 'space',
-    transform: getMargin,
-  },
-  marginBlockEnd: {
-    property: 'marginBlockEnd',
-    scale: 'space',
-    transform: getMargin,
-  },
-  marginInline: {
-    property: 'marginInline',
-    scale: 'space',
-    transform: getMargin,
-  },
-  marginInlineStart: {
-    property: 'marginInlineStart',
-    scale: 'space',
-    transform: getMargin,
-  },
-  marginInlineEnd: {
-    property: 'marginInlineEnd',
-    scale: 'space',
-    transform: getMargin,
-  },
   padding: {
     property: 'padding',
     scale: 'space',
   },
-  paddingTop: {
-    property: 'paddingTop',
+  paddingBlockEnd: {
+    property: 'paddingBlockEnd',
     scale: 'space',
   },
-  paddingRight: {
-    property: 'paddingRight',
+  paddingBlockStart: {
+    property: 'paddingBlockStart',
     scale: 'space',
   },
   paddingBottom: {
     property: 'paddingBottom',
     scale: 'space',
   },
+  paddingInline: {
+    property: 'paddingInline',
+    scale: 'space',
+  },
+  paddingInlineEnd: {
+    property: 'paddingInlineEnd',
+    scale: 'space',
+  },
+  paddingInlineStart: {
+    property: 'paddingInlineStart',
+    scale: 'space',
+  },
   paddingLeft: {
     property: 'paddingLeft',
+    scale: 'space',
+  },
+  paddingRight: {
+    property: 'paddingRight',
+    scale: 'space',
+  },
+  paddingTop: {
+    property: 'paddingTop',
     scale: 'space',
   },
   paddingX: {
@@ -154,26 +174,6 @@ const config: Configs = {
   },
   paddingY: {
     properties: ['paddingTop', 'paddingBottom'],
-    scale: 'space',
-  },
-  paddingBlockStart: {
-    property: 'paddingBlockStart',
-    scale: 'space',
-  },
-  paddingBlockEnd: {
-    property: 'paddingBlockEnd',
-    scale: 'space',
-  },
-  paddingInline: {
-    property: 'paddingInline',
-    scale: 'space',
-  },
-  paddingInlineStart: {
-    property: 'paddingInlineStart',
-    scale: 'space',
-  },
-  paddingInlineEnd: {
-    property: 'paddingInlineEnd',
     scale: 'space',
   },
 };

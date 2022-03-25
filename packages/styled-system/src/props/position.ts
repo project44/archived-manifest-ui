@@ -47,21 +47,6 @@ function positiveOrNegative(scale?: Scale, path?: any): any {
 }
 
 const config: Configs = {
-  position: true,
-  zIndex: {
-    property: 'zIndex',
-    scale: 'zIndices',
-  },
-  top: {
-    property: 'top',
-    scale: 'space',
-    transform: positiveOrNegative,
-  },
-  right: {
-    property: 'right',
-    scale: 'space',
-    transform: positiveOrNegative,
-  },
   bottom: {
     property: 'bottom',
     scale: 'space',
@@ -71,6 +56,21 @@ const config: Configs = {
     property: 'left',
     scale: 'space',
     transform: positiveOrNegative,
+  },
+  position: true,
+  right: {
+    property: 'right',
+    scale: 'space',
+    transform: positiveOrNegative,
+  },
+  top: {
+    property: 'top',
+    scale: 'space',
+    transform: positiveOrNegative,
+  },
+  zIndex: {
+    property: 'zIndex',
+    scale: 'zIndices',
   },
 };
 

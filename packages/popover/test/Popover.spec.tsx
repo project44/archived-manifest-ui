@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { fireEvent, render, screen, testA11y, waitFor } from '../../../test/utils';
+import { act, fireEvent, render, screen, testA11y, waitFor } from '../../../test/utils';
 import { Popover, PopoverAnchor, PopoverContent, PopoverTrigger } from '../src';
 
 function ControlledPopover() {
@@ -17,17 +17,19 @@ function ControlledPopover() {
 
 describe('@manifest-ui/popover', () => {
   it('should pass accessibility', async () => {
-    await testA11y(
-      <Popover isOpen>
-        <PopoverTrigger>
-          <button>click me</button>
-        </PopoverTrigger>
-        <PopoverContent>hello world</PopoverContent>
-      </Popover>,
+    await act(() =>
+      testA11y(
+        <Popover isOpen>
+          <PopoverTrigger>
+            <button>click me</button>
+          </PopoverTrigger>
+          <PopoverContent>hello world</PopoverContent>
+        </Popover>,
+      ),
     );
   });
 
-  it('should render', async () => {
+  it('should render', () => {
     render(
       <Popover>
         <PopoverTrigger>
@@ -41,35 +43,20 @@ describe('@manifest-ui/popover', () => {
 
     expect(trigger).toHaveAttribute('aria-expanded', 'false');
 
-    fireEvent.click(trigger);
-
-    await waitFor(() => {
-      expect(trigger).toHaveAttribute('aria-expanded', 'true');
-      expect(screen.getByRole('dialog')).toBeInTheDocument();
+    act(() => {
+      fireEvent.click(trigger);
     });
+
+    expect(trigger).toHaveAttribute('aria-expanded', 'true');
+    expect(screen.getByRole('dialog')).toBeInTheDocument();
 
     // Escape close the popover
-    fireEvent.keyDown(screen.getByRole('dialog'), { key: 'Escape' });
-
-    await waitFor(() => {
-      expect(trigger).toHaveAttribute('aria-expanded', 'false');
-      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    act(() => {
+      fireEvent.keyDown(screen.getByRole('dialog'), { key: 'Escape' });
     });
 
-    fireEvent.click(trigger);
-
-    await waitFor(() => {
-      expect(trigger).toHaveAttribute('aria-expanded', 'true');
-      expect(screen.getByRole('dialog')).toBeInTheDocument();
-    });
-
-    // Outside click closed the popover
-    fireEvent.click(document.body);
-
-    await waitFor(() => {
-      expect(trigger).toHaveAttribute('aria-expanded', 'false');
-      expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
-    });
+    expect(trigger).toHaveAttribute('aria-expanded', 'false');
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
   });
 
   it('should not call events if not open', () => {
@@ -77,7 +64,7 @@ describe('@manifest-ui/popover', () => {
     const escapeKeySpy = jest.fn();
 
     render(
-      <Popover onClickOutside={clickOutsideSpy} onEscapeKeyDown={escapeKeySpy}>
+      <Popover onOutsideClick={clickOutsideSpy} onEscapeKeyDown={escapeKeySpy}>
         <PopoverTrigger>
           <button>click me</button>
         </PopoverTrigger>

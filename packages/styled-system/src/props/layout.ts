@@ -30,36 +30,36 @@ const config: Configs = {
     properties: ['width', 'height'],
     scale: 'sizes',
   },
-  width: {
-    property: 'width',
-    scale: 'sizes',
-  },
+  boxSizing: true,
+  display: true,
   height: {
     property: 'height',
-    scale: 'sizes',
-  },
-  minWidth: {
-    property: 'minWidth',
-    scale: 'sizes',
-  },
-  minHeight: {
-    property: 'minHeight',
-    scale: 'sizes',
-  },
-  maxWidth: {
-    property: 'maxWidth',
     scale: 'sizes',
   },
   maxHeight: {
     property: 'maxHeight',
     scale: 'sizes',
   },
-  boxSizing: true,
-  display: true,
-  verticalAlign: true,
+  maxWidth: {
+    property: 'maxWidth',
+    scale: 'sizes',
+  },
+  minHeight: {
+    property: 'minHeight',
+    scale: 'sizes',
+  },
+  minWidth: {
+    property: 'minWidth',
+    scale: 'sizes',
+  },
   overflow: true,
   overflowX: true,
   overflowY: true,
+  verticalAlign: true,
+  width: {
+    property: 'width',
+    scale: 'sizes',
+  },
 };
 
 config.w = config.width;

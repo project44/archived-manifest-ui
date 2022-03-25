@@ -3,23 +3,30 @@ import { styled } from '@manifest-ui/styled';
 
 const themeKey = 'dropdown';
 
-export const StyledDropdownMenu = styled('div', { themeKey })({
-  boxSizing: 'border-box',
-  display: 'flex',
-  flexDirection: 'column',
-  margin: 0,
-  maxHeight: 480,
-  minWidth: 224,
-  maxWidth: 448,
-  overflow: 'auto',
-  padding: 2,
-  paddingY: 2,
-
-  '& > .manifestui-separator': {
-    mx: -2,
-    my: 2,
+export const StyledDropdownMenu = styled('div', { themeKey })(
+  {
+    backgroundColor: 'white',
+    borderRadius: 'medium',
+    boxShadow: 'medium',
+    boxSizing: 'border-box',
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 0,
+    maxHeight: 480,
+    maxWidth: 448,
+    minWidth: 224,
+    overflow: 'auto',
+    padding: 2,
+    paddingY: 2,
+    zIndex: 'popover',
   },
-});
+  {
+    '& > .manifestui-separator': {
+      mx: -2,
+      my: 2,
+    },
+  },
+);
 
 export const StyledDropdownItem = styled('button', {
   slot: 'item',
@@ -44,7 +51,8 @@ export const StyledDropdownItem = styled('button', {
     py: 2,
     transitionDuration: 'base',
     transitionProperty: 'colors',
-
+  },
+  {
     '&:hover': {
       backgroundColor: 'neutral.100',
     },
@@ -75,18 +83,21 @@ export const StyledDropdownItemText = styled('span', {
 export const StyledDropdownItemIcon = styled('span', {
   slot: 'icon',
   themeKey,
-})({
-  alignSelf: 'center',
-  display: 'inline-flex',
-  flexShrink: 0,
-
-  '&[data-placement=end]': {
-    ml: 2,
-    mr: -1,
+})(
+  {
+    alignSelf: 'center',
+    display: 'inline-flex',
+    flexShrink: 0,
   },
+  {
+    '&[data-placement=end]': {
+      ml: 2,
+      mr: -1,
+    },
 
-  '&[data-placement=start]': {
-    ml: -1,
-    mr: 2,
+    '&[data-placement=start]': {
+      ml: -1,
+      mr: 2,
+    },
   },
-});
+);

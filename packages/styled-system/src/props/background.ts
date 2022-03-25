@@ -26,6 +26,8 @@ const config: Configs = {
     property: 'background',
     scale: 'colors',
   },
+  backgroundAttachment: true,
+  backgroundClip: true,
   backgroundColor: {
     property: 'backgroundColor',
     scale: 'colors',
@@ -34,11 +36,9 @@ const config: Configs = {
     property: 'backgroundImage',
     scale: 'colors',
   },
-  backgroundClip: true,
-  backgroundSize: true,
   backgroundPosition: true,
   backgroundRepeat: true,
-  backgroundAttachment: true,
+  backgroundSize: true,
 };
 
 config.bg = config.background;

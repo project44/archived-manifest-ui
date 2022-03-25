@@ -1,4 +1,6 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Vessel",
   "extends": "./tsconfig.options.json",
   "files": [],
   "references": [
@@ -12,19 +14,10 @@
       "path": "packages/checkbox"
     },
     {
-      "path": "packages/color"
-    },
-    {
-      "path": "packages/config"
-    },
-    {
       "path": "packages/css-baseline"
     },
     {
       "path": "packages/dropdown"
-    },
-    {
-      "path": "packages/focus-trap"
     },
     {
       "path": "packages/hooks"
@@ -48,16 +41,10 @@
       "path": "packages/link"
     },
     {
-      "path": "packages/menu"
-    },
-    {
       "path": "packages/pagination"
     },
     {
       "path": "packages/popover"
-    },
-    {
-      "path": "packages/popper"
     },
     {
       "path": "packages/portal"
