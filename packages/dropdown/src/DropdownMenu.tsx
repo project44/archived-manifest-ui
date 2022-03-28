@@ -1,9 +1,6 @@
-/* eslint-disable jsx-a11y/no-autofocus */
 import * as React from 'react';
 import { ComponentProps } from '@manifest-ui/styled';
-import { FocusTrap } from '@manifest-ui/focus-trap';
-import { PopoverContent } from '@manifest-ui/popover';
-import { RovingFocusGroup } from '@radix-ui/react-roving-focus';
+import { DropdownMenuContent as RadixDropdownMenuContent } from '@radix-ui/react-dropdown-menu';
 import { StyledDropdownMenu } from './Dropdown.styles';
 import { useDropdownContext } from './context';
 
@@ -11,26 +8,20 @@ export type DropdownMenuProps = ComponentProps<typeof StyledDropdownMenu>;
 
 export const DropdownMenu = React.forwardRef<HTMLDivElement, DropdownMenuProps>(
   (props: DropdownMenuProps, ref) => {
-    const { children, ...other } = props;
-
-    const { autoFocus, disableFocusTrap, restoreFocus } = useDropdownContext();
+    const { align, offset, placement, onOutsideClick, onEscapeKeyDown } = useDropdownContext();
 
     return (
-      <PopoverContent>
-        <FocusTrap autoFocus={autoFocus} isDisabled={disableFocusTrap} restoreFocus={restoreFocus}>
-          <RovingFocusGroup asChild orientation="vertical">
-            <StyledDropdownMenu
-              aria-orientation="vertical"
-              role="menu"
-              ref={ref}
-              tabIndex={-1}
-              {...other}
-            >
-              {children}
-            </StyledDropdownMenu>
-          </RovingFocusGroup>
-        </FocusTrap>
-      </PopoverContent>
+      <RadixDropdownMenuContent
+        asChild
+        align={align}
+        alignOffset={offset?.[0]}
+        side={placement}
+        sideOffset={offset?.[1]}
+        onInteractOutside={onOutsideClick}
+        onEscapeKeyDown={onEscapeKeyDown}
+      >
+        <StyledDropdownMenu className="manifestui-dropdown" ref={ref} {...props} />
+      </RadixDropdownMenuContent>
     );
   },
 );

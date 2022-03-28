@@ -1,11 +1,34 @@
 import * as React from 'react';
-import { FocusTrapProps } from '@manifest-ui/focus-trap';
+import { FocusOutsideEvent, PointerDownOutsideEvent } from '@radix-ui/react-dismissable-layer';
 
-export interface DropdownContextOptions extends Omit<FocusTrapProps, 'disabled' | 'children'> {
+export type Align = 'center' | 'end' | 'start';
+export type Placement = 'bottom' | 'left' | 'right' | 'top';
+
+export interface DropdownContextOptions {
   /**
-   * Whether the focus trap is disabled.
+   * Alignment of the dropdown in relation to its trigger.
+   *
+   * @default `center`
    */
-  disableFocusTrap?: boolean;
+  align?: Align;
+  /**
+   * The offset of the dropdown in relation to its trigger.
+   */
+  offset?: [crossAxis: number, mainAxis: number];
+  /**
+   * Placement of the dropdown in relation to its trigger.
+   *
+   * @default `bottom`
+   */
+  placement?: Placement;
+  /**
+   * Callback fired when a click or focus event is register outside the dialog.
+   */
+  onOutsideClick?(event: FocusOutsideEvent | PointerDownOutsideEvent): void;
+  /**
+   * Callback fired when the dialog is closed.
+   */
+  onEscapeKeyDown?(event: KeyboardEvent): void;
 }
 
 export const DropdownContext = React.createContext<DropdownContextOptions>({});

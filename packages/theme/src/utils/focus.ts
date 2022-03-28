@@ -15,22 +15,19 @@ export const focusStyles = ({
   const negativeOffset = `${offset * -1}px`;
 
   return {
-    position: 'relative',
-    WebkitTapHighlightColor: 'transparent',
-
     '&:after': {
-      content: '""',
-      display: 'block',
       borderRadius,
       bottom: negativeOffset,
       boxShadow: `0 0 0 ${negativeOffset} ${theme?.colors?.primary?.[200] as string}`,
+      content: '""',
+      display: 'block',
       left: negativeOffset,
       pointerEvents: 'none',
       position: 'absolute',
       right: negativeOffset,
+      top: negativeOffset,
       transitionDuration: 'base',
       transitionProperty: 'common',
-      top: negativeOffset,
       zIndex: 1,
     },
 
@@ -40,5 +37,8 @@ export const focusStyles = ({
         outline: `1px solid transparent`,
       },
     },
+
+    position: 'relative',
+    WebkitTapHighlightColor: 'transparent',
   };
 };

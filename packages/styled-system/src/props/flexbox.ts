@@ -24,25 +24,25 @@ export interface FlexboxProps {
 }
 
 const config: Configs = {
-  alignItems: true,
   alignContent: true,
-  justifyItems: true,
-  justifyContent: true,
-  flexWrap: true,
-  flexDirection: true,
+  alignItems: true,
+  alignSelf: true,
   flex: true,
-  flexFlow: true,
-  flexGrow: true,
-  flexShrink: true,
   flexBasis: {
     property: 'flexBasis',
     scale: 'sizes',
   },
+  flexDirection: true,
+  flexFlow: true,
+  flexGrow: true,
+  flexShrink: true,
+  flexWrap: true,
+  justifyContent: true,
+  justifyItems: true,
   justifySelf: true,
-  alignSelf: true,
   order: true,
-  placeItems: true,
   placeContent: true,
+  placeItems: true,
   placeSelf: true,
 };
 

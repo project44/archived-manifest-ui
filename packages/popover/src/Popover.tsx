@@ -1,82 +1,48 @@
 import * as React from 'react';
-import { Popper, PopperProps } from '@manifest-ui/popper';
-import { useControlled, useId } from '@manifest-ui/hooks';
-import { PopoverContext } from './context';
-import { VirtualElement } from '@popperjs/core';
+import { PopoverContext, PopoverContextOptions } from './context';
+import { Popover as RadixPopover } from '@radix-ui/react-popover';
 
-export interface PopoverProps extends PopperProps {
+export interface PopoverProps extends PopoverContextOptions {
   /**
-   * Whether the popover is open by default.
+   * Content to be render by the popover.
    */
-  defaultOpen?: boolean;
+  children?: React.ReactNode;
   /**
    * Whether the popover is open.
-   *
-   * @default false
    */
   isOpen?: boolean;
   /**
-   * Callback executed on popover state change.
+   * Callback fired when the popover state changes.
    */
   onChange?(isOpen: boolean): void;
-  /**
-   * Callback fired when a click is registered outside the popover.
-   */
-  onClickOutside?(event: TouchEvent | MouseEvent): void;
-  /**
-   * Callback fired when the escape key is pressed.
-   */
-  onEscapeKeyDown?(event: KeyboardEvent): void;
 }
 
 export function Popover(props: PopoverProps) {
   const {
+    align = 'center',
     children,
-    defaultOpen: defaultValue,
-    disablePortal,
-    gutter,
-    isOpen: value,
-    modifiers,
+    isOpen,
+    offset = [0, 8],
+    placement = 'bottom',
     onChange,
-    onClickOutside,
     onEscapeKeyDown,
-    placement,
+    onOutsideClick,
   } = props;
 
-  const anchorRef = React.useRef<Element | VirtualElement | null>(null);
-  const triggerRef = React.useRef<HTMLButtonElement | null>(null);
-  const popoverRef = React.useRef<HTMLDivElement | null>(null);
-
-  const id = useId();
-
-  const [hasAnchor, setHasAnchor] = React.useState(false);
-  const [isOpen = false, setIsOpen] = useControlled({ defaultValue, onChange, value });
-
   return (
-    <Popper
-      disablePortal={disablePortal}
-      gutter={gutter}
-      isOpen={isOpen}
-      modifiers={modifiers}
-      placement={placement}
-    >
+    <RadixPopover open={isOpen} onOpenChange={onChange}>
       <PopoverContext.Provider
         value={{
-          anchorRef,
-          hasAnchor,
-          id,
-          isOpen,
-          popoverRef,
-          onClickOutside,
+          align,
+          offset,
           onEscapeKeyDown,
-          setHasAnchor,
-          setIsOpen,
-          triggerRef,
+          onOutsideClick,
+          placement,
         }}
       >
         {children}
       </PopoverContext.Provider>
-    </Popper>
+    </RadixPopover>
   );
 }
 

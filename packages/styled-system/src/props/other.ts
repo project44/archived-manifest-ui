@@ -23,19 +23,19 @@ export interface OtherProps {
 const config: Configs = {
   animation: true,
   appearance: true,
-  visibility: true,
-  userSelect: true,
-  pointerEvents: true,
   cursor: true,
-  resize: true,
+  float: true,
   objectFit: true,
   objectPosition: true,
-  float: true,
-  willChange: true,
   outline: true,
   outlineOffset: true,
+  pointerEvents: true,
+  resize: true,
   transform: true,
   transformOrigin: true,
+  userSelect: true,
+  visibility: true,
+  willChange: true,
 };
 
 export const other = system(config);

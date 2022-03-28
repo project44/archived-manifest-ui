@@ -26,18 +26,18 @@ const config: Configs = {
     property: 'fontSize',
     scale: 'fontSizes',
   },
+  fontStyle: true,
   fontWeight: {
     property: 'fontWeight',
     scale: 'fontWeights',
   },
-  fontStyle: true,
-  lineHeight: {
-    property: 'lineHeight',
-    scale: 'lineHeights',
-  },
   letterSpacing: {
     property: 'letterSpacing',
     scale: 'letterSpacings',
+  },
+  lineHeight: {
+    property: 'lineHeight',
+    scale: 'lineHeights',
   },
   textAlign: true,
   textDecoration: true,

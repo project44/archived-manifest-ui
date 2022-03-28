@@ -1,7 +1,7 @@
-import { PopperContent } from '@manifest-ui/popper';
+import { TooltipContent as RadixTooltipContent } from '@radix-ui/react-tooltip';
 import { styled } from '@manifest-ui/styled';
 
-export const StyledTooltip = styled(PopperContent, { themeKey: 'tooltip' })({
+export const StyledTooltip = styled(RadixTooltipContent, { themeKey: 'tooltip' })({
   backgroundColor: 'emphasis.secondary',
   borderRadius: 'large',
   boxShadow: 'large',
