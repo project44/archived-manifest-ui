@@ -13,12 +13,6 @@
   ],
   "references": [
     {
-      "path": "../focus-trap"
-    },
-    {
-      "path": "../popover"
-    },
-    {
       "path": "../styled"
     },
     {

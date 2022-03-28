@@ -81,8 +81,8 @@ export function createParser(config: { [key: string]: SystemConfig }) {
 
           const responsiveStyles = parseResponsiveStyle({
             cache,
-            propValue,
             props,
+            propValue,
             scale,
             systemConfig,
           });
@@ -97,8 +97,8 @@ export function createParser(config: { [key: string]: SystemConfig }) {
 
           const responsiveStyles = parseResponsiveObject({
             cache,
-            propValue,
             props,
+            propValue,
             scale,
             systemConfig,
           });

@@ -1,12 +1,8 @@
 import * as React from 'react';
-import { PopoverTrigger, PopoverTriggerProps } from '@manifest-ui/popover';
+import { DropdownMenuTriggerProps, Trigger } from '@radix-ui/react-dropdown-menu';
 
-export type DropdownTriggerProps = PopoverTriggerProps;
-
-export const DropdownTrigger = React.forwardRef<HTMLButtonElement, DropdownTriggerProps>(
-  (props: DropdownTriggerProps, ref) => (
-    <PopoverTrigger aria-haspopup="menu" ref={ref} {...props} />
-  ),
+export const DropdownTrigger = React.forwardRef<HTMLButtonElement, DropdownMenuTriggerProps>(
+  (props: DropdownMenuTriggerProps, ref) => <Trigger {...props} ref={ref} asChild />,
 );
 
 DropdownTrigger.displayName = 'DropdownTrigger';

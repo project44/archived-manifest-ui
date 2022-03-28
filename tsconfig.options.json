@@ -7,15 +7,14 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "lib": [
-      "dom",
-      "esnext"
+      "esnext",
+      "dom"
     ],
     "module": "esnext",
     "moduleResolution": "node",
-    "noEmitOnError": true,
+    "noEmitOnError": false,
     "noImplicitReturns": true,
     "pretty": true,
-    "jsx": "react-jsx",
     "removeComments": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -24,6 +23,7 @@
     "target": "es2021",
     "composite": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true
+    "emitDeclarationOnly": true,
+    "jsx": "react"
   }
 }

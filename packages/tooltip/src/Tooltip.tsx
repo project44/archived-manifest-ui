@@ -1,133 +1,82 @@
 import * as React from 'react';
-import { Popper, PopperAnchor, PopperProps } from '@manifest-ui/popper';
-import { useControlled, useEscapeKey, useId } from '@manifest-ui/hooks';
-import { chainCallbacks } from '@manifest-ui/utils';
+import {
+  Tooltip as RadixTooltip,
+  TooltipTrigger as RadixTooltipTrigger,
+} from '@radix-ui/react-tooltip';
 import { ComponentProps } from '@manifest-ui/styled';
 import { StyledTooltip } from './Tooltip.styles';
 
+export type Align = 'center' | 'end' | 'start';
+export type Placement = 'bottom' | 'left' | 'right' | 'top';
+
 export interface TooltipOptions {
   /**
-   * Delay before closing the tooltip (ms).
+   * Alignment of the menu in relation to its trigger.
    *
-   * @default 0
+   * @default `center`
    */
-  closeDelay?: number;
+  align?: Align;
   /**
-   * Whether the tooltip is open by default.
+   * The amount of time to delay the display of the tooltip.
+   *
+   * @default 300
    */
-  defaultOpen?: boolean;
+  delayDuration?: number;
   /**
    * The label of the tooltip
    */
   label?: React.ReactNode;
   /**
-   * Whether the tooltip is open.
-   *
-   * @default false
+   * Whether the dialog is open.
    */
   isOpen?: boolean;
   /**
-   * Delay before opening the tooltip (ms).
-   *
-   * @default 0
+   * The offset of the menu in relation to its trigger.
    */
-  openDelay?: number;
+  offset?: [crossAxis: number, mainAxis: number];
+  /**
+   * Placement of the menu in relation to its trigger.
+   *
+   * @default `bottom`
+   */
+  placement?: Placement;
   /**
    * Callback executed on tooltip state change.
    */
   onChange?(isOpen: boolean): void;
-  /**
-   * Callback fired when the escape key is pressed.
-   */
-  onEscapeKeyDown?(event: KeyboardEvent): void;
 }
 
 export interface TooltipProps
-  extends Omit<ComponentProps<typeof StyledTooltip>, 'children' | 'onChange'>,
-    TooltipOptions,
-    PopperProps {}
+  extends Omit<ComponentProps<typeof StyledTooltip>, 'onChange'>,
+    TooltipOptions {}
 
 export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>((props, ref) => {
   const {
+    align = 'center',
     children,
-    closeDelay = 0,
-    defaultOpen: defaultValue,
-    disablePortal,
-    gutter,
+    delayDuration = 300,
     label,
-    isOpen: value,
-    modifiers,
-    openDelay = 0,
-    onBlur,
+    isOpen,
+    offset = [0, 4],
+    placement = 'bottom',
     onChange,
-    onEscapeKeyDown,
-    onFocus,
-    onMouseEnter,
-    onMouseLeave,
-    placement,
     ...other
   } = props;
 
-  const enterTimeoutRef = React.useRef<number>();
-  const exitTimeoutRef = React.useRef<number>();
-
-  const id = useId();
-
-  const [isOpen = false, setIsOpen] = useControlled({ defaultValue, onChange, value });
-
-  const handleClose = React.useCallback(() => {
-    if (enterTimeoutRef.current) {
-      clearTimeout(enterTimeoutRef.current);
-    }
-
-    exitTimeoutRef.current = window.setTimeout(() => {
-      setIsOpen(false);
-    }, closeDelay);
-  }, [closeDelay, setIsOpen]);
-
-  const handleOpen = React.useCallback(() => {
-    enterTimeoutRef.current = window.setTimeout(() => {
-      setIsOpen(true);
-    }, openDelay);
-  }, [openDelay, setIsOpen]);
-
-  React.useEffect(
-    () => () => {
-      clearTimeout(enterTimeoutRef.current);
-      clearTimeout(exitTimeoutRef.current);
-    },
-    [],
-  );
-
-  useEscapeKey((event: KeyboardEvent) => {
-    if (!isOpen) return;
-
-    onEscapeKeyDown?.(event);
-
-    setIsOpen(false);
-  });
-
   return (
-    <Popper
-      disablePortal={disablePortal}
-      gutter={gutter}
-      isOpen={isOpen}
-      modifiers={modifiers}
-      placement={placement}
-    >
-      <PopperAnchor
-        aria-describedby={isOpen ? id : undefined}
-        onBlur={chainCallbacks(onBlur, handleClose)}
-        onFocus={chainCallbacks(onFocus, handleOpen)}
-        onMouseEnter={chainCallbacks(onMouseEnter, handleOpen)}
-        onMouseLeave={chainCallbacks(onMouseLeave, handleClose)}
+    <RadixTooltip delayDuration={delayDuration} open={isOpen} onOpenChange={onChange}>
+      <RadixTooltipTrigger asChild>{children}</RadixTooltipTrigger>
+      <StyledTooltip
+        align={align}
+        alignOffset={offset?.[0]}
+        side={placement}
+        sideOffset={offset?.[1]}
+        ref={ref}
+        {...other}
       >
-        {children}
-      </PopperAnchor>
-      <StyledTooltip id={id} role="tooltip" {...other}>
         {label}
       </StyledTooltip>
-    </Popper>
+    </RadixTooltip>
   );
 });
 
