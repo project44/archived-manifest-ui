@@ -20,6 +20,9 @@
       "path": "packages/dropdown"
     },
     {
+      "path": "packages/form-control"
+    },
+    {
       "path": "packages/hooks"
     },
     {
