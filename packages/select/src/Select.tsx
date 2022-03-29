@@ -125,7 +125,7 @@ const components: ReactSelectProps['components'] = {
       {children}
     </StyledIndicatorsContainer>
   ),
-  Input: ({ innerRef, isDisabled, isHidden, inputClassName, size, ...other }) => (
+  Input: ({ innerRef, isDisabled, isHidden, inputClassName, size, theme, ...other }) => (
     <StyledInput
       className="manifestui-select__input"
       disabled={isDisabled}
@@ -174,7 +174,7 @@ const components: ReactSelectProps['components'] = {
       {children}
     </StyledSingleValue>
   ),
-  ValueContainer: ({ isDisabled, ...other }) => (
+  ValueContainer: ({ isDisabled, theme, ...other }) => (
     <StyledValueContainer className="manifestui-select__value-container" {...other} />
   ),
 };
