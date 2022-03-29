@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/button",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -20,6 +20,6 @@
   },
   "dependencies": {
     "@manifest-ui/styled": "^0.0.9",
-    "@manifest-ui/theme": "^0.1.0"
+    "@manifest-ui/theme": "^0.2.0"
   }
 }
