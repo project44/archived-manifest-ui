@@ -64,7 +64,7 @@ export const StyledDropdownItem = styled('button', {
     },
 
     '&[data-selected]': {
-      backgroundColor: 'neutral.300',
+      backgroundColor: 'neutral.100',
     },
   },
   focusStyles,

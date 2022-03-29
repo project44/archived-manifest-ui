@@ -25,6 +25,9 @@
       "path": "../dropdown"
     },
     {
+      "path": "../form-control"
+    },
+    {
       "path": "../icon"
     },
     {
@@ -53,6 +56,9 @@
     },
     {
       "path": "../radio"
+    },
+    {
+      "path": "../select"
     },
     {
       "path": "../separator"
