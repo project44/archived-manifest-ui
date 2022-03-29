@@ -23,6 +23,7 @@
     "@manifest-ui/card": "0.1.0",
     "@manifest-ui/checkbox": "0.0.8",
     "@manifest-ui/css-baseline": "0.0.6",
+    "@manifest-ui/date-range": "0.0.0",
     "@manifest-ui/dropdown": "0.0.0",
     "@manifest-ui/form-control": "0.0.0",
     "@manifest-ui/hooks": "0.1.0",
