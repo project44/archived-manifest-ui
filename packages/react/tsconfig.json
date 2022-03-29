@@ -22,6 +22,9 @@
       "path": "../css-baseline"
     },
     {
+      "path": "../date-range"
+    },
+    {
       "path": "../dropdown"
     },
     {
