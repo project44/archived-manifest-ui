@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/textarea",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@manifest-ui/styled": "^0.0.9",
-    "@manifest-ui/theme": "^0.1.0",
+    "@manifest-ui/theme": "^0.2.0",
     "@manifest-ui/utils": "^0.1.0"
   }
 }
