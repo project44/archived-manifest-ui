@@ -17,6 +17,9 @@
       "path": "packages/css-baseline"
     },
     {
+      "path": "packages/date-range"
+    },
+    {
       "path": "packages/dropdown"
     },
     {
