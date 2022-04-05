@@ -1,5 +1,13 @@
 # @manifest-ui/react
 
+## 2.6.1
+
+### Patch Changes
+
+- [#200](https://github.com/project44/manifest-ui/pull/200)
+  [`36d34bc`](https://github.com/project44/manifest-ui/commit/36d34bc81480f7fb1ada390e11243649e9faa3aa)
+  Thanks [@bclark-p44](https://github.com/bclark-p44)! - Adding exports for new packages
+
 ## 2.6.0
 
 ### Minor Changes
