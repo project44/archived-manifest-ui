@@ -7,35 +7,34 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "yarn run build:cjs && yarn run build:esm && yarn run build:types",
-    "build:cjs": "yarn run beemo babel --workspaces=*",
-    "build:esm": "yarn run beemo babel --workspaces=* --esm",
-    "build:types": "yarn run beemo typescript --build",
-    "clean": "yarn run clean:build && yarn run clean:types",
-    "clean:build": "rimraf 'packages/**/*/{lib,esm}'",
-    "clean:types": "rimraf 'packages/**/*/{dts,*.tsbuildinfo}'",
-    "coverage": "yarn run test --coverage",
-    "format": "yarn format:eslint && yarn format:prettier",
-    "format:eslint": "yarn run beemo eslint --fix packages/*/src/**/*.ts",
-    "format:prettier": "yarn run beemo prettier",
-    "lint": "yarn run lint:eslint && yarn run lint:types",
-    "lint:eslint": "yarn run beemo eslint",
-    "lint:types": "yarn run beemo typescript --noEmit --emitDeclarationOnly false",
-    "prepare": "husky install && beemo create-config babel eslint prettier",
-    "test": "yarn run beemo jest"
+    "build": "yarn run build:packages && yarn run build:types",
+    "build:packages": "packemon build --addEngines",
+    "build:types": "beemo typescript --build",
+    "clean": "packemon clean",
+    "prepare": "husky install && beemo create-config babel eslint prettier"
   },
   "workspaces": [
-    "packages/*"
+    "packages/react/**"
   ],
-  "devDependencies": {
+  "dependencies": {
     "@changesets/changelog-github": "^0.4.2",
     "@changesets/cli": "^2.20.0",
     "@commitlint/cli": "^16.0.3",
     "@commitlint/config-conventional": "^16.0.0",
     "@manifest-ui/vessel-dev": "^0.1.0",
+    "@manypkg/cli": "^0.19.1",
+    "@testing-library/dom": "^8.13.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@testing-library/user-event": "^14.0.4",
+    "@types/jest-axe": "^3.5.3",
     "@types/node": "^17.0.10",
     "husky": "^7.0.4",
+    "jest-axe": "^6.0.0",
     "lint-staged": "^12.2.1",
-    "yarn-deduplicate": "^3.1.0"
+    "packemon": "^1.15.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }
