@@ -22,7 +22,6 @@
     "@commitlint/cli": "^16.0.3",
     "@commitlint/config-conventional": "^16.0.0",
     "@manifest-ui/vessel-dev": "^0.1.0",
-    "@manypkg/cli": "^0.19.1",
     "@testing-library/dom": "^8.13.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.0",
