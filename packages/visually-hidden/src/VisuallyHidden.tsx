@@ -1,5 +1,5 @@
 import { ComponentProps, styled } from '@manifest-ui/styled';
-import { visuallyHiddenStyles } from '@manifest-ui/theme';
+import { visuallyHiddenStyles } from '@manifest-ui/theme-utils';
 
 export type VisuallyHiddenProps = ComponentProps<typeof VisuallyHidden>;
 

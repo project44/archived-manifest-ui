@@ -1,6 +1,6 @@
 import { defaultStyles, themeStyles } from './styles';
 import { DateRangePicker as DateRange } from 'react-date-range';
-import { pxToRem } from '@manifest-ui/theme';
+import { pxToRem } from '@manifest-ui/theme-utils';
 import { styled } from '@manifest-ui/styled';
 
 const themeKey = 'dateRangePicker';

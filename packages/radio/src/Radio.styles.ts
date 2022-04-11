@@ -1,4 +1,4 @@
-import { focusStyles, visuallyHiddenStyles } from '@manifest-ui/theme';
+import { focusStyles, visuallyHiddenStyles } from '@manifest-ui/theme-utils';
 import { styled } from '@manifest-ui/styled';
 
 const themeKey = 'radio';

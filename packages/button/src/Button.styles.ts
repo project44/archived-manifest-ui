@@ -1,5 +1,5 @@
 import { shouldForwardProp, styled } from '@manifest-ui/styled';
-import { focusStyles } from '@manifest-ui/theme';
+import { focusStyles } from '@manifest-ui/theme-utils';
 
 const props = new Set(['colorTheme', 'isActive']);
 

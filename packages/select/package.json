@@ -16,6 +16,7 @@
   "dependencies": {
     "@manifest-ui/icons": "^0.1.0",
     "@manifest-ui/styled": "^0.0.9",
+    "@manifest-ui/theme-utils": "^0.0.1",
     "react-select": "^5.2.2"
   }
 }

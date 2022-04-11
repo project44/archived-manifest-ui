@@ -23,6 +23,7 @@ export * from '@manifest-ui/table';
 export * from '@manifest-ui/tag';
 export * from '@manifest-ui/textarea';
 export * from '@manifest-ui/theme';
+export * from '@manifest-ui/theme-utils';
 export * from '@manifest-ui/toggle';
 export * from '@manifest-ui/tooltip';
 export * from '@manifest-ui/typography';

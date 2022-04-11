@@ -19,7 +19,7 @@
       "path": "../styled"
     },
     {
-      "path": "../theme"
+      "path": "../theme-utils"
     },
     {
       "path": "../utils"

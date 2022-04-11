@@ -1,4 +1,4 @@
-import { focusStyles, transparentize } from '@manifest-ui/theme';
+import { focusStyles, transparentize } from '@manifest-ui/theme-utils';
 import { styled } from '@manifest-ui/styled';
 import { UnfoldMore } from '@manifest-ui/icons';
 
