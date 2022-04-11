@@ -1,5 +1,33 @@
 # @manifest-ui/react
 
+## 2.6.2
+
+### Patch Changes
+
+- [#206](https://github.com/project44/manifest-ui/pull/206)
+  [`bb814a2`](https://github.com/project44/manifest-ui/commit/bb814a2081e80f283074cc6b7103f24f377caf34)
+  Thanks [@jackiekan-p44](https://github.com/jackiekan-p44)! - split theme utils
+
+- Updated dependencies
+  [[`bb814a2`](https://github.com/project44/manifest-ui/commit/bb814a2081e80f283074cc6b7103f24f377caf34)]:
+  - @manifest-ui/theme@0.3.0
+  - @manifest-ui/theme-utils@0.1.0
+  - @manifest-ui/button@0.0.15
+  - @manifest-ui/checkbox@0.0.10
+  - @manifest-ui/date-range@0.1.1
+  - @manifest-ui/dropdown@0.1.1
+  - @manifest-ui/input@0.1.6
+  - @manifest-ui/pagination@0.0.14
+  - @manifest-ui/radio@0.1.6
+  - @manifest-ui/select@0.1.1
+  - @manifest-ui/table@0.2.2
+  - @manifest-ui/tag@0.1.5
+  - @manifest-ui/textarea@0.1.2
+  - @manifest-ui/toggle@0.1.6
+  - @manifest-ui/visually-hidden@0.0.12
+  - @manifest-ui/provider@0.0.12
+  - @manifest-ui/spinner@0.0.12
+
 ## 2.6.1
 
 ### Patch Changes
