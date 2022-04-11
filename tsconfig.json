@@ -95,6 +95,9 @@
       "path": "packages/theme"
     },
     {
+      "path": "packages/theme-utils"
+    },
+    {
       "path": "packages/themes"
     },
     {

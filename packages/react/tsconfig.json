@@ -88,6 +88,9 @@
       "path": "../theme"
     },
     {
+      "path": "../theme-utils"
+    },
+    {
       "path": "../toggle"
     },
     {

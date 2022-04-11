@@ -10,16 +10,7 @@
   "include": ["src/**/*", "types/**/*", "../../types/**/*"],
   "references": [
     {
-      "path": "../hooks"
-    },
-    {
-      "path": "../styled"
-    },
-    {
-      "path": "../theme-utils"
-    },
-    {
-      "path": "../utils"
+      "path": "../styled-system"
     }
   ]
 }

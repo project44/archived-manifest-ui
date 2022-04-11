@@ -1,4 +1,4 @@
-import { focusStyles, pxToRem } from '@manifest-ui/theme';
+import { focusStyles, pxToRem } from '@manifest-ui/theme-utils';
 import { shouldForwardProp, styled } from '@manifest-ui/styled';
 
 const themeKey = 'select';

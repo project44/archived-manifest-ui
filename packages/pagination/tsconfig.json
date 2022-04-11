@@ -22,7 +22,7 @@
       "path": "../styled"
     },
     {
-      "path": "../theme"
+      "path": "../theme-utils"
     }
   ]
 }

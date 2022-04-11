@@ -36,6 +36,7 @@ storybook-static/
 # Custom
 *.min.js
 *.map
+.npmrc
 
 # MacOS
 .DS_Store

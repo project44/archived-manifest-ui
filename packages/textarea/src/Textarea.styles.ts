@@ -1,4 +1,4 @@
-import { focusStyles } from '@manifest-ui/theme';
+import { focusStyles } from '@manifest-ui/theme-utils';
 import { styled } from '@manifest-ui/styled';
 
 const themeKey = 'textarea';
