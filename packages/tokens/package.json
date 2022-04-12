@@ -1,0 +1,25 @@
+{
+  "name": "@manifest-ui/tokens",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:project-44/manifest-ui.git",
+    "directory": "packages/tokens"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "scripts": {
+    "build:tokens": "ts-node scripts/build.ts"
+  },
+  "devDependencies": {
+    "style-dictionary": "^3.7.0",
+    "ts-node": "^10.7.0"
+  }
+}
