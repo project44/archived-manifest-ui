@@ -1,8 +1,8 @@
 import {
   BackgroundColors,
   BorderColors,
+  BrandColors,
   Colors,
-  ColorToken,
   ContrastColors,
   PaletteColors,
   TextColors,
@@ -10,16 +10,16 @@ import {
 
 const palette: PaletteColors = {
   blue: {
-    50: { value: '#E1F5FD' },
-    100: { value: '#B3E5FB' },
-    200: { value: '#81D3F8' },
-    300: { value: '#4FC2F4' },
-    400: { value: '#29B5F2' },
-    500: { value: '#00A8F0' },
-    600: { value: '#009AE1' },
-    700: { value: '#0087CD' },
-    800: { value: '#0076B9' },
-    900: { value: '#005698' },
+    50: { value: '#ECF4FE' },
+    100: { value: '#C9E1FB' },
+    200: { value: '#95C5F8' },
+    300: { value: '#62A9F4' },
+    400: { value: '#308DF1' },
+    500: { value: '#0072EC' },
+    600: { value: '#005CBE' },
+    700: { value: '#00458E' },
+    800: { value: '#003772' },
+    900: { value: '#002956' },
   },
   brown: {
     50: { value: '#FAF0E7' },
@@ -186,6 +186,11 @@ const border: BorderColors = {
   disabled: palette.grey[100],
 };
 
+const brand: BrandColors = {
+  primary: palette.blue[500],
+  gradient: { value: 'linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)' },
+};
+
 const contrast: ContrastColors = {
   brand: palette.white,
   danger: palette.white,
@@ -203,6 +208,7 @@ const text: TextColors = {
 export const color: Colors = {
   background,
   border,
+  brand,
   contrast,
   palette,
   text,

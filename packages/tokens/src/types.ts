@@ -42,6 +42,11 @@ export interface BorderColors {
   disabled: ColorToken;
 }
 
+export interface BrandColors {
+  primary: ColorToken;
+  gradient: ColorToken;
+}
+
 export type ColorPalette = {
   [key in ColorScale]: ColorToken;
 };
@@ -49,6 +54,7 @@ export type ColorPalette = {
 export interface Colors {
   background: BackgroundColors;
   border: BorderColors;
+  brand: BrandColors;
   contrast: ContrastColors;
   palette: PaletteColors;
   text: TextColors;

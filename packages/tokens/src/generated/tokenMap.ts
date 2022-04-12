@@ -17,6 +17,8 @@ const TOKEN_MAP = {
   'color-background-warning': TOKENS.COLOR_BACKGROUND_WARNING,
   'color-border-primary': TOKENS.COLOR_BORDER_PRIMARY,
   'color-border-disabled': TOKENS.COLOR_BORDER_DISABLED,
+  'color-brand-primary': TOKENS.COLOR_BRAND_PRIMARY,
+  'color-brand-gradient': TOKENS.COLOR_BRAND_GRADIENT,
   'color-contrast-brand': TOKENS.COLOR_CONTRAST_BRAND,
   'color-contrast-danger': TOKENS.COLOR_CONTRAST_DANGER,
   'color-contrast-success': TOKENS.COLOR_CONTRAST_SUCCESS,
