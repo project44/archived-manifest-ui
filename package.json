@@ -10,6 +10,7 @@
     "build": "yarn run build:cjs && yarn run build:esm && yarn run build:types",
     "build:cjs": "yarn run beemo babel --workspaces=*",
     "build:esm": "yarn run beemo babel --workspaces=* --esm",
+    "build:tokens": "yarn workspace @manifest-ui/tokens build:tokens",
     "build:types": "yarn run beemo typescript --build",
     "clean": "yarn run clean:build && yarn run clean:types",
     "clean:build": "rimraf 'packages/**/*/{lib,esm}'",
@@ -54,6 +55,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.0",
     "@types/jest-axe": "^3.5.3",
+    "@types/lodash.camelcase": "^4.3.6",
     "@types/lodash.capitalize": "^4.2.6",
     "@types/lodash.get": "^4.4.6",
     "@types/lodash.isempty": "^4.4.6",
@@ -74,6 +76,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "storybook-addon-theme-playground": "^2.1.0",
+    "ts-node": "^10.7.0",
     "yarn-deduplicate": "^3.1.0"
   }
 }
