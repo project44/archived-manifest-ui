@@ -104,17 +104,22 @@ const components: ReactSelectProps['components'] = {
       <Clear className="manifestui-select__clear-icon" />
     </StyledIndicatorContainer>
   ),
-  Control: ({ innerProps, innerRef, children, isDisabled, isFocused }) => (
-    <StyledControl
-      className="manifestui-select__control"
-      data-disabled={isDisabled ? '' : null}
-      data-focus={isFocused ? '' : null}
-      ref={innerRef}
-      {...innerProps}
-    >
-      {children}
-    </StyledControl>
-  ),
+  Control: ({ innerProps, innerRef, children, isDisabled, isFocused, selectProps }) => {
+    const { startIcon } = selectProps;
+
+    return (
+      <StyledControl
+        className="manifestui-select__control"
+        data-disabled={isDisabled ? '' : null}
+        data-focus={isFocused ? '' : null}
+        ref={innerRef}
+        data-startIcon={startIcon}
+        {...innerProps}
+      >
+        {children}
+      </StyledControl>
+    );
+  },
   DropdownIndicator: ({ innerProps, isDisabled }) => (
     <StyledIndicatorContainer
       className="manifestui-select__indicator-container"

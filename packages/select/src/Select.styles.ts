@@ -56,6 +56,10 @@ export const StyledControl = styled('div', {
     borderColor: 'status.danger.500',
     color: 'status.danger.500',
   },
+
+  '&[data-startIcon]': {
+    pl: 0,
+  },
 });
 
 export const StyledIndicatorContainer = styled('div', {
