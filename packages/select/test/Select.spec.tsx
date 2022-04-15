@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Person } from '@manifest-ui/icons';
 import { render } from '../../../test/utils';
 import { Select } from '../src';
 
@@ -22,5 +23,24 @@ describe('@manifest-ui/select', () => {
         placeholder="Basic Select"
       />,
     );
+  });
+
+  it('should render with a startIcon if prop is specified', () => {
+    render(
+      <Select
+        options={[
+          { label: 'Running Late', value: 'late' },
+          { label: 'Running Early', value: 'early' },
+          { label: 'Estimated Time', value: 'estimated' },
+          { label: 'Planned Time', value: 'planned' },
+          { label: 'Actual Time', value: 'actual' },
+          { label: 'Stop Name', value: 'stop' },
+        ]}
+        placeholder="Basic Select"
+        startIcon={<Person />}
+      />,
+    );
+
+    expect(document.querySelector('.manifestui-input-startIcon')).toBeTruthy();
   });
 });

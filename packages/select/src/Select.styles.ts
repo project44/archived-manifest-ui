@@ -103,6 +103,19 @@ export const StyledInput = styled('input', {
   width: '100%',
 });
 
+export const StyledInputIcon = styled('div', {
+  slot: 'icon',
+  themeKey,
+})({
+  alignItems: 'center',
+  color: 'emphasis.tertiary',
+  display: 'flex',
+  justifyContent: 'center',
+  pe: 2,
+  ps: 2,
+  pointerEvents: 'none',
+});
+
 export const StyledMenu = styled('div', {
   shouldForwardProp: (prop: string) => shouldForwardProp(prop) && !props.has(prop),
   slot: 'menu',
@@ -221,7 +234,9 @@ export const StyledPlaceholder = styled('div', {
   slot: 'placeholder',
   themeKey,
 })({
+  alignItems: 'center',
   color: 'emphasis.tertiary',
+  display: 'flex',
   opacity: 1,
   padding: 0,
   position: 'absolute',
