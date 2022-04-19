@@ -38,8 +38,11 @@ export type BackgroundColors = {
 };
 
 export interface BorderColors {
+  danger: ColorToken;
   primary: ColorToken;
   disabled: ColorToken;
+  success: ColorToken;
+  warning: ColorToken;
 }
 
 export interface BrandColors {
@@ -55,6 +58,7 @@ export interface Colors {
   background: BackgroundColors;
   border: BorderColors;
   brand: BrandColors;
+  'data-viz': DataVizColors;
   contrast: ContrastColors;
   palette: PaletteColors;
   text: TextColors;
@@ -67,10 +71,48 @@ export interface ContrastColors {
   warning: ColorToken;
 }
 
+export interface DataVizColors {
+  danger: {
+    fill: ColorToken;
+    hover: ColorToken;
+    line: ColorToken;
+  };
+  neutral: {
+    fill: ColorToken;
+    hover: ColorToken;
+  };
+  primary: {
+    fill: ColorToken;
+    'fill-alt': ColorToken;
+    hover: ColorToken;
+    line: ColorToken;
+  };
+  secondary: {
+    fill: ColorToken;
+    'fill-alt': ColorToken;
+    hover: ColorToken;
+    line: ColorToken;
+  };
+  tertiary: {
+    fill: ColorToken;
+    'fill-alt': ColorToken;
+    hover: ColorToken;
+    line: ColorToken;
+  };
+  warning: {
+    fill: ColorToken;
+    hover: ColorToken;
+    line: ColorToken;
+  };
+}
+
 export type TextColors = {
   [key in OrdinalScale]: ColorToken;
 } & {
+  danger: ColorToken;
   disabled: ColorToken;
+  success: ColorToken;
+  warning: ColorToken;
 };
 
 export interface Token<TValue> {

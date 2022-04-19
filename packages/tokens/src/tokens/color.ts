@@ -4,6 +4,7 @@ import {
   BrandColors,
   Colors,
   ContrastColors,
+  DataVizColors,
   PaletteColors,
   TextColors,
 } from '../types';
@@ -170,20 +171,23 @@ const palette: PaletteColors = {
 };
 
 const background: BackgroundColors = {
-  danger: { value: '#DD425A' },
+  danger: palette.red[200],
   primary: palette.white,
   secondary: palette.grey[100],
   sideNav: { value: '#021C6B' },
-  success: { value: '#4CAF50' },
+  success: palette.green[200],
   surface: palette.white,
   tertiary: palette.grey[200],
   topNav: { value: '#1F3987' },
-  warning: { value: '#FFC107' },
+  warning: palette.orange[200],
 };
 
 const border: BorderColors = {
-  primary: palette.grey[200],
+  danger: palette.red[500],
   disabled: palette.grey[100],
+  primary: palette.grey[200],
+  success: palette.green[500],
+  warning: palette.orange[500],
 };
 
 const brand: BrandColors = {
@@ -198,17 +202,56 @@ const contrast: ContrastColors = {
   warning: palette.grey[900],
 };
 
+const dataViz: DataVizColors = {
+  danger: {
+    fill: palette.red[300],
+    hover: palette.red[600],
+    line: palette.red[500],
+  },
+  neutral: {
+    fill: palette.grey[300],
+    hover: palette.grey[500],
+  },
+  primary: {
+    fill: palette.indigo[300],
+    'fill-alt': palette.indigo[100],
+    hover: palette.indigo[600],
+    line: palette.indigo[500],
+  },
+  secondary: {
+    fill: palette.cyan[300],
+    'fill-alt': palette.cyan[100],
+    hover: palette.cyan[600],
+    line: palette.cyan[500],
+  },
+  tertiary: {
+    fill: palette.purple[300],
+    'fill-alt': palette.purple[100],
+    hover: palette.purple[600],
+    line: palette.purple[500],
+  },
+  warning: {
+    fill: palette.orange[300],
+    hover: palette.orange[600],
+    line: palette.orange[500],
+  },
+};
+
 const text: TextColors = {
+  danger: palette.red[700],
   disabled: palette.grey[400],
   primary: palette.grey[900],
   secondary: palette.grey[700],
+  success: palette.green[700],
   tertiary: palette.grey[500],
+  warning: palette.orange[700],
 };
 
 export const color: Colors = {
   background,
   border,
   brand,
+  'data-viz': dataViz,
   contrast,
   palette,
   text,
