@@ -1,0 +1,37 @@
+{
+  "name": "@manifest-ui/system",
+  "description": "CSS-in-JS styling system for Manifest UI",
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "types": "./dts/index.d.ts",
+  "files": [
+    "dts/**/*.d.ts",
+    "esm/**/*.{js,map}",
+    "lib/**/*.{js,map}",
+    "src/**/*.{ts,tsx,json}"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:project44/manifest-ui.git",
+    "directory": "packages/system"
+  },
+  "author": "project44",
+  "license": "MIT",
+  "peerDependencies": {
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "react": "^16.8 || ^17.0"
+  },
+  "dependencies": {
+    "@styled-system/css": "^5.1.5",
+    "@styled-system/should-forward-prop": "^5.1.5"
+  },
+  "devDependencies": {
+    "csstype": "^3.0.11"
+  },
+  "packemon": {
+    "platform": "browser",
+    "support": "current"
+  },
+  "module": "./esm/index.js"
+}

@@ -1,27 +1,29 @@
 {
   "name": "manifest-ui",
   "private": true,
-  "repository": "project44/manifest-ui",
-  "contributors": [
-    "Brandon Clark"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:project44/manifest-ui.git"
+  },
   "license": "MIT",
   "scripts": {
-    "build": "yarn run build:packages && yarn run build:types",
-    "build:packages": "packemon build --addEngines",
-    "build:types": "beemo typescript --build",
+    "build": "packemon build --addEngines",
     "clean": "packemon clean",
-    "prepare": "husky install && beemo create-config babel eslint prettier"
+    "postinstall": "husky install && beemo create-config babel eslint prettier",
+    "type": "beemo typescript --build"
   },
   "workspaces": [
-    "packages/react/**"
+    "packages/*"
   ],
   "dependencies": {
+    "@beemo/cli": "^2.0.6",
+    "@beemo/core": "^2.1.4",
     "@changesets/changelog-github": "^0.4.2",
     "@changesets/cli": "^2.20.0",
     "@commitlint/cli": "^16.0.3",
     "@commitlint/config-conventional": "^16.0.0",
-    "@manifest-ui/vessel-dev": "^0.1.0",
+    "@manifest-ui/vessel": "^0.1.0",
+    "@manypkg/cli": "^0.19.1",
     "@testing-library/dom": "^8.13.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.0",
@@ -33,7 +35,9 @@
     "jest-axe": "^6.0.0",
     "lint-staged": "^12.2.1",
     "packemon": "^1.15.0",
+    "precise-commits": "^1.0.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
-  }
+  },
+  "packageManager": "yarn@3.2.0"
 }
