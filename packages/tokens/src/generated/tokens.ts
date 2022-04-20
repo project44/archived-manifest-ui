@@ -3,20 +3,20 @@
  *
  * To re-generate run `yarn build:tokens`
  */
-export const COLOR_BACKGROUND_DANGER = '#ECA9A5';
+export const COLOR_BACKGROUND_DANGER = '#FBE5EA';
 export const COLOR_BACKGROUND_PRIMARY = '#FFFFFF';
 export const COLOR_BACKGROUND_SECONDARY = '#F4F4F5';
 export const COLOR_BACKGROUND_SIDE_NAV = '#021C6B';
-export const COLOR_BACKGROUND_SUCCESS = '#93C9AE';
+export const COLOR_BACKGROUND_SUCCESS = '#E8F5E9';
 export const COLOR_BACKGROUND_SURFACE = '#FFFFFF';
 export const COLOR_BACKGROUND_TERTIARY = '#E4E6E7';
 export const COLOR_BACKGROUND_TOP_NAV = '#1F3987';
-export const COLOR_BACKGROUND_WARNING = '#FFB291';
-export const COLOR_BORDER_DANGER = '#D44037';
+export const COLOR_BACKGROUND_WARNING = '#FFF8E1';
+export const COLOR_BORDER_DANGER = '#CD3D57';
 export const COLOR_BORDER_DISABLED = '#F4F4F5';
 export const COLOR_BORDER_PRIMARY = '#E4E6E7';
-export const COLOR_BORDER_SUCCESS = '#0E864C';
-export const COLOR_BORDER_WARNING = '#FF6422';
+export const COLOR_BORDER_SUCCESS = '#43A047';
+export const COLOR_BORDER_WARNING = '#FFB300';
 export const COLOR_BRAND_PRIMARY = '#0072EC';
 export const COLOR_BRAND_GRADIENT =
   'linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)';
@@ -41,7 +41,7 @@ export const COLOR_DATA_VIZ_WARNING_FILL = '#FF9365';
 export const COLOR_DATA_VIZ_WARNING_HOVER = '#F45E1E';
 export const COLOR_DATA_VIZ_WARNING_LINE = '#FF6422';
 export const COLOR_CONTRAST_BRAND = '#FFFFFF';
-export const COLOR_CONTRAST_DANGER = '#FFFFFF';
+export const COLOR_CONTRAST_DANGER = '#091521';
 export const COLOR_CONTRAST_SUCCESS = '#091521';
 export const COLOR_CONTRAST_WARNING = '#091521';
 export const COLOR_PALETTE_BLUE_50 = '#ECF4FE';
@@ -176,10 +176,10 @@ export const COLOR_PALETTE_YELLOW_800 = '#B39638';
 export const COLOR_PALETTE_YELLOW_900 = '#90722F';
 export const COLOR_PALETTE_BLACK = '#091521';
 export const COLOR_PALETTE_WHITE = '#FFFFFF';
-export const COLOR_TEXT_DANGER = '#942D27';
+export const COLOR_TEXT_DANGER = '#CD3D57';
 export const COLOR_TEXT_DISABLED = '#A9ADB1';
 export const COLOR_TEXT_PRIMARY = '#091521';
 export const COLOR_TEXT_SECONDARY = '#49515A';
-export const COLOR_TEXT_SUCCESS = '#095731';
+export const COLOR_TEXT_SUCCESS = '#43A047';
 export const COLOR_TEXT_TERTIARY = '#898E94';
-export const COLOR_TEXT_WARNING = '#E65719';
+export const COLOR_TEXT_WARNING = '#FFB300';
