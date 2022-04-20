@@ -1,5 +1,13 @@
 # @manifest-ui/select
 
+## 0.2.0
+
+### Minor Changes
+
+- [#210](https://github.com/project44/manifest-ui/pull/210)
+  [`1bd6a02`](https://github.com/project44/manifest-ui/commit/1bd6a02e4ee30135617f3aa93641424d7ae68f51)
+  Thanks [@ashwoodall](https://github.com/ashwoodall)! - add optional start icon
+
 ## 0.1.1
 
 ### Patch Changes
