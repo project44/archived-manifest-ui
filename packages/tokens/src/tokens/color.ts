@@ -171,23 +171,23 @@ const palette: PaletteColors = {
 };
 
 const background: BackgroundColors = {
-  danger: palette.red[200],
+  danger: { value: '#FBE5EA' },
   primary: palette.white,
   secondary: palette.grey[100],
   sideNav: { value: '#021C6B' },
-  success: palette.green[200],
+  success: { value: '#E8F5E9' },
   surface: palette.white,
   tertiary: palette.grey[200],
   topNav: { value: '#1F3987' },
-  warning: palette.orange[200],
+  warning: { value: '#FFF8E1' },
 };
 
 const border: BorderColors = {
-  danger: palette.red[500],
+  danger: { value: '#CD3D57' },
   disabled: palette.grey[100],
   primary: palette.grey[200],
-  success: palette.green[500],
-  warning: palette.orange[500],
+  success: { value: '#43A047' },
+  warning: { value: '#FFB300' },
 };
 
 const brand: BrandColors = {
@@ -197,7 +197,7 @@ const brand: BrandColors = {
 
 const contrast: ContrastColors = {
   brand: palette.white,
-  danger: palette.white,
+  danger: palette.grey[900],
   success: palette.grey[900],
   warning: palette.grey[900],
 };
@@ -238,13 +238,13 @@ const dataViz: DataVizColors = {
 };
 
 const text: TextColors = {
-  danger: palette.red[700],
+  danger: { value: '#CD3D57' },
   disabled: palette.grey[400],
   primary: palette.grey[900],
   secondary: palette.grey[700],
-  success: palette.green[700],
+  success: { value: '#43A047' },
   tertiary: palette.grey[500],
-  warning: palette.orange[700],
+  warning: { value: '#FFB300' },
 };
 
 export const color: Colors = {
