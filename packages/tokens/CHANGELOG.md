@@ -1,5 +1,13 @@
 # @manifest-ui/tokens
 
+## 0.2.1
+
+### Patch Changes
+
+- [#213](https://github.com/project44/manifest-ui/pull/213)
+  [`c826c59`](https://github.com/project44/manifest-ui/commit/c826c59aaa2cf1bc525fffbe9447fe4f5ea94f79)
+  Thanks [@branclar](https://github.com/branclar)! - Updating status colors
+
 ## 0.2.0
 
 ### Minor Changes
