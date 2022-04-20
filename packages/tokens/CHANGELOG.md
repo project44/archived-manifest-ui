@@ -1,5 +1,13 @@
 # @manifest-ui/tokens
 
+## 0.2.2
+
+### Patch Changes
+
+- [#215](https://github.com/project44/manifest-ui/pull/215)
+  [`e121421`](https://github.com/project44/manifest-ui/commit/e1214219c61095b3ab17a76c848b0fa2f7b3e813)
+  Thanks [@branclar](https://github.com/branclar)! - Fix generated tokens
+
 ## 0.2.1
 
 ### Patch Changes
