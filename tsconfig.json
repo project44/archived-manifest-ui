@@ -104,9 +104,6 @@
       "path": "packages/toggle"
     },
     {
-      "path": "packages/tokens"
-    },
-    {
       "path": "packages/tooltip"
     },
     {
