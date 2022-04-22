@@ -44,6 +44,9 @@ StyleDictionary.registerFormat({
     // @ts-expect-error: this is incorrectly typed in styled-dictionary
     const minified: Record<string, any> = formatHelpers.minifyDictionary(dictionary.tokens);
 
+    // json-to-ts is smart and will create reusable types, however it will assign a name to the type based
+    // on the first usage of that type. In this case `Blue` was being used to represet a color scale.
+    // Renaming `Blue` to something that makes more sense.
     const typeDeclarations = JsonToTS(minified).map(type => {
       let newType = type;
 
