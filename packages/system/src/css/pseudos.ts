@@ -1,4 +1,4 @@
-export const pseudos = {
+export const pseudoSelectors = {
   _active: '&:active, &[data-active]',
   _activeLink: '&[aria-current=page]',
   _after: '&::after',
@@ -40,4 +40,4 @@ export const pseudos = {
   _visited: '&:visited',
 };
 
-export type Pseudos = typeof pseudos;
+export type Pseudos = typeof pseudoSelectors;
