@@ -6,7 +6,7 @@
   "files": [
     "dts/**/*.d.ts",
     "lib/**/*.{js,map}",
-    "src/**/*.{ts,tsx,json}"
+    "tokens/**/*.json"
   ],
   "repository": {
     "type": "git",
@@ -16,9 +16,10 @@
   "author": "project44",
   "license": "MIT",
   "scripts": {
-    "build:tokens": "ts-node scripts/build.ts"
+    "build:tokens": "ts-node build.ts"
   },
   "devDependencies": {
+    "json-to-ts": "^1.7.0",
     "style-dictionary": "^3.7.0",
     "ts-node": "^10.7.0"
   }
