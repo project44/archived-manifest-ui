@@ -7,6 +7,7 @@ import {
   StyledIndicatorContainer,
   StyledIndicatorsContainer,
   StyledInput,
+  StyledInputIcon,
   StyledMenu,
   StyledMultiValue,
   StyledMultiValueLabel,
@@ -68,6 +69,10 @@ export interface SelectProps {
    */
   placeholder?: React.ReactNode;
   /**
+   * Icon to display at the start of the select
+   */
+  startIcon?: React.ReactNode;
+  /**
    * The value of the select; reflected by the selected option
    */
   value?: ReactSelectProps['value'];
@@ -99,17 +104,22 @@ const components: ReactSelectProps['components'] = {
       <Clear className="manifestui-select__clear-icon" />
     </StyledIndicatorContainer>
   ),
-  Control: ({ innerProps, innerRef, children, isDisabled, isFocused }) => (
-    <StyledControl
-      className="manifestui-select__control"
-      data-disabled={isDisabled ? '' : null}
-      data-focus={isFocused ? '' : null}
-      ref={innerRef}
-      {...innerProps}
-    >
-      {children}
-    </StyledControl>
-  ),
+  Control: ({ innerProps, innerRef, children, isDisabled, isFocused, selectProps }) => {
+    const { startIcon } = selectProps;
+
+    return (
+      <StyledControl
+        className="manifestui-select__control"
+        data-disabled={isDisabled ? '' : null}
+        data-focus={isFocused ? '' : null}
+        ref={innerRef}
+        data-startIcon={startIcon}
+        {...innerProps}
+      >
+        {children}
+      </StyledControl>
+    );
+  },
   DropdownIndicator: ({ innerProps, isDisabled }) => (
     <StyledIndicatorContainer
       className="manifestui-select__indicator-container"
@@ -164,9 +174,17 @@ const components: ReactSelectProps['components'] = {
       {children}
     </StyledOption>
   ),
-  Placeholder: ({ children }) => {
+  Placeholder: ({ children, selectProps }) => {
+    const { startIcon } = selectProps;
     return (
-      <StyledPlaceholder className="manifestui-select__placeholder">{children}</StyledPlaceholder>
+      <StyledPlaceholder className="manifestui-select__placeholder">
+        {startIcon && (
+          <StyledInputIcon className="manifestui-input-startIcon" data-placement="start">
+            {startIcon}
+          </StyledInputIcon>
+        )}
+        {children}
+      </StyledPlaceholder>
     );
   },
   SingleValue: ({ innerProps, children }) => (
@@ -174,13 +192,23 @@ const components: ReactSelectProps['components'] = {
       {children}
     </StyledSingleValue>
   ),
-  ValueContainer: ({ isDisabled, theme, ...other }) => (
-    <StyledValueContainer className="manifestui-select__value-container" {...other} />
-  ),
+  ValueContainer: ({ children, isDisabled, selectProps, theme, ...other }) => {
+    const { startIcon } = selectProps;
+    return (
+      <StyledValueContainer className="manifestui-select__value-container" {...other}>
+        {startIcon && (
+          <StyledInputIcon className="manifestui-input-startIcon" data-placement="start">
+            {startIcon}
+          </StyledInputIcon>
+        )}
+        {children}
+      </StyledValueContainer>
+    );
+  },
 };
 
 export const Select = React.forwardRef<HTMLDivElement, SelectProps>((props: SelectProps, ref) => {
-  const { id, placeholder, isSearchable = false, ...other } = props;
+  const { id, placeholder, isSearchable = false, startIcon, ...other } = props;
 
   return (
     <StyledSelect className="manifestui-select" ref={ref}>
@@ -190,6 +218,7 @@ export const Select = React.forwardRef<HTMLDivElement, SelectProps>((props: Sele
         inputId={id}
         isSearchable={isSearchable}
         placeholder={placeholder ?? ''}
+        startIcon={startIcon}
         {...other}
       />
     </StyledSelect>

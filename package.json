@@ -7,9 +7,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "yarn run build:cjs && yarn run build:esm && yarn run build:types",
-    "build:cjs": "yarn run beemo babel --workspaces=*",
-    "build:esm": "yarn run beemo babel --workspaces=* --esm",
+    "build": "yarn run build:cjs && yarn run build:esm && yarn run build:types && yarn build:tokens",
+    "build:cjs": "yarn run beemo babel --workspaces='*/!(tokens)'",
+    "build:esm": "yarn run beemo babel --workspaces='*/!(tokens)' --esm",
     "build:tokens": "yarn workspace @manifest-ui/tokens build:tokens",
     "build:types": "yarn run beemo typescript --build",
     "clean": "yarn run clean:build && yarn run clean:types",

@@ -56,6 +56,10 @@ export const StyledControl = styled('div', {
     borderColor: 'status.danger.500',
     color: 'status.danger.500',
   },
+
+  '&[data-startIcon]': {
+    pl: 0,
+  },
 });
 
 export const StyledIndicatorContainer = styled('div', {
@@ -101,6 +105,19 @@ export const StyledInput = styled('input', {
   outline: 0,
   padding: 0,
   width: '100%',
+});
+
+export const StyledInputIcon = styled('div', {
+  slot: 'icon',
+  themeKey,
+})({
+  alignItems: 'center',
+  color: 'emphasis.tertiary',
+  display: 'flex',
+  justifyContent: 'center',
+  pe: 2,
+  ps: 2,
+  pointerEvents: 'none',
 });
 
 export const StyledMenu = styled('div', {
@@ -221,7 +238,9 @@ export const StyledPlaceholder = styled('div', {
   slot: 'placeholder',
   themeKey,
 })({
+  alignItems: 'center',
   color: 'emphasis.tertiary',
+  display: 'flex',
   opacity: 1,
   padding: 0,
   position: 'absolute',

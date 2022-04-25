@@ -1,11 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Vessel",
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  },
   "extends": "./tsconfig.options.json",
   "files": [],
   "references": [
@@ -107,9 +102,6 @@
     },
     {
       "path": "packages/toggle"
-    },
-    {
-      "path": "packages/tokens"
     },
     {
       "path": "packages/tooltip"

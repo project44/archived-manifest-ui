@@ -2,4 +2,4 @@
 '@manifest-ui/tokens': minor
 ---
 
-Adding tokens package
+Changing export pattern for tokens
