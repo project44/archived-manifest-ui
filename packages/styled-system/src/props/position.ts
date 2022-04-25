@@ -2,7 +2,7 @@ import * as CSS from 'csstype';
 import { Configs, Length, ResponsiveValue, Scale } from '../types';
 import get from 'lodash.get';
 import isNumber from 'lodash.isnumber';
-import isString from 'lodash.isString';
+import isString from 'lodash.isstring';
 import { system } from '../core';
 
 export interface PositionProps {
