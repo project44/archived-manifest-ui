@@ -1,0 +1,169 @@
+{
+  "color": {
+    "background": {
+      "danger": {
+        "value": "{color.status.danger.50.value}"
+      },
+      "primary": {
+        "value": "{color.palette.white.value}"
+      },
+      "secondary": {
+        "value": "{color.palette.grey.100.value}"
+      },
+      "sideNav": {
+        "value": "#021C6B"
+      },
+      "success": {
+        "value": "{color.status.success.50.value}"
+      },
+      "surface": {
+        "value": "{color.palette.white.value}"
+      },
+      "tertiary": {
+        "value": "{color.palette.grey.200.value}"
+      },
+      "topNav": {
+        "value": "#1F3987"
+      },
+      "warning": {
+        "value": "{color.status.warning.50.value}"
+      }
+    },
+    "border": {
+      "danger": {
+        "value": "{color.status.danger.600.value}"
+      },
+      "disabled": {
+        "value": "{color.palette.grey.100.value}"
+      },
+      "primary": {
+        "value": "{color.palette.grey.200.value}"
+      },
+      "success": {
+        "value": "{color.status.success.600.value}"
+      },
+      "warning": {
+        "value": "{color.status.warning.600.value}"
+      }
+    },
+    "brand": {
+      "primary": {
+        "value": "{color.palette.blue.500.value}"
+      },
+      "gradient": {
+        "value": "linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2 191.59%)"
+      }
+    },
+    "contrast": {
+      "brand": {
+        "value": "{color.palette.white.value}"
+      },
+      "danger": {
+        "value": "{color.palette.grey.900.value}"
+      },
+      "success": {
+        "value": "{color.palette.grey.900.value}"
+      },
+      "warning": {
+        "value": "{color.palette.grey.900.value}"
+      }
+    },
+    "dataViz": {
+      "danger": {
+        "fill": {
+          "value": "{color.palette.red.300.value}"
+        },
+        "hover": {
+          "value": "{color.palette.red.600.value}"
+        },
+        "line": {
+          "value": "{color.palette.red.500.value}"
+        }
+      },
+      "neutral": {
+        "fill": {
+          "value": "{color.palette.grey.300.value}"
+        },
+        "hover": {
+          "value": "{color.palette.grey.500.value}"
+        }
+      },
+      "primary": {
+        "fill": {
+          "value": "{color.palette.indigo.300.value}"
+        },
+        "fillAlt": {
+          "value": "{color.palette.indigo.100.value}"
+        },
+        "hover": {
+          "value": "{color.palette.indigo.600.value}"
+        },
+        "line": {
+          "value": "{color.palette.indigo.500.value}"
+        }
+      },
+      "secondary": {
+        "fill": {
+          "value": "{color.palette.cyan.300.value}"
+        },
+        "fillAlt": {
+          "value": "{color.palette.cyan.100.value}"
+        },
+        "hover": {
+          "value": "{color.palette.cyan.600.value}"
+        },
+        "line": {
+          "value": "{color.palette.cyan.500.value}"
+        }
+      },
+      "tertiary": {
+        "fill": {
+          "value": "{color.palette.purple.300.value}"
+        },
+        "fillAlt": {
+          "value": "{color.palette.purple.100.value}"
+        },
+        "hover": {
+          "value": "{color.palette.purple.600.value}"
+        },
+        "line": {
+          "value": "{color.palette.purple.500.value}"
+        }
+      },
+      "warning": {
+        "fill": {
+          "value": "{color.palette.orange.300.value}"
+        },
+        "hover": {
+          "value": "{color.palette.orange.600.value}"
+        },
+        "line": {
+          "value": "{color.palette.orange.500.value}"
+        }
+      }
+    },
+    "text": {
+      "danger": {
+        "value": "{color.status.danger.600.value}"
+      },
+      "disabled": {
+        "value": "{color.palette.grey.400.value}"
+      },
+      "primary": {
+        "value": "{color.palette.grey.900.value}"
+      },
+      "secondary": {
+        "value": "{color.palette.grey.700.value}"
+      },
+      "success": {
+        "value": "{color.status.success.600.value}"
+      },
+      "tertiary": {
+        "value": "{color.palette.grey.500.value}"
+      },
+      "warning": {
+        "value": "{color.status.warning.600.value}"
+      }
+    }
+  }
+}
