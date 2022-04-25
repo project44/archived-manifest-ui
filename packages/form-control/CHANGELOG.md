@@ -1,5 +1,12 @@
 # @manifest-ui/form-control
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.11
+
 ## 0.1.1
 
 ### Patch Changes

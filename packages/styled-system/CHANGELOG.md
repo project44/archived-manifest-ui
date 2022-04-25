@@ -1,5 +1,13 @@
 # @manifest-ui/styled-system
 
+## 0.0.9
+
+### Patch Changes
+
+- [#221](https://github.com/project44/manifest-ui/pull/221)
+  [`46d0c19`](https://github.com/project44/manifest-ui/commit/46d0c1968c843bda6855df1b8eadda39b2f0d28f)
+  Thanks [@bclark-p44](https://github.com/bclark-p44)! - Fixing packages for styled-system
+
 ## 0.0.8
 
 ### Patch Changes

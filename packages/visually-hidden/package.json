@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/visually-hidden",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -19,7 +19,7 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/styled": "^0.0.10",
-    "@manifest-ui/theme-utils": "^0.1.1"
+    "@manifest-ui/styled": "^0.0.11",
+    "@manifest-ui/theme-utils": "^0.1.2"
   }
 }
