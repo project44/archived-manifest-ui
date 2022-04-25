@@ -1,5 +1,14 @@
 # @manifest-ui/select
 
+## 0.2.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.10
+  - @manifest-ui/theme-utils@0.1.1
+  - @manifest-ui/icons@0.1.1
+
 ## 0.2.0
 
 ### Minor Changes

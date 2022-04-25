@@ -1,5 +1,13 @@
 # @manifest-ui/toggle
 
+## 0.1.7
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.10
+  - @manifest-ui/theme-utils@0.1.1
+
 ## 0.1.6
 
 ### Patch Changes

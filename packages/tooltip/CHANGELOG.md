@@ -1,5 +1,12 @@
 # @manifest-ui/tooltip
 
+## 0.2.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.10
+
 ## 0.2.0
 
 ### Minor Changes

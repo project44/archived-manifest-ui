@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/radio",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "@manifest-ui/hooks": "^0.1.0",
-    "@manifest-ui/styled": "^0.0.9",
-    "@manifest-ui/theme-utils": "^0.1.0",
+    "@manifest-ui/styled": "^0.0.10",
+    "@manifest-ui/theme-utils": "^0.1.1",
     "@manifest-ui/utils": "^0.1.0"
   }
 }

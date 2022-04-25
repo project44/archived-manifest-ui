@@ -1,5 +1,14 @@
 # @manifest-ui/checkbox
 
+## 0.0.11
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.10
+  - @manifest-ui/theme-utils@0.1.1
+  - @manifest-ui/icons@0.1.1
+
 ## 0.0.10
 
 ### Patch Changes
