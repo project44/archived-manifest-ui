@@ -1,7 +1,7 @@
 import * as CSS from 'csstype';
 import { Configs, Length, ResponsiveValue, Scale } from '../types';
 import get from 'lodash.get';
-import isNumber from 'lodash/isNumber';
+import isNumber from 'lodash.isnumber';
 import { system } from '../core';
 
 export interface SpaceProps {
