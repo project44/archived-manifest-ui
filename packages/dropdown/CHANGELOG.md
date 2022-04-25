@@ -1,5 +1,13 @@
 # @manifest-ui/dropdown
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.10
+  - @manifest-ui/theme-utils@0.1.1
+
 ## 0.1.1
 
 ### Patch Changes

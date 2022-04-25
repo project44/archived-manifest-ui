@@ -1,5 +1,13 @@
 # @manifest-ui/tokens
 
+## 0.3.0
+
+### Minor Changes
+
+- [#218](https://github.com/project44/manifest-ui/pull/218)
+  [`f9c8639`](https://github.com/project44/manifest-ui/commit/f9c8639fe3cc2f7d1d8ca505ad0903e8bc056085)
+  Thanks [@branclar](https://github.com/branclar)! - Changing export pattern for tokens
+
 ## 0.2.2
 
 ### Patch Changes
