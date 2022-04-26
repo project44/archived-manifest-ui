@@ -14,6 +14,7 @@ export const StyledTooltip = styled(RadixTooltipContent, { themeKey: 'tooltip' }
   lineHeight: 'small',
   overflow: 'hidden',
   position: 'relative',
+  zIndex: 'tooltip',
   px: 2,
   py: 1,
 });
