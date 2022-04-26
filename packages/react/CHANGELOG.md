@@ -1,5 +1,39 @@
 # @manifest-ui/react
 
+## 2.6.5
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/css-baseline@0.0.8
+  - @manifest-ui/styled@0.0.11
+  - @manifest-ui/theme-utils@0.1.2
+  - @manifest-ui/provider@0.0.14
+  - @manifest-ui/button@0.0.17
+  - @manifest-ui/card@0.1.2
+  - @manifest-ui/checkbox@0.0.12
+  - @manifest-ui/date-range@0.1.3
+  - @manifest-ui/dropdown@0.1.3
+  - @manifest-ui/form-control@0.1.2
+  - @manifest-ui/icon@0.0.11
+  - @manifest-ui/image@0.0.11
+  - @manifest-ui/input@0.1.8
+  - @manifest-ui/layout@0.0.11
+  - @manifest-ui/link@0.0.10
+  - @manifest-ui/pagination@0.0.16
+  - @manifest-ui/popover@0.2.2
+  - @manifest-ui/radio@0.1.8
+  - @manifest-ui/select@0.2.2
+  - @manifest-ui/separator@0.1.2
+  - @manifest-ui/spinner@0.0.14
+  - @manifest-ui/table@0.2.4
+  - @manifest-ui/tag@0.1.7
+  - @manifest-ui/textarea@0.1.4
+  - @manifest-ui/toggle@0.1.8
+  - @manifest-ui/tooltip@0.2.2
+  - @manifest-ui/typography@0.0.11
+  - @manifest-ui/visually-hidden@0.0.14
+
 ## 2.6.4
 
 ### Patch Changes

@@ -1,5 +1,15 @@
 # @manifest-ui/table
 
+## 0.2.4
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.11
+  - @manifest-ui/theme-utils@0.1.2
+  - @manifest-ui/pagination@0.0.16
+  - @manifest-ui/icons@0.1.2
+
 ## 0.2.3
 
 ### Patch Changes

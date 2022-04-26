@@ -1,5 +1,13 @@
 # @manifest-ui/radio
 
+## 0.1.8
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @manifest-ui/styled@0.0.11
+  - @manifest-ui/theme-utils@0.1.2
+
 ## 0.1.7
 
 ### Patch Changes
