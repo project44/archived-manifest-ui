@@ -1,6 +1,5 @@
 import * as CSS from 'csstype';
-import { ResponsiveValue, system, TLengthStyledSystem } from 'styled-system';
-import { Config } from '../types';
+import { ConfigStyle, ResponsiveValue, TLengthStyledSystem } from 'styled-system';
 
 export interface OtherProps {
   animation?: ResponsiveValue<CSS.Property.Animation>;
@@ -29,7 +28,7 @@ export interface OtherProps {
   willChange?: ResponsiveValue<CSS.Property.WillChange>;
 }
 
-const config: Config<OtherProps> = {
+const config: Record<keyof OtherProps, boolean | ConfigStyle> = {
   animation: true,
   appearance: true,
   cursor: true,
@@ -70,5 +69,3 @@ const config: Config<OtherProps> = {
   visibility: true,
   willChange: true,
 };
-
-export const other = system(config);

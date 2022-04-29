@@ -1,18 +1,29 @@
-import { background, BackgroundProps } from './background';
-import { border, BorderProps } from './border';
-import { color, ColorProps } from './color';
-import { flexbox, FlexboxProps } from './flexbox';
-import { grid, GridProps } from './grid';
-import { layout, LayoutProps } from './layout';
+import {
+  background,
+  BackgroundProps,
+  border,
+  BorderProps,
+  color,
+  ColorProps,
+  compose,
+  flexbox,
+  FlexboxProps,
+  grid,
+  GridProps,
+  layout,
+  LayoutProps,
+  position,
+  PositionProps,
+  shadow,
+  ShadowProps,
+  space,
+  SpaceProps,
+  typography,
+  TypographyProps,
+} from 'styled-system';
 import { other, OtherProps } from './other';
-import { position, PositionProps } from './position';
-import { shadow, ShadowProps } from './shadow';
-import { space, SpaceProps } from './space';
-import { transition, TransitionProps } from './transition';
-import { typography, TypographyProps } from './typography';
-import { compose } from '@styled-system/core';
 
-export interface StyledProps
+export interface StyleProps
   extends BackgroundProps,
     BorderProps,
     ColorProps,
@@ -23,10 +34,9 @@ export interface StyledProps
     PositionProps,
     ShadowProps,
     SpaceProps,
-    TransitionProps,
     TypographyProps {}
 
-export const styledProps = compose(
+export const styleProps = compose(
   background,
   border,
   color,
@@ -37,8 +47,7 @@ export const styledProps = compose(
   position,
   shadow,
   space,
-  transition,
   typography,
 );
 
-export const styledPropNames = [...(styledProps.propNames as string[])];
+export const styledPropNames = [...(styleProps.propNames as string[])];
