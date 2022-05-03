@@ -14,9 +14,7 @@ export function createConfig(config: ConfigStyle): SystemConfig {
     if (parsedValue === null) return;
 
     styleProperty.forEach(prop => {
-      if (prop) {
-        result[prop] = parsedValue;
-      }
+      result[prop] = parsedValue;
     });
 
     return result;

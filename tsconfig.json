@@ -6,6 +6,9 @@
   "references": [
     {
       "path": "packages/system"
+    },
+    {
+      "path": "packages/test-utils"
     }
   ]
 }

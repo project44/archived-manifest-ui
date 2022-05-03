@@ -226,15 +226,6 @@ export interface SerializedStyles {
   next?: SerializedStyles;
 }
 
-export interface StyleFn {
-  (value: any, scale: Scale | undefined, props: any): any;
-  properties?: string[];
-  property?: string;
-  scale?: string;
-  transform?: Transform;
-  defaults?: Scale;
-}
-
 export interface StyledComponent<
   ComponentProps extends {},
   SpecificComponentProps extends {} = {},
