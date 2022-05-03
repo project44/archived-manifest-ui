@@ -1,8 +1,7 @@
-import { As } from '../types';
+import { CreateStyled, StyledProps, SystemStyleObject } from '../types';
 import { css } from '../css';
+import { shouldForwardProp as defaultShouldForwardProp } from './shouldForwardProp';
 import emotionStyled from '@emotion/styled';
-import { shouldForwardProp } from '../props';
-import { SystemStyleObject } from '@styled-system/css';
 
 interface StyledOptions {
   /**
@@ -15,42 +14,33 @@ interface StyledOptions {
   shouldForwardProp?(prop: string): boolean;
 }
 
-export interface StyledProps {
-  size?: string;
-  sx?: SystemStyleObject;
-  theme?: Theme;
-}
+export function createStyled(): CreateStyled<StyledOptions> {
+  return (tag: any, options?: StyledOptions) => {
+    const { label, shouldForwardProp = defaultShouldForwardProp } = options ?? {};
 
-export function styled<T extends As, P = {}>(tag: T, options?: StyledOptions) {
-  const { label, ...other } = options ?? {};
-
-  if (!other.shouldForwardProp) {
-    other.shouldForwardProp = shouldForwardProp;
-  }
-
-  const emotionResolver = emotionStyled(tag as React.ComponentType<any>, {
-    label,
-    shouldForwardProp,
-  });
-
-  const styleResolver = (...args: any[]) => {
-    const styleArgs = args.map(interpolation => {
-      return (props: StyledProps) => {
-        const { size: sizeProp, sx, theme: themeProp, variant: variantProp, ...other } = props;
-
-        const baseStyles =
-          typeof interpolation === 'function' ? interpolation({ ...props, theme }) : interpolation;
-        const mergedStyles = Object.assign({}, baseStyles);
-        const styleProps = omitBy(other, (_, prop) => !isStyleProp(prop));
-
-        const composedStyles: SystemStyleObject = Object.assign({}, baseStyles, styleProps, sx);
-
-        return css(composedStyles)(theme);
-      };
+    const emotionResolver = emotionStyled(tag as React.ComponentType<any>, {
+      label,
+      shouldForwardProp,
     });
 
-    return emotionResolver(styleArgs);
-  };
+    const styleResolver = (...args: any[]) => {
+      const styleArgs = args.map(interpolation => {
+        return (props: StyledProps) => {
+          const { sx, theme, ...other } = props;
 
-  return styleResolver;
+          const baseStyles =
+            typeof interpolation === 'function'
+              ? interpolation({ ...props, theme })
+              : interpolation;
+          const composedStyles: SystemStyleObject = Object.assign({}, baseStyles, sx);
+
+          return css(composedStyles)(theme);
+        };
+      });
+
+      return emotionResolver(styleArgs);
+    };
+
+    return styleResolver;
+  };
 }

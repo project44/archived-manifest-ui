@@ -1,12 +1,12 @@
 import * as CSS from 'csstype';
 import {
-  Config,
   RequiredTheme,
   ResponsiveValue,
-  system,
+  SystemConfigs,
   Theme,
   TLengthStyledSystem,
-} from 'styled-system';
+} from '../types';
+import { system } from '../core';
 
 export interface GridProps<ThemeType extends Theme = RequiredTheme> {
   gridGap?: ResponsiveValue<CSS.Property.GridGap<TLengthStyledSystem>, ThemeType>;
@@ -27,7 +27,7 @@ export interface GridProps<ThemeType extends Theme = RequiredTheme> {
   gridArea?: ResponsiveValue<CSS.Property.GridArea, ThemeType>;
 }
 
-const config: Config = {
+const config: SystemConfigs = {
   gridArea: true,
   gridAutoColumns: true,
   gridAutoFlow: true,

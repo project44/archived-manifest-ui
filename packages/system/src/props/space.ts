@@ -1,13 +1,6 @@
-import {
-  Config,
-  get,
-  RequiredTheme,
-  ResponsiveValue,
-  Scale,
-  system,
-  Theme,
-  ThemeValue,
-} from 'styled-system';
+import { get, isNumber } from '../utils';
+import { RequiredTheme, ResponsiveValue, Scale, SystemConfigs, Theme, ThemeValue } from '../types';
+import { system } from '../core';
 
 export interface SpaceProps<
   ThemeType extends Theme = RequiredTheme,
@@ -59,23 +52,23 @@ export interface SpaceProps<
   pe?: ResponsiveValue<TVal, ThemeType>;
 }
 
-const getMargin = (path: number | string, scale?: Scale) => {
-  if (typeof path !== 'number') {
-    return get(scale, path, path) as string;
+const getMargin = (scale: Scale | undefined, path: number | string): any => {
+  if (!isNumber(path)) {
+    return get(scale, path, path);
   }
 
   const isNegative = path < 0;
   const absolute = Math.abs(path);
   const value = get(scale, absolute, absolute);
 
-  if (typeof value === 'string') {
+  if (!isNumber(value)) {
     return isNegative ? `-${String(value)}` : value;
   }
 
-  return (value as number) * (isNegative ? -1 : 1);
+  return value * (isNegative ? -1 : 1);
 };
 
-const config: Config = {
+const config: SystemConfigs = {
   margin: {
     property: 'margin',
     scale: 'space',

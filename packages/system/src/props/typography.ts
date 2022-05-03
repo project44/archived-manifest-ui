@@ -1,12 +1,12 @@
 import * as CSS from 'csstype';
 import {
-  Config,
   RequiredTheme,
   ResponsiveValue,
-  system,
+  SystemConfigs,
   Theme,
   TLengthStyledSystem,
-} from 'styled-system';
+} from '../types';
+import { system } from '../core';
 
 export interface TypographyProps<ThemeType extends Theme = RequiredTheme> {
   fontFamily?: ResponsiveValue<CSS.Property.FontFamily, ThemeType>;
@@ -23,7 +23,7 @@ export interface TypographyProps<ThemeType extends Theme = RequiredTheme> {
   wordBreak?: ResponsiveValue<CSS.Property.WordBreak, ThemeType>;
 }
 
-const config: Config = {
+const config: SystemConfigs = {
   fontFamily: {
     property: 'fontFamily',
     scale: 'fonts',

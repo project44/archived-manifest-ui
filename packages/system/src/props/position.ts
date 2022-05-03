@@ -1,14 +1,14 @@
 import * as CSS from 'csstype';
+import { get, isNumber, isString } from '../utils';
 import {
-  Config,
-  get,
   RequiredTheme,
   ResponsiveValue,
   Scale,
-  system,
+  SystemConfigs,
   Theme,
   TLengthStyledSystem,
-} from 'styled-system';
+} from '../types';
+import { system } from '../core';
 
 export interface PositionProps<ThemeType extends Theme = RequiredTheme> {
   position?: ResponsiveValue<CSS.Property.Position, ThemeType>;
@@ -20,20 +20,38 @@ export interface PositionProps<ThemeType extends Theme = RequiredTheme> {
   left?: ResponsiveValue<CSS.Property.Left<TLengthStyledSystem>, ThemeType>;
 }
 
-const positiveOrNegative = (path: number | string, scale?: Scale) => {
-  if (typeof path !== 'number' || path >= 0) {
-    return get(scale, path, path) as string;
+const positiveOrNegative = (scale: Scale | undefined, path: number | string): any => {
+  if (!isNumber(path)) {
+    if (isString(path) && path.startsWith('-')) {
+      const raw: string = path.slice(1);
+      const value = get(scale, raw, raw);
+
+      if (isNumber(value)) {
+        return value * -1;
+      }
+
+      return `-${String(value)}`;
+    }
+
+    return get(scale, path, path);
   }
 
-  const absolute = Math.abs(path);
-  const value = get(scale, absolute, absolute);
+  const isNegative = path < 0;
+  const abs = Math.abs(path);
+  const value = get(scale, abs, abs);
 
-  if (typeof value === 'string') return `-${String(value)}`;
+  if (isNumber(value)) {
+    return value * (isNegative ? -1 : 1);
+  }
 
-  return value * -1;
+  if (value == null) {
+    return;
+  }
+
+  return isNegative ? `-${String(value)}` : value;
 };
 
-const config: Config = {
+const config: SystemConfigs = {
   bottom: {
     property: 'bottom',
     scale: 'space',

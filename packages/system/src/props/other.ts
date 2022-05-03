@@ -1,12 +1,12 @@
 import * as CSS from 'csstype';
 import {
-  Config,
   RequiredTheme,
   ResponsiveValue,
-  system,
+  SystemConfigs,
   Theme,
   TLengthStyledSystem,
-} from 'styled-system';
+} from '../types';
+import { system } from '../core';
 
 export interface OtherProps<ThemeType extends Theme = RequiredTheme> {
   animation?: ResponsiveValue<CSS.Property.Animation, ThemeType>;
@@ -28,7 +28,7 @@ export interface OtherProps<ThemeType extends Theme = RequiredTheme> {
   willChange?: ResponsiveValue<CSS.Property.WillChange, ThemeType>;
 }
 
-const config: Config = {
+const config: SystemConfigs = {
   animation: true,
   appearance: true,
   cursor: true,

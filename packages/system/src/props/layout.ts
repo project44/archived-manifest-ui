@@ -1,12 +1,12 @@
 import * as CSS from 'csstype';
 import {
-  Config,
   RequiredTheme,
   ResponsiveValue,
-  system,
+  SystemConfigs,
   Theme,
   TLengthStyledSystem,
-} from 'styled-system';
+} from '../types';
+import { system } from '../core';
 
 export interface LayoutProps<ThemeType extends Theme = RequiredTheme> {
   boxSize?: ResponsiveValue<CSS.Property.Width<TLengthStyledSystem>, ThemeType>;
@@ -31,7 +31,7 @@ export interface LayoutProps<ThemeType extends Theme = RequiredTheme> {
   overflowY?: ResponsiveValue<CSS.Property.OverflowY, ThemeType>;
 }
 
-const config: Config = {
+const config: SystemConfigs = {
   boxSize: {
     properties: ['width', 'height'],
     scale: 'sizes',

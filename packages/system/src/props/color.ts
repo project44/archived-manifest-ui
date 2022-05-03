@@ -1,5 +1,6 @@
 import * as CSS from 'csstype';
-import { Config, RequiredTheme, ResponsiveValue, system, Theme, ThemeValue } from 'styled-system';
+import { RequiredTheme, ResponsiveValue, SystemConfigs, Theme, ThemeValue } from '../types';
+import { system } from '../core';
 
 export interface ColorProps<
   ThemeType extends Theme = RequiredTheme,
@@ -12,7 +13,7 @@ export interface ColorProps<
   textColor?: ResponsiveValue<TVal, ThemeType>;
 }
 
-const config: Config = {
+const config: SystemConfigs = {
   color: {
     property: 'color',
     scale: 'colors',

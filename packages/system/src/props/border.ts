@@ -1,12 +1,12 @@
 import * as CSS from 'csstype';
 import {
-  Config,
   RequiredTheme,
   ResponsiveValue,
-  system,
+  SystemConfigs,
   Theme,
   TLengthStyledSystem,
-} from 'styled-system';
+} from '../types';
+import { system } from '../core';
 
 export interface BorderProps<ThemeType extends Theme = RequiredTheme> {
   border?: ResponsiveValue<CSS.Property.Border<TLengthStyledSystem>, ThemeType>;
@@ -51,7 +51,7 @@ export interface BorderProps<ThemeType extends Theme = RequiredTheme> {
   borderY?: ResponsiveValue<CSS.Property.Border<TLengthStyledSystem>, ThemeType>;
 }
 
-const config: Config = {
+const config: SystemConfigs = {
   border: {
     property: 'border',
     scale: 'borders',

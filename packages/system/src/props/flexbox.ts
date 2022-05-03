@@ -1,12 +1,12 @@
 import * as CSS from 'csstype';
 import {
-  Config,
   RequiredTheme,
   ResponsiveValue,
-  system,
+  SystemConfigs,
   Theme,
   TLengthStyledSystem,
-} from 'styled-system';
+} from '../types';
+import { system } from '../core';
 
 export interface FlexboxProps<ThemeType extends Theme = RequiredTheme> {
   alignItems?: ResponsiveValue<CSS.Property.AlignItems, ThemeType>;
@@ -29,7 +29,7 @@ export interface FlexboxProps<ThemeType extends Theme = RequiredTheme> {
   placeSelf?: ResponsiveValue<CSS.Property.PlaceSelf, ThemeType>;
 }
 
-const config: Config = {
+const config: SystemConfigs = {
   alignContent: true,
   alignItems: true,
   alignSelf: true,

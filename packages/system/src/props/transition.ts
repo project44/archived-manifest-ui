@@ -1,5 +1,6 @@
 import * as CSS from 'csstype';
-import { Config, RequiredTheme, ResponsiveValue, system, Theme } from 'styled-system';
+import { RequiredTheme, ResponsiveValue, SystemConfigs, Theme } from '../types';
+import { system } from '../core';
 
 export interface TransitionProps<ThemeType extends Theme = RequiredTheme> {
   transition?: ResponsiveValue<CSS.Property.Transition, ThemeType>;
@@ -9,7 +10,7 @@ export interface TransitionProps<ThemeType extends Theme = RequiredTheme> {
   transitionDelay?: ResponsiveValue<CSS.Property.TransitionDelay, ThemeType>;
 }
 
-const config: Config = {
+const config: SystemConfigs = {
   transition: true,
   transitionDelay: true,
   transitionDuration: {

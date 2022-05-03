@@ -10,6 +10,7 @@
     "build": "packemon build --addEngines",
     "clean": "packemon clean",
     "postinstall": "husky install && beemo create-config babel eslint prettier",
+    "test": "yarn run beemo jest",
     "type": "beemo typescript --build"
   },
   "workspaces": [

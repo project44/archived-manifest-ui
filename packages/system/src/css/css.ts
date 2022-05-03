@@ -1,20 +1,49 @@
 /**
- * Copying and extending the functionality of the base styled-system css function to
- * ensuring support for custom transformations, multiple and aliased properties.
+ * Copying and extending the functionality of the base styled-system css function
+ * adding support for custom transformations, multiple and aliased properties.
  *
  * https://github.com/styled-system/styled-system/blob/master/packages/css/src/index.js
  */
-import { allSystemProps, systemProps } from '../props';
-import { CSSObject, get } from '@styled-system/css';
+import {
+  background,
+  border,
+  color,
+  flexbox,
+  grid,
+  layout,
+  other,
+  position,
+  shadow,
+  space,
+  transition,
+  typography,
+} from '../props';
+import { defaultBreakpoints, get, parseBreakpoints } from '../utils';
+import { Prop, SystemConfig, SystemStyleObject, Theme } from '../types';
+import { compose } from '../core';
+
+export const systemProps = compose(
+  background,
+  border,
+  color,
+  flexbox,
+  grid,
+  layout,
+  other,
+  position,
+  shadow,
+  space,
+  transition,
+  typography,
+);
 
 const aliases: Record<string, string> = {};
 const multiples: Record<string, Array<string>> = {};
 const scales: Record<string, string> = {};
 const transforms: Record<string, any> = {};
 
-allSystemProps.forEach(propName => {
-  //@ts-expect-error: styled-system config type is a generic object.
-  const config = systemProps.config?.[propName];
+systemProps.propNames.forEach(propName => {
+  const config: SystemConfig = systemProps.config[propName];
 
   if (!config) return;
 
@@ -35,69 +64,61 @@ allSystemProps.forEach(propName => {
   }
 });
 
-const defaultBreakpoints = [40, 52, 64].map(n => `${n}em`);
+export function responsive(styles?: Record<string, any>) {
+  return (theme: Theme) => {
+    const result: { [key: string]: any } = {};
+    const breakpoints = get(theme, 'breakpoints', defaultBreakpoints) as Prop<string | number>;
 
-const defaultTheme = {
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
-};
+    const mediaQueries = [null, ...parseBreakpoints(breakpoints)];
 
-export const responsive = (styles: Record<string, any>) => (theme: JSON) => {
-  const result: { [key: string]: any } = {};
-  const breakpoints = get(theme, 'breakpoints', defaultBreakpoints) as string[];
+    for (const style in styles) {
+      const styleValue = typeof styles[style] === 'function' ? styles[style](theme) : styles[style];
 
-  const mediaQueries = [
-    null,
-    ...breakpoints.map(breakpoint => `@media screen and (min-width: ${breakpoint})`),
-  ];
+      if (styleValue === null) continue;
 
-  for (const style in styles) {
-    const styleValue = typeof styles[style] === 'function' ? styles[style](theme) : styles[style];
-
-    if (styleValue === null) continue;
-
-    if (!Array.isArray(styleValue)) {
-      result[style] = styleValue;
-
-      continue;
-    }
-
-    for (let i = 0; i < styleValue.slice(0, mediaQueries.length).length; i += 1) {
-      const media = mediaQueries[i];
-
-      if (!media) {
-        result[style] = styleValue[i];
+      if (!Array.isArray(styleValue)) {
+        result[style] = styleValue;
 
         continue;
       }
 
-      result[media] = result[media] || {};
+      for (let i = 0; i < styleValue.slice(0, mediaQueries.length).length; i += 1) {
+        const media = mediaQueries[i];
 
-      if (styleValue[i] == null) continue;
+        if (!media) {
+          result[style] = styleValue[i];
 
-      result[media][style] = styleValue[i];
+          continue;
+        }
+
+        result[media] = result[media] || {};
+
+        if (styleValue[i] == null) continue;
+
+        result[media][style] = styleValue[i];
+      }
     }
-  }
 
-  return result;
-};
+    return result;
+  };
+}
 
-export function css(stylesOrFn: any) {
-  return (props = {}): CSSObject => {
-    const theme: JSON = { ...defaultTheme, ...((props as any)?.theme || props) };
+export function css(stylesOrFn?: SystemStyleObject) {
+  return (theme: Theme = {}) => {
+    if (!stylesOrFn) return {};
 
     const result: { [key: string]: any } = {};
 
-    const rawStyles: object = typeof stylesOrFn === 'function' ? stylesOrFn(theme) : stylesOrFn;
+    const rawStyles = typeof stylesOrFn === 'function' ? stylesOrFn(theme) : stylesOrFn;
     const styles = responsive(rawStyles)(theme);
 
-    Object.keys(styles).forEach(style => {
-      const styleValue = styles[style];
+    for (const style in styles) {
+      const styleValue: SystemStyleObject = styles[style];
 
       if (styleValue && typeof styleValue === 'object') {
         result[style] = css(styleValue)(theme);
 
-        return;
+        continue;
       }
 
       const prop: string = get(aliases, style, style);
@@ -114,11 +135,11 @@ export function css(stylesOrFn: any) {
           result[dirs[i]] = value;
         }
 
-        return;
+        continue;
       }
 
       result[prop] = value;
-    });
+    }
 
     return result;
   };

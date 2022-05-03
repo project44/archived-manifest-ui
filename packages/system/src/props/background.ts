@@ -1,12 +1,12 @@
 import * as CSS from 'csstype';
 import {
-  Config,
   RequiredTheme,
   ResponsiveValue,
-  system,
+  SystemConfigs,
   Theme,
   TLengthStyledSystem,
-} from 'styled-system';
+} from '../types';
+import { system } from '../core';
 
 export interface BackgroundProps<ThemeType extends Theme = RequiredTheme> {
   background?: ResponsiveValue<CSS.Property.Background<TLengthStyledSystem>, ThemeType>;
@@ -30,7 +30,7 @@ export interface BackgroundProps<ThemeType extends Theme = RequiredTheme> {
   bgSize?: ResponsiveValue<CSS.Property.BackgroundSize | number, ThemeType>;
 }
 
-const config: Config = {
+const config: SystemConfigs = {
   background: {
     property: 'background',
     scale: 'colors',
