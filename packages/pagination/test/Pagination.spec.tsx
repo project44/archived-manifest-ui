@@ -32,6 +32,12 @@ describe('@manifest-ui/pagination', () => {
     expect(screen.getAllByRole('button')[1]).toHaveAttribute('aria-current', 'true');
   });
 
+  it('should render without page numbers', () => {
+    render(<Pagination totalRowCount={100} showPageNumbers={false} />);
+
+    expect(screen.getAllByRole('button')).toHaveLength(2);
+  });
+
   it.each(['filled', 'outlined', 'text'])('should render %s variant', variant => {
     render(<Pagination totalRowCount={100} variant={variant as PaginationProps['variant']} />);
   });
