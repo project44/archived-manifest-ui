@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/react",
-  "version": "2.6.5",
+  "version": "2.6.6",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -32,7 +32,7 @@
     "@manifest-ui/input": "0.1.8",
     "@manifest-ui/layout": "0.0.11",
     "@manifest-ui/link": "0.0.10",
-    "@manifest-ui/pagination": "0.0.16",
+    "@manifest-ui/pagination": "0.0.17",
     "@manifest-ui/popover": "0.2.2",
     "@manifest-ui/portal": "0.1.0",
     "@manifest-ui/provider": "0.0.14",
@@ -42,7 +42,7 @@
     "@manifest-ui/slot": "0.1.0",
     "@manifest-ui/spinner": "0.0.14",
     "@manifest-ui/styled": "^0.0.11",
-    "@manifest-ui/table": "0.2.4",
+    "@manifest-ui/table": "0.2.5",
     "@manifest-ui/tag": "0.1.7",
     "@manifest-ui/textarea": "0.1.4",
     "@manifest-ui/theme": "0.3.0",
