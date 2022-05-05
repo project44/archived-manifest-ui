@@ -5,8 +5,9 @@
   "types": "./dts/index.d.ts",
   "files": [
     "dts/**/*.d.ts",
+    "esm/**/*.{js,map}",
     "lib/**/*.{js,map}",
-    "tokens/**/*.json"
+    "src/**/*.{ts,tsx,json}"
   ],
   "repository": {
     "type": "git",
@@ -19,12 +20,8 @@
     "build": "ts-node scripts/build.ts"
   },
   "devDependencies": {
-    "chalk": "^5.0.1",
-    "lodash.template": "^4.5.0",
+    "deepmerge": "^4.2.2",
     "style-dictionary": "^3.7.0",
     "ts-node": "^10.7.0"
-  },
-  "dependencies": {
-    "deepmerge": "^4.2.2"
   }
 }
