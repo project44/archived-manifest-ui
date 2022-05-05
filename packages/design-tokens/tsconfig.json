@@ -1,0 +1,13 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "compilerOptions": {
+    "emitDeclarationOnly": false,
+    "noEmit": true
+  },
+  "exclude": ["dts", "tests"],
+  "extends": "../../tsconfig.options.json",
+}

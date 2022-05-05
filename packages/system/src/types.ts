@@ -296,8 +296,8 @@ export interface Theme {
   fonts?: ObjectOrArray<CSS.Property.FontFamily> | undefined;
   fontSizes?: ObjectOrArray<CSS.Property.FontSize<string | number>> | undefined;
   fontWeights?: ObjectOrArray<CSS.Property.FontWeight> | undefined;
-  lineHeights?: ObjectOrArray<CSS.Property.LineHeight<TLengthStyledSystem>> | undefined;
   letterSpacings?: ObjectOrArray<CSS.Property.LetterSpacing<TLengthStyledSystem>> | undefined;
+  lineHeights?: ObjectOrArray<CSS.Property.LineHeight<TLengthStyledSystem>> | undefined;
   mediaQueries?: { [size: string]: string } | undefined | undefined;
   radii?: ObjectOrArray<CSS.Property.BorderRadius<TLengthStyledSystem>> | undefined;
   shadows?: ObjectOrArray<CSS.Property.BoxShadow> | undefined;
