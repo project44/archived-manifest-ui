@@ -1,5 +1,13 @@
 # @manifest-ui/pagination
 
+## 0.0.17
+
+### Patch Changes
+
+- [#224](https://github.com/project44/manifest-ui/pull/224)
+  [`869b42f`](https://github.com/project44/manifest-ui/commit/869b42f55fa94f4688fd587ab56e9b3750d875d8)
+  Thanks [@bclark-p44](https://github.com/bclark-p44)! - Fixing line height on pagination ellipsis
+
 ## 0.0.16
 
 ### Patch Changes

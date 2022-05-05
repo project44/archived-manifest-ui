@@ -1,5 +1,13 @@
 # @manifest-ui/table
 
+## 0.2.5
+
+### Patch Changes
+
+- Updated dependencies
+  [[`869b42f`](https://github.com/project44/manifest-ui/commit/869b42f55fa94f4688fd587ab56e9b3750d875d8)]:
+  - @manifest-ui/pagination@0.0.17
+
 ## 0.2.4
 
 ### Patch Changes
