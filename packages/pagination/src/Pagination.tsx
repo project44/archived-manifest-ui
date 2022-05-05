@@ -11,7 +11,14 @@ import { ComponentProps } from '@manifest-ui/styled';
 
 export interface PaginationProps
   extends Omit<ComponentProps<typeof StyledPagination>, 'onChange'>,
-    UsePaginationOptions {}
+    UsePaginationOptions {
+  /**
+   * Whether to show page numbers buttons.
+   *
+   * @default true
+   */
+  showPageNumbers?: boolean;
+}
 
 export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
   (props: PaginationProps, ref) => {
@@ -22,6 +29,7 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
       page: pageProp,
       rowsPerPage,
       siblings,
+      showPageNumbers = true,
       totalRowCount,
       ...other
     } = props;
@@ -50,28 +58,29 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
           </StyledPaginationText>
         </StyledPaginationButton>
 
-        {pages.map((item, index) => (
-          <React.Fragment key={`${item}_${index}`}>
-            {item === 'dots' && (
-              <StyledPaginationEllipsis className="manifestui-pagination-ellipsis">
-                ...
-              </StyledPaginationEllipsis>
-            )}
-            {item !== 'dots' && (
-              <StyledPaginationButton
-                aria-current={item === page ? 'true' : undefined}
-                aria-label={`${item === page ? '' : 'go to '}page ${String(item)}`}
-                className="manifestui-pagination-button"
-                data-active={item === page ? '' : undefined}
-                onClick={() => {
-                  setPage(item as number);
-                }}
-              >
-                {item.toString()}
-              </StyledPaginationButton>
-            )}
-          </React.Fragment>
-        ))}
+        {showPageNumbers &&
+          pages.map((item, index) => (
+            <React.Fragment key={`${item}_${index}`}>
+              {item === 'dots' && (
+                <StyledPaginationEllipsis className="manifestui-pagination-ellipsis">
+                  ...
+                </StyledPaginationEllipsis>
+              )}
+              {item !== 'dots' && (
+                <StyledPaginationButton
+                  aria-current={item === page ? 'true' : undefined}
+                  aria-label={`${item === page ? '' : 'go to '}page ${String(item)}`}
+                  className="manifestui-pagination-button"
+                  data-active={item === page ? '' : undefined}
+                  onClick={() => {
+                    setPage(item as number);
+                  }}
+                >
+                  {item.toString()}
+                </StyledPaginationButton>
+              )}
+            </React.Fragment>
+          ))}
 
         <StyledPaginationButton
           aria-label="go to next page"

@@ -78,9 +78,8 @@ export const StyledPaginationEllipsis = styled('div', {
   fontWeight: 'semibold',
   height: 'auto',
   letterSpacing: 'normal',
-  lineHeight: 'large',
-  px: 3,
-  py: 2,
+  lineHeight: 'medium',
+  p: 2,
   textAlign: 'center',
 });
 
