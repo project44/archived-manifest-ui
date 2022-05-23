@@ -1,6 +1,8 @@
 {
-  "name": "@manifest-ui/design-tokens",
-  "version": "0.0.0",
+  "name": "@manifest-ui/react",
+  "version": "2.6.6",
+  "author": "project44",
+  "license": "MIT",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -13,10 +15,16 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:project-44/manifest-ui.git",
-    "directory": "packages/design-tokens"
+    "directory": "packages/react"
   },
-  "author": "project44",
-  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.8 || ^17.0",
+    "react-dom": "^16.8 || ^17.0"
+  },
+  "dependencies": {
+    "@manifest-ui/design-tokens": "^0.0.0",
+    "@stitches/react": "^1.2.8"
+  },
   "packemon": {
     "platform": "browser"
   }

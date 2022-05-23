@@ -5,10 +5,10 @@
   "files": [],
   "references": [
     {
-      "path": "packages/system"
+      "path": "packages/design-tokens"
     },
     {
-      "path": "packages/test-utils"
+      "path": "packages/react"
     }
   ]
 }

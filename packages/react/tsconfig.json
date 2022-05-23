@@ -8,4 +8,9 @@
   "exclude": ["dts"],
   "extends": "../../tsconfig.json",
   "include": ["src/**/*"],
+  "references": [
+    {
+      "path": "../design-tokens"
+    }
+  ]
 }

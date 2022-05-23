@@ -2,7 +2,13 @@ import { BeemoConfig } from '@beemo/core';
 
 const config: BeemoConfig = {
   module: '@manifest-ui/vessel',
-  drivers: ['babel', 'eslint', 'jest', 'prettier', 'typescript'],
+  drivers: [
+    ['babel', { configStrategy: 'none' }],
+    ['typescript', { buildFolder: 'dts', declarationOnly: true }],
+    'eslint',
+    'jest',
+    'prettier',
+  ],
   settings: {
     react: true,
   },

@@ -6,11 +6,13 @@ Themeable design system built using [Emotion] and [Radix] for project44.
 
 ## Documentation
 
-Our documentation site lives at [p44design.systems]. You'll be able to find detailed documentation on getting started, all of the components, our theme, our principles, and more.
+Our documentation site lives at [p44design.systems]. You'll be able to find detailed documentation
+on getting started, all of the components, our theme, our principles, and more.
 
 ## Installation
 
-Install `@manifest-ui/react` and necessary peer dependencies in your project with your package manager of choice:
+Install `@manifest-ui/react` and necessary peer dependencies in your project with your package
+manager of choice:
 
 ```sh
 # with npm
@@ -57,4 +59,4 @@ We love collaborating with folks inside and outside of project44 and welcome con
 [emotion]: https://emotion.sh/docs/introduction
 [radix]: https://www.radix-ui.com/
 [contributing docs]: CONTRIBUTING.md
-[NPM]: https://www.npmjs.com/search?q=%40manifest-ui
+[npm]: https://www.npmjs.com/search?q=%40manifest-ui
