@@ -1,10 +1,7 @@
 {
   "name": "manifest-root",
+  "version": "0.0.0",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:project44/manifest-ui.git"
-  },
   "license": "MIT",
   "workspaces": [
     "packages/*"
@@ -21,7 +18,9 @@
     "format": "beemo prettier",
     "lint": "beemo eslint",
     "pack": "NODE_ENV=production packemon pack --addEngines --declaration",
-    "postinstall": "beemo create-config"
+    "postinstall": "beemo create-config",
+    "test": "beemo jest",
+    "test:coverage": "yarn run test --coverage"
   },
   "devDependencies": {
     "@beemo/cli": "^2.0.6",
