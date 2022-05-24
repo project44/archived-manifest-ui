@@ -42,6 +42,9 @@
     "@commitlint/config-conventional": "^17.0.0",
     "@manifest-ui/vessel": "^0.2.1",
     "@manypkg/cli": "^0.19.1",
+    "@storybook/addon-a11y": "^6.5.5",
+    "@storybook/addon-essentials": "^6.5.5",
+    "@storybook/addon-links": "^6.5.5",
     "@storybook/builder-webpack5": "^6.5.4",
     "@storybook/core": "^6.5.4",
     "@storybook/manager-webpack5": "^6.5.4",
@@ -58,6 +61,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "rimraf": "^3.0.2",
+    "storybook-addon-performance": "^0.16.1",
     "style-dictionary": "^3.7.0",
     "webpack": "^5.70.0"
   },
