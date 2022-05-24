@@ -11,6 +11,9 @@
   "references": [
     {
       "path": "../design-tokens"
+    },
+    {
+      "path": "../test-utils"
     }
   ]
 }

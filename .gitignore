@@ -17,12 +17,11 @@ dts/
 node_modules/
 
 # Configs
-.babelrc
 .eslintignore
 .eslintrc.js
 .prettierignore
-*.config.js
-*.config.ts
+jest.config.js
+prettier.config.js
 *.tsbuildinfo
 
 # MacOS
