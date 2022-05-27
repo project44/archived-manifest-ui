@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@manifest-ui/design-tokens": "^0.0.0",
+    "@radix-ui/react-avatar": "^0.1.4",
     "@stitches/react": "^1.2.8"
   },
   "devDependencies": {

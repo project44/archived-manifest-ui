@@ -7,13 +7,10 @@
   },
   "exclude": ["dts"],
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "../../types/**/*"],
   "references": [
     {
       "path": "../design-tokens"
-    },
-    {
-      "path": "../test-utils"
     }
   ]
 }

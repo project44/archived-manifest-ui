@@ -9,7 +9,6 @@ on:
       - main
 
 jobs:
-
   prerelease:
     name: Prerelease
     runs-on: ubuntu-latest
@@ -162,6 +161,6 @@ jobs:
         with:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          buildScriptName: "build:storybook"
-          autoAcceptChanges: "main"
+          buildScriptName: 'build:storybook'
+          autoAcceptChanges: 'main'
           exitOnceUploaded: true

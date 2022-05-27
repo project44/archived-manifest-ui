@@ -1,8 +1,8 @@
-import { ComponentProps } from '../types';
-import { styled } from '../styles';
-import { VariantProps } from '@stitches/react';
+import type * as React from 'react';
+import { styled } from '../../styles';
+import type { VariantProps } from '@stitches/react';
 
-export type FlexProps = ComponentProps<typeof Flex> & VariantProps<typeof Flex>;
+export interface FlexProps extends React.ComponentProps<typeof Flex>, VariantProps<typeof Flex> {}
 
 export const Flex = styled('div', {
   display: 'flex',
@@ -19,6 +19,7 @@ export const Flex = styled('div', {
       vertical: { flexDirection: 'column' },
     },
     justify: {
+      around: { justifyContent: 'space-around' },
       between: { justifyContent: 'space-between' },
       center: { justifyContent: 'center' },
       end: { justifyContent: 'flex-end' },
@@ -30,5 +31,3 @@ export const Flex = styled('div', {
     },
   },
 });
-
-Flex.displayName = 'ManifestFlex';

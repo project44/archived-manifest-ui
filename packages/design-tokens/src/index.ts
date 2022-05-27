@@ -20,13 +20,9 @@ export const COLOR_BORDER_DISABLED = '#F4F4F5';
 export const COLOR_BORDER_PRIMARY = '#E4E6E7';
 export const COLOR_BORDER_SUCCESS = '#43A047';
 export const COLOR_BORDER_WARNING = '#FFB300';
+export const COLOR_BRAND = '#0072EC';
 export const COLOR_BRAND_GRADIENT =
   'linear-gradient(90deg, #0072EC 0%, #4E00C6 163.65%, #8C18E2  191.59%)';
-export const COLOR_BRAND_PRIMARY = '#0072EC';
-export const COLOR_CONTRAST_BRAND = '#FFFFFF';
-export const COLOR_CONTRAST_DANGER = '#091521';
-export const COLOR_CONTRAST_SUCCESS = '#091521';
-export const COLOR_CONTRAST_WARNING = '#091521';
 export const COLOR_PALETTE_BLUE_50 = '#ECF4FE';
 export const COLOR_PALETTE_BLUE_100 = '#C9E1FB';
 export const COLOR_PALETTE_BLUE_200 = '#95C5F8';
@@ -197,17 +193,16 @@ export const COLOR_TEXT_WARNING = '#FFB300';
 export const COLOR_WHITE = '#FFFFFF';
 export const RADIUS_FULL = '8rem';
 export const RADIUS_SMALL = '0.125rem';
-export const SHADOW_LARGE = '0px 1px 3px rgba(0, 0, 0, 0.16)';
-export const SHADOW_MEDIUM =
-  '0px 9px 12px 1px rgba(0, 0, 0, 0.05), 0px 3px 16px 2px rgba(0, 0, 0, 0.04), 0px 5px 6px -3px rgba(0, 0, 0, 0.06)';
-export const SHADOW_SMALL =
-  '0px 16px 24px 2px rgba(0, 0, 0, 0.05), 0px 6px 30px 5px rgba(0, 0, 0, 0.04), 0px 8px 10px -5px rgba(0, 0, 0, 0.06)';
+export const SHADOW_INSET = 'inset 0px 1px 1px rgba(5, 10, 26, 0.25)';
+export const SHADOW_LARGE = '0px 6px 14px rgba(56, 85, 179, 0.15)';
+export const SHADOW_MEDIUM = '0px 4px 5px rgba(56, 85, 179, 0.15)';
+export const SHADOW_SMALL = ' 0px 1px 2px rgba(56, 85, 179, 0.4)';
 export const SIZE_LARGE = '80rem';
 export const SIZE_MEDIUM = '64rem';
 export const SIZE_SMALL = '37.5rem';
 export const SIZE_X_LARGE = '120rem';
-export const SPACE_LARGE = '1.25rem';
-export const SPACE_MEDIUM = '0.75rem';
+export const SPACE_LARGE = '1.5rem';
+export const SPACE_MEDIUM = '1rem';
 export const SPACE_SMALL = '0.5rem';
 export const SPACE_X_LARGE = '2rem';
 export const SPACE_X_SMALL = '0.25rem';
@@ -270,12 +265,8 @@ export const theme = {
     'border-primary': COLOR_BORDER_PRIMARY,
     'border-success': COLOR_BORDER_SUCCESS,
     'border-warning': COLOR_BORDER_WARNING,
+    brand: COLOR_BRAND,
     'brand-gradient': COLOR_BRAND_GRADIENT,
-    'brand-primary': COLOR_BRAND_PRIMARY,
-    'contrast-brand': COLOR_CONTRAST_BRAND,
-    'contrast-danger': COLOR_CONTRAST_DANGER,
-    'contrast-success': COLOR_CONTRAST_SUCCESS,
-    'contrast-warning': COLOR_CONTRAST_WARNING,
     'palette-blue-50': COLOR_PALETTE_BLUE_50,
     'palette-blue-100': COLOR_PALETTE_BLUE_100,
     'palette-blue-200': COLOR_PALETTE_BLUE_200,
@@ -474,7 +465,7 @@ export const theme = {
     'xx-large': LINE_HEIGHT_XX_LARGE,
   },
   radii: { full: RADIUS_FULL, small: RADIUS_SMALL },
-  shadows: { large: SHADOW_LARGE, medium: SHADOW_MEDIUM, small: SHADOW_SMALL },
+  shadows: { inset: SHADOW_INSET, large: SHADOW_LARGE, medium: SHADOW_MEDIUM, small: SHADOW_SMALL },
   sizes: { large: SIZE_LARGE, medium: SIZE_MEDIUM, small: SIZE_SMALL, 'x-large': SIZE_X_LARGE },
   space: {
     large: SPACE_LARGE,

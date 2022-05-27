@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { render, screen } from '@manifest-ui/test-utils';
-import { CssBaseline } from '../src';
+import { CssBaseline } from './CssBaseline';
+import { render } from '@testing-library/react';
 
 describe('@manifest/react - CssBaseline', () => {
   it('should render', () => {
-    render(
+    const { container } = render(
       <>
         <CssBaseline />
         <div>hello world</div>
       </>,
     );
 
-    expect(screen.getByText('hello world')).toBeInTheDocument();
+    expect(container).toBeInTheDocument();
   });
 });

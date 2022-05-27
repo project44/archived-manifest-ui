@@ -1,11 +1,12 @@
 {
   "shadow": {
-    "large": { "value": "0px 1px 3px rgba(0, 0, 0, 0.16)" },
+    "inset": { "value": "inset 0px 1px 1px rgba(5, 10, 26, 0.25)" },
+    "large": { "value": "0px 6px 14px rgba(56, 85, 179, 0.15)" },
     "medium": {
-      "value": "0px 9px 12px 1px rgba(0, 0, 0, 0.05), 0px 3px 16px 2px rgba(0, 0, 0, 0.04), 0px 5px 6px -3px rgba(0, 0, 0, 0.06)"
+      "value": "0px 4px 5px rgba(56, 85, 179, 0.15)"
     },
     "small": {
-      "value": "0px 16px 24px 2px rgba(0, 0, 0, 0.05), 0px 6px 30px 5px rgba(0, 0, 0, 0.04), 0px 8px 10px -5px rgba(0, 0, 0, 0.06)"
+      "value": " 0px 1px 2px rgba(56, 85, 179, 0.4)"
     }
   }
 }
