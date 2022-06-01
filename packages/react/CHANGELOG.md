@@ -1,5 +1,13 @@
 # @manifest-ui/react
 
+## 2.6.7
+
+### Patch Changes
+
+- Updated dependencies
+  [[`6572f2c`](https://github.com/project44/manifest-ui/commit/6572f2c6e2e7b468b72449b9504d66143886f520)]:
+  - @manifest-ui/select@0.2.3
+
 ## 2.6.6
 
 ### Patch Changes
