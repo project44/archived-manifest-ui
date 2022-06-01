@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/react",
-  "version": "2.6.6",
+  "version": "2.6.7",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -37,7 +37,7 @@
     "@manifest-ui/portal": "0.1.0",
     "@manifest-ui/provider": "0.0.14",
     "@manifest-ui/radio": "0.1.8",
-    "@manifest-ui/select": "0.2.2",
+    "@manifest-ui/select": "0.2.3",
     "@manifest-ui/separator": "0.1.2",
     "@manifest-ui/slot": "0.1.0",
     "@manifest-ui/spinner": "0.0.14",

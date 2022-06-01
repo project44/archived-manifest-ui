@@ -1,5 +1,13 @@
 # @manifest-ui/select
 
+## 0.2.3
+
+### Patch Changes
+
+- [#228](https://github.com/project44/manifest-ui/pull/228)
+  [`6572f2c`](https://github.com/project44/manifest-ui/commit/6572f2c6e2e7b468b72449b9504d66143886f520)
+  Thanks [@bclark-p44](https://github.com/bclark-p44)! - Fixing data attribute on select
+
 ## 0.2.2
 
 ### Patch Changes

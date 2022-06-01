@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/select",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
