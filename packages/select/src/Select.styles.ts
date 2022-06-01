@@ -57,7 +57,7 @@ export const StyledControl = styled('div', {
     color: 'status.danger.500',
   },
 
-  '&[data-startIcon]': {
+  '&[data-start-icon]': {
     pl: 0,
   },
 });
