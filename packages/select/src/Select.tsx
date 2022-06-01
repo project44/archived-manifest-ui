@@ -113,7 +113,7 @@ const components: ReactSelectProps['components'] = {
         data-disabled={isDisabled ? '' : null}
         data-focus={isFocused ? '' : null}
         ref={innerRef}
-        data-startIcon={startIcon}
+        data-start-icon={startIcon}
         {...innerProps}
       >
         {children}
