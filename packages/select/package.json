@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/select",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -14,8 +14,8 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/icons": "^0.1.2",
-    "@manifest-ui/styled": "^0.0.11",
+    "@manifest-ui/icons": "^0.1.3",
+    "@manifest-ui/styled": "^0.0.12",
     "@manifest-ui/theme-utils": "^0.1.2",
     "react-select": "^5.2.2"
   }

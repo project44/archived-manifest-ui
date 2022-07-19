@@ -1,5 +1,14 @@
 # @manifest-ui/spinner
 
+## 0.0.15
+
+### Patch Changes
+
+- Updated dependencies
+  [[`10e8669`](https://github.com/project44/manifest-ui/commit/10e86695f5fafa5f23bd6f7225c36062aafd8119)]:
+  - @manifest-ui/styled@0.0.12
+  - @manifest-ui/visually-hidden@0.0.15
+
 ## 0.0.14
 
 ### Patch Changes

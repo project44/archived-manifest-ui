@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/table",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@manifest-ui/hooks": "^0.1.0",
-    "@manifest-ui/icons": "^0.1.2",
-    "@manifest-ui/pagination": "^0.0.17",
-    "@manifest-ui/styled": "^0.0.11",
+    "@manifest-ui/icons": "^0.1.3",
+    "@manifest-ui/pagination": "^0.0.18",
+    "@manifest-ui/styled": "^0.0.12",
     "@manifest-ui/theme-utils": "^0.1.2"
   }
 }
