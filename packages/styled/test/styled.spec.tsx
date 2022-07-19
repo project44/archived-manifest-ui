@@ -166,4 +166,20 @@ describe('@manifest-ui/styled - styled', () => {
     expect(screen.getByText('Hello')).toHaveStyle('border: 1px solid black');
     expect(screen.getByText('Hello')).toHaveStyle('width: 200px');
   });
+
+  it('should support styling styled compponents', () => {
+    const Button = styled('button')(({ variant }) => ({
+      ...(variant === 'test' && {
+        height: 200,
+      }),
+    }));
+
+    const StyledButton = styled(Button)({
+      color: 'pink',
+    });
+
+    render(<StyledButton variant="test">Hello</StyledButton>);
+
+    expect(screen.getByText('Hello')).toHaveStyle('color: pink; height: 200px');
+  });
 });
