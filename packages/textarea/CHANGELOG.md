@@ -1,5 +1,13 @@
 # @manifest-ui/textarea
 
+## 0.1.5
+
+### Patch Changes
+
+- Updated dependencies
+  [[`10e8669`](https://github.com/project44/manifest-ui/commit/10e86695f5fafa5f23bd6f7225c36062aafd8119)]:
+  - @manifest-ui/styled@0.0.12
+
 ## 0.1.4
 
 ### Patch Changes

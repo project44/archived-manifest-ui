@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/layout",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "main": "./lib/index.js",
   "types": "./dts/index.d.ts",
   "files": [
@@ -19,6 +19,6 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/styled": "^0.0.11"
+    "@manifest-ui/styled": "^0.0.12"
   }
 }

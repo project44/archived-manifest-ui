@@ -1,6 +1,6 @@
 {
   "name": "@manifest-ui/dropdown",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "./lib/index.js",
   "module": "./esm/index.js",
   "types": "./dts/index.d.ts",
@@ -14,7 +14,7 @@
     "react": "^16.8 || ^17.0"
   },
   "dependencies": {
-    "@manifest-ui/styled": "^0.0.11",
+    "@manifest-ui/styled": "^0.0.12",
     "@manifest-ui/theme-utils": "^0.1.2",
     "@radix-ui/react-dropdown-menu": "^0.1.6"
   }
